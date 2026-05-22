@@ -6,7 +6,7 @@
  * Layout: Centred hero with book cover, trilogy announcement, notification form.
  * Author: AB (pen name — full name not yet public)
  */
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -15,6 +15,110 @@ const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
 const DARK_CARD = "oklch(0.12 0.005 285)";
+
+function TeaserVideo() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [activated, setActivated] = useState(false);
+
+  const handleTouch = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = false;
+    v.play().catch(() => {});
+    setActivated(true);
+  };
+
+  return (
+    <div className="reveal" style={{ position: "relative", maxWidth: "860px", margin: "0 auto" }}>
+      {[
+        { top: -12, left: -12 },
+        { top: -12, right: -12 },
+        { bottom: -12, left: -12 },
+        { bottom: -12, right: -12 },
+      ].map((pos, i) => (
+        <div key={i} style={{
+          position: "absolute",
+          width: "28px",
+          height: "28px",
+          borderTop: i < 2 ? `2px solid ${GOLD}` : "none",
+          borderBottom: i >= 2 ? `2px solid ${GOLD}` : "none",
+          borderLeft: i % 2 === 0 ? `2px solid ${GOLD}` : "none",
+          borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
+          ...pos,
+          zIndex: 2,
+        }} />
+      ))}
+      <div style={{ position: "relative" }}>
+        <video
+          ref={videoRef}
+          src="/manus-storage/0522(1)(2)_7f24a587.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            boxShadow: "0 20px 60px oklch(0.09 0.005 285 / 0.5)",
+          }}
+        />
+        {!activated && (
+          <div
+            onClick={handleTouch}
+            style={{
+              position: "absolute",
+              inset: 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "1rem",
+              background: "oklch(0.09 0.005 285 / 0.45)",
+              cursor: "pointer",
+              backdropFilter: "blur(1px)",
+            }}
+          >
+            <div style={{
+              width: "64px",
+              height: "64px",
+              borderRadius: "50%",
+              border: `2px solid ${GOLD}`,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill={GOLD}>
+                <polygon points="5,3 19,12 5,21" />
+              </svg>
+            </div>
+            <span style={{
+              fontFamily: "'Cinzel', serif",
+              fontSize: "0.6rem",
+              letterSpacing: "0.25em",
+              textTransform: "uppercase",
+              color: GOLD,
+            }}>Play with Sound</span>
+          </div>
+        )}
+      </div>
+      {/* Caption */}
+      <div style={{ background: DARK, padding: "1rem 1.5rem", textAlign: "center" }}>
+        <div style={{ width: "48px", height: "1px", background: GOLD, margin: "0 auto 0.75rem", opacity: 0.4 }} />
+        <p style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontStyle: "italic",
+          fontSize: "0.8rem",
+          color: "oklch(0.45 0.01 85)",
+          letterSpacing: "0.04em",
+          margin: 0,
+        }}>
+          Official teaser · <em>The Danubian Throne</em> · "History Was Not Prevented. Only Rewritten."
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function Books() {
   useScrollReveal();
@@ -202,6 +306,51 @@ export default function Books() {
               The Empire was never saved. It was replaced.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* ── Teaser Video ── */}
+      <section style={{ backgroundColor: DARK_CARD, padding: "5rem 0", borderTop: `1px solid oklch(0.72 0.12 85 / 0.1)` }}>
+        <div className="container">
+          <div className="reveal text-center mb-10">
+            <div
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "0.6rem",
+                letterSpacing: "0.35em",
+                color: GOLD,
+                textTransform: "uppercase",
+                marginBottom: "0.75rem",
+                opacity: 0.8,
+              }}
+            >
+              Official Teaser
+            </div>
+            <h2
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "clamp(1.4rem, 3vw, 2rem)",
+                fontWeight: 600,
+                color: CREAM,
+                letterSpacing: "0.03em",
+                marginBottom: "0.5rem",
+              }}
+            >
+              What if Sarajevo Failed?
+            </h2>
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontStyle: "italic",
+                fontSize: "0.95rem",
+                color: "oklch(0.5 0.01 85)",
+                lineHeight: 1.7,
+              }}
+            >
+              History was not prevented. Only rewritten.
+            </p>
+          </div>
+          <TeaserVideo />
         </div>
       </section>
 

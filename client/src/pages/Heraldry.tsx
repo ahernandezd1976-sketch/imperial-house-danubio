@@ -112,7 +112,7 @@ export default function Heraldry() {
                   />
                 ))}
                 <img
-                  src="/manus-storage/coat_of_arms_real_375cb88d.png"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/coat_of_arms_rudolf_crown-9ciVuAzzEns7mQyvQXFT4f.webp"
                   alt="Imperial Coat of Arms of Austria-Danubio"
                   style={{ width: "100%", height: "auto", display: "block", padding: "1rem" }}
                 />

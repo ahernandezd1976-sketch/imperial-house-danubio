@@ -20,7 +20,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="flex flex-col items-start gap-4">
             <img
-              src="/manus-storage/coat_of_arms_real_375cb88d.png"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/coat_of_arms_rudolf_crown-9ciVuAzzEns7mQyvQXFT4f.webp"
               alt="Imperial Coat of Arms"
               className="w-16 h-auto opacity-90"
             />

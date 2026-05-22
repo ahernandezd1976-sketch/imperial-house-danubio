@@ -963,8 +963,8 @@ export default function Family() {
               src="/manus-storage/klimt_engagement_portrait_4e104b52.mp4"
               autoPlay
               loop
-              muted
               playsInline
+              controls
               style={{
                 width: "100%",
                 height: "auto",

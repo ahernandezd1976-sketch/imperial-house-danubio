@@ -90,32 +90,76 @@ export default function Heraldry() {
           <div className="reveal grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Arms image */}
             <div className="flex justify-center">
-              <div style={{ maxWidth: "420px", width: "100%", position: "relative" }}>
+              {/* Outer diamond ornament wrapper */}
+              <div style={{ position: "relative", maxWidth: "420px", width: "100%" }}>
+
+                {/* Diamond ornaments at midpoints */}
                 {[
-                  { top: -10, left: -10 },
-                  { top: -10, right: -10 },
-                  { bottom: -10, left: -10 },
-                  { bottom: -10, right: -10 },
+                  { top: -10, left: "50%", transform: "translateX(-50%) rotate(45deg)" },
+                  { bottom: -10, left: "50%", transform: "translateX(-50%) rotate(45deg)" },
+                  { top: "50%", left: -10, transform: "translateY(-50%) rotate(45deg)" },
+                  { top: "50%", right: -10, transform: "translateY(-50%) rotate(45deg)" },
                 ].map((pos, i) => (
-                  <div
-                    key={i}
-                    style={{
+                  <div key={i} style={{
+                    position: "absolute",
+                    width: "14px",
+                    height: "14px",
+                    background: GOLD,
+                    opacity: 0.55,
+                    zIndex: 3,
+                    ...pos,
+                  }} />
+                ))}
+
+                {/* Inner frame */}
+                <div style={{
+                  position: "relative",
+                  backgroundColor: "oklch(0.97 0.012 85)",
+                  border: `1px solid oklch(0.72 0.12 85 / 0.35)`,
+                  boxShadow: `0 0 0 4px oklch(0.96 0.015 85), 0 0 0 5px oklch(0.72 0.12 85 / 0.25), 0 8px 32px oklch(0.09 0.005 285 / 0.18)`,
+                }}>
+                  {/* Corner L-brackets */}
+                  {[
+                    { top: -8, left: -8 },
+                    { top: -8, right: -8 },
+                    { bottom: -8, left: -8 },
+                    { bottom: -8, right: -8 },
+                  ].map((pos, i) => (
+                    <div key={i} style={{
                       position: "absolute",
-                      width: "24px",
-                      height: "24px",
+                      width: "20px",
+                      height: "20px",
                       borderTop: i < 2 ? `2px solid ${GOLD}` : "none",
                       borderBottom: i >= 2 ? `2px solid ${GOLD}` : "none",
                       borderLeft: i % 2 === 0 ? `2px solid ${GOLD}` : "none",
                       borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
                       ...pos,
-                    }}
-                  />
-                ))}
-                <img
-                  src="/manus-storage/coat_of_arms_real_375cb88d.png"
-                  alt="Imperial Coat of Arms of Austria-Danubio"
-                  style={{ width: "100%", height: "auto", display: "block", padding: "1rem" }}
-                />
+                      zIndex: 2,
+                    }} />
+                  ))}
+
+                  {/* Dark band top */}
+                  <div style={{ height: "10px", background: "oklch(0.09 0.005 285)", opacity: 0.85 }} />
+
+                  {/* Image cropped to hide the black strip at bottom */}
+                  <div style={{ overflow: "hidden", lineHeight: 0 }}>
+                    <img
+                      src="/manus-storage/coat_of_arms_real_375cb88d.png"
+                      alt="Imperial Coat of Arms of Austria-Danubio"
+                      style={{
+                        width: "100%",
+                        display: "block",
+                        padding: "1rem 1.5rem 0",
+                        marginBottom: "-6%",
+                        mixBlendMode: "multiply",
+                      }}
+                    />
+                  </div>
+
+                  {/* Dark band bottom — mirrors top */}
+                  <div style={{ height: "10px", background: "oklch(0.09 0.005 285)", opacity: 0.85 }} />
+
+                </div>
               </div>
             </div>
 

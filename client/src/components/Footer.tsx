@@ -20,7 +20,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="flex flex-col items-start gap-4">
             <img
-              src="/manus-storage/coat_of_arms_fd3008ef.png"
+              src="/manus-storage/coat_of_arms_real_375cb88d.png"
               alt="Imperial Coat of Arms"
               className="w-16 h-auto opacity-90"
             />
@@ -85,6 +85,7 @@ export default function Footer() {
                 { href: "/family", label: "The Imperial Family" },
                 { href: "/traditions", label: "Traditions" },
                 { href: "/heraldry", label: "Heraldry" },
+                { href: "/properties", label: "Imperial Properties" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

@@ -9,6 +9,7 @@ import History from "./pages/History";
 import Family from "./pages/Family";
 import Traditions from "./pages/Traditions";
 import Heraldry from "./pages/Heraldry";
+import Properties from "./pages/Properties";
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function Router() {
       <Route path={"/family"} component={Family} />
       <Route path={"/traditions"} component={Traditions} />
       <Route path={"/heraldry"} component={Heraldry} />
+      <Route path={"/properties"} component={Properties} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

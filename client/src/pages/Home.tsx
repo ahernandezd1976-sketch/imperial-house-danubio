@@ -3,7 +3,7 @@
  * Hero: full-bleed palace image with dark overlay, Cinzel title
  * Sections: alternating dark/cream bands with gold ornaments
  */
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -36,9 +36,95 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [playing, setPlaying] = useState(false);
+  const [volume, setVolume] = useState(0.4);
+
+  const togglePlay = () => {
+    if (!audioRef.current) return;
+    if (playing) {
+      audioRef.current.pause();
+      setPlaying(false);
+    } else {
+      audioRef.current.volume = volume;
+      audioRef.current.play().then(() => setPlaying(true)).catch(() => {});
+    }
+  };
+
+  const handleVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const v = parseFloat(e.target.value);
+    setVolume(v);
+    if (audioRef.current) audioRef.current.volume = v;
+  };
+
   return (
     <div style={{ backgroundColor: DARK }}>
       <Navigation />
+
+      {/* Habsburg Waltz floating audio player */}
+      <audio ref={audioRef} src="/manus-storage/habsburg_walzer_804aad1b.mp3" loop />
+      <div
+        style={{
+          position: "fixed",
+          bottom: "2rem",
+          right: "2rem",
+          zIndex: 100,
+          background: "oklch(0.09 0.005 285 / 0.92)",
+          backdropFilter: "blur(12px)",
+          border: `1px solid oklch(0.72 0.12 85 / 0.3)`,
+          padding: "0.85rem 1.1rem",
+          display: "flex",
+          alignItems: "center",
+          gap: "0.75rem",
+          minWidth: "220px",
+          boxShadow: "0 8px 32px oklch(0 0 0 / 0.4)",
+        }}
+      >
+        {/* Gold top accent */}
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "1px", background: GOLD }} />
+        <button
+          onClick={togglePlay}
+          style={{
+            width: "36px",
+            height: "36px",
+            border: `1px solid oklch(0.72 0.12 85 / 0.5)`,
+            background: playing ? GOLD : "transparent",
+            color: playing ? "oklch(0.09 0.005 285)" : GOLD,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+            flexShrink: 0,
+            transition: "all 0.2s ease",
+            fontSize: "1rem",
+          }}
+          aria-label={playing ? "Pause" : "Play Habsburg Waltz"}
+        >
+          {playing ? (
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
+              <rect x="2" y="1" width="4" height="12" />
+              <rect x="8" y="1" width="4" height="12" />
+            </svg>
+          ) : (
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
+              <polygon points="2,1 12,7 2,13" />
+            </svg>
+          )}
+        </button>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.2em", color: GOLD, textTransform: "uppercase", marginBottom: "0.2rem" }}>Habsburg Walzer</div>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value={volume}
+            onChange={handleVolume}
+            style={{ width: "100%", accentColor: "oklch(0.72 0.12 85)", cursor: "pointer" }}
+            aria-label="Volume"
+          />
+        </div>
+      </div>
 
       {/* ── HERO ── */}
       <section
@@ -396,8 +482,8 @@ export default function Home() {
             <div className="reveal flex justify-center order-2 lg:order-1" style={{ transitionDelay: "0.2s" }}>
               <div style={{ maxWidth: "340px", width: "100%" }}>
                 <img
-                  src="/manus-storage/emperor_portrait_4ad8ffe0.png"
-                  alt="His Imperial Majesty Emperor Karl-Heinrich II"
+                  src="/manus-storage/emperor_engraving_a2dd5d8f.png"
+                  alt="His Imperial Majesty Emperor Maximilian I"
                   className="portrait-frame"
                   style={{ width: "100%", height: "auto", display: "block" }}
                 />

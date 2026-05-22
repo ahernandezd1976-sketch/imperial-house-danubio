@@ -765,6 +765,173 @@ export default function Family() {
         </div>
       </section>
 
+      {/* Engagement Portrait */}
+      <section style={{ backgroundColor: CREAM, padding: "6rem 0" }}>
+        <div className="container">
+          <div className="reveal text-center mb-10">
+            <div
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "0.6rem",
+                letterSpacing: "0.3em",
+                color: "oklch(0.55 0.08 85)",
+                textTransform: "uppercase",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Official Engagement Portrait · 2026
+            </div>
+            <h2
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+                fontWeight: 600,
+                color: DARK,
+                letterSpacing: "0.03em",
+                marginBottom: "0.5rem",
+              }}
+            >
+              Die Verlobung — The Betrothal
+            </h2>
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontStyle: "italic",
+                fontSize: "1rem",
+                color: "oklch(0.45 0.01 285)",
+                maxWidth: "550px",
+                margin: "0 auto",
+                lineHeight: 1.7,
+              }}
+            >
+              Crown Prince Leopold von Habsburg and Fräulein Katharina von Richter, as depicted in the official engagement portrait commissioned by the Imperial House, 2026.
+            </p>
+          </div>
+
+          <div className="reveal" style={{ position: "relative", maxWidth: "640px", margin: "0 auto" }}>
+            {[
+              { top: -12, left: -12 },
+              { top: -12, right: -12 },
+              { bottom: -12, left: -12 },
+              { bottom: -12, right: -12 },
+            ].map((pos, i) => (
+              <div
+                key={i}
+                style={{
+                  position: "absolute",
+                  width: "28px",
+                  height: "28px",
+                  borderTop: i < 2 ? `2px solid ${GOLD}` : "none",
+                  borderBottom: i >= 2 ? `2px solid ${GOLD}` : "none",
+                  borderLeft: i % 2 === 0 ? `2px solid ${GOLD}` : "none",
+                  borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
+                  ...pos,
+                  zIndex: 2,
+                }}
+              />
+            ))}
+            <img
+              src="/manus-storage/engagement_portrait_ee45904b.png"
+              alt="Official engagement portrait of Crown Prince Leopold and Katharina von Richter"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                boxShadow: "0 20px 60px oklch(0.09 0.005 285 / 0.2)",
+              }}
+            />
+            <div
+              style={{
+                background: DARK,
+                padding: "0.85rem 1.5rem",
+                display: "flex",
+                justifyContent: "center",
+                gap: "2rem",
+                flexWrap: "wrap",
+              }}
+            >
+              <span style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.15em", color: "oklch(0.55 0.01 85)", textTransform: "uppercase" }}>Crown Prince Leopold von Habsburg</span>
+              <span style={{ color: GOLD, fontFamily: "'Cinzel', serif", fontSize: "0.55rem" }}>·</span>
+              <span style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.15em", color: "oklch(0.55 0.01 85)", textTransform: "uppercase" }}>Katharina von Richter</span>
+            </div>
+          </div>
+
+          <div className="reveal" style={{ maxWidth: "640px", margin: "2rem auto 0", textAlign: "center" }}>
+            <p
+              style={{
+                fontFamily: "'Source Serif 4', serif",
+                fontSize: "0.95rem",
+                lineHeight: 1.9,
+                color: "oklch(0.3 0.005 285)",
+              }}
+            >
+              The engagement of Crown Prince Leopold von Habsburg and Fräulein Katharina von Richter was officially announced by the Imperial Chancery on the 15th of March, 2026. The portrait, painted in the manner of the Vienna Secession and bearing the inscription <em>Die Verlobung MMXXVI</em>, was unveiled at a private ceremony at the Hofburg attended by the Emperor and members of the Imperial Household.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Family Tree */}
+      <section style={{ backgroundColor: DARK, padding: "6rem 0" }}>
+        <div className="container">
+          <div className="reveal text-center mb-10">
+            <div
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "0.6rem",
+                letterSpacing: "0.3em",
+                color: GOLD,
+                textTransform: "uppercase",
+                marginBottom: "1rem",
+                opacity: 0.8,
+              }}
+            >
+              Dynastic Genealogy
+            </div>
+            <h2
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
+                fontWeight: 600,
+                color: CREAM,
+                letterSpacing: "0.03em",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Habsburg Family Tree
+            </h2>
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontStyle: "italic",
+                fontSize: "1rem",
+                color: "oklch(0.55 0.01 85)",
+                maxWidth: "560px",
+                margin: "0 auto",
+                lineHeight: 1.7,
+              }}
+            >
+              From Franz Joseph I to the present day — the dynastic lineage of the Imperial House of Austria-Danubio.
+            </p>
+          </div>
+          <div className="reveal" style={{ maxWidth: "1000px", margin: "0 auto" }}>
+            <img
+              src="/manus-storage/family_tree_58abbdc1.webp"
+              alt="Habsburg Family Tree from Franz Joseph I to Emperor Maximilian I"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                border: `1px solid oklch(0.72 0.12 85 / 0.15)`,
+              }}
+            />
+            <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: "0.8rem", color: "oklch(0.4 0.01 85)", textAlign: "center", marginTop: "1rem" }}>
+              Dynastic genealogy of the Imperial House · From Franz Joseph I to Emperor Maximilian I
+            </p>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

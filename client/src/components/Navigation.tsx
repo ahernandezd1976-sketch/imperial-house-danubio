@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/family", label: "The Imperial Family" },
   { href: "/traditions", label: "Traditions" },
   { href: "/heraldry", label: "Heraldry" },
+  { href: "/properties", label: "Imperial Properties" },
 ];
 
 export default function Navigation() {
@@ -41,7 +42,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <img
-              src="/manus-storage/coat_of_arms_fd3008ef.png"
+              src="/manus-storage/coat_of_arms_real_375cb88d.png"
               alt="Imperial Coat of Arms"
               className="w-10 h-auto transition-transform duration-300 group-hover:scale-105"
             />

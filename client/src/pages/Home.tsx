@@ -425,15 +425,14 @@ export default function Home() {
 
             {/* Coat of arms */}
             <div className="reveal flex justify-center" style={{ transitionDelay: "0.2s" }}>
-              <div style={{ position: "relative", maxWidth: "380px" }}>
-                {/* Parchment background frame */}
-                <div style={{
-                  position: "absolute",
-                  inset: 0,
-                  backgroundColor: "oklch(0.97 0.012 85)",
-                  border: `1px solid oklch(0.72 0.12 85 / 0.35)`,
-                  boxShadow: `0 0 0 4px oklch(0.96 0.015 85), 0 0 0 5px oklch(0.72 0.12 85 / 0.25), 0 8px 32px oklch(0.09 0.005 285 / 0.15)`,
-                }} />
+              <div style={{
+                position: "relative",
+                maxWidth: "380px",
+                width: "100%",
+                backgroundColor: "oklch(0.97 0.012 85)",
+                border: `1px solid oklch(0.72 0.12 85 / 0.35)`,
+                boxShadow: `0 0 0 4px oklch(0.96 0.015 85), 0 0 0 5px oklch(0.72 0.12 85 / 0.25), 0 8px 32px oklch(0.09 0.005 285 / 0.18)`,
+              }}>
                 {/* Corner ornaments */}
                 {[
                   { top: -8, left: -8 },
@@ -452,6 +451,7 @@ export default function Home() {
                       borderLeft: i % 2 === 0 ? `2px solid ${GOLD}` : "none",
                       borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
                       ...pos,
+                      zIndex: 2,
                     }}
                   />
                 ))}
@@ -463,6 +463,8 @@ export default function Home() {
                     height: "auto",
                     display: "block",
                     padding: "1.5rem",
+                    position: "relative",
+                    zIndex: 1,
                   }}
                 />
               </div>

@@ -94,7 +94,7 @@ const properties = [
     flag: "🇭🇺",
     era: "14th century — present",
     description:
-      "Crowning the Castle Hill above the Danube, the Royal Palace of Budapest is the historic seat of the Hungarian Crown within the Danubian Confederation. Its Neo-Baroque façade, rebuilt after the devastation of the Second World War, overlooks the Chain Bridge and the Parliament across the river. The throne room and the Hungarian state apartments are among the most splendid interiors in Central Europe.",
+      "Crowning the Castle Hill above the Danube, the Royal Palace of Budapest is the historic seat of the Hungarian Crown within the Danubian Confederation. Its Neo-Baroque façade, restored and extended in the early twentieth century, overlooks the Chain Bridge and the Parliament across the river. The throne room and the Hungarian state apartments are among the most splendid interiors in Central Europe.",
     visitNote: "Open to the public on the third Saturday of each month, 10:00–15:00.",
     image: "/manus-storage/budapest_castle_a9b51aa6.webp",
     tag: "Royal Palace",

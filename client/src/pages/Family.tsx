@@ -235,7 +235,7 @@ export default function Family() {
               />
             ))}
             <img
-              src="/manus-storage/family_portrait_enhanced_68dbc692.png"
+              src="/manus-storage/imperial_family_portrait_v2_d943e727.png"
               alt="Official portrait of the Imperial House of Austria-Danubio, 2026"
               style={{
                 width: "100%",

@@ -211,7 +211,7 @@ export default function Family() {
             </h2>
           </div>
 
-          <div className="reveal" style={{ position: "relative", maxWidth: "900px", margin: "0 auto" }}>
+          <div className="reveal" style={{ position: "relative", maxWidth: "1100px", margin: "0 auto" }}>
             {/* Corner ornaments */}
             {[
               { top: -10, left: -10 },
@@ -241,7 +241,9 @@ export default function Family() {
                 width: "100%",
                 height: "auto",
                 display: "block",
-                boxShadow: "0 20px 60px oklch(0.09 0.005 285 / 0.25)",
+                boxShadow: "0 24px 80px oklch(0.09 0.005 285 / 0.45)",
+                imageRendering: "high-quality",
+                filter: "contrast(1.04) brightness(1.02) saturate(1.05)",
               }}
             />
             {/* Caption bar */}
@@ -276,11 +278,7 @@ export default function Family() {
           </div>
 
           {/* Name labels below portrait */}
-          <div
-            className="reveal"
-            style={{
-              maxWidth: "900px",
-              margin: "0.5rem auto 0",
+                    <div className="reveal" style={{ maxWidth: "1100px", margin: "0.5rem auto 0",
               display: "grid",
               gridTemplateColumns: "repeat(7, 1fr)",
               gap: "0.25rem",
@@ -717,7 +715,7 @@ export default function Family() {
                 marginBottom: "2rem",
               }}
             >
-              Succession to the Imperial Throne of Austria-Danubio follows the principle of absolute primogeniture. The current heir apparent is Crown Prince Leopold von Habsburg, Archduke of Neustadt, whose forthcoming marriage to Katharina von Richter is anticipated with great public interest throughout the Confederation.
+              Succession to the Imperial Throne of Austria-Danubio is governed by the ancient laws of the Imperial House. The current heir apparent is Crown Prince Leopold von Habsburg, Archduke of Neustadt, whose forthcoming marriage to Katharina von Richter is anticipated with great public interest throughout the Confederation.
             </p>
             <div
               style={{
@@ -742,8 +740,7 @@ export default function Family() {
               </div>
               {[
                 "1st — Crown Prince Leopold von Habsburg, Archduke of Neustadt",
-                "2nd — Archduchess Eleonora of Austria-Danubio",
-                "3rd — Archduke Reiner von Habsburg, Marshall of the Crown",
+                "2nd — Archduke Reiner von Habsburg, Marshall of the Crown",
               ].map((line, i) => (
                 <div
                   key={i}
@@ -752,7 +749,7 @@ export default function Family() {
                     fontSize: "0.95rem",
                     color: CREAM,
                     padding: "0.45rem 0",
-                    borderBottom: i < 2 ? `1px solid oklch(0.72 0.12 85 / 0.15)` : "none",
+                    borderBottom: i < 1 ? `1px solid oklch(0.72 0.12 85 / 0.15)` : "none",
                     textAlign: "left",
                     fontStyle: "italic",
                   }}

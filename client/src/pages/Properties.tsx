@@ -40,7 +40,7 @@ const properties = [
     description:
       "The Hofburg is the historic heart of the Imperial House — a vast complex of palaces, chapels, and state apartments that has served as the winter residence of the dynasty since the thirteenth century. Its Baroque and Neoclassical wings house the Imperial Apartments, the Sisi Museum, and the Imperial Silver Collection. The Hofburg remains the official seat of the Imperial Chancellery.",
     visitNote: "Open to the public on the first and third Saturday of each month, 10:00–16:00.",
-    image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=900&q=80",
+    image: "/manus-storage/hofburg_5d7a6dae.webp",
     tag: "Primary Residence",
     tagColor: GOLD,
   },

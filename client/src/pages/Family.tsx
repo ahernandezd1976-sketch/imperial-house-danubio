@@ -936,7 +936,8 @@ export default function Family() {
             </p>
           </div>
 
-          <div className="reveal" style={{ position: "relative", maxWidth: "640px", margin: "0 auto" }}>
+          {/* Video portrait */}
+          <div className="reveal" style={{ position: "relative", maxWidth: "720px", margin: "0 auto" }}>
             {[
               { top: -12, left: -12 },
               { top: -12, right: -12 },
@@ -958,14 +959,17 @@ export default function Family() {
                 }}
               />
             ))}
-            <img
-              src="/manus-storage/engagement_portrait_ee45904b.png"
-              alt="Official engagement portrait of Crown Prince Leopold and Katharina von Richter"
+            <video
+              src="/manus-storage/klimt_engagement_portrait_4e104b52.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               style={{
                 width: "100%",
                 height: "auto",
                 display: "block",
-                boxShadow: "0 20px 60px oklch(0.09 0.005 285 / 0.2)",
+                boxShadow: "0 20px 60px oklch(0.09 0.005 285 / 0.25)",
               }}
             />
             <div
@@ -984,17 +988,103 @@ export default function Family() {
             </div>
           </div>
 
-          <div className="reveal" style={{ maxWidth: "640px", margin: "2rem auto 0", textAlign: "center" }}>
-            <p
-              style={{
-                fontFamily: "'Source Serif 4', serif",
-                fontSize: "0.95rem",
-                lineHeight: 1.9,
-                color: "oklch(0.3 0.005 285)",
-              }}
-            >
-              The engagement of Crown Prince Leopold von Habsburg and Fräulein Katharina von Richter was officially announced by the Imperial Chancery on the 15th of March, 2026. The portrait, painted in the manner of the Vienna Secession and bearing the inscription <em>Die Verlobung MMXXVI</em>, was unveiled at a private ceremony at the Hofburg attended by the Emperor and members of the Imperial Household.
-            </p>
+          {/* Artist & exhibition note */}
+          <div className="reveal" style={{ maxWidth: "680px", margin: "2.5rem auto 0" }}>
+
+            {/* Artist credit */}
+            <div style={{
+              display: "flex",
+              alignItems: "flex-start",
+              gap: "1.5rem",
+              padding: "1.75rem 2rem",
+              background: "oklch(0.99 0.008 85)",
+              border: `1px solid oklch(0.72 0.12 85 / 0.2)`,
+              marginBottom: "1.5rem",
+            }}>
+              <div style={{ flex: "0 0 3px", alignSelf: "stretch", background: GOLD, opacity: 0.6 }} />
+              <div>
+                <div style={{
+                  fontFamily: "'Cinzel', serif",
+                  fontSize: "0.5rem",
+                  letterSpacing: "0.25em",
+                  color: "oklch(0.55 0.08 85)",
+                  textTransform: "uppercase",
+                  marginBottom: "0.5rem",
+                }}>Artist</div>
+                <div style={{
+                  fontFamily: "'Cinzel', serif",
+                  fontSize: "1rem",
+                  fontWeight: 600,
+                  color: DARK,
+                  letterSpacing: "0.04em",
+                  marginBottom: "0.6rem",
+                }}>Leon Klimt</div>
+                <p style={{
+                  fontFamily: "'Source Serif 4', serif",
+                  fontSize: "0.9rem",
+                  lineHeight: 1.85,
+                  color: "oklch(0.3 0.005 285)",
+                }}>
+                  The engagement portrait <em>Die Verlobung MMXXVI</em> was painted by Leon Klimt using traditional oil techniques combined with modern nano-technology pigments — a process that allows the painting to age naturally over time, its colours deepening and shifting as decades pass. The nano-technology layer also permits the portrait to reflect changes in the subjects' dress, decorations, and jewels as new insignia are conferred, and to adapt its background as circumstances evolve. The work was unveiled at a private ceremony at the Hofburg in the spring of 2026, attended by the Emperor and members of the Imperial Household.
+                </p>
+              </div>
+            </div>
+
+            {/* Exhibition note */}
+            <div style={{
+              display: "flex",
+              alignItems: "flex-start",
+              gap: "1.5rem",
+              padding: "1.75rem 2rem",
+              background: "oklch(0.99 0.008 85)",
+              border: `1px solid oklch(0.72 0.12 85 / 0.2)`,
+            }}>
+              <div style={{ flex: "0 0 3px", alignSelf: "stretch", background: GOLD, opacity: 0.6 }} />
+              <div>
+                <div style={{
+                  fontFamily: "'Cinzel', serif",
+                  fontSize: "0.5rem",
+                  letterSpacing: "0.25em",
+                  color: "oklch(0.55 0.08 85)",
+                  textTransform: "uppercase",
+                  marginBottom: "0.5rem",
+                }}>Current Exhibition</div>
+                <div style={{
+                  fontFamily: "'Cinzel', serif",
+                  fontSize: "1rem",
+                  fontWeight: 600,
+                  color: DARK,
+                  letterSpacing: "0.04em",
+                  marginBottom: "0.6rem",
+                }}>Lower Belvedere · Klimt Museum</div>
+                <p style={{
+                  fontFamily: "'Source Serif 4', serif",
+                  fontSize: "0.9rem",
+                  lineHeight: 1.85,
+                  color: "oklch(0.3 0.005 285)",
+                }}>
+                  The portrait is currently on public exhibition at the Lower Belvedere, in the permanent collection of the Klimt Museum, Vienna. It will remain on display until <strong>April 2027</strong>, when it will be returned to the Hofburg Imperial Palace to take its permanent place in the Habsburg Portrait Gallery.
+                </p>
+                <div style={{
+                  marginTop: "1rem",
+                  display: "flex",
+                  gap: "2rem",
+                  flexWrap: "wrap",
+                }}>
+                  {[
+                    { label: "Venue", value: "Lower Belvedere, Vienna" },
+                    { label: "On display until", value: "April 2027" },
+                    { label: "Permanent home", value: "Hofburg, Habsburg Portrait Gallery" },
+                  ].map((item, i) => (
+                    <div key={i}>
+                      <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.45rem", letterSpacing: "0.2em", color: "oklch(0.55 0.08 85)", textTransform: "uppercase", marginBottom: "0.2rem" }}>{item.label}</div>
+                      <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.85rem", color: DARK, fontWeight: 600 }}>{item.value}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

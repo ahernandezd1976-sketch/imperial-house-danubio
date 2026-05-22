@@ -456,7 +456,7 @@ export default function Home() {
                   />
                 ))}
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/coat_of_arms_rudolf_crown-9ciVuAzzEns7mQyvQXFT4f.webp"
+                  src="/manus-storage/coat_of_arms_real_375cb88d.png"
                   alt="Imperial Coat of Arms of Austria-Danubio"
                   style={{
                     width: "100%",
@@ -465,6 +465,7 @@ export default function Home() {
                     padding: "1.5rem",
                     position: "relative",
                     zIndex: 1,
+                    mixBlendMode: "multiply",
                   }}
                 />
               </div>

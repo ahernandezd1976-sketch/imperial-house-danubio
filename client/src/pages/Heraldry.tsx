@@ -206,7 +206,7 @@ export default function Heraldry() {
                   color: "oklch(0.25 0.005 285)",
                 }}
               >
-                The Imperial Crown depicted above the shield in the arms is a heraldic representation of sovereignty. The actual coronation regalia of the dynasty is the Federation Crown — commissioned by Emperor Franz Ferdinand I in 1920 and completed in 1923 — which replaced the earlier practice of crowning the sovereign as King of Hungary with the Hungarian Holy Crown.
+                The Imperial Crown depicted above the shield in the arms is a heraldic representation of sovereignty. The Austrian Imperial title is inherited by dynastic right and has never required a coronation ceremony. The Federation Crown — commissioned by Emperor Franz Ferdinand I in 1920 and completed in 1923 — is the supreme symbol of Imperial authority, displayed at state occasions and accession proclamations, not placed upon the sovereign's head in a coronation rite. The sole coronation ceremony observed by the dynasty is the ancient rite of the Apostolic King of Hungary, performed in Budapest with the Holy Crown of Saint Stephen.
               </p>
             </div>
           </div>
@@ -517,7 +517,7 @@ export default function Heraldry() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Founded by Emperor Leopold-Karl I on the day of his coronation, the 12th of June, 1867, the Order of the Golden Eagle is the supreme order of chivalry of the Imperial House of Austria-Danubio. It is awarded exclusively by the Emperor, acting on his personal initiative, and is limited to twelve living members at any one time.
+                Founded by Emperor Leopold-Karl I on the 12th of June, 1867 — the day of the proclamation of the Danubian Confederation — the Order of the Golden Eagle is the supreme order of chivalry of the Imperial House of Austria-Danubio. It is awarded exclusively by the Emperor, acting on his personal initiative, and is limited to twelve living members at any one time.
               </p>
               <p
                 style={{
@@ -797,7 +797,7 @@ export default function Heraldry() {
                   marginBottom: "1.5rem",
                 }}
               >
-                The Federation Crown replaced the earlier practice, observed throughout the nineteenth century, of crowning the sovereign as King of Hungary with the ancient Hungarian Holy Crown of Saint Stephen. The new crown was conceived as a symbol of the Confederation's unity rather than of any single kingdom's precedence. It has been placed upon the head of every Emperor since Franz Ferdinand I at his coronation in 1923. Between coronations it is kept in the Imperial Treasury at the Hofburg, where it may be viewed by appointment through the Office of the Grand Chamberlain.
+                The Federation Crown was conceived as a symbol of the Confederation's unity, replacing the earlier tradition — observed throughout the nineteenth century — by which the dynasty's authority over the Hungarian kingdom was expressed through the coronation as Apostolic King of Hungary with the ancient Holy Crown of Saint Stephen in Budapest. The Austrian Imperial title itself has always been inherited by right of succession, never conferred by crowning. The Federation Crown is displayed at the Proclamation of a new Emperor from the Hofburg balcony, at state openings of the Imperial Diet, and at the Hungarian Coronation in Budapest. Between these occasions it is kept in the Imperial Treasury at the Hofburg, where it may be viewed by appointment through the Office of the Grand Chamberlain.
               </p>
               <div
                 style={{

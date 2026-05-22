@@ -82,7 +82,7 @@ const properties = [
     description:
       "Set within an English landscape park of over 250 hectares, the Laxenburg complex comprises the Blue Court, the Franzensburg — a romantic neo-Gothic castle on an island in the palace lake — and the Old Palace. For centuries the preferred spring retreat of the Imperial family, Laxenburg retains an atmosphere of quiet, pastoral grandeur far removed from the ceremonial weight of the Vienna residences.",
     visitNote: "Open to the public on the second Saturday of each month, 10:00–15:00.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
+    image: "/manus-storage/laxenburg_palace_736e60bb.png",
     tag: "Country Retreat",
     tagColor: "oklch(0.45 0.07 150)",
   },
@@ -96,7 +96,7 @@ const properties = [
     description:
       "Crowning the Castle Hill above the Danube, the Royal Palace of Budapest is the historic seat of the Hungarian Crown within the Danubian Confederation. Its Neo-Baroque façade, rebuilt after the devastation of the Second World War, overlooks the Chain Bridge and the Parliament across the river. The throne room and the Hungarian state apartments are among the most splendid interiors in Central Europe.",
     visitNote: "Open to the public on the third Saturday of each month, 10:00–15:00.",
-    image: "https://images.unsplash.com/photo-1541849546-216549ae216d?w=900&q=80",
+    image: "/manus-storage/budapest_castle_a9b51aa6.webp",
     tag: "Royal Palace",
     tagColor: "oklch(0.5 0.15 30)",
   },
@@ -110,7 +110,7 @@ const properties = [
     description:
       "Prague Castle — Pražský hrad — is the largest ancient castle complex in the world, encompassing palaces, churches, gardens, and galleries spread across a hilltop above the Vltava. The Imperial apartments within the Old Royal Palace and the Spanish Hall served as the Bohemian seat of the dynasty for centuries. The Cathedral of St. Vitus, containing the Bohemian Crown Jewels, stands at its heart.",
     visitNote: "Open to the public on the first and third Sunday of each month, 09:00–14:00.",
-    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=900&q=80",
+    image: "https://images.unsplash.com/photo-1541849546-216549ae216d?w=1200&q=85",
     tag: "Bohemian Seat",
     tagColor: "oklch(0.4 0.1 260)",
   },
@@ -124,7 +124,7 @@ const properties = [
     description:
       "Perched on a rocky promontory above the Gulf of Trieste, Miramare Castle was built between 1856 and 1860 for Archduke Maximilian of Austria. Its white Neo-Gothic towers rise directly from the Adriatic Sea, surrounded by a park of exotic trees and formal gardens. The castle's interiors — preserved almost entirely in their original state — evoke the romantic sensibility of the mid-nineteenth century Imperial court.",
     visitNote: "Open to the public on the second Saturday of each month, 10:00–16:00.",
-    image: "https://images.unsplash.com/photo-1555993539-1732b0258235?w=900&q=80",
+    image: "/manus-storage/miramare_castle_756fbc7c.png",
     tag: "Adriatic Villa",
     tagColor: "oklch(0.45 0.1 220)",
   },
@@ -138,7 +138,7 @@ const properties = [
     description:
       "Built by Emperor Franz Joseph I as a personal retreat for the Empress Elisabeth within the Lainzer Tiergarten nature reserve, the Hermes Villa is a Historicist jewel of intimate scale. Its rooms, decorated by Hans Makart and Gustav Klimt, reflect the refined private taste of the Imperial couple. Surrounded by ancient woodland, the villa remains one of the most atmospheric of the Imperial residences.",
     visitNote: "Open to the public on the fourth Saturday of each month, 10:00–14:00.",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80",
+    image: "/manus-storage/hermes_villa_7f607740.png",
     tag: "Hunting Lodge",
     tagColor: "oklch(0.45 0.07 150)",
   },
@@ -503,24 +503,23 @@ export default function Properties() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {properties.map((prop, i) => (
               <div
                 key={prop.id}
                 className="reveal"
                 style={{
                   transitionDelay: `${(i % 4) * 0.1}s`,
-                  border: `1px solid oklch(0.72 0.12 85 / 0.15)`,
+                  border: `1px solid ${activeProperty === prop.id ? GOLD : "oklch(0.72 0.12 85 / 0.15)"}`,
                   overflow: "hidden",
                   cursor: "pointer",
-                  transition: "border-color 0.3s ease, transform 0.3s ease",
-                  transform: activeProperty === prop.id ? "scale(1.01)" : "scale(1)",
-                  borderColor: activeProperty === prop.id ? GOLD : "oklch(0.72 0.12 85 / 0.15)",
+                  transition: "border-color 0.3s ease, box-shadow 0.3s ease",
+                  boxShadow: activeProperty === prop.id ? `0 0 40px oklch(0.72 0.12 85 / 0.15)` : "none",
                 }}
                 onClick={() => setActiveProperty(activeProperty === prop.id ? null : prop.id)}
               >
-                {/* Image */}
-                <div style={{ position: "relative", height: "240px", overflow: "hidden" }}>
+                {/* Image — expands on click */}
+                <div style={{ position: "relative", height: activeProperty === prop.id ? "420px" : "240px", overflow: "hidden", transition: "height 0.5s cubic-bezier(0.23,1,0.32,1)" }}>
                   <img
                     src={prop.image}
                     alt={prop.name}
@@ -528,9 +527,9 @@ export default function Properties() {
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
-                      transition: "transform 0.6s ease",
-                      transform: activeProperty === prop.id ? "scale(1.05)" : "scale(1)",
-                      filter: "brightness(0.75) saturate(0.8)",
+                      transition: "transform 0.6s ease, filter 0.4s ease",
+                      transform: activeProperty === prop.id ? "scale(1.03)" : "scale(1)",
+                      filter: activeProperty === prop.id ? "brightness(0.85) saturate(1)" : "brightness(0.75) saturate(0.8)",
                     }}
                   />
                   <div

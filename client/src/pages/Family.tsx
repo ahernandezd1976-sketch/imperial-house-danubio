@@ -1146,43 +1146,25 @@ export default function Family() {
                   ))}
                 </div>
 
-                {/* Visit button */}
-                <div style={{ marginTop: "1.5rem" }}>
-                  <a
-                    href="https://www.belvedere.at"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "0.5rem",
-                      fontFamily: "'Cinzel', serif",
-                      fontSize: "0.55rem",
-                      letterSpacing: "0.2em",
-                      textTransform: "uppercase",
-                      color: CREAM,
-                      background: DARK,
-                      border: `1px solid oklch(0.72 0.12 85 / 0.4)`,
-                      padding: "0.75rem 1.5rem",
-                      textDecoration: "none",
-                      transition: "all 0.2s cubic-bezier(0.23, 1, 0.32, 1)",
-                    }}
-                    onMouseEnter={e => {
-                      (e.currentTarget as HTMLAnchorElement).style.background = "oklch(0.72 0.12 85)";
-                      (e.currentTarget as HTMLAnchorElement).style.color = DARK;
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "oklch(0.72 0.12 85)";
-                    }}
-                    onMouseLeave={e => {
-                      (e.currentTarget as HTMLAnchorElement).style.background = DARK;
-                      (e.currentTarget as HTMLAnchorElement).style.color = CREAM;
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "oklch(0.72 0.12 85 / 0.4)";
-                    }}
-                  >
-                    Visit the Exhibition
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ flexShrink: 0 }}>
-                      <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
+                {/* Exhibition address note */}
+                <div style={{
+                  marginTop: "1.25rem",
+                  paddingTop: "1rem",
+                  borderTop: `1px solid oklch(0.72 0.12 85 / 0.15)`,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.6rem",
+                }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, opacity: 0.7 }}>
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                    <circle cx="12" cy="9" r="2.5"/>
+                  </svg>
+                  <span style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "0.85rem",
+                    color: "oklch(0.4 0.005 285)",
+                    fontStyle: "italic",
+                  }}>Lower Belvedere, Rennweg 6, 1030 Vienna — open daily 10:00–18:00</span>
                 </div>
 
               </div>

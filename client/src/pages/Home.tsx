@@ -425,24 +425,42 @@ export default function Home() {
 
             {/* Coat of arms */}
             <div className="reveal flex justify-center" style={{ transitionDelay: "0.2s" }}>
-              <div style={{
-                position: "relative",
-                maxWidth: "380px",
-                width: "100%",
-                backgroundColor: "oklch(0.97 0.012 85)",
-                border: `1px solid oklch(0.72 0.12 85 / 0.35)`,
-                boxShadow: `0 0 0 4px oklch(0.96 0.015 85), 0 0 0 5px oklch(0.72 0.12 85 / 0.25), 0 8px 32px oklch(0.09 0.005 285 / 0.18)`,
-              }}>
-                {/* Corner ornaments */}
+              {/* Outer diamond ornament wrapper */}
+              <div style={{ position: "relative", maxWidth: "380px", width: "100%" }}>
+
+                {/* Diamond ornaments — top, bottom, left, right midpoints */}
                 {[
-                  { top: -8, left: -8 },
-                  { top: -8, right: -8 },
-                  { bottom: -8, left: -8 },
-                  { bottom: -8, right: -8 },
+                  { top: -10, left: "50%", transform: "translateX(-50%) rotate(45deg)" },
+                  { bottom: -10, left: "50%", transform: "translateX(-50%) rotate(45deg)" },
+                  { top: "50%", left: -10, transform: "translateY(-50%) rotate(45deg)" },
+                  { top: "50%", right: -10, transform: "translateY(-50%) rotate(45deg)" },
                 ].map((pos, i) => (
-                  <div
-                    key={i}
-                    style={{
+                  <div key={i} style={{
+                    position: "absolute",
+                    width: "14px",
+                    height: "14px",
+                    background: GOLD,
+                    opacity: 0.55,
+                    zIndex: 3,
+                    ...pos,
+                  }} />
+                ))}
+
+                {/* Inner frame */}
+                <div style={{
+                  position: "relative",
+                  backgroundColor: "oklch(0.97 0.012 85)",
+                  border: `1px solid oklch(0.72 0.12 85 / 0.35)`,
+                  boxShadow: `0 0 0 4px oklch(0.96 0.015 85), 0 0 0 5px oklch(0.72 0.12 85 / 0.25), 0 8px 32px oklch(0.09 0.005 285 / 0.18)`,
+                }}>
+                  {/* Corner L-brackets */}
+                  {[
+                    { top: -8, left: -8 },
+                    { top: -8, right: -8 },
+                    { bottom: -8, left: -8 },
+                    { bottom: -8, right: -8 },
+                  ].map((pos, i) => (
+                    <div key={i} style={{
                       position: "absolute",
                       width: "20px",
                       height: "20px",
@@ -452,22 +470,30 @@ export default function Home() {
                       borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
                       ...pos,
                       zIndex: 2,
+                    }} />
+                  ))}
+
+                  {/* Dark band top */}
+                  <div style={{ height: "10px", background: DARK, opacity: 0.85 }} />
+
+                  <img
+                    src="/manus-storage/coat_of_arms_real_375cb88d.png"
+                    alt="Imperial Coat of Arms of Austria-Danubio"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      display: "block",
+                      padding: "1rem 1.5rem",
+                      position: "relative",
+                      zIndex: 1,
+                      mixBlendMode: "multiply",
                     }}
                   />
-                ))}
-                <img
-                  src="/manus-storage/coat_of_arms_real_375cb88d.png"
-                  alt="Imperial Coat of Arms of Austria-Danubio"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    display: "block",
-                    padding: "1.5rem",
-                    position: "relative",
-                    zIndex: 1,
-                    mixBlendMode: "multiply",
-                  }}
-                />
+
+                  {/* Dark band bottom — mirrors the top */}
+                  <div style={{ height: "10px", background: DARK, opacity: 0.85 }} />
+
+                </div>
               </div>
             </div>
           </div>

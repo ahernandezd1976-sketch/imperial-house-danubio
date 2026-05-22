@@ -3,7 +3,7 @@
  * Real characters: Emperor Maximilian I and the Imperial Household
  * Portrait: Official family photograph, Palais Danubio
  */
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -11,6 +11,118 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
+
+// Sub-component: engagement portrait video with touch-to-activate audio
+function PaintingVideo() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [activated, setActivated] = useState(false);
+
+  const handleTouch = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = false;
+    v.play().catch(() => {});
+    setActivated(true);
+  };
+
+  return (
+    <div className="reveal" style={{ position: "relative", maxWidth: "720px", margin: "0 auto" }}>
+      {[
+        { top: -12, left: -12 },
+        { top: -12, right: -12 },
+        { bottom: -12, left: -12 },
+        { bottom: -12, right: -12 },
+      ].map((pos, i) => (
+        <div key={i} style={{
+          position: "absolute",
+          width: "28px",
+          height: "28px",
+          borderTop: i < 2 ? `2px solid ${GOLD}` : "none",
+          borderBottom: i >= 2 ? `2px solid ${GOLD}` : "none",
+          borderLeft: i % 2 === 0 ? `2px solid ${GOLD}` : "none",
+          borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
+          ...pos,
+          zIndex: 2,
+        }} />
+      ))}
+
+      {/* Video + overlay */}
+      <div style={{ position: "relative" }}>
+        <video
+          ref={videoRef}
+          src="/manus-storage/klimt_engagement_portrait_4e104b52.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            boxShadow: "0 20px 60px oklch(0.09 0.005 285 / 0.25)",
+          }}
+        />
+
+        {/* Touch overlay — disappears after first click */}
+        {!activated && (
+          <div
+            onClick={handleTouch}
+            style={{
+              position: "absolute",
+              inset: 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "1rem",
+              background: "oklch(0.09 0.005 285 / 0.42)",
+              cursor: "pointer",
+              backdropFilter: "blur(1px)",
+            }}
+          >
+            <div style={{
+              width: "64px",
+              height: "64px",
+              borderRadius: "50%",
+              border: `2px solid ${GOLD}`,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 11V6a2 2 0 0 0-4 0v5" />
+                <path d="M14 10V4a2 2 0 0 0-4 0v6" />
+                <path d="M10 10.5V6a2 2 0 0 0-4 0v8" />
+                <path d="M6 14a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4v-2.5" />
+              </svg>
+            </div>
+            <span style={{
+              fontFamily: "'Cinzel', serif",
+              fontSize: "0.6rem",
+              letterSpacing: "0.25em",
+              textTransform: "uppercase",
+              color: GOLD,
+            }}>Touch the Painting</span>
+          </div>
+        )}
+      </div>
+
+      {/* Name bar */}
+      <div style={{
+        background: DARK,
+        padding: "0.85rem 1.5rem",
+        display: "flex",
+        justifyContent: "center",
+        gap: "2rem",
+        flexWrap: "wrap",
+      }}>
+        <span style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.15em", color: "oklch(0.55 0.01 85)", textTransform: "uppercase" }}>Crown Prince Leopold von Habsburg</span>
+        <span style={{ color: GOLD, fontFamily: "'Cinzel', serif", fontSize: "0.55rem" }}>·</span>
+        <span style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.15em", color: "oklch(0.55 0.01 85)", textTransform: "uppercase" }}>Katharina von Richter</span>
+      </div>
+    </div>
+  );
+}
 
 // Right to left in the official portrait (as viewed)
 const familyMembers = [
@@ -936,57 +1048,8 @@ export default function Family() {
             </p>
           </div>
 
-          {/* Video portrait */}
-          <div className="reveal" style={{ position: "relative", maxWidth: "720px", margin: "0 auto" }}>
-            {[
-              { top: -12, left: -12 },
-              { top: -12, right: -12 },
-              { bottom: -12, left: -12 },
-              { bottom: -12, right: -12 },
-            ].map((pos, i) => (
-              <div
-                key={i}
-                style={{
-                  position: "absolute",
-                  width: "28px",
-                  height: "28px",
-                  borderTop: i < 2 ? `2px solid ${GOLD}` : "none",
-                  borderBottom: i >= 2 ? `2px solid ${GOLD}` : "none",
-                  borderLeft: i % 2 === 0 ? `2px solid ${GOLD}` : "none",
-                  borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
-                  ...pos,
-                  zIndex: 2,
-                }}
-              />
-            ))}
-            <video
-              src="/manus-storage/klimt_engagement_portrait_4e104b52.mp4"
-              autoPlay
-              loop
-              playsInline
-              controls
-              style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-                boxShadow: "0 20px 60px oklch(0.09 0.005 285 / 0.25)",
-              }}
-            />
-            <div
-              style={{
-                background: DARK,
-                padding: "0.85rem 1.5rem",
-                display: "flex",
-                justifyContent: "center",
-                gap: "2rem",
-                flexWrap: "wrap",
-              }}
-            >
-              <span style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.15em", color: "oklch(0.55 0.01 85)", textTransform: "uppercase" }}>Crown Prince Leopold von Habsburg</span>
-              <span style={{ color: GOLD, fontFamily: "'Cinzel', serif", fontSize: "0.55rem" }}>·</span>
-              <span style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.15em", color: "oklch(0.55 0.01 85)", textTransform: "uppercase" }}>Katharina von Richter</span>
-            </div>
-          </div>
+          {/* Video portrait — touch-to-activate */}
+          <PaintingVideo />
 
           {/* Artist & exhibition note */}
           <div className="reveal" style={{ maxWidth: "680px", margin: "2.5rem auto 0" }}>

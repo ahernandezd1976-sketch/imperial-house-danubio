@@ -14,62 +14,61 @@ const CREAM = "oklch(0.96 0.015 85)";
 const eras = [
   {
     numeral: "I",
-    period: "1867 – 1890",
-    title: "The Founding Era",
-    emperor: "Leopold-Karl I",
-    subtitle: "The Eagle Takes Flight",
+    period: "1848 – 1916",
+    title: "The Reign of Franz Joseph I",
+    emperor: "Franz Joseph I",
+    subtitle: "The Old Emperor",
     paragraphs: [
-      "The Imperial House of Austria-Danubio was formally constituted on the 12th of June, 1867, with the signing of the Treaty of Neustadt. This landmark accord united the ancient Habsburg-Lorraine line with the noble House of Danubio through the marriage of Archduke Leopold-Karl and Princess Maria Theresa, daughter of the last reigning Duke of the Danubian Marches.",
-      "Leopold-Karl I, the first Emperor of Austria-Danubio, proved himself a statesman of exceptional vision. He oversaw the drafting of the Danubian Confederation Charter, which federated seven distinct principalities under a single imperial crown while preserving the autonomy of each constituent state. His reign also saw the construction of the Palais Danubio, the Imperial Opera House, and the founding of the University of Neustadt.",
-      "The Founding Era was defined by rapid industrialisation along the Danube corridor, the establishment of the Imperial Railway Network, and the flourishing of a distinctly Danubian cultural identity — one that blended Germanic, Slavic, and Latin influences into a unique artistic and intellectual tradition.",
+      "The history of the Imperial House follows the real Habsburg-Lorraine dynasty without deviation until the outbreak of the Great War. Emperor Franz Joseph I ascended to the throne on 2 December 1848, at the age of eighteen, following the abdication of his uncle Ferdinand I during the revolutionary upheavals that swept Europe. His reign of sixty-eight years would become the longest in Habsburg history and one of the longest of any European monarch.",
+      "Franz Joseph presided over the Compromise of 1867 — the Ausgleich — which transformed the Austrian Empire into the Austro-Hungarian Dual Monarchy, granting Hungary equal constitutional status. He was crowned Apostolic King of Hungary in Budapest on 8 June 1867, with the ancient Holy Crown of Saint Stephen, the only coronation ceremony the dynasty observed. The Austrian Imperial title itself was inherited by right of succession and never conferred by crowning.",
+      "His reign encompassed the construction of the Ringstrasse, the flourishing of Viennese culture, the tragedies of his son Rudolf's death at Mayerling in 1889 and his wife Elisabeth's assassination in Geneva in 1898, and the long twilight years of an empire straining under the pressures of nationalism and modernity. Franz Joseph died on 21 November 1916, as the Great War raged, having reigned through an era of extraordinary transformation.",
     ],
   },
   {
     numeral: "II",
-    period: "1890 – 1918",
-    title: "The Golden Age",
-    emperor: "Karl-Josef I",
-    subtitle: "The River in Full Flow",
+    period: "1914 – 1917",
+    title: "The Great War & The Divergence",
+    emperor: "Franz Ferdinand I (as Archduke)",
+    subtitle: "The Point of Departure",
     paragraphs: [
-      "The reign of Emperor Karl-Josef I is remembered as the zenith of the Danubian Confederation's cultural and economic power. The Imperial capital of Neustadt became one of the great cities of Central Europe, rivalling Vienna and Budapest in its architectural ambition and intellectual vitality. The Vienna Secession movement found a warm reception at the Danubian court, and the Emperor himself was a noted patron of the arts.",
-      "The Imperial Academy of Sciences was founded in 1895, and the Danubian School of Music produced composers and performers of international renown. The Grand Exhibition of 1900, held on the grounds of the Palais Danubio, attracted visitors from across Europe and cemented the Confederation's reputation as a centre of civilisation.",
-      "The Golden Age came to an abrupt end with the outbreak of the Great War in 1914. The Danubian Confederation, bound by treaty to the Central Powers, found itself drawn into a conflict that would reshape the political map of Europe and test the foundations of the imperial order.",
+      "In our timeline, Archduke Franz Ferdinand, heir to the throne, was assassinated in Sarajevo on 28 June 1914, an act that ignited the First World War. In the world of this dynasty, history diverges at that very moment: the assassination attempt fails. The Archduke's motorcade takes a different route; the shots fired by Gavrilo Princip miss their mark. Franz Ferdinand survives.",
+      "The diplomatic crisis of July 1914 still unfolds — the ultimatum to Serbia, the mobilisations — but with the heir alive and his voice carrying weight in the Imperial Council, the war that begins is fought with a different objective. Franz Ferdinand, long an advocate of a reformed 'United States of Greater Austria,' uses the conflict to accelerate the restructuring of the empire rather than merely defend it.",
+      "By 1916, with Franz Joseph's death, Franz Ferdinand accedes to the throne as Emperor Franz Ferdinand I. He immediately opens armistice negotiations, and by the Treaty of Brest-Litovsk in 1917 and the subsequent Armistice of Vienna, the war ends on terms that leave the Central Powers' core territories largely intact. The stage is set for a radical reimagining of the Danubian realm.",
     ],
   },
   {
     numeral: "III",
-    period: "1918 – 1945",
-    title: "The Age of Reform",
-    emperor: "Franz-Josef II",
-    subtitle: "The Eagle Adapts",
+    period: "1917 – 1936",
+    title: "The Founding of the Danubian Federation",
+    emperor: "Franz Ferdinand I",
+    subtitle: "The Eagle Reborn",
     paragraphs: [
-      "The aftermath of the Great War brought the Danubian Confederation to the brink of dissolution. Nationalist movements within the federated principalities demanded greater autonomy, and the old imperial order faced its gravest challenge. Emperor Franz-Josef II, a man of pragmatic temperament and genuine democratic sympathies, chose the path of reform over repression.",
-      "The Constitutional Charter of 1918 transformed the Danubian Confederation into a constitutional monarchy, establishing a bicameral parliament, an independent judiciary, and a Bill of Rights modelled on the most progressive documents of the age. The Emperor retained significant ceremonial and diplomatic powers, but executive authority passed to an elected Chancellor.",
-      "The interwar decades were marked by economic hardship, political turbulence, and the shadow of rising authoritarian movements across Europe. The Danubian Confederation maintained its independence and democratic character through a combination of diplomatic skill, geographic advantage, and the personal authority of the Emperor, who remained a symbol of continuity and legitimacy throughout the crisis years.",
+      "The Treaty of Vienna of 1917 formally dissolved the Austro-Hungarian Dual Monarchy and replaced it with the Danubian Federation — a constitutional union of fifteen sovereign states stretching from Bohemia and Moravia in the north to Croatia and Slovenia in the south, with Austria and Hungary as the two largest constituent kingdoms. Each state retained its own parliament, language rights, and legal traditions; the Emperor served as head of state of the whole, with executive authority vested in a Federal Chancellor elected by the Imperial Diet.",
+      "Emperor Franz Ferdinand I commissioned the Federation Crown in 1920 as the supreme symbol of this new order — not a coronation crown, for the Imperial title remained hereditary, but a ceremonial object embodying the unity of all fifteen states. Crafted in platinum by the Viennese atelier of Köchert & Söhne and completed in 1923, its fifteen towers represent each member state. The Hungarian coronation rite in Budapest, with the Holy Crown of Saint Stephen, was preserved as the sole traditional crowning ceremony of the dynasty.",
+      "Franz Ferdinand I died in 1936, having transformed a crumbling empire into a functioning federal state. He is remembered as the dynasty's greatest reformer — the Emperor who chose architecture over ruin.",
     ],
   },
   {
     numeral: "IV",
-    period: "1945 – 1998",
-    title: "The Modern Era",
-    emperor: "Franz-Leopold III",
-    subtitle: "Rebuilding the Realm",
+    period: "1936 – 1989",
+    title: "The Age of Endurance",
+    emperor: "Friedrich I & Otto I",
+    subtitle: "Through War and Cold",
     paragraphs: [
-      "Emperor Franz-Leopold III ascended to the throne in 1945, inheriting a Confederation that had survived the Second World War largely intact but deeply shaken. His long reign of fifty-three years was devoted to reconstruction, reconciliation, and the careful modernisation of Danubian society and institutions.",
-      "The post-war decades saw the Danubian Confederation emerge as a model of Central European stability. The Emperor's personal diplomacy helped secure the Confederation's neutrality during the Cold War, and Neustadt became a favoured venue for international negotiations. The economy was rebuilt on foundations of manufacturing, tourism, and financial services, and living standards rose steadily through the second half of the twentieth century.",
-      "Franz-Leopold III was also a devoted patron of the arts and sciences. The Danubian National Museum, the Imperial Library, and the Neustadt Philharmonic all received significant imperial support during his reign. He died on the 3rd of September, 1998, having reigned longer than any other Emperor of Austria-Danubio.",
+      "Emperor Friedrich I (r. 1936–1955) guided the Danubian Federation through the Second World War, maintaining a precarious neutrality until 1943 before joining the Allied cause. The Federation's geographic position at the heart of Europe made it a critical theatre of diplomacy and intelligence throughout the conflict. The Neustadt Accords of 1945 confirmed the Federation's borders and its status as a neutral constitutional monarchy in the new post-war order.",
+      "Emperor Otto I (r. 1955–1989) presided over the longest reign since Franz Joseph. His era saw the Federation emerge as a model of Central European stability during the Cold War — Neustadt became a favoured venue for East-West negotiations, and the Federation's multilingual civil service and federal institutions were studied by constitutional reformers across the world. Otto I died in 1989, the year the Iron Curtain fell, having witnessed the vindication of the federal model his great-grandfather had built.",
     ],
   },
   {
     numeral: "V",
-    period: "1998 – Present",
+    period: "1989 – Present",
     title: "The Contemporary Reign",
-    emperor: "Karl-Heinrich II",
+    emperor: "Maximilian I",
     subtitle: "Eagle and River, Renewed",
     paragraphs: [
-      "His Imperial Majesty Karl-Heinrich II has reigned since the 7th of September, 1998. His accession was marked by a solemn ceremony at the Cathedral of Neustadt, attended by heads of state from across Europe and beyond. The new Emperor brought to the throne a combination of traditional values and forward-looking vision that has defined his reign.",
-      "Under Karl-Heinrich II, the Danubian Confederation has deepened its engagement with European institutions while maintaining its distinctive constitutional character. The Emperor has been a vocal advocate for cultural diplomacy, environmental stewardship of the Danube river system, and the preservation of the Confederation's multilingual heritage.",
-      "The Imperial House today maintains its ceremonial, diplomatic, and cultural functions with a staff of several hundred at the Palais Danubio. The Emperor and Empress conduct several hundred official engagements per year, and the House's charitable foundations support education, the arts, and social welfare across the Confederation.",
+      "His Imperial Majesty Emperor Maximilian I has reigned since 1989 — nineteen years on the throne as of 2026, having inherited at a moment of historic transformation as the Cold War ended and the Federation's eastern neighbours began their own democratic transitions. His accession was proclaimed from the Hofburg balcony in Vienna, with the Federation Crown displayed on its ceremonial cushion, before a gathering of heads of state.",
+      "The Emperor's reign has been marked by deep personal tragedy: the death of his beloved Empress in the fire at the Paris Ritz in the year 2000, a loss from which he has never fully recovered publicly, though he has continued his duties with unwavering dedication. He has raised his children — Crown Prince Leopold and Archduchess Eleonora — with the same sense of duty that has defined the dynasty for generations.",
+      "Today, the Danubian Federation stands as one of Europe's most stable and prosperous constitutional monarchies. The forthcoming betrothal of Crown Prince Leopold von Habsburg to Katharina von Richter, announced in 2026, has been greeted with widespread celebration across the fifteen member states, heralding a new chapter in the dynasty's long history.",
     ],
   },
 ];
@@ -143,7 +142,7 @@ export default function History() {
                 whiteSpace: "nowrap",
               }}
             >
-              1867 – Present
+              1848 – Present
             </div>
           </div>
         </div>
@@ -304,13 +303,11 @@ export default function History() {
               </thead>
               <tbody>
                 {[
-                  { n: "I", name: "Leopold-Karl I", reign: "1867–1890", life: "1828–1890", note: "Founder of the Imperial House; drafted the Confederation Charter. Crowned King of Hungary with the Holy Crown of Saint Stephen." },
-                  { n: "II", name: "Karl-Josef I", reign: "1890–1916", life: "1855–1916", note: "Patron of the arts; presided over the Golden Age. Crowned King of Hungary." },
-                  { n: "III", name: "Maria-Sophia I", reign: "1916–1918", life: "1880–1952", note: "First Empress Regnant; negotiated the Armistice of Neustadt. Crowned Queen of Hungary." },
-                  { n: "IV", name: "Franz Ferdinand I", reign: "1918–1936", life: "1878–1936", note: "Reconstituted the Danubian Confederation; commissioned the Federation Crown in 1920. First Emperor crowned with the new regalia (1923)." },
-                  { n: "V", name: "Friedrich I", reign: "1936–1955", life: "1905–1955", note: "Guided the Empire through the Second World War; signed the Neustadt Accords." },
-                  { n: "VI", name: "Otto I", reign: "1955–1989", life: "1930–1989", note: "Longest-reigning Emperor; architect of post-war recovery and Danubian integration." },
-                  { n: "VII", name: "Maximilian I", reign: "2007–present", life: "1954–", note: "Current Emperor; 19 years on the throne. Widower since the death of the Empress in 2000." },
+                  { n: "I", name: "Franz Joseph I", reign: "1848–1916", life: "1830–1916", note: "Longest-reigning Habsburg Emperor. Signed the Ausgleich of 1867; crowned Apostolic King of Hungary in Budapest, 1867." },
+                  { n: "II", name: "Franz Ferdinand I", reign: "1916–1936", life: "1863–1936", note: "Survived the Sarajevo assassination attempt (1914); ended the Great War; founded the Danubian Federation (1917); commissioned the Federation Crown (1920, completed 1923)." },
+                  { n: "III", name: "Friedrich I", reign: "1936–1955", life: "1902–1955", note: "Guided the Federation through the Second World War; maintained neutrality until 1943; signed the Neustadt Accords (1945)." },
+                  { n: "IV", name: "Otto I", reign: "1955–1989", life: "1912–1989", note: "Presided over post-war recovery and Cold War neutrality; Neustadt became a centre of East-West diplomacy." },
+                  { n: "V", name: "Maximilian I", reign: "1989–present", life: "1954–", note: "Current Emperor; 37 years on the throne. Widower since the death of the Empress in the Paris Ritz fire, 2000." },
                 ].map((row, i) => (
                   <tr
                     key={i}

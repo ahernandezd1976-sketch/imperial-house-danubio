@@ -213,6 +213,133 @@ export default function Heraldry() {
         </div>
       </section>
 
+      {/* The Austrian Imperial Crown */}
+      <section style={{ backgroundColor: CREAM, padding: "6rem 0" }}>
+        <div className="container">
+          <div className="reveal grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Crown image */}
+            <div
+              style={{
+                position: "relative",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  position: "relative",
+                  maxWidth: "480px",
+                  width: "100%",
+                  background: "oklch(0.09 0.005 285)",
+                  padding: "1.5rem",
+                }}
+              >
+                {[
+                  { top: -10, left: -10 },
+                  { top: -10, right: -10 },
+                  { bottom: -10, left: -10 },
+                  { bottom: -10, right: -10 },
+                ].map((pos, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      position: "absolute",
+                      width: "24px",
+                      height: "24px",
+                      borderTop: i < 2 ? `2px solid ${GOLD}` : "none",
+                      borderBottom: i >= 2 ? `2px solid ${GOLD}` : "none",
+                      borderLeft: i % 2 === 0 ? `2px solid ${GOLD}` : "none",
+                      borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
+                      ...pos,
+                    }}
+                  />
+                ))}
+                <img
+                  src="/manus-storage/austrian_imperial_crown_b4cbcc2a.jpg"
+                  alt="The Austrian Imperial Crown — Crown of Rudolf II, 1602"
+                  style={{ width: "100%", height: "auto", display: "block" }}
+                />
+                <p
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontStyle: "italic",
+                    fontSize: "0.8rem",
+                    color: GOLD,
+                    textAlign: "center",
+                    marginTop: "0.75rem",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  The Austrian Imperial Crown &nbsp;·&nbsp; Crown of Rudolf II, 1602 &nbsp;·&nbsp; Kunsthistorisches Museum, Vienna
+                </p>
+              </div>
+            </div>
+
+            {/* Crown text */}
+            <div>
+              <div
+                style={{
+                  fontFamily: "'Cinzel', serif",
+                  fontSize: "0.6rem",
+                  letterSpacing: "0.3em",
+                  color: "oklch(0.55 0.08 85)",
+                  textTransform: "uppercase",
+                  marginBottom: "1rem",
+                }}
+              >
+                II &nbsp;·&nbsp; The Imperial Crown
+              </div>
+              <h2
+                style={{
+                  fontFamily: "'Cinzel', serif",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
+                  fontWeight: 600,
+                  color: DARK,
+                  lineHeight: 1.2,
+                  marginBottom: "1.5rem",
+                }}
+              >
+                The Crown of Rudolf II
+              </h2>
+              <div style={{ height: "1px", background: `linear-gradient(90deg, ${GOLD}, transparent)`, marginBottom: "1.5rem" }} />
+              <p
+                style={{
+                  fontFamily: "'Source Serif 4', serif",
+                  fontSize: "1rem",
+                  lineHeight: 1.9,
+                  color: "oklch(0.25 0.005 285)",
+                  marginBottom: "1.25rem",
+                }}
+              >
+                The Austrian Imperial Crown — formally the Crown of Rudolf II — was crafted in Prague in 1602 by the goldsmith Jan Vermeyen for Emperor Rudolf II. It is the most significant object in the Habsburg treasury: a masterpiece of Mannerist goldsmithery set with rubies, sapphires, spinels, and pearls, surmounted by a great blue sapphire. It served as the private crown of the Holy Roman Emperors and, from 1804, as the crown of the Austrian Empire.
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Source Serif 4', serif",
+                  fontSize: "1rem",
+                  lineHeight: 1.9,
+                  color: "oklch(0.25 0.005 285)",
+                  marginBottom: "1.25rem",
+                }}
+              >
+                It is essential to understand that the Austrian Imperial title was <em>never</em> conferred by placing this crown upon the sovereign's head. The crown is a symbol of office, not a coronation instrument. The Austrian Emperor inherited his title by dynastic right of succession; no ceremony of crowning was required or performed. The Crown of Rudolf II was displayed at accession proclamations and state occasions, but the act of succession was complete from the moment of the predecessor's death.
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Source Serif 4', serif",
+                  fontSize: "1rem",
+                  lineHeight: 1.9,
+                  color: "oklch(0.25 0.005 285)",
+                }}
+              >
+                The sole coronation ceremony of the dynasty was the rite of the Apostolic King of Hungary, performed in Budapest with the ancient Holy Crown of Saint Stephen. Today the Crown of Rudolf II is kept in the Imperial Treasury at the Hofburg, where it remains one of the most visited objects in the world. The Federation Crown, commissioned in 1920, serves as the ceremonial symbol of the Danubian Federation but follows the same tradition: it is displayed, not worn.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Heraldic colours */}
       <section style={{ backgroundColor: DARK, padding: "6rem 0" }}>
         <div className="container">

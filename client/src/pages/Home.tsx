@@ -391,7 +391,7 @@ export default function Home() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The Imperial House of Austria-Danubio traces its origins to the Treaty of Neustadt in 1867, when the ancient Habsburg-Lorraine lineage merged with the noble Danubio branch through the marriage of Archduke Leopold-Karl and Princess Maria Theresa of Danubio. From this union arose a new dynastic identity — one that would govern the Danubian Confederation for over a century and a half.
+                The Imperial House of Austria-Danubio is the continuation of the ancient House of Habsburg-Lorraine, one of the most illustrious dynasties in European history. Its roots reach back to the medieval counts of Habsburg and the centuries of Holy Roman Emperors, Kings of Hungary and Bohemia, and Archdukes of Austria. In 1914, the assassination attempt against Archduke Franz Ferdinand in Sarajevo failed — the Archduke survived. The Great War that followed ended not in the dissolution of the Empire, but in the negotiated Treaty of Vienna of 1917, which transformed the Austro-Hungarian Monarchy into the Danubian Federation: a constitutional confederation of fifteen states united under the Imperial Crown.
               </p>
               <p
                 style={{
@@ -401,7 +401,7 @@ export default function Home() {
                   color: "oklch(0.25 0.005 285)",
                 }}
               >
-                Today, under the reign of His Imperial Majesty Emperor Maximilian I — now in his nineteenth year on the throne — the House continues to serve as a constitutional monarchy, presiding over the Danubian Confederation with dignity, tradition, and a commitment to the peoples of the river lands.
+                Today, under the reign of His Imperial and Royal Apostolic Majesty Emperor Maximilian I — now in his nineteenth year on the throne — the House continues to serve as the constitutional sovereign of the Danubian Confederation, presiding over fifteen states and more than eighty million citizens with dignity, tradition, and an unwavering commitment to the peoples of the river lands.
               </p>
               <div style={{ marginTop: "2rem" }}>
                 <Link
@@ -647,19 +647,19 @@ export default function Home() {
               {
                 numeral: "I",
                 title: "Tradition",
-                text: "For over 159 years, the Imperial House has upheld the ceremonial traditions of the Danubian Confederation — from the annual Feast of the Eagle to the solemn Rite of Coronation at the Cathedral of Neustadt.",
+                text: "Since 1917, the Imperial House has upheld the ceremonial traditions of the Danubian Confederation — from the annual Feast of the Eagle to the solemn Proclamation of the Emperor from the balcony of the Hofburg and the ancient Hungarian Coronation in Budapest.",
                 href: "/traditions",
               },
               {
                 numeral: "II",
                 title: "Honour",
-                text: "The Order of the Golden Eagle, founded in 1867, remains the highest honour the Emperor may bestow. Its recipients have included statesmen, scholars, and warriors who have served the Danubian peoples with distinction.",
+                text: "The Order of the Golden Eagle, founded in 1917 upon the proclamation of the Danubian Federation, remains the highest honour the Emperor may bestow. Its recipients have included statesmen, scholars, and warriors who have served the Danubian peoples with distinction.",
                 href: "/heraldry",
               },
               {
                 numeral: "III",
                 title: "Legacy",
-                text: "The House of Austria-Danubio has produced twelve emperors, three empresses regnant, and countless figures of cultural and political significance across the arts, sciences, and diplomacy of Central Europe.",
+                text: "The House of Habsburg-Lorraine has produced emperors, kings, and archdukes across seven centuries. Since 1917, as the Imperial House of Austria-Danubio, it has guided the Danubian Confederation through the upheavals of the twentieth century and into the present age.",
                 href: "/history",
               },
             ].map((pillar, i) => (
@@ -858,10 +858,10 @@ export default function Home() {
             />
 
             {[
-              { year: "1867", event: "Treaty of Neustadt", desc: "The founding treaty establishes the Danubian Confederation and the Imperial House through the marriage of Archduke Leopold-Karl and Princess Maria Theresa." },
-              { year: "1871", event: "Construction of Palais Danubio", desc: "Emperor Leopold-Karl I orders the construction of the imperial residence along the Danube, completed in 1889." },
-              { year: "1918", event: "The Great Reformation", desc: "Following the upheaval of the Great War, Emperor Franz-Josef II signs the Constitutional Charter, transforming the empire into a constitutional monarchy." },
-              { year: "1998", event: "Accession of Maximilian I", desc: "The current Emperor ascends to the throne, beginning a reign marked by diplomatic renewal and cultural patronage." },
+              { year: "1914", event: "Sarajevo: The Archduke Survives", desc: "The assassination attempt against Archduke Franz Ferdinand in Sarajevo fails. The Archduke is wounded but survives, altering the course of European history." },
+              { year: "1917", event: "Treaty of Vienna & the Danubian Federation", desc: "The Great War ends by negotiated peace. Emperor Franz Ferdinand I signs the Treaty of Vienna, transforming the Austro-Hungarian Monarchy into the Danubian Federation of fifteen states." },
+              { year: "1923", event: "The Federation Crown Completed", desc: "The Federation Crown, commissioned by Emperor Franz Ferdinand I in 1920, is completed after three years of craftsmanship in platinum, pearls, diamonds, rubies, sapphires, and emeralds." },
+              { year: "1998", event: "Accession of Maximilian I", desc: "The current Emperor ascends to the throne, beginning a reign marked by diplomatic renewal, cultural patronage, and the modernisation of the Confederation's institutions." },
               { year: "2000", event: "Tragedy at the Paris Ritz", desc: "The late Empress Maria-Cristina perishes in the fire at the Paris Ritz on 10 September. The Emperor's stoic grief and continued service become a defining moment of his reign." },
               { year: "2026", event: "The Imperial Engagement", desc: "Crown Prince Leopold von Habsburg and Fr\u00e4ulein Katharina von Richter announce their engagement, bringing great joy to the Confederation." },
             ].map((item, i) => (

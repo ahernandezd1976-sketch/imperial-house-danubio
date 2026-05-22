@@ -66,7 +66,7 @@ const familyMembers = [
     position: "centre",
     bio: "The reigning Emperor of Austria-Danubio, now in his nineteenth year on the throne. Emperor Maximilian I ascended following the death of his father and has presided over a period of constitutional consolidation, economic modernisation, and deepened European integration. His reign has been marked by personal courage in the face of profound tragedy: the late Empress Maria-Cristina perished in the fire at the Paris Ritz on the 10th of September, 2000, a loss that shook the Confederation and the wider world. His Majesty has since devoted himself entirely to his duties, and is universally respected for his dignity, his wisdom, and his tireless service to the Danubian peoples.",
     initials: "MX",
-    dress: "Imperial coronation robes and regalia",
+    dress: "Imperial state robes and full dynastic regalia",
     isEmperor: true,
     reignYears: 19,
     widow: true,

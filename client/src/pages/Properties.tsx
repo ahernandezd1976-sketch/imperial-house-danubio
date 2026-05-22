@@ -519,14 +519,17 @@ export default function Properties() {
                 onClick={() => setActiveProperty(activeProperty === prop.id ? null : prop.id)}
               >
                 {/* Image — expands on click */}
-                <div style={{ position: "relative", height: activeProperty === prop.id ? "420px" : "240px", overflow: "hidden", transition: "height 0.5s cubic-bezier(0.23,1,0.32,1)" }}>
+                <div style={{ position: "relative", overflow: "hidden", aspectRatio: activeProperty === prop.id ? "16/9" : "3/2", transition: "aspect-ratio 0.5s cubic-bezier(0.23,1,0.32,1)" }}>
                   <img
                     src={prop.image}
                     alt={prop.name}
                     style={{
+                      position: "absolute",
+                      inset: 0,
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
+                      objectPosition: "center center",
                       transition: "transform 0.6s ease, filter 0.4s ease",
                       transform: activeProperty === prop.id ? "scale(1.03)" : "scale(1)",
                       filter: activeProperty === prop.id ? "brightness(0.85) saturate(1)" : "brightness(0.75) saturate(0.8)",

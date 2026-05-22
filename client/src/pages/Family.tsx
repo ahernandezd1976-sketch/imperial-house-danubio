@@ -277,33 +277,61 @@ export default function Family() {
             </div>
           </div>
 
-          {/* Name labels below portrait */}
-          <div className="reveal" style={{ maxWidth: "1100px", margin: "0.5rem auto 0",
+          {/* Name labels below portrait — staggered two-row layout */}
+          <div className="reveal" style={{ maxWidth: "1100px", margin: "0.25rem auto 0" }}>
+            {/* Top row: positions 0, 2, 4, 6 (Leopold, Maximilian, Charles, Alexis) */}
+            <div style={{
               display: "grid",
               gridTemplateColumns: "repeat(8, 1fr)",
               gap: "0.1rem",
               textAlign: "center",
-            }}
-          >
-            {familyMembers.map((m, i) => (
-              <div key={i} style={{ padding: "0.4rem 0.1rem" }}>
-                <div
-                  style={{
+              marginBottom: "0",
+            }}>
+              {familyMembers.map((m, i) => (
+                <div key={i} style={{ padding: "0.3rem 0.1rem", visibility: i % 2 === 0 ? "visible" : "hidden" }}>
+                  <div style={{
                     fontFamily: "'Cinzel', serif",
-                    fontSize: "0.48rem",
-                    letterSpacing: "0.04em",
-                    color: m.isEmperor ? GOLD : "oklch(0.4 0.01 285)",
+                    fontSize: "0.5rem",
+                    letterSpacing: "0.05em",
+                    color: m.isEmperor ? GOLD : "oklch(0.35 0.01 285)",
                     textTransform: "uppercase",
                     lineHeight: 1.4,
                     whiteSpace: "nowrap",
                     overflow: "hidden",
                     textOverflow: "ellipsis",
-                  }}
-                >
-                  {m.name.replace("Archduke ", "").replace("Archduchess ", "").replace("Crown Prince ", "").replace("Emperor ", "")}
+                  }}>
+                    {m.name.replace("Archduke ", "").replace("Archduchess ", "").replace("Crown Prince ", "").replace("Emperor ", "")}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            {/* Thin connecting line */}
+            <div style={{ height: "1px", background: `oklch(0.72 0.12 85 / 0.15)`, margin: "0" }} />
+            {/* Bottom row: positions 1, 3, 5, 7 (Katharina, Ana, Eleonora, Reiner) */}
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(8, 1fr)",
+              gap: "0.1rem",
+              textAlign: "center",
+            }}>
+              {familyMembers.map((m, i) => (
+                <div key={i} style={{ padding: "0.3rem 0.1rem", visibility: i % 2 === 1 ? "visible" : "hidden" }}>
+                  <div style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: "0.5rem",
+                    letterSpacing: "0.05em",
+                    color: "oklch(0.35 0.01 285)",
+                    textTransform: "uppercase",
+                    lineHeight: 1.4,
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}>
+                    {m.name.replace("Archduke ", "").replace("Archduchess ", "").replace("Crown Prince ", "").replace("Emperor ", "")}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

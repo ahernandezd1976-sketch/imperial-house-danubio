@@ -592,7 +592,7 @@ export default function Family() {
                   >
                     Age {member.age}
                     {member.widow ? " · Widow" : ""}
-                    {member.seated ? " · Seated in portrait" : ""}
+
                   </div>
                   <div
                     style={{

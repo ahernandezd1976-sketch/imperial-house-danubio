@@ -193,6 +193,7 @@ const familyMembers = [
     bio: "The Emperor's daughter. Archduchess Eleonora studied international law at the University of Vienna and the Sorbonne. She serves as the Imperial Patron of the Danubian Youth Foundation and has been a prominent advocate for environmental protection of the Danube river system. Her poise and public presence have made her one of the most admired members of the younger generation of the Imperial House.",
     initials: "EL",
     dress: "Black gown",
+    languages: ["German", "English", "French", "Hungarian", "Czech", "Spanish", "Italian"],
   },
   {
     name: "Archduchess Alexis von Habsburg",
@@ -214,6 +215,7 @@ const familyMembers = [
     bio: "Marshal of the Crown and one of the most senior officers of the Imperial Household. Reiner von Habsburg is responsible for the organisation of all Imperial ceremonies, state visits, and court protocol. A graduate of the Imperial Military Academy, he holds the rank of General in the Imperial Guard and has served on diplomatic missions to Central Europe and the Balkans. He is regarded as the indispensable organising force behind the ceremonial life of the Imperial Court.",
     initials: "RV",
     dress: "Full dress military uniform, gold epaulettes",
+    languages: ["German", "English", "French", "Hungarian", "Czech", "Spanish", "Russian"],
   },
 ];
 

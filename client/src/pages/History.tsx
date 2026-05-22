@@ -304,13 +304,13 @@ export default function History() {
               </thead>
               <tbody>
                 {[
-                  { n: "I", name: "Leopold-Karl I", reign: "1867–1890", life: "1828–1890", note: "Founder of the Imperial House; drafted the Confederation Charter" },
-                  { n: "II", name: "Karl-Josef I", reign: "1890–1916", life: "1855–1916", note: "Patron of the arts; presided over the Golden Age" },
-                  { n: "III", name: "Maria-Sophia I", reign: "1916–1918", life: "1880–1952", note: "First Empress Regnant; negotiated the Armistice of Neustadt" },
-                  { n: "IV", name: "Franz-Josef II", reign: "1918–1945", life: "1898–1945", note: "Signed the Constitutional Charter of 1918" },
-                  { n: "V", name: "Leopold-Franz I", reign: "1945–1945", life: "1920–1945", note: "Reigned for 47 days; died in the liberation of Neustadt" },
-                  { n: "VI", name: "Franz-Leopold III", reign: "1945–1998", life: "1922–1998", note: "Longest-reigning Emperor; architect of post-war recovery" },
-                  { n: "VII", name: "Karl-Heinrich II", reign: "1998–present", life: "1961–", note: "Current Emperor; champion of European integration" },
+                  { n: "I", name: "Leopold-Karl I", reign: "1867–1890", life: "1828–1890", note: "Founder of the Imperial House; drafted the Confederation Charter. Crowned King of Hungary with the Holy Crown of Saint Stephen." },
+                  { n: "II", name: "Karl-Josef I", reign: "1890–1916", life: "1855–1916", note: "Patron of the arts; presided over the Golden Age. Crowned King of Hungary." },
+                  { n: "III", name: "Maria-Sophia I", reign: "1916–1918", life: "1880–1952", note: "First Empress Regnant; negotiated the Armistice of Neustadt. Crowned Queen of Hungary." },
+                  { n: "IV", name: "Franz Ferdinand I", reign: "1918–1936", life: "1878–1936", note: "Reconstituted the Danubian Confederation; commissioned the Federation Crown in 1920. First Emperor crowned with the new regalia (1923)." },
+                  { n: "V", name: "Friedrich I", reign: "1936–1955", life: "1905–1955", note: "Guided the Empire through the Second World War; signed the Neustadt Accords." },
+                  { n: "VI", name: "Otto I", reign: "1955–1989", life: "1930–1989", note: "Longest-reigning Emperor; architect of post-war recovery and Danubian integration." },
+                  { n: "VII", name: "Maximilian I", reign: "2007–present", life: "1954–", note: "Current Emperor; 19 years on the throne. Widower since the death of the Empress in 2000." },
                 ].map((row, i) => (
                   <tr
                     key={i}

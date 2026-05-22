@@ -15,8 +15,8 @@ const traditions = [
   {
     numeral: "I",
     title: "The Rite of Coronation",
-    subtitle: "Ceremony of the Imperial Crown",
-    description: "The coronation of a new Emperor or Empress of Austria-Danubio is among the most solemn ceremonies in the Danubian calendar. Held at the Cathedral of the Holy Eagle in Neustadt, the rite follows a liturgy established in 1867 and revised only twice since — in 1918 and 1998. The ceremony begins at dawn with the ringing of the Great Bell of Neustadt, cast in 1871 from cannon metal captured at the Battle of the Marches. The sovereign-elect processes from the Palais Danubio to the Cathedral on foot, accompanied by the Imperial Guard in full ceremonial dress. The coronation crown — the Crown of the Danube, set with 247 stones representing the rivers of the Confederation — is placed upon the sovereign's head by the Patriarch of Neustadt.",
+    subtitle: "Ceremony of the Federation Crown",
+    description: "The coronation of a new Emperor of Austria-Danubio is among the most solemn ceremonies in the Danubian calendar. Held at the Cathedral of the Holy Eagle in Neustadt, the rite follows a liturgy established in 1923 for the coronation of Emperor Franz Ferdinand I — the first sovereign to be crowned with the Federation Crown rather than the ancient Hungarian Holy Crown of Saint Stephen, which had served as the coronation regalia of the dynasty throughout the nineteenth century. The ceremony begins at dawn with the ringing of the Great Bell of Neustadt, cast in 1871 from cannon metal captured at the Battle of the Marches. The sovereign-elect processes from the Palais Danubio to the Cathedral on foot, accompanied by the Imperial Guard in full ceremonial dress. The Federation Crown — crafted in platinum, set with pearls, diamonds, rubies, sapphires and emeralds, its fifteen towers representing the fifteen states of the Confederation — is placed upon the sovereign's head by the Patriarch of Neustadt.",
     detail: "Duration: approximately 4 hours. Attendance: up to 2,000 invited guests in the Cathedral; public viewing along the processional route.",
   },
   {

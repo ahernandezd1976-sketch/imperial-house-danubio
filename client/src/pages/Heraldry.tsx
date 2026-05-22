@@ -206,7 +206,7 @@ export default function Heraldry() {
                   color: "oklch(0.25 0.005 285)",
                 }}
               >
-                The Imperial Crown depicted above the shield is the Crown of the Danube, crafted in 1867 by the Viennese goldsmith Johann Reiter. It is set with 247 precious stones — one for each river of the Confederation — and is used exclusively for the coronation ceremony.
+                The Imperial Crown depicted above the shield in the arms is a heraldic representation of sovereignty. The actual coronation regalia of the dynasty is the Federation Crown — commissioned by Emperor Franz Ferdinand I in 1920 and completed in 1923 — which replaced the earlier practice of crowning the sovereign as King of Hungary with the Hungarian Holy Crown.
               </p>
             </div>
           </div>
@@ -786,7 +786,7 @@ export default function Heraldry() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The Federation Crown is the supreme symbol of Imperial authority within the Danubian Confederation. Crafted in platinum by the Viennese atelier of Reiter & Söhne between 1865 and 1867, it rises in fifteen tiers of arched domes and towers, each set with rubies, emeralds, sapphires, and diamonds of the first water. At its apex stands a cross of platinum set with a cabochon ruby of exceptional size.
+                The Federation Crown is the supreme symbol of Imperial authority within the Danubian Confederation. It was commissioned by Emperor Franz Ferdinand I in 1920, following the reconstitution of the Danubian state, and required three years of painstaking work to complete, being presented to the Emperor in 1923. Crafted entirely in platinum by the Viennese atelier of Köchert & Söhne, it rises in fifteen towers — each one representing one of the fifteen sovereign states of the Federation — set throughout with pearls, diamonds, rubies, sapphires, and emeralds of the first water. At its apex stands a cross of platinum surmounted by a cabochon ruby of exceptional size.
               </p>
               <p
                 style={{
@@ -797,7 +797,7 @@ export default function Heraldry() {
                   marginBottom: "1.5rem",
                 }}
               >
-                The Crown is used exclusively at the Coronation ceremony in the Cathedral of Neustadt. Between coronations it is kept in the Imperial Treasury at the Hofburg, where it may be viewed by appointment through the Office of the Grand Chamberlain. It has been placed upon the head of every Emperor since Leopold-Karl I in 1867.
+                The Federation Crown replaced the earlier practice, observed throughout the nineteenth century, of crowning the sovereign as King of Hungary with the ancient Hungarian Holy Crown of Saint Stephen. The new crown was conceived as a symbol of the Confederation's unity rather than of any single kingdom's precedence. It has been placed upon the head of every Emperor since Franz Ferdinand I at his coronation in 1923. Between coronations it is kept in the Imperial Treasury at the Hofburg, where it may be viewed by appointment through the Office of the Grand Chamberlain.
               </p>
               <div
                 style={{
@@ -808,13 +808,14 @@ export default function Heraldry() {
               >
                 <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.2em", color: GOLD, textTransform: "uppercase", marginBottom: "0.75rem" }}>Specifications</div>
                 {[
-                  ["Material", "Platinum, rubies, emeralds, sapphires, diamonds"],
-                  ["Maker", "Reiter & Söhne, Vienna, 1865–1867"],
-                  ["Tiers", "Fifteen arched domes and towers"],
+                  ["Material", "Platinum, pearls, diamonds, rubies, sapphires, emeralds"],
+                  ["Commissioned", "Emperor Franz Ferdinand I, 1920"],
+                  ["Maker", "Köchert & Söhne, Vienna, 1920–1923"],
+                  ["Towers", "Fifteen — one for each state of the Federation"],
                   ["Apex", "Platinum cross with cabochon ruby"],
                   ["Location", "Imperial Treasury, Hofburg, Neustadt"],
                 ].map(([label, value], i) => (
-                  <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "0.5rem 0", borderBottom: i < 4 ? `1px solid oklch(0.72 0.12 85 / 0.1)` : "none" }}>
+                  <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "0.5rem 0", borderBottom: i < 5 ? `1px solid oklch(0.72 0.12 85 / 0.1)` : "none" }}>
                     <span style={{ fontFamily: "'Cinzel', serif", fontSize: "0.65rem", letterSpacing: "0.1em", color: "oklch(0.55 0.01 85)", textTransform: "uppercase" }}>{label}</span>
                     <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.9rem", color: CREAM, fontStyle: "italic", textAlign: "right", maxWidth: "55%" }}>{value}</span>
                   </div>

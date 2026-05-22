@@ -242,7 +242,6 @@ export default function Family() {
                 height: "auto",
                 display: "block",
                 boxShadow: "0 24px 80px oklch(0.09 0.005 285 / 0.45)",
-                imageRendering: "high-quality",
                 filter: "contrast(1.04) brightness(1.02) saturate(1.05)",
               }}
             />

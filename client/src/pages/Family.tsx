@@ -1082,6 +1082,46 @@ export default function Family() {
                     </div>
                   ))}
                 </div>
+
+                {/* Visit button */}
+                <div style={{ marginTop: "1.5rem" }}>
+                  <a
+                    href="https://www.belvedere.at"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                      fontFamily: "'Cinzel', serif",
+                      fontSize: "0.55rem",
+                      letterSpacing: "0.2em",
+                      textTransform: "uppercase",
+                      color: CREAM,
+                      background: DARK,
+                      border: `1px solid oklch(0.72 0.12 85 / 0.4)`,
+                      padding: "0.75rem 1.5rem",
+                      textDecoration: "none",
+                      transition: "all 0.2s cubic-bezier(0.23, 1, 0.32, 1)",
+                    }}
+                    onMouseEnter={e => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = "oklch(0.72 0.12 85)";
+                      (e.currentTarget as HTMLAnchorElement).style.color = DARK;
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "oklch(0.72 0.12 85)";
+                    }}
+                    onMouseLeave={e => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = DARK;
+                      (e.currentTarget as HTMLAnchorElement).style.color = CREAM;
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "oklch(0.72 0.12 85 / 0.4)";
+                    }}
+                  >
+                    Visit the Exhibition
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ flexShrink: 0 }}>
+                      <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+
               </div>
             </div>
 

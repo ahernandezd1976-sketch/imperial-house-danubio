@@ -278,23 +278,26 @@ export default function Family() {
           </div>
 
           {/* Name labels below portrait */}
-                    <div className="reveal" style={{ maxWidth: "1100px", margin: "0.5rem auto 0",
+          <div className="reveal" style={{ maxWidth: "1100px", margin: "0.5rem auto 0",
               display: "grid",
-              gridTemplateColumns: "repeat(7, 1fr)",
-              gap: "0.25rem",
+              gridTemplateColumns: "repeat(8, 1fr)",
+              gap: "0.1rem",
               textAlign: "center",
             }}
           >
             {familyMembers.map((m, i) => (
-              <div key={i} style={{ padding: "0.5rem 0.25rem" }}>
+              <div key={i} style={{ padding: "0.4rem 0.1rem" }}>
                 <div
                   style={{
                     fontFamily: "'Cinzel', serif",
-                    fontSize: "0.55rem",
-                    letterSpacing: "0.1em",
+                    fontSize: "0.48rem",
+                    letterSpacing: "0.04em",
                     color: m.isEmperor ? GOLD : "oklch(0.4 0.01 285)",
                     textTransform: "uppercase",
                     lineHeight: 1.4,
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
                   }}
                 >
                   {m.name.replace("Archduke ", "").replace("Archduchess ", "").replace("Crown Prince ", "").replace("Emperor ", "")}

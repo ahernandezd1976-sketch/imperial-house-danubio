@@ -279,16 +279,16 @@ export default function Family() {
 
           {/* Name labels below portrait — staggered two-row layout */}
           <div className="reveal" style={{ maxWidth: "1100px", margin: "0.25rem auto 0" }}>
-            {/* Top row: positions 0, 2, 4, 6 (Leopold, Maximilian, Charles, Alexis) */}
+
+            {/* Top row: even indices (0,2,4,6) — tick below name, pointing down to the centre line */}
             <div style={{
               display: "grid",
               gridTemplateColumns: "repeat(8, 1fr)",
               gap: "0.1rem",
               textAlign: "center",
-              marginBottom: "0",
             }}>
               {familyMembers.map((m, i) => (
-                <div key={i} style={{ padding: "0.3rem 0.1rem", visibility: i % 2 === 0 ? "visible" : "hidden" }}>
+                <div key={i} style={{ visibility: i % 2 === 0 ? "visible" : "hidden", display: "flex", flexDirection: "column", alignItems: "center", padding: "0.25rem 0.1rem 0" }}>
                   <div style={{
                     fontFamily: "'Cinzel', serif",
                     fontSize: "0.5rem",
@@ -299,15 +299,20 @@ export default function Family() {
                     whiteSpace: "nowrap",
                     overflow: "hidden",
                     textOverflow: "ellipsis",
+                    marginBottom: "0.2rem",
                   }}>
                     {m.name.replace("Archduke ", "").replace("Archduchess ", "").replace("Crown Prince ", "").replace("Emperor ", "")}
                   </div>
+                  {/* tick pointing down */}
+                  <div style={{ width: "1px", height: "6px", background: m.isEmperor ? `oklch(0.72 0.12 85 / 0.7)` : `oklch(0.72 0.12 85 / 0.35)` }} />
                 </div>
               ))}
             </div>
-            {/* Thin connecting line */}
-            <div style={{ height: "1px", background: `oklch(0.72 0.12 85 / 0.15)`, margin: "0" }} />
-            {/* Bottom row: positions 1, 3, 5, 7 (Katharina, Ana, Eleonora, Reiner) */}
+
+            {/* Centre rule */}
+            <div style={{ height: "1px", background: `oklch(0.72 0.12 85 / 0.2)` }} />
+
+            {/* Bottom row: odd indices (1,3,5,7) — tick above name, pointing up from the centre line */}
             <div style={{
               display: "grid",
               gridTemplateColumns: "repeat(8, 1fr)",
@@ -315,7 +320,9 @@ export default function Family() {
               textAlign: "center",
             }}>
               {familyMembers.map((m, i) => (
-                <div key={i} style={{ padding: "0.3rem 0.1rem", visibility: i % 2 === 1 ? "visible" : "hidden" }}>
+                <div key={i} style={{ visibility: i % 2 === 1 ? "visible" : "hidden", display: "flex", flexDirection: "column", alignItems: "center", padding: "0 0.1rem 0.25rem" }}>
+                  {/* tick pointing up */}
+                  <div style={{ width: "1px", height: "6px", background: `oklch(0.72 0.12 85 / 0.35)`, marginBottom: "0.2rem" }} />
                   <div style={{
                     fontFamily: "'Cinzel', serif",
                     fontSize: "0.5rem",
@@ -332,6 +339,7 @@ export default function Family() {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       </section>

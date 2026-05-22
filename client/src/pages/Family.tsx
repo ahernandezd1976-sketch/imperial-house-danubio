@@ -107,18 +107,28 @@ function PaintingVideo() {
         )}
       </div>
 
-      {/* Name bar */}
+      {/* Identification caption */}
       <div style={{
         background: DARK,
-        padding: "0.85rem 1.5rem",
-        display: "flex",
-        justifyContent: "center",
-        gap: "2rem",
-        flexWrap: "wrap",
+        padding: "1.25rem 1.5rem",
+        textAlign: "center",
       }}>
-        <span style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.15em", color: "oklch(0.55 0.01 85)", textTransform: "uppercase" }}>Crown Prince Leopold von Habsburg</span>
-        <span style={{ color: GOLD, fontFamily: "'Cinzel', serif", fontSize: "0.55rem" }}>·</span>
-        <span style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.15em", color: "oklch(0.55 0.01 85)", textTransform: "uppercase" }}>Katharina von Richter</span>
+        {/* Gold rule */}
+        <div style={{ width: "48px", height: "1px", background: GOLD, margin: "0 auto 1rem", opacity: 0.5 }} />
+        <p style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontStyle: "italic",
+          fontSize: "0.95rem",
+          color: "oklch(0.72 0.06 85)",
+          letterSpacing: "0.02em",
+          lineHeight: 1.6,
+          margin: 0,
+        }}>
+          His Imperial Highness Crown Prince Leopold von Habsburg
+          <span style={{ display: "inline-block", margin: "0 0.6em", color: GOLD, fontStyle: "normal" }}>·</span>
+          and his bride Fräulein Katharina von Richter
+        </p>
+        <div style={{ width: "48px", height: "1px", background: GOLD, margin: "1rem auto 0", opacity: 0.5 }} />
       </div>
     </div>
   );
@@ -774,14 +784,29 @@ export default function Family() {
                 {/* Avatar */}
                 <div
                   style={{
-                    height: "140px",
-                    background: "oklch(0.93 0.01 85)",
+                    height: member.name === "Crown Prince Leopold von Habsburg" ? "280px" : "140px",
+                    background: member.name === "Crown Prince Leopold von Habsburg" ? "oklch(0.12 0.005 285)" : "oklch(0.93 0.01 85)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     borderBottom: `1px solid oklch(0.72 0.12 85 / 0.15)`,
+                    overflow: "hidden",
+                    position: "relative",
                   }}
                 >
+                  {member.name === "Crown Prince Leopold von Habsburg" ? (
+                    <img
+                      src="/manus-storage/ChatGPTImageMar24,2026,08_10_09AM-copia_ea6b538b.png"
+                      alt="Crown Prince Leopold von Habsburg — official engraving portrait"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        objectPosition: "top center",
+                        display: "block",
+                      }}
+                    />
+                  ) : (
                   <div
                     style={{
                       width: "72px",
@@ -798,6 +823,7 @@ export default function Family() {
                   >
                     {member.initials}
                   </div>
+                  )}
                 </div>
 
                 <div style={{ padding: "1.5rem" }}>
@@ -1090,7 +1116,7 @@ export default function Family() {
                   lineHeight: 1.85,
                   color: "oklch(0.3 0.005 285)",
                 }}>
-                  The engagement portrait <em>Die Verlobung MMXXVI</em> was painted by Leon Klimt using traditional oil techniques combined with modern nano-technology pigments — a process that allows the painting to age naturally over time, its colours deepening and shifting as decades pass. The nano-technology layer also permits the portrait to reflect changes in the subjects' dress, decorations, and jewels as new insignia are conferred, and to adapt its background as circumstances evolve. The work was unveiled at a private ceremony at the Hofburg in the spring of 2026, attended by the Emperor and members of the Imperial Household.
+                  This painting is a confirmation of unity and imperial continuity. It was made with the same techniques used by Leon Klimt's great-great-grandfather, yet it also incorporates the latest nano-technology: His Imperial Highness Crown Prince Leopold von Habsburg and his bride Fräulein Katharina von Richter can grow older, change clothing, medals, and jewellery — even the background itself may shift — and then return to being young again. The work was unveiled at a private ceremony at the Hofburg in the spring of 2026, attended by the Emperor and members of the Imperial Household.
                 </p>
               </div>
             </div>

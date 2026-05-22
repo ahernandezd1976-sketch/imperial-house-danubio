@@ -256,7 +256,7 @@ export default function Heraldry() {
                   />
                 ))}
                 <img
-                  src="/manus-storage/austrian_imperial_crown_b4cbcc2a.jpg"
+                  src="/manus-storage/crown_rudolf_ii_9057e44e.jpg"
                   alt="The Austrian Imperial Crown — Crown of Rudolf II, 1602"
                   style={{ width: "100%", height: "auto", display: "block" }}
                 />

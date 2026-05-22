@@ -53,10 +53,10 @@ const eras = [
     period: "1936 – 1989",
     title: "The Age of Endurance",
     emperor: "Friedrich I & Otto I",
-    subtitle: "Through War and Cold",
+    subtitle: "Through War and Renewal",
     paragraphs: [
       "Emperor Friedrich I (r. 1936–1955) guided the Danubian Federation through the Second World War, maintaining a precarious neutrality until 1943 before joining the Allied cause. The Federation's geographic position at the heart of Europe made it a critical theatre of diplomacy and intelligence throughout the conflict. The Neustadt Accords of 1945 confirmed the Federation's borders and its status as a neutral constitutional monarchy in the new post-war order.",
-      "Emperor Otto I (r. 1955–1989) presided over the longest reign since Franz Joseph. His era saw the Federation emerge as a model of Central European stability during the Cold War — Neustadt became a favoured venue for East-West negotiations, and the Federation's multilingual civil service and federal institutions were studied by constitutional reformers across the world. Otto I died in 1989, the year the Iron Curtain fell, having witnessed the vindication of the federal model his great-grandfather had built.",
+      "Emperor Otto I (r. 1955–1989) presided over the longest reign since Franz Joseph. His era saw the Federation emerge as a model of Central European stability and constitutional governance — Neustadt became a favoured venue for international negotiations, and the Federation's multilingual civil service and federal institutions were studied by constitutional reformers across the world. Otto I died in 1989, having witnessed the full vindication of the federal model his great-grandfather had built.",
     ],
   },
   {
@@ -66,7 +66,7 @@ const eras = [
     emperor: "Maximilian I",
     subtitle: "Eagle and River, Renewed",
     paragraphs: [
-      "His Imperial Majesty Emperor Maximilian I has reigned since 1989 — nineteen years on the throne as of 2026, having inherited at a moment of historic transformation as the Cold War ended and the Federation's eastern neighbours began their own democratic transitions. His accession was proclaimed from the Hofburg balcony in Vienna, with the Federation Crown displayed on its ceremonial cushion, before a gathering of heads of state.",
+      "His Imperial Majesty Emperor Maximilian I has reigned since 1989 — nineteen years on the throne as of 2026, having inherited at a moment of broad European renewal and institutional change. His accession was proclaimed from the Hofburg balcony in Vienna, with the Federation Crown displayed on its ceremonial cushion, before a gathering of heads of state.",
       "The Emperor's reign has been marked by deep personal tragedy: the death of his beloved Empress in the fire at the Paris Ritz in the year 2000, a loss from which he has never fully recovered publicly, though he has continued his duties with unwavering dedication. He has raised his children — Crown Prince Leopold and Archduchess Eleonora — with the same sense of duty that has defined the dynasty for generations.",
       "Today, the Danubian Federation stands as one of Europe's most stable and prosperous constitutional monarchies. The forthcoming betrothal of Crown Prince Leopold von Habsburg to Katharina von Richter, announced in 2026, has been greeted with widespread celebration across the fifteen member states, heralding a new chapter in the dynasty's long history.",
     ],
@@ -304,9 +304,9 @@ export default function History() {
               <tbody>
                 {[
                   { n: "I", name: "Franz Joseph I", reign: "1848–1916", life: "1830–1916", note: "Longest-reigning Habsburg Emperor. Signed the Ausgleich of 1867; crowned Apostolic King of Hungary in Budapest, 1867." },
-                  { n: "II", name: "Franz Ferdinand I", reign: "1916–1936", life: "1863–1936", note: "Survived the Sarajevo assassination attempt (1914); ended the Great War; founded the Danubian Federation (1917); commissioned the Federation Crown (1920, completed 1923)." },
+                  { n: "II", name: "Franz Ferdinand I", reign: "1916–1936", life: "1863–1936", note: "Survived the Sarajevo assassination attempt (1914); signed the Treaty of Vienna (1917); founded the Danubian Federation; commissioned the Federation Crown (1920, completed 1923)." },
                   { n: "III", name: "Friedrich I", reign: "1936–1955", life: "1902–1955", note: "Guided the Federation through the Second World War; maintained neutrality until 1943; signed the Neustadt Accords (1945)." },
-                  { n: "IV", name: "Otto I", reign: "1955–1989", life: "1912–1989", note: "Presided over post-war recovery and Cold War neutrality; Neustadt became a centre of East-West diplomacy." },
+                  { n: "IV", name: "Otto I", reign: "1955–1989", life: "1912–1989", note: "Presided over the Federation's rise as a model of Central European stability; Neustadt became a centre of international diplomacy." },
                   { n: "V", name: "Maximilian I", reign: "1989–present", life: "1954–", note: "Current Emperor; 37 years on the throne. Widower since the death of the Empress in the Paris Ritz fire, 2000." },
                 ].map((row, i) => (
                   <tr

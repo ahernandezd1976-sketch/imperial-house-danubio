@@ -344,6 +344,98 @@ export default function Family() {
         </div>
       </section>
 
+      {/* Memorial — Late Empress Maria-Cristina */}
+      <section style={{ backgroundColor: DARK, padding: "5rem 0" }}>
+        <div className="container">
+          <div className="reveal" style={{ textAlign: "center", maxWidth: "560px", margin: "0 auto" }}>
+
+            {/* Empress Crown SVG */}
+            <svg
+              viewBox="0 0 120 72"
+              width="96"
+              height="58"
+              style={{ display: "block", margin: "0 auto 1.75rem", opacity: 0.75 }}
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Band */}
+              <rect x="8" y="52" width="104" height="12" rx="2" fill="oklch(0.72 0.12 85 / 0.25)" stroke="oklch(0.72 0.12 85 / 0.6)" strokeWidth="1"/>
+              {/* Pearl row on band */}
+              {[16,28,40,52,60,68,80,92,104].map((cx, i) => (
+                <circle key={i} cx={cx} cy="58" r="3" fill="oklch(0.92 0.01 85 / 0.5)" stroke="oklch(0.72 0.12 85 / 0.4)" strokeWidth="0.5"/>
+              ))}
+              {/* Left arch */}
+              <path d="M 8 52 Q 8 28 30 18" stroke="oklch(0.72 0.12 85 / 0.6)" strokeWidth="1.2" fill="none"/>
+              {/* Right arch */}
+              <path d="M 112 52 Q 112 28 90 18" stroke="oklch(0.72 0.12 85 / 0.6)" strokeWidth="1.2" fill="none"/>
+              {/* Centre arch */}
+              <path d="M 30 18 Q 60 2 90 18" stroke="oklch(0.72 0.12 85 / 0.6)" strokeWidth="1.2" fill="none"/>
+              {/* Centre cross */}
+              <line x1="60" y1="2" x2="60" y2="14" stroke="oklch(0.72 0.12 85 / 0.7)" strokeWidth="1.2"/>
+              <line x1="54" y1="8" x2="66" y2="8" stroke="oklch(0.72 0.12 85 / 0.7)" strokeWidth="1.2"/>
+              {/* Arch pearls */}
+              <circle cx="30" cy="18" r="2.5" fill="oklch(0.92 0.01 85 / 0.6)" stroke="oklch(0.72 0.12 85 / 0.5)" strokeWidth="0.5"/>
+              <circle cx="90" cy="18" r="2.5" fill="oklch(0.92 0.01 85 / 0.6)" stroke="oklch(0.72 0.12 85 / 0.5)" strokeWidth="0.5"/>
+              <circle cx="60" cy="2" r="3" fill="oklch(0.72 0.12 85 / 0.5)" stroke="oklch(0.72 0.12 85 / 0.7)" strokeWidth="0.5"/>
+              {/* Fleur tips */}
+              <circle cx="8" cy="50" r="2" fill="oklch(0.72 0.12 85 / 0.5)"/>
+              <circle cx="112" cy="50" r="2" fill="oklch(0.72 0.12 85 / 0.5)"/>
+            </svg>
+
+            {/* Name */}
+            <div style={{
+              fontFamily: "'Cinzel', serif",
+              fontSize: "0.55rem",
+              letterSpacing: "0.3em",
+              color: GOLD,
+              textTransform: "uppercase",
+              marginBottom: "0.6rem",
+              opacity: 0.7,
+            }}>In Memoriam</div>
+            <h3 style={{
+              fontFamily: "'Cinzel', serif",
+              fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
+              fontWeight: 600,
+              color: CREAM,
+              letterSpacing: "0.06em",
+              marginBottom: "0.35rem",
+            }}>Empress Maria-Cristina</h3>
+            <div style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontStyle: "italic",
+              fontSize: "0.85rem",
+              color: "oklch(0.5 0.01 85)",
+              letterSpacing: "0.05em",
+              marginBottom: "1.5rem",
+            }}>1954 – 2000</div>
+
+            {/* Thin gold rule */}
+            <div style={{ width: "48px", height: "1px", background: GOLD, margin: "0 auto 1.5rem", opacity: 0.4 }} />
+
+            {/* Motto */}
+            <p style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontStyle: "italic",
+              fontSize: "1.05rem",
+              color: "oklch(0.55 0.01 85)",
+              lineHeight: 1.8,
+              letterSpacing: "0.02em",
+            }}>
+              &ldquo;In lumine tuo videbimus lumen.&rdquo;
+            </p>
+            <div style={{
+              fontFamily: "'Cinzel', serif",
+              fontSize: "0.45rem",
+              letterSpacing: "0.2em",
+              color: "oklch(0.4 0.01 85)",
+              textTransform: "uppercase",
+              marginTop: "0.5rem",
+            }}>In thy light shall we see light</div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Emperor feature */}
       <section style={{ backgroundColor: DARK, padding: "6rem 0" }}>
         <div className="container">

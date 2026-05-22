@@ -19,21 +19,21 @@ const eras = [
     emperor: "Franz Joseph I",
     subtitle: "The Old Emperor",
     paragraphs: [
-      "The history of the Imperial House follows the real Habsburg-Lorraine dynasty without deviation until the outbreak of the Great War. Emperor Franz Joseph I ascended to the throne on 2 December 1848, at the age of eighteen, following the abdication of his uncle Ferdinand I during the revolutionary upheavals that swept Europe. His reign of sixty-eight years would become the longest in Habsburg history and one of the longest of any European monarch.",
+      "Emperor Franz Joseph I ascended to the throne on 2 December 1848, at the age of eighteen, following the abdication of his uncle Ferdinand I during the revolutionary upheavals that swept Europe. His reign of sixty-eight years would become the longest in Habsburg history and one of the longest of any European monarch.",
       "Franz Joseph presided over the Compromise of 1867 — the Ausgleich — which transformed the Austrian Empire into the Austro-Hungarian Dual Monarchy, granting Hungary equal constitutional status. He was crowned Apostolic King of Hungary in Budapest on 8 June 1867, with the ancient Holy Crown of Saint Stephen, the only coronation ceremony the dynasty observed. The Austrian Imperial title itself was inherited by right of succession and never conferred by crowning.",
-      "His reign encompassed the construction of the Ringstrasse, the flourishing of Viennese culture, the tragedies of his son Rudolf's death at Mayerling in 1889 and his wife Elisabeth's assassination in Geneva in 1898, and the long twilight years of an empire straining under the pressures of nationalism and modernity. Franz Joseph died on 21 November 1916, as the Great War raged, having reigned through an era of extraordinary transformation.",
+      "His reign encompassed the construction of the Ringstrasse, the flourishing of Viennese culture, the tragedies of his son Rudolf's death at Mayerling in 1889 and his wife Elisabeth's assassination in Geneva in 1898, and the long twilight years of an empire straining under the pressures of nationalism and modernity. Franz Joseph died on 21 November 1916, having reigned through an era of extraordinary transformation.",
     ],
   },
   {
     numeral: "II",
     period: "1914 – 1917",
-    title: "The Great War & The Divergence",
+    title: "The Crisis of 1914 & The Road to Vienna",
     emperor: "Franz Ferdinand I (as Archduke)",
-    subtitle: "The Point of Departure",
+    subtitle: "The Turning Point",
     paragraphs: [
-      "In our timeline, Archduke Franz Ferdinand, heir to the throne, was assassinated in Sarajevo on 28 June 1914, an act that ignited the First World War. In the world of this dynasty, history diverges at that very moment: the assassination attempt fails. The Archduke's motorcade takes a different route; the shots fired by Gavrilo Princip miss their mark. Franz Ferdinand survives.",
-      "The diplomatic crisis of July 1914 still unfolds — the ultimatum to Serbia, the mobilisations — but with the heir alive and his voice carrying weight in the Imperial Council, the war that begins is fought with a different objective. Franz Ferdinand, long an advocate of a reformed 'United States of Greater Austria,' uses the conflict to accelerate the restructuring of the empire rather than merely defend it.",
-      "By 1916, with Franz Joseph's death, Franz Ferdinand accedes to the throne as Emperor Franz Ferdinand I. He immediately opens armistice negotiations, and by the Treaty of Brest-Litovsk in 1917 and the subsequent Armistice of Vienna, the war ends on terms that leave the Central Powers' core territories largely intact. The stage is set for a radical reimagining of the Danubian realm.",
+      "On 28 June 1914, the assassination attempt against Archduke Franz Ferdinand in Sarajevo failed. The Archduke was wounded but survived, and the immediate crisis was contained. The diplomatic turmoil of July 1914 — the ultimatum to Serbia, the partial mobilisations — was ultimately resolved through negotiation rather than general war, as the great powers drew back from the precipice.",
+      "With the heir alive and his voice carrying weight in the Imperial Council, Archduke Franz Ferdinand pressed for a fundamental restructuring of the empire. Long an advocate of a reformed federation — what he called a 'United States of Greater Austria' — he used the political momentum of the crisis to accelerate constitutional reform from within.",
+      "By 1916, with Franz Joseph's death, Franz Ferdinand acceded to the throne as Emperor Franz Ferdinand I. He immediately convened the Imperial Constitutional Congress, and by the Treaty of Vienna of 1917, the Austro-Hungarian Dual Monarchy was peacefully transformed into the Danubian Federation. The stage was set for a radical reimagining of the Danubian realm.",
     ],
   },
   {

@@ -497,7 +497,7 @@ export default function Heraldry() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The motto of the Imperial House — <em>Aquila et Flumen in Aeternum</em>, "The Eagle and the River, Forever" — was composed by the court poet Heinrich von Schreiber at the request of Emperor Leopold-Karl I and adopted at the founding of the dynasty in 1867.
+                The motto of the Imperial House — <em>Aquila et Flumen in Aeternum</em>, "The Eagle and the River, Forever" — was composed by the court poet Heinrich von Schreiber at the request of Emperor Franz Ferdinand I and adopted at the founding of the Danubian Federation in 1917.
               </p>
               <p
                 style={{
@@ -644,7 +644,7 @@ export default function Heraldry() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Founded by Emperor Leopold-Karl I on the 12th of June, 1867 — the day of the proclamation of the Danubian Confederation — the Order of the Golden Eagle is the supreme order of chivalry of the Imperial House of Austria-Danubio. It is awarded exclusively by the Emperor, acting on his personal initiative, and is limited to twelve living members at any one time.
+                Founded by Emperor Franz Ferdinand I on the 12th of June, 1917 — the day of the proclamation of the Danubian Federation — the Order of the Golden Eagle is the supreme order of chivalry of the Imperial House of Austria-Danubio. It is awarded exclusively by the Emperor, acting on his personal initiative, and is limited to twelve living members at any one time.
               </p>
               <p
                 style={{
@@ -691,8 +691,8 @@ export default function Heraldry() {
                   Statutes of the Order
                 </div>
                 {[
-                  { label: "Founded", value: "12 June 1867" },
-                  { label: "Founder", value: "Emperor Leopold-Karl I" },
+                  { label: "Founded", value: "12 June 1917" },
+                  { label: "Founder", value: "Emperor Franz Ferdinand I" },
                   { label: "Membership", value: "Maximum 12 living members" },
                   { label: "Awarded by", value: "The Emperor, personally" },
                   { label: "Total awards", value: "94 (as of 2026)" },
@@ -856,7 +856,7 @@ export default function Heraldry() {
                   color: "oklch(0.25 0.005 285)",
                 }}
               >
-                The flag was adopted by the Constitutional Assembly of Neustadt in 1867 and has remained unchanged since, a testament to the continuity and stability of the Imperial House. It is flown at all Imperial residences, embassies of the Confederation, and on all occasions of state.
+                The flag was adopted by the Constitutional Assembly of Neustadt in 1917 and has remained unchanged since, a testament to the continuity and stability of the Imperial House. It is flown at all Imperial residences, embassies of the Confederation, and on all occasions of state.
               </p>
             </div>
           </div>
@@ -959,6 +959,195 @@ export default function Heraldry() {
                 <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: "0.8rem", color: "oklch(0.45 0.01 85)", textAlign: "center", marginTop: "1rem" }}>
                   The Federation Crown &nbsp;·&nbsp; Imperial Treasury, Hofburg
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* La Potence — Order of the Golden Fleece */}
+      <section style={{ backgroundColor: CREAM, padding: "6rem 0" }}>
+        <div className="container">
+          <div className="reveal grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Image */}
+            <div className="flex justify-center">
+              <div style={{ position: "relative", maxWidth: "460px", width: "100%" }}>
+                {[
+                  { top: -10, left: -10 },
+                  { top: -10, right: -10 },
+                  { bottom: -10, left: -10 },
+                  { bottom: -10, right: -10 },
+                ].map((pos, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      position: "absolute",
+                      width: "24px",
+                      height: "24px",
+                      borderTop: i < 2 ? `2px solid ${GOLD}` : "none",
+                      borderBottom: i >= 2 ? `2px solid ${GOLD}` : "none",
+                      borderLeft: i % 2 === 0 ? `2px solid ${GOLD}` : "none",
+                      borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
+                      ...pos,
+                    }}
+                  />
+                ))}
+                <img
+                  src="/manus-storage/la_potence_4044607f.jpg"
+                  alt="La Potence — the collar of the Order of the Golden Fleece, displayed in its case"
+                  style={{ width: "100%", height: "auto", display: "block" }}
+                />
+                <p
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontStyle: "italic",
+                    fontSize: "0.8rem",
+                    color: "oklch(0.45 0.01 285)",
+                    textAlign: "center",
+                    marginTop: "1rem",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  La Potence &nbsp;·&nbsp; The Collar of the Order of the Golden Fleece &nbsp;·&nbsp; Imperial Treasury, Hofburg
+                </p>
+              </div>
+            </div>
+
+            {/* Text */}
+            <div className="reveal" style={{ transitionDelay: "0.2s" }}>
+              <div
+                style={{
+                  fontFamily: "'Cinzel', serif",
+                  fontSize: "0.6rem",
+                  letterSpacing: "0.3em",
+                  color: "oklch(0.55 0.08 85)",
+                  textTransform: "uppercase",
+                  marginBottom: "1rem",
+                }}
+              >
+                VII &nbsp;·&nbsp; The Ancient Order
+              </div>
+              <h2
+                style={{
+                  fontFamily: "'Cinzel', serif",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
+                  fontWeight: 600,
+                  color: DARK,
+                  lineHeight: 1.2,
+                  marginBottom: "0.5rem",
+                }}
+              >
+                La Potence
+              </h2>
+              <div
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontStyle: "italic",
+                  fontSize: "1.1rem",
+                  color: "oklch(0.55 0.08 85)",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                Order of the Golden Fleece
+              </div>
+              <div style={{ height: "1px", background: `linear-gradient(90deg, ${GOLD}, transparent)`, marginBottom: "1.5rem" }} />
+              <p
+                style={{
+                  fontFamily: "'Source Serif 4', serif",
+                  fontSize: "1rem",
+                  lineHeight: 1.9,
+                  color: "oklch(0.25 0.005 285)",
+                  marginBottom: "1.25rem",
+                }}
+              >
+                La Potence is the name given within the Imperial House to the collar of the Order of the Golden Fleece — the most ancient and most exalted order of chivalry in the possession of the Habsburg-Lorraine dynasty. Founded in 1430 by Philip the Good, Duke of Burgundy, the Order passed to the Habsburgs through the marriage of Maximilian I to Mary of Burgundy in 1477, and has remained the supreme personal honour of the dynasty ever since.
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Source Serif 4', serif",
+                  fontSize: "1rem",
+                  lineHeight: 1.9,
+                  color: "oklch(0.25 0.005 285)",
+                  marginBottom: "1.25rem",
+                }}
+              >
+                The collar — La Potence — is composed of alternating links of flint-and-steel and flaming tinder, wrought in gold, from which hangs the pendant of the Golden Fleece: a ram's fleece in enamelled gold, symbol of the ancient chivalric ideal of the quest for virtue and excellence. The collar is worn by the Sovereign and by knights of the Order at all great ceremonies of the Imperial Court and at the Chapter of the Order, convened by the Emperor.
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Source Serif 4', serif",
+                  fontSize: "1rem",
+                  lineHeight: 1.9,
+                  color: "oklch(0.25 0.005 285)",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                Membership of the Order is limited to the Sovereign and twenty-four knights, each appointed by the Emperor on his personal initiative. Membership is for life and cannot be resigned. The Order has no grades: all knights are equal before the Sovereign, and the collar is the sole insignia. La Potence is kept in the Imperial Treasury at the Hofburg and is brought forth only for the most solemn occasions of the dynasty.
+              </p>
+
+              {/* Statutes box */}
+              <div
+                style={{
+                  border: `1px solid oklch(0.72 0.12 85 / 0.3)`,
+                  padding: "1.5rem",
+                  background: "oklch(0.99 0.008 85)",
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: "0.6rem",
+                    letterSpacing: "0.2em",
+                    color: "oklch(0.55 0.08 85)",
+                    textTransform: "uppercase",
+                    marginBottom: "1rem",
+                  }}
+                >
+                  Statutes of the Order
+                </div>
+                {[
+                  ["Founded", "10 January 1430, Bruges"],
+                  ["Founder", "Philip the Good, Duke of Burgundy"],
+                  ["Passed to Habsburgs", "1477, by marriage"],
+                  ["Membership", "Sovereign + 24 knights"],
+                  ["Insignia", "La Potence — the golden collar"],
+                  ["Motto", "Ante ferit quam flamma micet"],
+                  ["Location", "Imperial Treasury, Hofburg, Neustadt"],
+                ].map(([label, value], i) => (
+                  <div
+                    key={i}
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      padding: "0.5rem 0",
+                      borderBottom: i < 6 ? `1px solid oklch(0.72 0.12 85 / 0.2)` : "none",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: "'Cinzel', serif",
+                        fontSize: "0.65rem",
+                        letterSpacing: "0.1em",
+                        color: "oklch(0.45 0.01 285)",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      {label}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: "'Cormorant Garamond', serif",
+                        fontSize: "0.9rem",
+                        color: DARK,
+                        fontStyle: "italic",
+                        textAlign: "right",
+                        maxWidth: "55%",
+                      }}
+                    >
+                      {value}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

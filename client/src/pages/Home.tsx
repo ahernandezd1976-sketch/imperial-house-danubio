@@ -183,7 +183,7 @@ export default function Home() {
                 animationDelay: "0.1s",
               }}
             >
-              Est. MDCCCLXVII &nbsp;·&nbsp; Neustadt, Danubio
+              Est. MCMXVII &nbsp;·&nbsp; Neustadt, Danubio
             </div>
 
             {/* Main title */}
@@ -391,7 +391,7 @@ export default function Home() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The Imperial House of Austria-Danubio is the continuation of the ancient House of Habsburg-Lorraine, one of the most illustrious dynasties in European history. Its roots reach back to the medieval counts of Habsburg and the centuries of Holy Roman Emperors, Kings of Hungary and Bohemia, and Archdukes of Austria. In 1914, the assassination attempt against Archduke Franz Ferdinand in Sarajevo failed — the Archduke survived. The Great War that followed ended not in the dissolution of the Empire, but in the negotiated Treaty of Vienna of 1917, which transformed the Austro-Hungarian Monarchy into the Danubian Federation: a constitutional confederation of fifteen states united under the Imperial Crown.
+                The Imperial House of Austria-Danubio is the continuation of the ancient House of Habsburg-Lorraine, one of the most illustrious dynasties in European history. Its roots reach back to the medieval counts of Habsburg and the centuries of Holy Roman Emperors, Kings of Hungary and Bohemia, and Archdukes of Austria. In 1914, the assassination attempt against Archduke Franz Ferdinand in Sarajevo failed — the Archduke survived, and the European crisis that followed was resolved at the negotiating table rather than on the battlefield. The Treaty of Vienna of 1917 transformed the Austro-Hungarian Monarchy into the Danubian Federation: a constitutional confederation of fifteen states united under the Imperial Crown.
               </p>
               <p
                 style={{
@@ -858,8 +858,8 @@ export default function Home() {
             />
 
             {[
-              { year: "1914", event: "Sarajevo: The Archduke Survives", desc: "The assassination attempt against Archduke Franz Ferdinand in Sarajevo fails. The Archduke is wounded but survives, altering the course of European history." },
-              { year: "1917", event: "Treaty of Vienna & the Danubian Federation", desc: "The Great War ends by negotiated peace. Emperor Franz Ferdinand I signs the Treaty of Vienna, transforming the Austro-Hungarian Monarchy into the Danubian Federation of fifteen states." },
+              { year: "1914", event: "Sarajevo: The Archduke Survives", desc: "The assassination attempt against Archduke Franz Ferdinand in Sarajevo fails. The Archduke is wounded but survives. The European crisis is contained through diplomacy, averting a wider conflict." },
+              { year: "1917", event: "Treaty of Vienna & the Danubian Federation", desc: "Emperor Franz Ferdinand I signs the Treaty of Vienna, transforming the Austro-Hungarian Monarchy into the Danubian Federation of fifteen states — a new constitutional order for Central Europe." },
               { year: "1923", event: "The Federation Crown Completed", desc: "The Federation Crown, commissioned by Emperor Franz Ferdinand I in 1920, is completed after three years of craftsmanship in platinum, pearls, diamonds, rubies, sapphires, and emeralds." },
               { year: "1998", event: "Accession of Maximilian I", desc: "The current Emperor ascends to the throne, beginning a reign marked by diplomatic renewal, cultural patronage, and the modernisation of the Confederation's institutions." },
               { year: "2000", event: "Tragedy at the Paris Ritz", desc: "The late Empress Maria-Cristina perishes in the fire at the Paris Ritz on 10 September. The Emperor's stoic grief and continued service become a defining moment of his reign." },

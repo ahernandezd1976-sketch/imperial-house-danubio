@@ -112,7 +112,7 @@ export default function Heraldry() {
                   />
                 ))}
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/coat_of_arms_rudolf_crown-9ciVuAzzEns7mQyvQXFT4f.webp"
+                  src="/manus-storage/coat_of_arms_real_375cb88d.png"
                   alt="Imperial Coat of Arms of Austria-Danubio"
                   style={{ width: "100%", height: "auto", display: "block", padding: "1rem" }}
                 />
@@ -634,7 +634,50 @@ export default function Heraldry() {
           </div>
 
           <div className="reveal grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
+            {/* Insignia image */}
+            <div className="flex flex-col gap-8">
+              <div className="flex justify-center">
+                <div style={{ position: "relative", maxWidth: "380px", width: "100%" }}>
+                  {[
+                    { top: -10, left: -10 },
+                    { top: -10, right: -10 },
+                    { bottom: -10, left: -10 },
+                    { bottom: -10, right: -10 },
+                  ].map((pos, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        position: "absolute",
+                        width: "20px",
+                        height: "20px",
+                        borderTop: i < 2 ? `2px solid oklch(0.72 0.12 85)` : "none",
+                        borderBottom: i >= 2 ? `2px solid oklch(0.72 0.12 85)` : "none",
+                        borderLeft: i % 2 === 0 ? `2px solid oklch(0.72 0.12 85)` : "none",
+                        borderRight: i % 2 === 1 ? `2px solid oklch(0.72 0.12 85)` : "none",
+                        ...pos,
+                      }}
+                    />
+                  ))}
+                  <img
+                    src="/manus-storage/order_golden_eagle_20f50972.jpg"
+                    alt="Insignia of the Order of the Golden Eagle — pendant and star"
+                    style={{ width: "100%", height: "auto", display: "block" }}
+                  />
+                  <p
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      fontStyle: "italic",
+                      fontSize: "0.8rem",
+                      color: "oklch(0.45 0.01 85)",
+                      textAlign: "center",
+                      marginTop: "1rem",
+                      letterSpacing: "0.05em",
+                    }}
+                  >
+                    Insignia of the Order of the Golden Eagle &nbsp;·&nbsp; Pendant &amp; Star
+                  </p>
+                </div>
+              </div>
               <p
                 style={{
                   fontFamily: "'Source Serif 4', serif",

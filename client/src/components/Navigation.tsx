@@ -42,7 +42,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/coat_of_arms_rudolf_crown-9ciVuAzzEns7mQyvQXFT4f.webp"
+              src="/manus-storage/coat_of_arms_real_375cb88d.png"
               alt="Imperial Coat of Arms"
               className="w-10 h-auto transition-transform duration-300 group-hover:scale-105"
             />

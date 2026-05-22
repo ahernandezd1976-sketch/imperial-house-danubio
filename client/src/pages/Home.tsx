@@ -448,7 +448,7 @@ export default function Home() {
                   />
                 ))}
                 <img
-                  src="/manus-storage/coat_of_arms_fd3008ef.png"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/coat_of_arms_rudolf_crown-9ciVuAzzEns7mQyvQXFT4f.webp"
                   alt="Imperial Coat of Arms of Austria-Danubio"
                   style={{
                     width: "100%",

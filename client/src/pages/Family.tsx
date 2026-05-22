@@ -1,6 +1,7 @@
 /*
  * Family Page — Imperial Modernism / Vienna Secession Reborn
- * Imperial family members with portrait cards and biographies
+ * Real characters: Emperor Maximilian I and the Imperial Household
+ * Portrait: Official family photograph, Palais Danubio
  */
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
@@ -11,60 +12,97 @@ const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
 
+// Left to right in the official portrait
 const familyMembers = [
   {
-    name: "Karl-Heinrich II",
-    title: "His Imperial Majesty the Emperor",
-    born: "14 March 1961, Neustadt",
+    name: "Archduke Charles",
+    title: "Archduke of Austria-Danubio",
+    age: 69,
+    style: "His Imperial Highness",
+    position: "far left",
+    bio: "The Emperor's elder brother and a senior member of the Imperial House. Archduke Charles has served the Confederation with distinction across five decades of public life, including terms as President of the Imperial Council of State and as Special Envoy to the Danubian Principalities. He is regarded as one of the most respected elder statesmen of the dynasty.",
+    initials: "CH",
+    dress: "Military uniform",
+  },
+  {
+    name: "Archduchess Ana",
+    title: "Archduchess of Austria-Danubio",
+    age: 65,
+    style: "Her Imperial Highness",
+    position: "second from left",
+    bio: "The Emperor's younger sister. Archduchess Ana is a distinguished patron of the arts and a founding trustee of the Imperial Foundation for Cultural Heritage. Known for her warmth and accessibility, she has represented the Imperial House at cultural and humanitarian events across Europe for over three decades. She is depicted seated in the official portrait.",
+    initials: "AN",
+    dress: "Deep crimson gown",
+    seated: true,
+  },
+  {
+    name: "Crown Prince Leopold von Habsburg",
+    title: "Crown Prince of Austria-Danubio, Archduke of Neustadt",
+    age: 32,
+    style: "His Imperial Highness",
+    position: "third from left",
+    bio: "The heir apparent to the Imperial Throne. Crown Prince Leopold holds degrees from New York University and the London School of Economics. A gifted polyglot, he speaks German, French, English, Spanish, Hungarian, Czech, and Croatian — a linguistic range that reflects the Confederation's multilingual heritage and his own deep commitment to the unity of its peoples. He chairs the Imperial Commission on European Affairs and is widely regarded as one of the most capable members of his generation.",
+    initials: "LP",
+    dress: "Full dress military uniform, blue",
+    languages: ["German", "French", "English", "Spanish", "Hungarian", "Czech", "Croatian"],
+  },
+  {
+    name: "Katharina von Richter",
+    title: "Fiancée of the Crown Prince",
+    age: 31,
+    style: "Fräulein",
+    position: "centre-left",
+    bio: "Daughter of August von Richter, the foremost industrialist and financier in Europe. Katharina holds a degree in Corporate Management from the University of Vienna and has served as a director of the von Richter Group's philanthropic arm. She speaks German, English, French, Spanish, and Hungarian. Her engagement to Crown Prince Leopold was announced at the Imperial Court in the spring of 2026 and was greeted with widespread public enthusiasm.",
+    initials: "KR",
+    dress: "White bridal gown",
+    father: "August von Richter",
+    languages: ["German", "English", "French", "Spanish", "Hungarian"],
+  },
+  {
+    name: "Emperor Maximilian I",
+    title: "His Imperial Majesty the Emperor of Austria-Danubio",
+    age: 72,
     style: "His Imperial and Royal Majesty",
-    bio: "The reigning Emperor of Austria-Danubio since 1998. A graduate of the Imperial Military Academy and the University of Vienna, His Majesty has devoted his reign to constitutional modernisation, European diplomacy, and the patronage of the arts and sciences. He is Knight Grand Cross of the Order of the Golden Eagle and holds honorary doctorates from seven universities.",
-    image: "/manus-storage/emperor_portrait_4ad8ffe0.png",
+    position: "centre",
+    bio: "The reigning Emperor of Austria-Danubio, now in his nineteenth year on the throne. Emperor Maximilian I ascended following the death of his father and has presided over a period of constitutional consolidation, economic modernisation, and deepened European integration. His reign has been marked by personal courage in the face of profound tragedy: the late Empress Maria-Cristina perished in the fire at the Paris Ritz on the 10th of September, 2000, a loss that shook the Confederation and the wider world. His Majesty has since devoted himself entirely to his duties, and is universally respected for his dignity, his wisdom, and his tireless service to the Danubian peoples.",
+    initials: "MX",
+    dress: "Imperial coronation robes and regalia",
     isEmperor: true,
+    reignYears: 19,
+    widow: true,
+    lateSpouse: "Empress Maria-Cristina",
+    spouseDeath: "Paris Ritz fire, 10 September 2000",
   },
   {
-    name: "Maria-Elena",
-    title: "Her Imperial Majesty the Empress",
-    born: "22 September 1963, Vienna",
-    style: "Her Imperial and Royal Majesty",
-    bio: "Born Princess Maria-Elena of Württemberg-Danube, she married the then-Archduke Karl-Heinrich in 1987. The Empress is a distinguished art historian and the founder of the Imperial Foundation for Cultural Heritage, which has restored over two hundred historic monuments across the Confederation.",
-    image: null,
-    initials: "ME",
-  },
-  {
-    name: "Leopold-Franz",
-    title: "Archduke of Neustadt, Crown Prince",
-    born: "3 July 1988, Neustadt",
-    style: "His Imperial Highness",
-    bio: "The Crown Prince and heir apparent. Educated at the Imperial Military Academy, Oxford University, and the London School of Economics. He serves as the Emperor's representative at international diplomatic forums and chairs the Imperial Commission on Environmental Stewardship of the Danube.",
-    image: null,
-    initials: "LF",
-  },
-  {
-    name: "Theresa-Maria",
-    title: "Archduchess of Danubio",
-    born: "17 November 1990, Neustadt",
+    name: "Archduchess Eleonora",
+    title: "Archduchess of Austria-Danubio",
+    age: 29,
     style: "Her Imperial Highness",
-    bio: "The Emperor's second child. A physician by training, Archduchess Theresa-Maria serves as President of the Imperial Red Cross of Danubio and has led humanitarian missions to Central Asia and the Balkans. She is also a published author of two books on the history of Danubian medicine.",
-    image: null,
-    initials: "TM",
+    position: "centre-right",
+    bio: "The Emperor's daughter and youngest child. Archduchess Eleonora studied international law at the University of Vienna and the Sorbonne. She serves as the Imperial Patron of the Danubian Youth Foundation and has been a prominent advocate for environmental protection of the Danube river system. Her poise and public presence have made her one of the most admired members of the younger generation of the Imperial House.",
+    initials: "EL",
+    dress: "Black gown",
   },
   {
-    name: "Karl-Josef",
-    title: "Archduke, Duke of the Eastern Marches",
-    born: "5 April 1993, Neustadt",
-    style: "His Imperial Highness",
-    bio: "The Emperor's youngest child. An accomplished musician and composer, Archduke Karl-Josef studied at the Vienna Conservatory and the Paris Conservatoire. He serves as the Imperial Patron of the Neustadt Philharmonic and the Danubian Festival of Music.",
-    image: null,
-    initials: "KJ",
-  },
-  {
-    name: "Maria-Sophia",
-    title: "Archduchess, Princess of the Danubian Marches",
-    born: "12 February 1935, Neustadt",
+    name: "Archduchess Alexis",
+    title: "Archduchess of Austria-Danubio",
+    age: 66,
     style: "Her Imperial Highness",
-    bio: "The Emperor's aunt and the eldest living member of the Imperial House. A former diplomat who served as the Confederation's Ambassador to France and the United Nations, Archduchess Maria-Sophia is the author of the celebrated memoir 'The River and the Crown' (1998).",
-    image: null,
-    initials: "MS",
+    position: "second from right",
+    bio: "A senior member of the Imperial House and widow of the late Archduke Friedrich. Archduchess Alexis has served the Confederation as a diplomat, author, and philanthropist. She is the founder of the Imperial Society for the Preservation of Danubian Languages and a trustee of the Imperial Library. Her memoir, 'The River and the Crown' (2001), remains one of the most celebrated personal accounts of life within the Imperial House.",
+    initials: "AL",
+    dress: "Blue beaded gown",
+    widow: true,
+  },
+  {
+    name: "Archduke Reiner von Habsburg",
+    title: "Marshall of the Crown, Archduke of Austria-Danubio",
+    age: 31,
+    style: "His Imperial Highness",
+    position: "far right",
+    bio: "Marshall of the Crown and one of the most senior officers of the Imperial Household. Archduke Reiner von Habsburg is responsible for the organisation of all Imperial ceremonies, state visits, and court protocol. A graduate of the Imperial Military Academy, he holds the rank of General in the Imperial Guard and has served on diplomatic missions to Central Europe and the Balkans. He is regarded as the indispensable organising force behind the ceremonial life of the Imperial Court.",
+    initials: "RV",
+    dress: "Full dress military uniform, gold epaulettes",
   },
 ];
 
@@ -74,6 +112,9 @@ export default function Family() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const emperor = familyMembers.find((m) => m.isEmperor)!;
+  const others = familyMembers.filter((m) => !m.isEmperor);
 
   return (
     <div style={{ backgroundColor: DARK }}>
@@ -141,102 +182,301 @@ export default function Family() {
         </div>
       </section>
 
-      {/* Emperor feature */}
-      <section style={{ backgroundColor: CREAM, padding: "5rem 0" }}>
+      {/* Official Portrait */}
+      <section style={{ backgroundColor: CREAM, padding: "6rem 0" }}>
         <div className="container">
-          <div className="reveal grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+          <div className="reveal text-center mb-10">
+            <div
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "0.6rem",
+                letterSpacing: "0.3em",
+                color: "oklch(0.55 0.08 85)",
+                textTransform: "uppercase",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Official Photograph · Palais Danubio · 2026
+            </div>
+            <h2
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+                fontWeight: 600,
+                color: DARK,
+                letterSpacing: "0.03em",
+              }}
+            >
+              The Imperial Household
+            </h2>
+          </div>
+
+          <div className="reveal" style={{ position: "relative", maxWidth: "900px", margin: "0 auto" }}>
+            {/* Corner ornaments */}
+            {[
+              { top: -10, left: -10 },
+              { top: -10, right: -10 },
+              { bottom: -10, left: -10 },
+              { bottom: -10, right: -10 },
+            ].map((pos, i) => (
+              <div
+                key={i}
+                style={{
+                  position: "absolute",
+                  width: "28px",
+                  height: "28px",
+                  borderTop: i < 2 ? `2px solid ${GOLD}` : "none",
+                  borderBottom: i >= 2 ? `2px solid ${GOLD}` : "none",
+                  borderLeft: i % 2 === 0 ? `2px solid ${GOLD}` : "none",
+                  borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
+                  ...pos,
+                  zIndex: 2,
+                }}
+              />
+            ))}
+            <img
+              src="/manus-storage/family_portrait_bdc5e5ff.png"
+              alt="Official portrait of the Imperial House of Austria-Danubio, 2026"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                boxShadow: "0 20px 60px oklch(0.09 0.005 285 / 0.25)",
+              }}
+            />
+            {/* Caption bar */}
+            <div
+              style={{
+                background: DARK,
+                padding: "0.85rem 1.5rem",
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "0.25rem 1.5rem",
+                justifyContent: "center",
+              }}
+            >
+              {familyMembers.map((m, i) => (
+                <span
+                  key={i}
+                  style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: "0.55rem",
+                    letterSpacing: "0.15em",
+                    color: "oklch(0.55 0.01 85)",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {m.name.split(" ").slice(-1)[0]}
+                  {i < familyMembers.length - 1 && (
+                    <span style={{ color: GOLD, marginLeft: "1.5rem" }}>·</span>
+                  )}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Name labels below portrait */}
+          <div
+            className="reveal"
+            style={{
+              maxWidth: "900px",
+              margin: "0.5rem auto 0",
+              display: "grid",
+              gridTemplateColumns: "repeat(7, 1fr)",
+              gap: "0.25rem",
+              textAlign: "center",
+            }}
+          >
+            {familyMembers.map((m, i) => (
+              <div key={i} style={{ padding: "0.5rem 0.25rem" }}>
+                <div
+                  style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: "0.55rem",
+                    letterSpacing: "0.1em",
+                    color: m.isEmperor ? GOLD : "oklch(0.4 0.01 285)",
+                    textTransform: "uppercase",
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {m.name.replace("Archduke ", "").replace("Archduchess ", "").replace("Crown Prince ", "").replace("Emperor ", "")}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Emperor feature */}
+      <section style={{ backgroundColor: DARK, padding: "6rem 0" }}>
+        <div className="container">
+          <div className="reveal grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            {/* Sidebar */}
+            <div className="lg:col-span-4">
+              <div
+                style={{
+                  border: `1px solid oklch(0.72 0.12 85 / 0.2)`,
+                  padding: "2rem",
+                  background: "oklch(0.12 0.005 285)",
+                  position: "sticky",
+                  top: "6rem",
+                }}
+              >
+                <div style={{ height: "2px", background: GOLD, marginBottom: "1.5rem" }} />
+                <div
+                  style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: "0.55rem",
+                    letterSpacing: "0.25em",
+                    color: GOLD,
+                    textTransform: "uppercase",
+                    marginBottom: "0.75rem",
+                    opacity: 0.8,
+                  }}
+                >
+                  The Sovereign
+                </div>
+                <h2
+                  style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: "1.5rem",
+                    fontWeight: 600,
+                    color: CREAM,
+                    marginBottom: "0.35rem",
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {emperor.name}
+                </h2>
+                <div
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontStyle: "italic",
+                    fontSize: "0.9rem",
+                    color: GOLD,
+                    marginBottom: "1.25rem",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {emperor.title}
+                </div>
+                <div style={{ height: "1px", background: "oklch(0.72 0.12 85 / 0.2)", marginBottom: "1.25rem" }} />
+                {[
+                  { label: "Age", value: `${emperor.age} years` },
+                  { label: "Style", value: emperor.style },
+                  { label: "Years on Throne", value: `${emperor.reignYears} years` },
+                  { label: "Status", value: "Widower" },
+                  { label: "Late Empress", value: emperor.lateSpouse },
+                  { label: "Tragedy", value: emperor.spouseDeath },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      padding: "0.5rem 0",
+                      borderBottom: "1px solid oklch(0.72 0.12 85 / 0.08)",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.15rem",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: "'Cinzel', serif",
+                        fontSize: "0.55rem",
+                        letterSpacing: "0.15em",
+                        color: "oklch(0.5 0.01 85)",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      {item.label}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: "'Cormorant Garamond', serif",
+                        fontSize: "0.9rem",
+                        color: CREAM,
+                        fontStyle: "italic",
+                      }}
+                    >
+                      {item.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Bio */}
+            <div className="lg:col-span-8">
               <div
                 style={{
                   fontFamily: "'Cinzel', serif",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.3em",
-                  color: "oklch(0.55 0.08 85)",
+                  fontSize: "0.55rem",
+                  letterSpacing: "0.25em",
+                  color: GOLD,
                   textTransform: "uppercase",
                   marginBottom: "1rem",
+                  opacity: 0.8,
                 }}
               >
-                The Sovereign
+                His Imperial and Royal Majesty
               </div>
               <h2
                 style={{
                   fontFamily: "'Cinzel', serif",
-                  fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
-                  fontWeight: 600,
-                  color: DARK,
-                  lineHeight: 1.2,
-                  marginBottom: "0.5rem",
+                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  fontWeight: 700,
+                  color: CREAM,
+                  lineHeight: 1.15,
+                  marginBottom: "1.5rem",
+                  letterSpacing: "0.03em",
                 }}
               >
-                Karl-Heinrich II
+                Emperor<br />Maximilian I
               </h2>
-              <div
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontStyle: "italic",
-                  fontSize: "1.1rem",
-                  color: "oklch(0.55 0.08 85)",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                His Imperial and Royal Majesty the Emperor
-              </div>
-              <div
-                style={{
-                  fontFamily: "'Source Serif 4', serif",
-                  fontSize: "0.85rem",
-                  color: "oklch(0.5 0.01 285)",
-                  marginBottom: "1.5rem",
-                  letterSpacing: "0.05em",
-                }}
-              >
-                Born: 14 March 1961, Neustadt &nbsp;·&nbsp; Reigning since: 7 September 1998
-              </div>
-              <div
-                style={{
-                  height: "1px",
-                  background: `linear-gradient(90deg, ${GOLD}, transparent)`,
-                  marginBottom: "1.5rem",
-                }}
-              />
+              <div style={{ height: "1px", background: `linear-gradient(90deg, ${GOLD}, transparent)`, marginBottom: "1.75rem" }} />
               <p
                 style={{
                   fontFamily: "'Source Serif 4', serif",
                   fontSize: "1.05rem",
-                  lineHeight: 1.9,
-                  color: "oklch(0.25 0.005 285)",
+                  lineHeight: 1.95,
+                  color: "oklch(0.75 0.01 85)",
+                  marginBottom: "1.5rem",
                 }}
               >
-                {familyMembers[0].bio}
+                {emperor.bio}
               </p>
-            </div>
-            <div className="flex justify-center" style={{ transitionDelay: "0.2s" }}>
-              <div style={{ maxWidth: "360px", width: "100%", position: "relative" }}>
-                {[
-                  { top: -8, left: -8 },
-                  { top: -8, right: -8 },
-                  { bottom: -8, left: -8 },
-                  { bottom: -8, right: -8 },
-                ].map((pos, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      position: "absolute",
-                      width: "20px",
-                      height: "20px",
-                      borderTop: i < 2 ? `2px solid ${GOLD}` : "none",
-                      borderBottom: i >= 2 ? `2px solid ${GOLD}` : "none",
-                      borderLeft: i % 2 === 0 ? `2px solid ${GOLD}` : "none",
-                      borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
-                      ...pos,
-                    }}
-                  />
-                ))}
-                <img
-                  src="/manus-storage/emperor_portrait_4ad8ffe0.png"
-                  alt="Emperor Karl-Heinrich II"
-                  style={{ width: "100%", height: "auto", display: "block" }}
-                />
+              {/* Empress memorial note */}
+              <div
+                style={{
+                  borderLeft: `3px solid ${GOLD}`,
+                  paddingLeft: "1.5rem",
+                  marginTop: "2rem",
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: "0.55rem",
+                    letterSpacing: "0.2em",
+                    color: GOLD,
+                    textTransform: "uppercase",
+                    marginBottom: "0.5rem",
+                    opacity: 0.7,
+                  }}
+                >
+                  In Memoriam
+                </div>
+                <p
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontStyle: "italic",
+                    fontSize: "1rem",
+                    color: "oklch(0.6 0.01 85)",
+                    lineHeight: 1.8,
+                  }}
+                >
+                  The late Empress Maria-Cristina, beloved consort of Emperor Maximilian I, perished in the fire at the Paris Ritz on the 10th of September, 2000. Her memory is honoured each year on that date by a solemn Mass at the Cathedral of Neustadt, attended by the Imperial Family and representatives of the Confederation's seven constituent states.
+                </p>
               </div>
             </div>
           </div>
@@ -244,9 +484,206 @@ export default function Family() {
       </section>
 
       {/* Other family members */}
-      <section style={{ backgroundColor: DARK, padding: "6rem 0" }}>
+      <section style={{ backgroundColor: CREAM, padding: "6rem 0" }}>
         <div className="container">
           <div className="reveal text-center mb-12">
+            <div
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "0.6rem",
+                letterSpacing: "0.3em",
+                color: "oklch(0.55 0.08 85)",
+                textTransform: "uppercase",
+                marginBottom: "1rem",
+              }}
+            >
+              Members of the House
+            </div>
+            <h2
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
+                fontWeight: 600,
+                color: DARK,
+                letterSpacing: "0.03em",
+              }}
+            >
+              The Imperial Household
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {others.map((member, i) => (
+              <div
+                key={i}
+                className="reveal"
+                style={{
+                  transitionDelay: `${i * 0.08}s`,
+                  border: `1px solid oklch(0.72 0.12 85 / 0.2)`,
+                  background: "oklch(0.99 0.008 85)",
+                  position: "relative",
+                  overflow: "hidden",
+                }}
+              >
+                {/* Gold top accent */}
+                <div style={{ height: "2px", background: GOLD }} />
+
+                {/* Avatar */}
+                <div
+                  style={{
+                    height: "140px",
+                    background: "oklch(0.93 0.01 85)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderBottom: `1px solid oklch(0.72 0.12 85 / 0.15)`,
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "72px",
+                      height: "72px",
+                      border: `2px solid oklch(0.72 0.12 85 / 0.5)`,
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontFamily: "'Cinzel', serif",
+                      fontSize: "1.3rem",
+                      color: "oklch(0.55 0.08 85)",
+                    }}
+                  >
+                    {member.initials}
+                  </div>
+                </div>
+
+                <div style={{ padding: "1.5rem" }}>
+                  <h3
+                    style={{
+                      fontFamily: "'Cinzel', serif",
+                      fontSize: "0.95rem",
+                      fontWeight: 600,
+                      color: DARK,
+                      marginBottom: "0.3rem",
+                      letterSpacing: "0.02em",
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    {member.name}
+                  </h3>
+                  <div
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      fontStyle: "italic",
+                      fontSize: "0.88rem",
+                      color: "oklch(0.55 0.08 85)",
+                      marginBottom: "0.3rem",
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {member.title}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "'Source Serif 4', serif",
+                      fontSize: "0.75rem",
+                      color: "oklch(0.5 0.01 285)",
+                      marginBottom: "1rem",
+                      letterSpacing: "0.03em",
+                    }}
+                  >
+                    Age {member.age}
+                    {member.widow ? " · Widow" : ""}
+                    {member.seated ? " · Seated in portrait" : ""}
+                  </div>
+                  <div
+                    style={{
+                      height: "1px",
+                      background: `linear-gradient(90deg, oklch(0.72 0.12 85 / 0.4), transparent)`,
+                      marginBottom: "1rem",
+                    }}
+                  />
+                  <p
+                    style={{
+                      fontFamily: "'Source Serif 4', serif",
+                      fontSize: "0.87rem",
+                      lineHeight: 1.85,
+                      color: "oklch(0.3 0.005 285)",
+                      marginBottom: member.languages ? "1rem" : 0,
+                    }}
+                  >
+                    {member.bio}
+                  </p>
+
+                  {/* Languages tag */}
+                  {member.languages && (
+                    <div style={{ marginTop: "0.75rem" }}>
+                      <div
+                        style={{
+                          fontFamily: "'Cinzel', serif",
+                          fontSize: "0.55rem",
+                          letterSpacing: "0.2em",
+                          color: "oklch(0.55 0.08 85)",
+                          textTransform: "uppercase",
+                          marginBottom: "0.5rem",
+                        }}
+                      >
+                        Languages
+                      </div>
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
+                        {member.languages.map((lang, j) => (
+                          <span
+                            key={j}
+                            style={{
+                              fontFamily: "'Source Serif 4', serif",
+                              fontSize: "0.72rem",
+                              color: DARK,
+                              background: "oklch(0.93 0.01 85)",
+                              border: `1px solid oklch(0.72 0.12 85 / 0.3)`,
+                              padding: "0.15rem 0.5rem",
+                              fontStyle: "italic",
+                            }}
+                          >
+                            {lang}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Father note for Katharina */}
+                  {member.father && (
+                    <div
+                      style={{
+                        marginTop: "0.75rem",
+                        padding: "0.6rem 0.75rem",
+                        background: "oklch(0.93 0.01 85)",
+                        borderLeft: `2px solid oklch(0.72 0.12 85 / 0.5)`,
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontFamily: "'Cormorant Garamond', serif",
+                          fontStyle: "italic",
+                          fontSize: "0.82rem",
+                          color: "oklch(0.4 0.01 285)",
+                        }}
+                      >
+                        Daughter of August von Richter, the foremost industrialist in Europe.
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Succession */}
+      <section style={{ backgroundColor: DARK, padding: "5rem 0" }}>
+        <div className="container">
+          <div className="reveal max-w-3xl mx-auto text-center">
             <div
               style={{
                 fontFamily: "'Cinzel', serif",
@@ -258,140 +695,6 @@ export default function Family() {
                 opacity: 0.8,
               }}
             >
-              Members of the House
-            </div>
-            <h2
-              style={{
-                fontFamily: "'Cinzel', serif",
-                fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
-                fontWeight: 600,
-                color: CREAM,
-                letterSpacing: "0.03em",
-              }}
-            >
-              The Imperial Household
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {familyMembers.slice(1).map((member, i) => (
-              <div
-                key={i}
-                className="reveal"
-                style={{
-                  transitionDelay: `${i * 0.1}s`,
-                  border: `1px solid oklch(0.72 0.12 85 / 0.15)`,
-                  background: "oklch(0.12 0.005 285)",
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-              >
-                {/* Gold top accent */}
-                <div style={{ height: "2px", background: GOLD }} />
-
-                {/* Avatar placeholder */}
-                <div
-                  style={{
-                    height: "180px",
-                    background: "oklch(0.15 0.005 285)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderBottom: `1px solid oklch(0.72 0.12 85 / 0.1)`,
-                  }}
-                >
-                  <div
-                    style={{
-                      width: "80px",
-                      height: "80px",
-                      border: `2px solid oklch(0.72 0.12 85 / 0.4)`,
-                      borderRadius: "50%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontFamily: "'Cinzel', serif",
-                      fontSize: "1.5rem",
-                      color: GOLD,
-                      opacity: 0.7,
-                    }}
-                  >
-                    {member.initials}
-                  </div>
-                </div>
-
-                <div style={{ padding: "1.5rem" }}>
-                  <h3
-                    style={{
-                      fontFamily: "'Cinzel', serif",
-                      fontSize: "1rem",
-                      fontWeight: 600,
-                      color: CREAM,
-                      marginBottom: "0.35rem",
-                      letterSpacing: "0.03em",
-                    }}
-                  >
-                    {member.name}
-                  </h3>
-                  <div
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontStyle: "italic",
-                      fontSize: "0.9rem",
-                      color: GOLD,
-                      marginBottom: "0.35rem",
-                    }}
-                  >
-                    {member.title}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: "'Source Serif 4', serif",
-                      fontSize: "0.75rem",
-                      color: "oklch(0.5 0.01 85)",
-                      marginBottom: "1rem",
-                      letterSpacing: "0.03em",
-                    }}
-                  >
-                    b. {member.born}
-                  </div>
-                  <div
-                    style={{
-                      height: "1px",
-                      background: `linear-gradient(90deg, oklch(0.72 0.12 85 / 0.3), transparent)`,
-                      marginBottom: "1rem",
-                    }}
-                  />
-                  <p
-                    style={{
-                      fontFamily: "'Source Serif 4', serif",
-                      fontSize: "0.88rem",
-                      lineHeight: 1.8,
-                      color: "oklch(0.6 0.01 85)",
-                    }}
-                  >
-                    {member.bio}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Succession note */}
-      <section style={{ backgroundColor: CREAM, padding: "5rem 0" }}>
-        <div className="container">
-          <div className="reveal max-w-3xl mx-auto text-center">
-            <div
-              style={{
-                fontFamily: "'Cinzel', serif",
-                fontSize: "0.6rem",
-                letterSpacing: "0.3em",
-                color: "oklch(0.55 0.08 85)",
-                textTransform: "uppercase",
-                marginBottom: "1rem",
-              }}
-            >
               Order of Succession
             </div>
             <h2
@@ -399,7 +702,7 @@ export default function Family() {
                 fontFamily: "'Cinzel', serif",
                 fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
                 fontWeight: 600,
-                color: DARK,
+                color: CREAM,
                 marginBottom: "1.5rem",
               }}
             >
@@ -410,44 +713,48 @@ export default function Family() {
                 fontFamily: "'Source Serif 4', serif",
                 fontSize: "1rem",
                 lineHeight: 1.9,
-                color: "oklch(0.3 0.005 285)",
-                marginBottom: "1.5rem",
+                color: "oklch(0.65 0.01 85)",
+                marginBottom: "2rem",
               }}
             >
-              The succession to the Imperial Throne of Austria-Danubio is governed by the Imperial House Law of 1918, as amended in 1998. Succession follows the principle of absolute primogeniture — the eldest child of the reigning Emperor, regardless of sex, is first in line. The current heir apparent is Crown Prince Leopold-Franz, Archduke of Neustadt.
+              Succession to the Imperial Throne of Austria-Danubio follows the principle of absolute primogeniture. The current heir apparent is Crown Prince Leopold von Habsburg, Archduke of Neustadt, whose forthcoming marriage to Katharina von Richter is anticipated with great public interest throughout the Confederation.
             </p>
             <div
               style={{
                 display: "inline-block",
-                border: `1px solid oklch(0.72 0.12 85 / 0.4)`,
-                padding: "1.25rem 2rem",
+                border: `1px solid oklch(0.72 0.12 85 / 0.3)`,
+                padding: "1.5rem 2.5rem",
+                background: "oklch(0.12 0.005 285)",
               }}
             >
               <div
                 style={{
                   fontFamily: "'Cinzel', serif",
-                  fontSize: "0.6rem",
+                  fontSize: "0.55rem",
                   letterSpacing: "0.2em",
-                  color: "oklch(0.55 0.08 85)",
+                  color: GOLD,
                   textTransform: "uppercase",
-                  marginBottom: "0.75rem",
+                  marginBottom: "1rem",
+                  opacity: 0.8,
                 }}
               >
                 Current Line of Succession
               </div>
               {[
-                "1st — Crown Prince Leopold-Franz, Archduke of Neustadt",
-                "2nd — Archduchess Theresa-Maria of Danubio",
-                "3rd — Archduke Karl-Josef, Duke of the Eastern Marches",
+                "1st — Crown Prince Leopold von Habsburg, Archduke of Neustadt",
+                "2nd — Archduchess Eleonora of Austria-Danubio",
+                "3rd — Archduke Reiner von Habsburg, Marshall of the Crown",
               ].map((line, i) => (
                 <div
                   key={i}
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     fontSize: "0.95rem",
-                    color: DARK,
-                    padding: "0.35rem 0",
-                    borderBottom: i < 2 ? `1px solid oklch(0.72 0.12 85 / 0.2)` : "none",
+                    color: CREAM,
+                    padding: "0.45rem 0",
+                    borderBottom: i < 2 ? `1px solid oklch(0.72 0.12 85 / 0.15)` : "none",
+                    textAlign: "left",
+                    fontStyle: "italic",
                   }}
                 >
                   {line}

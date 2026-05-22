@@ -259,7 +259,7 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            ✦ &nbsp; Official Announcement: The Imperial Jubilee Celebrations of 2026 — 159th Anniversary of the House &nbsp; ✦
+            ✦ &nbsp; Imperial Announcement: The engagement of Crown Prince Leopold von Habsburg and Fräulein Katharina von Richter is formally proclaimed — Spring 2026 &nbsp; ✦
           </p>
         </div>
       </section>
@@ -315,7 +315,7 @@ export default function Home() {
                   color: "oklch(0.25 0.005 285)",
                 }}
               >
-                Today, under the reign of His Imperial Majesty Emperor Karl-Heinrich II, the House continues to serve as a constitutional monarchy, presiding over the Danubian Confederation with dignity, tradition, and a commitment to the peoples of the river lands.
+                Today, under the reign of His Imperial Majesty Emperor Maximilian I — now in his nineteenth year on the throne — the House continues to serve as a constitutional monarchy, presiding over the Danubian Confederation with dignity, tradition, and a commitment to the peoples of the river lands.
               </p>
               <div style={{ marginTop: "2rem" }}>
                 <Link
@@ -412,8 +412,8 @@ export default function Home() {
                     letterSpacing: "0.05em",
                   }}
                 >
-                  His Imperial Majesty Karl-Heinrich II<br />
-                  Emperor of Austria-Danubio, r. 1998–present
+                  His Imperial Majesty Maximilian I<br />
+                  Emperor of Austria-Danubio · 19 years on the throne
                 </p>
               </div>
             </div>
@@ -445,7 +445,7 @@ export default function Home() {
                 }}
               >
                 His Imperial Majesty<br />
-                <span style={{ color: GOLD }}>Karl-Heinrich II</span>
+                <span style={{ color: GOLD }}>Maximilian I</span>
               </h2>
               <SectionDivider light />
               <p
@@ -457,7 +457,7 @@ export default function Home() {
                   marginBottom: "1.25rem",
                 }}
               >
-                Born on the 14th of March, 1961, at the Palais Danubio in Neustadt, Karl-Heinrich Franz Josef Maria of Austria-Danubio ascended to the Imperial Throne on the 7th of September, 1998, following the passing of his father, Emperor Franz-Leopold III.
+                Born in 1954 at the Palais Danubio in Neustadt, Maximilian Franz Josef Karl of Austria-Danubio ascended to the Imperial Throne following the passing of his father. He has now reigned for nineteen years, presiding over a period of constitutional consolidation and European integration.
               </p>
               <p
                 style={{
@@ -467,7 +467,7 @@ export default function Home() {
                   color: "oklch(0.75 0.01 85)",
                 }}
               >
-                A graduate of the Imperial Military Academy of Neustadt and the University of Vienna, His Majesty has devoted his reign to the modernisation of the Danubian Confederation's constitutional framework while preserving the ceremonial and cultural heritage of the dynasty.
+                His Majesty has borne his duties with unwavering dignity in the face of profound personal tragedy. The late Empress Maria-Cristina perished in the fire at the Paris Ritz on the 10th of September, 2000 — a loss that shook the Confederation and the world. He has since devoted himself entirely to his people. The forthcoming marriage of Crown Prince Leopold to Katharina von Richter is a moment of great joy for the Imperial House and the Confederation alike.
               </p>
 
               {/* Imperial titles */}
@@ -500,7 +500,7 @@ export default function Home() {
                     lineHeight: 1.7,
                   }}
                 >
-                  His Imperial and Royal Majesty Karl-Heinrich II, by the Grace of God Emperor of Austria-Danubio, King of the Danubian Lands, Archduke of Neustadt, Grand Duke of the Eastern Marches, Protector of the River Peoples, Knight of the Order of the Golden Eagle.
+                  His Imperial and Royal Majesty Maximilian I, by the Grace of God Emperor of Austria-Danubio, King of the Danubian Lands, Archduke of Neustadt, Grand Duke of the Eastern Marches, Protector of the River Peoples, Knight of the Order of the Golden Eagle.
                 </p>
               </div>
 
@@ -775,7 +775,9 @@ export default function Home() {
               { year: "1867", event: "Treaty of Neustadt", desc: "The founding treaty establishes the Danubian Confederation and the Imperial House through the marriage of Archduke Leopold-Karl and Princess Maria Theresa." },
               { year: "1871", event: "Construction of Palais Danubio", desc: "Emperor Leopold-Karl I orders the construction of the imperial residence along the Danube, completed in 1889." },
               { year: "1918", event: "The Great Reformation", desc: "Following the upheaval of the Great War, Emperor Franz-Josef II signs the Constitutional Charter, transforming the empire into a constitutional monarchy." },
-              { year: "1998", event: "Accession of Karl-Heinrich II", desc: "The current Emperor ascends to the throne, beginning a reign marked by diplomatic renewal and cultural patronage." },
+              { year: "1998", event: "Accession of Maximilian I", desc: "The current Emperor ascends to the throne, beginning a reign marked by diplomatic renewal and cultural patronage." },
+              { year: "2000", event: "Tragedy at the Paris Ritz", desc: "The late Empress Maria-Cristina perishes in the fire at the Paris Ritz on 10 September. The Emperor's stoic grief and continued service become a defining moment of his reign." },
+              { year: "2026", event: "The Imperial Engagement", desc: "Crown Prince Leopold von Habsburg and Fr\u00e4ulein Katharina von Richter announce their engagement, bringing great joy to the Confederation." },
             ].map((item, i) => (
               <div
                 key={i}

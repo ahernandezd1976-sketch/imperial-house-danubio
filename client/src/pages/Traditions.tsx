@@ -23,14 +23,14 @@ const traditions = [
     numeral: "II",
     title: "The Feast of the Eagle",
     subtitle: "Annual Imperial Celebration",
-    description: "Held each year on the 17th of October — the anniversary of the Treaty of Vienna and the founding of the Danubian Federation — the Feast of the Eagle is the principal public celebration of the Imperial House. The day begins with a solemn Mass at the Cathedral, followed by a military parade along the Kaiserstrasse. In the afternoon, the Emperor and Empress receive representatives of all seven constituent states of the Confederation in the Grand Hall of the Palais Danubio. The evening concludes with a state banquet and a fireworks display over the Danube, a tradition begun by Emperor Franz Ferdinand I in 1918.",
+    description: "Held each year on the 17th of October — the anniversary of the Treaty of Vienna and the founding of the Danubian Federation — the Feast of the Eagle is the principal public celebration of the Imperial House. The day begins with a solemn Mass at the Cathedral, followed by a military parade along the Kaiserstrasse. In the afternoon, the Emperor and Empress receive representatives of all seven constituent states of the Confederation in the Grand Hall of the Hofburg Imperial Palace. The evening concludes with a state banquet and a fireworks display over the Danube, a tradition begun by Emperor Franz Ferdinand I in 1918.",
     detail: "Public holiday throughout the Danubian Confederation. The Feast has been celebrated without interruption since 1917, even during the years of the Second World War.",
   },
   {
     numeral: "III",
     title: "The Investiture of the Order of the Golden Eagle",
     subtitle: "The Highest Imperial Honour",
-    description: "The Order of the Golden Eagle, founded by Emperor Franz Ferdinand I in 1917 upon the proclamation of the Danubian Federation, is the highest honour the Emperor may bestow. The investiture ceremony is held in the Throne Room of the Palais Danubio on the Feast of the Eagle. Recipients — never more than twelve living members at any time — are invested with the Order's insignia: a golden eagle pendant suspended from a black and gold ribbon, a star of eight points, and a ceremonial mantle of black velvet lined with gold silk. The ceremony includes the reading of the recipient's citation, the Emperor's personal investiture, and a formal oath of loyalty to the Confederation.",
+    description: "The Order of the Golden Eagle, founded by Emperor Franz Ferdinand I in 1917 upon the proclamation of the Danubian Federation, is the highest honour the Emperor may bestow. The investiture ceremony is held in the Throne Room of the Hofburg Imperial Palace on the Feast of the Eagle. Recipients — never more than twelve living members at any time — are invested with the Order's insignia: a golden eagle pendant suspended from a black and gold ribbon, a star of eight points, and a ceremonial mantle of black velvet lined with gold silk. The ceremony includes the reading of the recipient's citation, the Emperor's personal investiture, and a formal oath of loyalty to the Confederation.",
     detail: "The Order has been awarded 94 times since its founding. Current living members include three heads of state, two Nobel laureates, and one reigning monarch.",
   },
   {
@@ -51,7 +51,7 @@ const traditions = [
     numeral: "VI",
     title: "The New Year's Concert",
     subtitle: "A Gift to the Confederation",
-    description: "On the first day of each year, the Neustadt Philharmonic performs the Imperial New Year's Concert in the Grand Hall of the Palais Danubio, broadcast live to the entire Danubian Confederation and to audiences in over forty countries. The concert, established in 1923, always concludes with the performance of the Danubian Hymn and the Emperor's New Year's address to the nation. The programme traditionally includes works by Danubian composers alongside the great masters of the European tradition.",
+    description: "On the first day of each year, the Neustadt Philharmonic performs the Imperial New Year's Concert in the Grand Hall of the Hofburg Imperial Palace, broadcast live to the entire Danubian Confederation and to audiences in over forty countries. The concert, established in 1923, always concludes with the performance of the Danubian Hymn and the Emperor's New Year's address to the nation. The programme traditionally includes works by Danubian composers alongside the great masters of the European tradition.",
     detail: "The concert has been broadcast internationally since 1955. Tickets for the live performance are allocated by public lottery.",
   },
 ];

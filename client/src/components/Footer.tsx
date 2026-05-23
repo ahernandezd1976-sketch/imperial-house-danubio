@@ -128,8 +128,8 @@ export default function Footer() {
                 lineHeight: 1.8,
               }}
             >
-              <p>Palais Danubio</p>
-              <p>Kaiserstrasse 1, Neustadt</p>
+              <p>Hofburg Imperial Palace</p>
+              <p>Michaelerplatz 1, Vienna</p>
               <p>Danubio, A-1010</p>
               <p style={{ marginTop: "0.75rem" }}>chancery@imperial-danubio.at</p>
             </div>

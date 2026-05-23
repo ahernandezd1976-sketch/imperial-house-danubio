@@ -613,6 +613,45 @@ export default function Books() {
             )}
 
             <div style={{ width: "48px", height: "1px", background: GOLD, margin: "2.5rem auto 0", opacity: 0.4 }} />
+
+            {/* Direct contact */}
+            <div style={{ marginTop: "2rem" }}>
+              <p
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontStyle: "italic",
+                  fontSize: "0.9rem",
+                  color: "oklch(0.4 0.01 85)",
+                  lineHeight: 1.7,
+                  marginBottom: "0.5rem",
+                }}
+              >
+                For enquiries regarding rights, translation, or publication:
+              </p>
+              <a
+                href="mailto:soloahpublishing2025@gmail.com"
+                style={{
+                  fontFamily: "'Cinzel', serif",
+                  fontSize: "0.7rem",
+                  letterSpacing: "0.1em",
+                  color: GOLD,
+                  textDecoration: "none",
+                  borderBottom: `1px solid oklch(0.72 0.12 85 / 0.3)`,
+                  paddingBottom: "2px",
+                  transition: "color 0.2s ease, border-color 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.color = "oklch(0.85 0.14 85)";
+                  (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "oklch(0.85 0.14 85 / 0.6)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.color = GOLD;
+                  (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "oklch(0.72 0.12 85 / 0.3)";
+                }}
+              >
+                soloahpublishing2025@gmail.com
+              </a>
+            </div>
           </div>
         </div>
       </section>

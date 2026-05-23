@@ -580,7 +580,7 @@ export default function Home() {
                   marginBottom: "1.25rem",
                 }}
               >
-                Born in 1954 at the Palais Danubio in Neustadt, Maximilian Franz Josef Karl of Austria-Danubio ascended to the Imperial Throne following the passing of his father. He has now reigned for nineteen years, presiding over a period of constitutional consolidation and European integration.
+                Born in 1954 at the Hofburg Imperial Palace in Vienna, Maximilian Franz Josef Karl of Austria-Danubio ascended to the Imperial Throne following the passing of his father. He has now reigned for nineteen years, presiding over a period of constitutional consolidation and European integration.
               </p>
               <p
                 style={{
@@ -833,7 +833,7 @@ export default function Home() {
                 color: "oklch(0.78 0.01 85)",
               }}
             >
-              Constructed between 1871 and 1889 along the western bank of the Danube, the Palais Danubio serves as the official residence and seat of the Imperial Court. Its Baroque façade, formal gardens, and riverside terraces have been the backdrop for the most significant ceremonies of the Danubian Confederation.
+              Constructed between 1919 and 1925 along the western bank of the Danube, the Palais Danubio serves as the seat of the Danubian Council — the assembly of governors of the seven constituent states of the Confederation. When the governors convene in Vienna, the Palais Danubio is their official meeting place, its Grand Council Chamber the setting for the deliberations that govern the Federation.
             </p>
           </div>
         </div>

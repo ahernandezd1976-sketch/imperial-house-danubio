@@ -1,7 +1,7 @@
 /*
  * Family Page — Imperial Modernism / Vienna Secession Reborn
  * Real characters: Emperor Maximilian I and the Imperial Household
- * Portrait: Official family photograph, Palais Danubio
+ * Portrait: Official family photograph, Hofburg Imperial Palace
  */
 import { useEffect, useRef, useState } from "react";
 import Navigation from "@/components/Navigation";
@@ -319,7 +319,7 @@ export default function Family() {
                 marginBottom: "0.75rem",
               }}
             >
-              Official Photograph · Palais Danubio · 2026
+              Official Photograph · Hofburg Imperial Palace · 2026
             </div>
             <h2
               style={{
@@ -801,9 +801,10 @@ export default function Family() {
                       style={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "cover",
-                        objectPosition: "top center",
+                        objectFit: "contain",
+                        objectPosition: "center",
                         display: "block",
+                        padding: "0.5rem",
                       }}
                     />
                   ) : (

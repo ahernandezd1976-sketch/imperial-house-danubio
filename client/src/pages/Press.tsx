@@ -6,7 +6,7 @@ import { Link } from "wouter";
 
 const IMAGES = {
   cortege:
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_cortege_entrance_2026b-hBc6XKWTjmXCkyymcvtRni.webp",
+    "https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_cortege_entrance_2026c-8Ly7damrah5KbUJPAV5wqY.webp",
   ballroom:
     "https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_ballroom_2026-ag9gdxHfEGojhMmkrRFVV9.webp",
   drones:
@@ -36,12 +36,12 @@ export default function Press() {
       </header>
 
       {/* Hero image — cortège */}
-      <div className="relative w-full" style={{ maxHeight: "70vh", overflow: "hidden" }}>
+      <div className="relative w-full">
         <img
           src={IMAGES.cortege}
           alt="The Imperial cortège enters the Grand Ballroom of the Hofburg, January 2026"
-          className="w-full object-cover object-center"
-          style={{ maxHeight: "70vh" }}
+          className="w-full"
+          style={{ display: "block", height: "auto" }}
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-6 md:px-16 py-6">
           <p className="text-white/80 text-xs tracking-[0.2em] uppercase">
@@ -98,9 +98,9 @@ export default function Press() {
             <img
               src={IMAGES.debutante}
               alt="Debutante presentation at the Imperial Court Ball, Hofburg Palace, January 2026"
-              className="w-full object-cover"
-              style={{ aspectRatio: "3/4" }}
-            />
+                          className="w-full"
+            style={{ display: "block", height: "auto" }}
+          />
             <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2">
               Countess Isabelle von Trauttmansdorff-Weinsberg makes her presentation to the Imperial Family · Maison Leitner, ivory duchess satin · Atelier Kern diamond crescent necklace
             </p>
@@ -130,8 +130,8 @@ export default function Press() {
           <img
             src={IMAGES.strauss}
             alt="Maximilian Johann Strauss conducts the Imperial Court Orchestra, Hofburg Grand Ballroom, January 2026"
-            className="w-full object-cover"
-            style={{ maxHeight: "600px", objectPosition: "top" }}
+            className="w-full"
+            style={{ display: "block", height: "auto" }}
           />
           <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2">
             Maximilian Johann Strauss, great-great-great-grandson of Johann Strauss II, conducts the Imperial Court Orchestra · Hofburg Grand Ballroom · January 2026
@@ -163,9 +163,9 @@ export default function Press() {
             <img
               src={IMAGES.ballroom}
               alt="Waltzing at the Imperial Court Ball, Hofburg Grand Ballroom, January 2026"
-              className="w-full object-cover"
-              style={{ aspectRatio: "3/4" }}
-            />
+                          className="w-full"
+            style={{ display: "block", height: "auto" }}
+          />
             <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2">
               The first waltz of the evening · Maison Leitner black silk faille with gold leaf bodice · Goldschmiede Weiss emerald collar necklace in geometric white gold
             </p>
@@ -177,8 +177,8 @@ export default function Press() {
           <img
             src={IMAGES.drones}
             alt="360 drones form the double-headed eagle above the Hofburg, January 2026"
-            className="w-full object-cover"
-            style={{ maxHeight: "500px" }}
+            className="w-full"
+            style={{ display: "block", height: "auto" }}
           />
           <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2">
             Three hundred and sixty drones choreographed by Lichtarchitektur above the Hofburg · The double-headed eagle dissolves into the fifteen stars of the Danubian Federation · January 2026
@@ -200,7 +200,7 @@ export default function Press() {
             <p className="text-2xl italic text-[#8B7355]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               "I have attended this ball for thirty years. I have never wept before. I wept tonight."
             </p>
-            <cite className="text-xs tracking-[0.2em] uppercase text-[#8B7355] not-italic">— Princess Eleonora von Schwarzenberg</cite>
+            <cite className="text-xs tracking-[0.2em] uppercase text-[#8B7355] not-italic">— Princess Mathilde von Schwarzenberg</cite>
           </blockquote>
         </div>
 

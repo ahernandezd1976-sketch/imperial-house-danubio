@@ -14,7 +14,6 @@ const navLinks = [
   { href: "/properties", label: "Imperial Properties" },
   { href: "/world", label: "The World" },
   { href: "/books", label: "The Danubian Throne" },
-  { href: "/press", label: "Press" },
 ];
 
 export default function Navigation() {

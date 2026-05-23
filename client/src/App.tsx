@@ -12,7 +12,6 @@ import Heraldry from "./pages/Heraldry";
 import Properties from "./pages/Properties";
 import World from "./pages/World";
 import Books from "./pages/Books";
-import Press from "./pages/Press";
 
 function Router() {
   return (
@@ -25,7 +24,6 @@ function Router() {
       <Route path={"/properties"} component={Properties} />
       <Route path={"/world"} component={World} />
       <Route path={"/books"} component={Books} />
-      <Route path={"/press"} component={Press} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

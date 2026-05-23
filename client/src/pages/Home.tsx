@@ -580,7 +580,7 @@ export default function Home() {
                   marginBottom: "1.25rem",
                 }}
               >
-                Born in 1954 at the Hofburg Imperial Palace in Vienna, Maximilian Franz Josef Karl of Austria-Danubio ascended to the Imperial Throne following the passing of his father. He has now reigned for thirty-seven years, presiding over a period of constitutional consolidation and European integration.
+                Born in 1954 at the Hofburg Imperial Palace in Vienna, Maximilian Franz Josef Karl of Austria-Danubio ascended to the Imperial Throne following the passing of his father. He has now reigned for nineteen years, presiding over a period of constitutional consolidation and European integration.
               </p>
               <p
                 style={{

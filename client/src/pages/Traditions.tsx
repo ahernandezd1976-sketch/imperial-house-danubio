@@ -49,6 +49,41 @@ const traditions = [
   },
   {
     numeral: "VI",
+    title: "The Imperial Court Balls",
+    subtitle: "The Vienna Season · January",
+    description: "Every year towards the end of January, the Imperial Court girds itself for the ball season; elaborate preparations are necessary for the Court to present itself in its full splendour. Two balls are held at the Hofburg: the Court Ball and, two weeks later, the Ball at Court. The Court Ball is the state ball of the Danubian Monarchy — around two thousand guests are invited, including Court society, high-ranking representatives from politics and the Church, and the serving officers of the Vienna garrison. Only the highest-ranking guests receive a personal invitation from the Emperor; the rest of the Court is informed that their appearance is requested via an official bulletin. The ball officially starts at eight o’clock in the evening. At half-past eight the Obersthofmeister reports to the Emperor that the guests have arrived; the imperial family makes its entrance at around half-past nine, at which point the court ball orchestra strikes up. Dancing is of secondary importance — the climax of the evening is the Cercle, when one exchanges a few words with Their Imperial Majesties. Until aristocratic young ladies have been presented to the Imperial Family, they cannot ‘come out’ in society. The Ball ends at midnight when the Imperial Family withdraws; guests depart with the famous Court bonbonnières, a coveted souvenir. The Ball at Court, held two weeks later, is the more socially exclusive event: no more than 700 guests are invited, all personally, from the crème de la crème of the aristocracy who are ‘presentable at Court’. It is a correspondingly more intimate occasion, with a fine dinner served at table rather than a buffet.",
+    detail: "Court Ball: last Friday of January, from 20:00. Ball at Court: two weeks later, by personal Imperial invitation only. Dress: white tie and decorations. Guests receive the Court bonbonnières upon departure. — By ancient tradition, the date of the Court Ball is fixed by the Empress. Since the passing of Her Imperial Majesty Empress Maria-Theresa of Austria-Danubio, this honour has been assumed by Her Imperial Highness Archduchess Alexis von Habsburg-Danubio, Princess of the Danubian Federation, who each year sets the date of the Ball in the name of the Imperial Household.",
+  },
+  {
+    numeral: "VII",
+    title: "The Spring Ball",
+    subtitle: "The Garden Season · Early June",
+    description: "Held in the first week of June in the illuminated gardens of Schönbrunn Palace, the Spring Ball marks the opening of the summer season and is the most celebrated of the outdoor Imperial entertainments. Unlike the January Court Balls, which are held by Imperial invitation, the Spring Ball is open to a wider circle of guests drawn from the cultural, academic, and civic life of the Confederation. The Schönbrunn gardens are lit by thousands of lanterns for the occasion; dancing takes place on the great terrace before the Gloriette, with the lights of Vienna spread below. The Ball was established in 1926 by Emperor Franz Ferdinand I as a gesture of openness toward the broader society of the Federation, and has been held annually ever since.",
+    detail: "Held on the first Saturday of June. Dress: evening dress. Tickets are available to the public by application to the Imperial Chamberlain's Office from the 1st of March each year.",
+  },
+  {
+    numeral: "VIII",
+    title: "Federation Day",
+    subtitle: "Public Holiday · 17 March",
+    description: "Celebrated on the 17th of March each year, Federation Day commemorates the signing of the Acta Danubiana on the 20th of July 1914 — the founding act by which the Danubian Confederation was first conceived — and the subsequent ratification of the Treaty of Vienna in the spring of 1917. The date of the 17th of March was chosen by Emperor Franz Ferdinand I himself as the day on which the Federal Constitution was formally adopted by the Constitutional Assembly of Neustadt. It is the principal national holiday of the Danubian Confederation, observed across all fifteen member states with public celebrations, military parades, and the opening of the Imperial gardens to the public.",
+    detail: "Public holiday throughout the Danubian Confederation. All government offices, schools, and courts are closed. The Emperor delivers a national address from the Hofburg balcony.",
+  },
+  {
+    numeral: "IX",
+    title: "The Imperial Birthday",
+    subtitle: "Public Holiday · 21 June",
+    description: "The 21st of June — the summer solstice — is the birthday of His Imperial Majesty Emperor Maximilian I, and is observed as a public holiday throughout the Danubian Confederation. The day is marked by a solemn Te Deum at the Cathedral of Neustadt, a military review on the Kaiserplatz, and a public reception at the Hofburg at which the Emperor receives delegations from each of the fifteen member states. In the evening, the Imperial Box at the Neustadt Opera is traditionally occupied by the Emperor and members of the Imperial Family for a gala performance in his honour. The birthday of the reigning sovereign has been a public holiday since the reign of Emperor Franz Ferdinand I.",
+    detail: "Public holiday throughout the Danubian Confederation. The Hofburg gardens are open to the public from 10:00 to sunset. A fireworks display over the Danube concludes the celebrations.",
+  },
+  {
+    numeral: "X",
+    title: "Konopiště Day",
+    subtitle: "Public Holiday · 28 October",
+    description: "Konopiště Day, observed on the 28th of October, commemorates the secret conference held at Konopiště Castle in Bohemia in the autumn of 1913, at which Archduke Franz Ferdinand first proposed the strategic realignment of Austria-Hungary away from the German alliance and toward a new understanding with Britain and France. The conference, long classified and only fully declassified in 2025, is now recognised as the moment at which the idea of the Danubian Federation was born. The holiday is observed with particular solemnity in Bohemia and with civic celebrations in Vienna and Neustadt. It is a day of reflection on the diplomatic courage that prevented the Great War and gave birth to the Confederation.",
+    detail: "Public holiday throughout the Danubian Confederation. The Konopiště Castle in Bohemia is open to the public free of charge on this day. Academic symposia and public lectures on the history of the Federation are held across the member states.",
+  },
+  {
+    numeral: "XI",
     title: "The New Year's Concert",
     subtitle: "A Gift to the Confederation",
     description: "On the first day of each year, the Neustadt Philharmonic performs the Imperial New Year's Concert in the Grand Hall of the Hofburg Imperial Palace, broadcast live to the entire Danubian Confederation and to audiences in over forty countries. The concert, established in 1923, always concludes with the performance of the Danubian Hymn and the Emperor's New Year's address to the nation. The programme traditionally includes works by Danubian composers alongside the great masters of the European tradition.",
@@ -260,14 +295,19 @@ export default function Traditions() {
 
           <div className="reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { month: "January", event: "New Year's Concert", icon: "♩" },
-              { month: "April", event: "Blessing of the Danube", icon: "〰" },
-              { month: "June", event: "Feast of the Eagle", icon: "✦" },
-              { month: "September", event: "Imperial Investiture", icon: "◈" },
-              { month: "October", event: "The Imperial Hunt", icon: "⊕" },
-              { month: "November", event: "Day of Remembrance", icon: "✝" },
-              { month: "December", event: "Imperial Christmas Mass", icon: "✶" },
-              { month: "As Required", event: "Rite of Coronation", icon: "♛" },
+              { month: "1 January", event: "New Year's Concert", icon: "♩", holiday: false },
+              { month: "January · 2nd Friday", event: "First Court Ball", icon: "♥", holiday: false },
+              { month: "January · Last Friday", event: "Second Court Ball", icon: "♥", holiday: false },
+              { month: "17 March", event: "Federation Day", icon: "⚑", holiday: true },
+              { month: "April", event: "Blessing of the Danube", icon: "〰", holiday: false },
+              { month: "June · 1st Saturday", event: "The Spring Ball", icon: "✿", holiday: false },
+              { month: "21 June", event: "Imperial Birthday", icon: "✦", holiday: true },
+              { month: "September", event: "Imperial Investiture", icon: "◈", holiday: false },
+              { month: "17 October", event: "Feast of the Eagle", icon: "✶", holiday: false },
+              { month: "28 October", event: "Konopiště Day", icon: "◆", holiday: true },
+              { month: "November", event: "Day of Remembrance", icon: "✝", holiday: false },
+              { month: "December", event: "Imperial Christmas Mass", icon: "❄", holiday: false },
+              { month: "As Required", event: "Rite of Coronation", icon: "♛", holiday: false },
             ].map((item, i) => (
               <div
                 key={i}
@@ -308,10 +348,25 @@ export default function Traditions() {
                     fontSize: "1rem",
                     fontWeight: 500,
                     color: CREAM,
+                    marginBottom: item.holiday ? "0.5rem" : 0,
                   }}
                 >
                   {item.event}
                 </div>
+                {item.holiday && (
+                  <div style={{
+                    display: "inline-block",
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: "0.45rem",
+                    letterSpacing: "0.18em",
+                    textTransform: "uppercase",
+                    color: GOLD,
+                    border: `1px solid oklch(0.72 0.12 85 / 0.4)`,
+                    padding: "0.2rem 0.5rem",
+                  }}>
+                    Public Holiday
+                  </div>
+                )}
               </div>
             ))}
           </div>

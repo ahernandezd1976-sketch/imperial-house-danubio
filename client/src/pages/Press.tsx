@@ -112,14 +112,14 @@ export default function Press() {
               The Waltz Descends
             </h3>
             <p className="text-lg leading-relaxed text-[#2a2a2a] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              At eleven o'clock, the Cercle concluded and the diplomatic reception complete, the floor is cleared for the first waltz of the evening. This year, the baton passes to a name that requires no introduction in Vienna: <strong>Maximilian Johann Strauss</strong>, thirty-one, great-great-great-grandson of Johann Strauss II, conducting the Imperial Court Orchestra for the first time.
+              At eleven o'clock, the Cercle concluded and the diplomatic reception complete, the floor is cleared for the first waltz of the evening. This year, the baton passes to a name that requires no introduction in Vienna: <strong>Johann Leopold Strauss</strong>, thirty-one, great-great-great-grandson of Johann Strauss II, conducting the Imperial Court Orchestra for the first time.
             </p>
             {/* Pull quote */}
             <blockquote className="border-l-4 border-[#8B7355] pl-4 my-4">
               <p className="text-xl italic text-[#8B7355]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 "The waltz makes you feel that time is not a line. It is a circle."
               </p>
-              <cite className="text-xs tracking-[0.2em] uppercase text-[#8B7355] not-italic">— Maximilian Johann Strauss</cite>
+              <cite className="text-xs tracking-[0.2em] uppercase text-[#8B7355] not-italic">— Johann Leopold Strauss</cite>
             </blockquote>
             <p className="text-lg leading-relaxed text-[#2a2a2a]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               He conducts from memory, without a score, with the easy authority of a man who has heard this music in his sleep since childhood. The Turkish Ambassador, a man not known for sentiment, was observed to close his eyes.
@@ -131,12 +131,12 @@ export default function Press() {
         <div className="mb-10">
           <img
             src={IMAGES.strauss}
-            alt="Maximilian Johann Strauss conducts the Imperial Court Orchestra, Hofburg Grand Ballroom, January 2026"
+            alt="Johann Leopold Strauss conducts the Imperial Court Orchestra, Hofburg Grand Ballroom, January 2026"
             className="w-full"
             style={{ display: "block", height: "auto" }}
           />
           <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2">
-            Maximilian Johann Strauss, great-great-great-grandson of Johann Strauss II, conducts the Imperial Court Orchestra · Hofburg Grand Ballroom · January 2026
+            Johann Leopold Strauss, great-great-great-grandson of Johann Strauss II, conducts the Imperial Court Orchestra · Hofburg Grand Ballroom · January 2026
           </p>
         </div>
 

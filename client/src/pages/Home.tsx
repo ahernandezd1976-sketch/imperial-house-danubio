@@ -1049,6 +1049,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── PRESS TEASER ── */}
+      <section style={{ background: "oklch(0.96 0.015 85)", padding: "5rem 0" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 2rem" }}>
+          <div className="reveal" style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+            <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: GOLD, marginBottom: "0.5rem" }}>Die Wiener Eleganz · Court Season Special</p>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: DARK, lineHeight: 1.1, marginBottom: "0.75rem" }}>The Ball That Never Ends</h2>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", margin: "1rem 0" }}>
+              <div style={{ flex: 1, maxWidth: "80px", height: "1px", background: GOLD }} />
+              <span style={{ color: GOLD }}>✦</span>
+              <div style={{ flex: 1, maxWidth: "80px", height: "1px", background: GOLD }} />
+            </div>
+            <p style={{ fontFamily: "'Source Serif 4', serif", fontSize: "1rem", color: "oklch(0.35 0.01 85)", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>January 2026. Two thousand guests. One night. The Court Ball returns to the Hofburg — and nothing is quite as it was.</p>
+          </div>
+          <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
+            <div style={{ overflow: "hidden", position: "relative" }}>
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_cortege_entrance_2026d-9HY3JZ76DLKwNQGCQPJUfC.webp"
+                alt="The Imperial cortège enters the Grand Ballroom"
+                style={{ width: "100%", height: "320px", objectFit: "cover", objectPosition: "center top", display: "block", transition: "transform 0.6s ease" }}
+                className="hover:scale-105"
+              />
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), transparent)", padding: "1rem" }}>
+                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.8)", letterSpacing: "0.15em", textTransform: "uppercase" }}>The Imperial Cortège · Hofburg, January 2026</p>
+              </div>
+            </div>
+            <div style={{ overflow: "hidden", position: "relative" }}>
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_drones_hofburg_2026-KMjneK7x9r8wgiLBsGJN3t.webp"
+                alt="Drone light show above the Hofburg"
+                style={{ width: "100%", height: "320px", objectFit: "cover", objectPosition: "center", display: "block", transition: "transform 0.6s ease" }}
+                className="hover:scale-105"
+              />
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), transparent)", padding: "1rem" }}>
+                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.8)", letterSpacing: "0.15em", textTransform: "uppercase" }}>Above the Hofburg · 360 Drones · January 2026</p>
+              </div>
+            </div>
+            <div style={{ overflow: "hidden", position: "relative" }}>
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_bonbonniere_2026-ghN6XBLhrLj7RWZo93CVFW.webp"
+                alt="The 2026 Court Ball bonbonnière"
+                style={{ width: "100%", height: "320px", objectFit: "cover", objectPosition: "center", display: "block", transition: "transform 0.6s ease" }}
+                className="hover:scale-105"
+              />
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), transparent)", padding: "1rem" }}>
+                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.8)", letterSpacing: "0.15em", textTransform: "uppercase" }}>The Bonbonnière · Wiener Werkstätte Neu · 2026</p>
+              </div>
+            </div>
+          </div>
+          <div className="reveal" style={{ textAlign: "center" }}>
+            <Link
+              href="/press"
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "0.7rem",
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                color: DARK,
+                background: GOLD,
+                padding: "0.85rem 2.5rem",
+                textDecoration: "none",
+                display: "inline-block",
+                transition: "opacity 0.3s ease",
+              }}
+              className="hover:opacity-90"
+            >
+              Read the Full Article →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

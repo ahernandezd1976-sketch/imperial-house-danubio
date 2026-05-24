@@ -6,7 +6,7 @@ import { Link } from "wouter";
 
 const IMAGES = {
   cortege:
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_cortege_entrance_2026c-8Ly7damrah5KbUJPAV5wqY.webp",
+    "https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_cortege_entrance_2026d-9HY3JZ76DLKwNQGCQPJUfC.webp",
   ballroom:
     "https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_ballroom_2026-ag9gdxHfEGojhMmkrRFVV9.webp",
   drones:
@@ -15,6 +15,8 @@ const IMAGES = {
     "https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_strauss_conductor_2026-myTCkTh5MLwLQB4NVVjUC9.webp",
   debutante:
     "https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_debutante_2026-T382LCcytXP7ShNj4UzLdg.webp",
+  bonbonniere:
+    "https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_bonbonniere_2026-ghN6XBLhrLj7RWZo93CVFW.webp",
 };
 
 export default function Press() {
@@ -102,7 +104,7 @@ export default function Press() {
             style={{ display: "block", height: "auto" }}
           />
             <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2">
-              Countess Isabelle von Trauttmansdorff-Weinsberg makes her presentation to the Imperial Family · Maison Leitner, ivory duchess satin · Atelier Kern diamond crescent necklace
+              Countess Isabelle von Trauttmansdorff-Weinsberg makes her presentation to the Imperial Family · Maison Leitner, ivory duchess satin · Jewels by A. E. Köchert, Vienna
             </p>
           </div>
           <div className="flex flex-col justify-center">
@@ -156,7 +158,7 @@ export default function Press() {
               </p>
             </blockquote>
             <p className="text-lg leading-relaxed text-[#2a2a2a]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              Crown Prince Leopold wore a masterpiece by <strong>Schneider &amp; Sohn</strong> in superfine black wool, with the sash of the Order of the Golden Eagle and, on his lapel, edelweiss in white enamel and pavé diamond. Beside him, Fräulein Katharina von Richter wore pale gold silk organza by <strong>Maison Leitner</strong> and, at her throat, a wide crescent of yellow gold set with a continuous line of cushion-cut diamonds by <strong>Atelier Kern</strong> — the most discussed piece of jewellery of the evening.
+              Crown Prince Leopold wore a masterpiece by <strong>Schneider &amp; Sohn</strong> in superfine black wool, with the sash of the Order of the Golden Eagle and, on his lapel, edelweiss in white enamel and pavé diamond. Beside him, Fräulein Katharina von Richter wore pale gold silk organza by <strong>Maison Leitner</strong> and, at her throat, a wide crescent of yellow gold set with a continuous line of cushion-cut diamonds by <strong>A. E. Köchert</strong>, the Imperial and Royal Court Jewellers — the most discussed piece of jewellery of the evening.
             </p>
           </div>
           <div className="order-1 md:order-2">
@@ -214,6 +216,16 @@ export default function Press() {
           </p>
           <p className="text-center text-sm italic text-[#8B7355] tracking-wide my-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Prepared with the assistance of VEGA · Imperial Institute of Applied Sciences, Neustadt · 2026.
+          </p>
+          {/* Bonbonnière image */}
+          <img
+            src={IMAGES.bonbonniere}
+            alt="The 2026 Court Ball bonbonnière by Wiener Werkstätte Neu — imperial black lacquer with double-headed eagle in 24-carat gold relief"
+            className="w-full"
+            style={{ display: "block", height: "auto", maxWidth: "600px", margin: "0 auto" }}
+          />
+          <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2 text-center">
+            The 2026 Court Ball bonbonnière · Wiener Werkstätte Neu · Imperial black lacquer, 24-carat gold double-headed eagle · Confections by K. u. K. Hofzuckerbäcker Demel, Vienna
           </p>
         </div>
 

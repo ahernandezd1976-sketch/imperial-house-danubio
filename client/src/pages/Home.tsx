@@ -1065,7 +1065,7 @@ export default function Home() {
           <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
             <div style={{ overflow: "hidden", position: "relative" }}>
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_cortege_entrance_2026d-9HY3JZ76DLKwNQGCQPJUfC.webp"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/court_ball_cortege_entrance_2026f-58PFPZ4Kt79zNqpHSg7Nix.webp"
                 alt="The Imperial cortège enters the Grand Ballroom"
                 style={{ width: "100%", height: "320px", objectFit: "cover", objectPosition: "center top", display: "block", transition: "transform 0.6s ease" }}
                 className="hover:scale-105"

@@ -2,7 +2,7 @@
  * Traditions Page — Imperial Modernism / Vienna Secession Reborn
  * Imperial ceremonies, customs, and cultural traditions
  */
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -10,6 +10,69 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
+
+function HymnPlayer({ src, isDark }: { src: string; isDark: boolean }) {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [playing, setPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  const toggle = () => {
+    const a = audioRef.current;
+    if (!a) return;
+    if (playing) {
+      a.pause();
+    } else {
+      a.play().catch(() => {});
+    }
+    setPlaying(!playing);
+  };
+
+  const handleTimeUpdate = () => {
+    const a = audioRef.current;
+    if (!a || !a.duration) return;
+    setProgress((a.currentTime / a.duration) * 100);
+  };
+
+  const handleEnded = () => setPlaying(false);
+
+  const textColor = isDark ? "oklch(0.75 0.01 85)" : "oklch(0.35 0.005 285)";
+  const borderColor = isDark ? "oklch(0.72 0.12 85 / 0.2)" : "oklch(0.72 0.12 85 / 0.3)";
+  const bgColor = isDark ? "oklch(0.12 0.005 285)" : "oklch(0.72 0.12 85 / 0.06)";
+
+  return (
+    <div style={{ marginTop: "1.5rem", padding: "1.25rem 1.5rem", border: `1px solid ${borderColor}`, background: bgColor, display: "flex", alignItems: "center", gap: "1.25rem" }}>
+      <audio ref={audioRef} src={src} onTimeUpdate={handleTimeUpdate} onEnded={handleEnded} />
+      <button
+        onClick={toggle}
+        style={{
+          width: "44px", height: "44px", borderRadius: "50%",
+          border: `1px solid ${GOLD}`, background: "transparent",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          cursor: "pointer", flexShrink: 0,
+        }}
+        aria-label={playing ? "Pause" : "Play"}
+      >
+        {playing ? (
+          <svg width="14" height="14" viewBox="0 0 14 14" fill={GOLD}>
+            <rect x="1" y="1" width="4" height="12" />
+            <rect x="9" y="1" width="4" height="12" />
+          </svg>
+        ) : (
+          <svg width="14" height="14" viewBox="0 0 14 14" fill={GOLD}>
+            <polygon points="2,1 13,7 2,13" />
+          </svg>
+        )}
+      </button>
+      <div style={{ flex: 1 }}>
+        <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.3em", color: GOLD, textTransform: "uppercase", marginBottom: "0.5rem", opacity: 0.8 }}>The Danubian Hymn</p>
+        <div style={{ height: "2px", background: isDark ? "oklch(0.25 0.005 285)" : "oklch(0.85 0.01 85)", borderRadius: "1px", overflow: "hidden" }}>
+          <div style={{ height: "100%", width: `${progress}%`, background: GOLD, transition: "width 0.5s linear", borderRadius: "1px" }} />
+        </div>
+      </div>
+      <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: "0.8rem", color: textColor, flexShrink: 0 }}>Listen</p>
+    </div>
+  );
+}
 
 const traditions = [
   {
@@ -85,6 +148,7 @@ const traditions = [
   {
     numeral: "XI",
     title: "The New Year's Concert",
+    audio: "/manus-storage/untitled_f960cf21.mp3",
     subtitle: "A Gift to the Confederation",
     description: "On the first day of each year, the Neustadt Philharmonic performs the Imperial New Year's Concert in the Grand Hall of the Hofburg Imperial Palace, broadcast live to the entire Danubian Confederation and to audiences in over forty countries. The concert, established in 1923, always concludes with the performance of the Danubian Hymn and the Emperor's New Year's address to the nation. The programme traditionally includes works by Danubian composers alongside the great masters of the European tradition.",
     detail: "The concert has been broadcast internationally since 1955. Tickets for the live performance are allocated by public lottery.",
@@ -257,6 +321,9 @@ export default function Traditions() {
                     {t.detail}
                   </p>
                 </div>
+                {t.audio && (
+                  <HymnPlayer src={t.audio} isDark={i % 2 !== 0} />
+                )}
               </div>
             </div>
           </div>

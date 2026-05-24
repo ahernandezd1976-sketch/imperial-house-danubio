@@ -51,7 +51,7 @@ function TeaserVideo() {
       <div style={{ position: "relative" }}>
         <video
           ref={videoRef}
-          src="/manus-storage/0522(1)(2)_7f24a587.mp4"
+          src="/manus-storage/sarajevo_clean_4ddcce8a.mp4"
           autoPlay
           loop
           muted

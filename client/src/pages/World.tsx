@@ -459,7 +459,7 @@ export default function World() {
                   />
                 ))}
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/moon_corridors_map-aYtdVbSvRbmDeTSUisjmpD.webp"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/moon_corridors_map_corrected-CmQhJQw4FFzCumPoJotVWG.webp"
                   alt="Political Map of Moon Corridors — Danubian Federation corridor since 2025"
                   style={{
                     width: "100%",

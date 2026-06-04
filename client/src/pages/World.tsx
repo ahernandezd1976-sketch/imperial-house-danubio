@@ -96,7 +96,7 @@ export default function World() {
         <div className="container">
           <div className="reveal grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Text column */}
-            <div className="lg:col-span-4">
+            <div className="lg:col-span-12">
               <div style={{ height: "2px", background: GOLD, marginBottom: "1.5rem", width: "48px" }} />
               <div
                 style={{
@@ -144,6 +144,17 @@ export default function World() {
                   marginBottom: "1.25rem",
                 }}
               >
+                The Danubian Federation model of shared governance has proven influential beyond Europe. Its principles of balanced representation, rotating leadership, and communal autonomy have been adapted in conflict resolution frameworks across the Middle East, the Balkans, and Southeast Asia. The Federation's success in managing multi-ethnic, multi-religious territories has made it a template for post-conflict reconstruction and regional stability initiatives.
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Source Serif 4', serif",
+                  fontSize: "1rem",
+                  lineHeight: 1.9,
+                  color: "oklch(0.65 0.01 85)",
+                  marginBottom: "1.25rem",
+                }}
+              >
                 To its south and east, the Ottoman Empire — reformed and reorganised between 1918 and 1945 — remains the dominant power of the Near East. The two empires share a long border and a longer history of rivalry and accommodation. Their joint administration of the Jerusalem Special Administrative Zone, established by the Jerusalem Protocol of 1965, is the most consequential act of cooperation between them.
               </p>
               <div
@@ -179,56 +190,7 @@ export default function World() {
               </div>
             </div>
 
-            {/* Map */}
-            <div className="lg:col-span-8">
-              <div style={{ position: "relative" }}>
-                {/* Corner ornaments */}
-                {[
-                  { top: -10, left: -10 },
-                  { top: -10, right: -10 },
-                  { bottom: -10, left: -10 },
-                  { bottom: -10, right: -10 },
-                ].map((pos, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      position: "absolute",
-                      width: "24px",
-                      height: "24px",
-                      borderTop: i < 2 ? `2px solid ${GOLD}` : "none",
-                      borderBottom: i >= 2 ? `2px solid ${GOLD}` : "none",
-                      borderLeft: i % 2 === 0 ? `2px solid ${GOLD}` : "none",
-                      borderRight: i % 2 === 1 ? `2px solid ${GOLD}` : "none",
-                      ...pos,
-                      zIndex: 2,
-                    }}
-                  />
-                ))}
-                <img
-                  src="/manus-storage/ChatGPTImageApr29,2026,01_02_56PM_8afb4be6.png"
-                  alt="Map 1: The Ottoman Empire after Reform (c.1935–1945) and Map 2: Jerusalem under the Jerusalem Protocol (post-1965)"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    display: "block",
-                    border: `1px solid oklch(0.72 0.12 85 / 0.15)`,
-                  }}
-                />
-              </div>
-              <p
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontStyle: "italic",
-                  fontSize: "0.8rem",
-                  color: "oklch(0.4 0.01 85)",
-                  textAlign: "center",
-                  marginTop: "1rem",
-                  lineHeight: 1.6,
-                }}
-              >
-                Map 1: The Ottoman Empire after Reform (c.1935–1945) · Map 2: Jerusalem under the Jerusalem Protocol (post-1965)
-              </p>
-            </div>
+
           </div>
         </div>
       </section>
@@ -303,7 +265,7 @@ export default function World() {
                   />
                 ))}
                 <img
-                  src="/manus-storage/ChatGPTImageApr29,2026,12_56_14PM_db1e4283.png"
+                  src="/manus-storage/ChatGPTImageApr29,2026,12_54_07PM_f83c5f9f.png"
                   alt="Jerusalem Protocol governance architecture diagram"
                   style={{
                     width: "100%",
@@ -497,7 +459,7 @@ export default function World() {
                   />
                 ))}
                 <img
-                  src="/manus-storage/ChatGPTImageMar24,2026,10_36_08AM-copia_2d29d31e.png"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663301701844/DGTyc4b55NDjb7mPZJGomf/moon_corridors_map-aYtdVbSvRbmDeTSUisjmpD.webp"
                   alt="Political Map of Moon Corridors — Danubian Federation corridor since 2025"
                   style={{
                     width: "100%",

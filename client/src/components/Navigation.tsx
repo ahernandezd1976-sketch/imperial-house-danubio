@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/heraldry", label: "Heraldry" },
   { href: "/properties", label: "Imperial Properties" },
   { href: "/world", label: "The World" },
+  { href: "/constitution", label: "Constitution" },
   { href: "/books", label: "The Danubian Throne" },
   { href: "/press", label: "Press" },
 ];

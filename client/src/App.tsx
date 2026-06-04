@@ -11,6 +11,7 @@ import Traditions from "./pages/Traditions";
 import Heraldry from "./pages/Heraldry";
 import Properties from "./pages/Properties";
 import World from "./pages/World";
+import Constitution from "./pages/Constitution";
 import Books from "./pages/Books";
 import Press from "./pages/Press";
 
@@ -24,6 +25,7 @@ function Router() {
       <Route path={"/heraldry"} component={Heraldry} />
       <Route path={"/properties"} component={Properties} />
       <Route path={"/world"} component={World} />
+      <Route path={"/constitution"} component={Constitution} />
       <Route path={"/books"} component={Books} />
       <Route path={"/press"} component={Press} />
       <Route path={"/404"} component={NotFound} />

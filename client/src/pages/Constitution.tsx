@@ -157,7 +157,7 @@ export default function Constitution() {
                 />
               ))}
               <img
-                src="/manus-storage/Gemini_Generated_Image_sle4ahsle4ahsle4_f1b37470.webp"
+                src="/manus-storage/constitution_document_3ac93f6f.png"
                 alt="The Federation Constitution — Title page with coat of arms and foundational cities"
                 style={{
                   width: "100%",

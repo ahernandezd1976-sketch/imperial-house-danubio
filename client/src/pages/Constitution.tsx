@@ -163,7 +163,33 @@ export default function Constitution() {
                   width: "100%",
                   height: "auto",
                   display: "block",
-                  border: `1px solid oklch(0.72 0.12 85 / 0.15)`,
+                  border: `1px solid oklch(0.72 0.12 85 / 0.15)`, backgroundColor: '#2b2727',
+                }}
+              />
+              {/* Sepia diamond (right) */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "2.5%",
+                  right: "5%",
+                  width: "16px",
+                  height: "16px",
+                  backgroundColor: "oklch(0.45 0.06 60)",
+                  transform: "rotate(45deg)",
+                  zIndex: 3,
+                }}
+              />
+              {/* Sepia diamond (left) */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "2.5%",
+                  left: "5%",
+                  width: "16px",
+                  height: "16px",
+                  backgroundColor: "oklch(0.45 0.06 60)",
+                  transform: "rotate(45deg)",
+                  zIndex: 3,
                 }}
               />
             </div>
@@ -171,8 +197,8 @@ export default function Constitution() {
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 fontStyle: "italic",
-                fontSize: "0.8rem",
-                color: "oklch(0.4 0.01 85)",
+                fontSize: "21px",
+                color: "#f4f5cc",
                 textAlign: "center",
                 marginTop: "1rem",
               }}

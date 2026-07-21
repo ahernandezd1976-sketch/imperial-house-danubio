@@ -8,6 +8,7 @@ import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.09 0.005 285)";
@@ -31,6 +32,7 @@ function SectionDivider({ light = false }: { light?: boolean }) {
 
 export default function Home() {
   useScrollReveal();
+  const { t } = useLanguage();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -183,7 +185,7 @@ export default function Home() {
                 animationDelay: "0.1s",
               }}
             >
-              Est. MCMXVII &nbsp;·&nbsp; Neustadt, Danubio
+              {t("hero.pretitle")}
             </div>
 
             {/* Main title */}
@@ -200,9 +202,9 @@ export default function Home() {
                 animationDelay: "0.25s",
               }}
             >
-              Imperial House
+              {t("hero.title1")}
               <br />
-              <span style={{ color: GOLD }}>of Austria-Danubio</span>
+              <span style={{ color: GOLD }}>{t("hero.title2")}</span>
             </h1>
 
             {/* Subtitle */}
@@ -218,7 +220,7 @@ export default function Home() {
                 animationDelay: "0.4s",
               }}
             >
-              Guardians of the Danube. Heirs of a Thousand Years.
+              {t("hero.subtitle")}
             </p>
 
             {/* Motto */}
@@ -267,7 +269,7 @@ export default function Home() {
                 }}
                 className="hover:opacity-90 active:scale-95"
               >
-                Our History
+                {t("hero.cta1")}
               </Link>
               <Link
                 href="/family"
@@ -286,7 +288,7 @@ export default function Home() {
                 }}
                 className="hover:border-yellow-400 active:scale-95"
               >
-                The Imperial Family
+                {t("hero.cta2")}
               </Link>
             </div>
           </div>
@@ -314,7 +316,7 @@ export default function Home() {
               textTransform: "uppercase",
             }}
           >
-            Scroll
+            {t("hero.scroll")}
           </div>
           <div
             style={{
@@ -345,7 +347,7 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            ✦ &nbsp; Imperial Announcement: The engagement of Crown Prince Leopold von Habsburg and Fräulein Katharina von Richter is formally proclaimed — Spring 2026 &nbsp; ✦
+            {t("announcement")}
           </p>
         </div>
       </section>
@@ -366,7 +368,7 @@ export default function Home() {
                   marginBottom: "1rem",
                 }}
               >
-                I &nbsp;·&nbsp; The House
+                {t("about.section")}
               </div>
               <h2
                 style={{
@@ -379,7 +381,7 @@ export default function Home() {
                   letterSpacing: "0.03em",
                 }}
               >
-                A Dynasty Born<br />of Eagle and River
+                {t("about.title1")}<br />{t("about.title2")}
               </h2>
               <SectionDivider />
               <p
@@ -391,7 +393,7 @@ export default function Home() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The Imperial House of Austria-Danubio is the continuation of the ancient House of Habsburg-Lorraine, one of the most illustrious dynasties in European history. Its roots reach back to the medieval counts of Habsburg and the centuries of Holy Roman Emperors, Kings of Hungary and Bohemia, and Archdukes of Austria. In 1914, the assassination attempt against Archduke Franz Ferdinand in Sarajevo failed — the Archduke survived, and the European crisis that followed was resolved at the negotiating table rather than on the battlefield. The Treaty of Vienna of 1917 transformed the Austro-Hungarian Monarchy into the Danubian Federation: a constitutional confederation of fifteen states united under the Imperial Crown.
+                {t("about.p1")}
               </p>
               <p
                 style={{
@@ -401,7 +403,7 @@ export default function Home() {
                   color: "oklch(0.25 0.005 285)",
                 }}
               >
-                Today, under the reign of His Imperial and Royal Apostolic Majesty Emperor Maximilian I — now in his nineteenth year on the throne — the House continues to serve as the constitutional sovereign of the Danubian Confederation, presiding over fifteen states and more than eighty million citizens with dignity, tradition, and an unwavering commitment to the peoples of the river lands.
+                {t("about.p2")}
               </p>
               <div style={{ marginTop: "2rem" }}>
                 <Link
@@ -418,7 +420,7 @@ export default function Home() {
                     transition: "all 0.3s ease",
                   }}
                 >
-                  Read the Full History →
+                  {t("about.link")}
                 </Link>
               </div>
             </div>
@@ -535,8 +537,7 @@ export default function Home() {
                     letterSpacing: "0.05em",
                   }}
                 >
-                  His Imperial Majesty Maximilian I<br />
-                  Emperor of Austria-Danubio · 19 years on the throne
+                  {t("emperor.caption").split("\n").map((line, i) => <span key={i}>{line}{i === 0 && <br />}</span>)}
                 </p>
               </div>
             </div>
@@ -554,7 +555,7 @@ export default function Home() {
                   opacity: 0.8,
                 }}
               >
-                II &nbsp;·&nbsp; The Sovereign
+                {t("emperor.section")}
               </div>
               <h2
                 style={{
@@ -567,7 +568,7 @@ export default function Home() {
                   letterSpacing: "0.03em",
                 }}
               >
-                His Imperial Majesty<br />
+                {t("emperor.title")}<br />
                 <span style={{ color: GOLD }}>Maximilian I</span>
               </h2>
               <SectionDivider light />
@@ -580,7 +581,7 @@ export default function Home() {
                   marginBottom: "1.25rem",
                 }}
               >
-                Born in 1954 at the Hofburg Imperial Palace in Vienna, Maximilian Franz Josef Karl of Austria-Danubio ascended to the Imperial Throne following the passing of his father. He has now reigned for thirty-seven years, presiding over a period of constitutional consolidation and European integration.
+                {t("emperor.p1")}
               </p>
               <p
                 style={{
@@ -590,7 +591,7 @@ export default function Home() {
                   color: "oklch(0.75 0.01 85)",
                 }}
               >
-                His Majesty has borne his duties with unwavering dignity in the face of profound personal tragedy. The late Empress Maria-Cristina perished in the fire at the Paris Ritz on the 10th of September, 2000 — a loss that shook the Confederation and the world. He has since devoted himself entirely to his people. The forthcoming marriage of Crown Prince Leopold to Katharina von Richter is a moment of great joy for the Imperial House and the Confederation alike.
+                {t("emperor.p2")}
               </p>
 
               {/* Imperial titles */}
@@ -612,7 +613,7 @@ export default function Home() {
                     marginBottom: "0.75rem",
                   }}
                 >
-                  Full Style & Titles
+                  {t("emperor.titles.label")}
                 </div>
                 <p
                   style={{
@@ -623,7 +624,7 @@ export default function Home() {
                     lineHeight: 1.7,
                   }}
                 >
-                  His Imperial and Royal Majesty Maximilian I, by the Grace of God Emperor of Austria-Danubio, King of the Danubian Lands, Archduke of Neustadt, Grand Duke of the Eastern Marches, Protector of the River Peoples, Knight of the Order of the Golden Eagle.
+                  {t("emperor.titles.text")}
                 </p>
               </div>
 
@@ -642,7 +643,7 @@ export default function Home() {
                     transition: "all 0.3s ease",
                   }}
                 >
-                  Meet the Imperial Family →
+                  {t("emperor.link")}
                 </Link>
               </div>
             </div>
@@ -664,7 +665,7 @@ export default function Home() {
                 marginBottom: "1rem",
               }}
             >
-              III &nbsp;·&nbsp; Our Foundations
+              {t("pillars.section")}
             </div>
             <h2
               style={{
@@ -675,7 +676,7 @@ export default function Home() {
                 letterSpacing: "0.03em",
               }}
             >
-              The Three Pillars of the House
+              {t("pillars.title")}
             </h2>
           </div>
 
@@ -683,20 +684,20 @@ export default function Home() {
             {[
               {
                 numeral: "I",
-                title: "Tradition",
-                text: "Since 1917, the Imperial House has upheld the ceremonial traditions of the Danubian Confederation — from the annual Feast of the Eagle to the solemn Proclamation of the Emperor from the balcony of the Hofburg and the ancient Hungarian Coronation in Budapest.",
+                title: t("pillars.tradition.title"),
+                text: t("pillars.tradition.text"),
                 href: "/traditions",
               },
               {
                 numeral: "II",
-                title: "Honour",
-                text: "The Order of the Golden Eagle, founded in 1917 upon the proclamation of the Danubian Federation, remains the highest honour the Emperor may bestow. Its recipients have included statesmen, scholars, and warriors who have served the Danubian peoples with distinction.",
+                title: t("pillars.honour.title"),
+                text: t("pillars.honour.text"),
                 href: "/heraldry",
               },
               {
                 numeral: "III",
-                title: "Legacy",
-                text: "The House of Habsburg-Lorraine has produced emperors, kings, and archdukes across seven centuries. Since 1917, as the Imperial House of Austria-Danubio, it has guided the Danubian Confederation through the upheavals of the twentieth century and into the present age.",
+                title: t("pillars.legacy.title"),
+                text: t("pillars.legacy.text"),
                 href: "/history",
               },
             ].map((pillar, i) => (
@@ -771,7 +772,7 @@ export default function Home() {
                     textDecoration: "none",
                   }}
                 >
-                  Learn More →
+                  {t("pillars.link")}
                 </Link>
               </div>
             ))}
@@ -811,7 +812,7 @@ export default function Home() {
                 opacity: 0.8,
               }}
             >
-              IV &nbsp;·&nbsp; The Residence
+              {t("palace.section")}
             </div>
             <h2
               style={{
@@ -823,7 +824,7 @@ export default function Home() {
                 marginBottom: "1.25rem",
               }}
             >
-              Palais Danubio
+              {t("palace.title")}
             </h2>
             <p
               style={{
@@ -833,7 +834,7 @@ export default function Home() {
                 color: "oklch(0.78 0.01 85)",
               }}
             >
-              Constructed between 1919 and 1925 along the western bank of the Danube, the Palais Danubio serves as the seat of the Danubian Council — the assembly of governors of the seven constituent states of the Confederation. When the governors convene in Vienna, the Palais Danubio is their official meeting place, its Grand Council Chamber the setting for the deliberations that govern the Federation.
+              {t("palace.text")}
             </p>
           </div>
         </div>
@@ -864,7 +865,7 @@ export default function Home() {
                 opacity: 0.8,
               }}
             >
-              V &nbsp;·&nbsp; Key Dates
+              {t("timeline.section")}
             </div>
             <h2
               style={{
@@ -875,7 +876,7 @@ export default function Home() {
                 letterSpacing: "0.03em",
               }}
             >
-              Milestones of the Dynasty
+              {t("timeline.title")}
             </h2>
           </div>
 
@@ -895,12 +896,12 @@ export default function Home() {
             />
 
             {[
-              { year: "1914", event: "Sarajevo: The Archduke Survives", desc: "The assassination attempt against Archduke Franz Ferdinand in Sarajevo fails. The Archduke is wounded but survives. The European crisis is contained through diplomacy, averting a wider conflict." },
-              { year: "1917", event: "Treaty of Vienna & the Danubian Federation", desc: "Emperor Franz Ferdinand I signs the Treaty of Vienna, transforming the Austro-Hungarian Monarchy into the Danubian Federation of fifteen states — a new constitutional order for Central Europe." },
-              { year: "1923", event: "The Federation Crown Completed", desc: "The Federation Crown, commissioned by Emperor Franz Ferdinand I in 1920, is completed after three years of craftsmanship in platinum, pearls, diamonds, rubies, sapphires, and emeralds." },
-              { year: "1998", event: "Accession of Maximilian I", desc: "The current Emperor ascends to the throne, beginning a reign marked by diplomatic renewal, cultural patronage, and the modernisation of the Confederation's institutions." },
-              { year: "2000", event: "Tragedy at the Paris Ritz", desc: "The late Empress Maria-Cristina perishes in the fire at the Paris Ritz on 10 September. The Emperor's stoic grief and continued service become a defining moment of his reign." },
-              { year: "2026", event: "The Imperial Engagement", desc: "Crown Prince Leopold von Habsburg and Fr\u00e4ulein Katharina von Richter announce their engagement, bringing great joy to the Confederation." },
+              { year: "1914", event: t("timeline.1914.event"), desc: t("timeline.1914.desc") },
+              { year: "1917", event: t("timeline.1917.event"), desc: t("timeline.1917.desc") },
+              { year: "1923", event: t("timeline.1923.event"), desc: t("timeline.1923.desc") },
+              { year: "1998", event: t("timeline.1998.event"), desc: t("timeline.1998.desc") },
+              { year: "2000", event: t("timeline.2000.event"), desc: t("timeline.2000.desc") },
+              { year: "2026", event: t("timeline.2026.event"), desc: t("timeline.2026.desc") },
             ].map((item, i) => (
               <div
                 key={i}
@@ -1043,7 +1044,7 @@ export default function Home() {
               }}
               className="hover:opacity-90"
             >
-              Full History →
+              {t("timeline.link")}
             </Link>
           </div>
         </div>
@@ -1053,14 +1054,14 @@ export default function Home() {
       <section style={{ background: "oklch(0.96 0.015 85)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 2rem" }}>
           <div className="reveal" style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-            <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: GOLD, marginBottom: "0.5rem" }}>Die Wiener Eleganz · Court Season Special</p>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: DARK, lineHeight: 1.1, marginBottom: "0.75rem" }}>The Ball That Never Ends</h2>
+            <p style={{ fontFamily: "'Cinzel', serif", fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: GOLD, marginBottom: "0.5rem" }}>{t("press.pretitle")}</p>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: DARK, lineHeight: 1.1, marginBottom: "0.75rem" }}>{t("press.title")}</h2>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", margin: "1rem 0" }}>
               <div style={{ flex: 1, maxWidth: "80px", height: "1px", background: GOLD }} />
               <span style={{ color: GOLD }}>✦</span>
               <div style={{ flex: 1, maxWidth: "80px", height: "1px", background: GOLD }} />
             </div>
-            <p style={{ fontFamily: "'Source Serif 4', serif", fontSize: "1rem", color: "oklch(0.35 0.01 85)", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>January 2026. Two thousand guests. One night. The Court Ball returns to the Hofburg — and nothing is quite as it was.</p>
+            <p style={{ fontFamily: "'Source Serif 4', serif", fontSize: "1rem", color: "oklch(0.35 0.01 85)", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>{t("press.subtitle")}</p>
           </div>
           <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
             <div style={{ overflow: "hidden", position: "relative" }}>
@@ -1071,7 +1072,7 @@ export default function Home() {
                 className="hover:scale-105"
               />
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), transparent)", padding: "1rem" }}>
-                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.8)", letterSpacing: "0.15em", textTransform: "uppercase" }}>The Imperial Cortège · Hofburg, January 2026</p>
+                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.8)", letterSpacing: "0.15em", textTransform: "uppercase" }}>{t("press.img1")}</p>
               </div>
             </div>
             <div style={{ overflow: "hidden", position: "relative" }}>
@@ -1082,7 +1083,7 @@ export default function Home() {
                 className="hover:scale-105"
               />
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), transparent)", padding: "1rem" }}>
-                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.8)", letterSpacing: "0.15em", textTransform: "uppercase" }}>Above the Hofburg · 360 Drones · January 2026</p>
+                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.8)", letterSpacing: "0.15em", textTransform: "uppercase" }}>{t("press.img2")}</p>
               </div>
             </div>
             <div style={{ overflow: "hidden", position: "relative" }}>
@@ -1093,7 +1094,7 @@ export default function Home() {
                 className="hover:scale-105"
               />
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), transparent)", padding: "1rem" }}>
-                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.8)", letterSpacing: "0.15em", textTransform: "uppercase" }}>The Bonbonnière · Wiener Werkstätte Neu · 2026</p>
+                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.8)", letterSpacing: "0.15em", textTransform: "uppercase" }}>{t("press.img3")}</p>
               </div>
             </div>
           </div>
@@ -1114,7 +1115,7 @@ export default function Home() {
               }}
               className="hover:opacity-90"
             >
-              Read the Full Article →
+              {t("press.link")}
             </Link>
           </div>
         </div>

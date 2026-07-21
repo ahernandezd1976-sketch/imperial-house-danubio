@@ -4,24 +4,29 @@
  */
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
+import LanguageSelector from "@/components/LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/history", label: "History" },
-  { href: "/family", label: "The Imperial Family" },
-  { href: "/traditions", label: "Traditions" },
-  { href: "/heraldry", label: "Heraldry" },
-  { href: "/properties", label: "Imperial Properties" },
-  { href: "/world", label: "The World" },
-  { href: "/constitution", label: "Constitution" },
-  { href: "/books", label: "The Danubian Throne" },
-  { href: "/press", label: "Press" },
+const navLinkKeys = [
+  { href: "/", key: "nav.home" },
+  { href: "/history", key: "nav.history" },
+  { href: "/family", key: "nav.family" },
+  { href: "/traditions", key: "nav.traditions" },
+  { href: "/heraldry", key: "nav.heraldry" },
+  { href: "/properties", key: "nav.properties" },
+  { href: "/world", key: "nav.world" },
+  { href: "/constitution", key: "nav.constitution" },
+  { href: "/books", key: "nav.books" },
+  { href: "/press", key: "nav.press" },
 ];
 
 export default function Navigation() {
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useLanguage();
+
+  const navLinks = navLinkKeys.map((link) => ({ href: link.href, label: t(link.key) }));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -61,7 +66,7 @@ export default function Navigation() {
                   lineHeight: 1.2,
                 }}
               >
-                Imperial House
+                {t("header.imperialHouse")}
               </div>
               <div
                 style={{
@@ -117,6 +122,9 @@ export default function Navigation() {
               );
             })}
           </ul>
+
+          {/* Language selector */}
+          <LanguageSelector />
 
           {/* Mobile menu button */}
           <button

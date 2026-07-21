@@ -175,13 +175,13 @@ const familyMembers = [
     spouseDeath: "Paris Ritz fire, 10 September 2000",
   },
   {
-    name: "Archduchess Ana von Habsburg",
+    name: "Archduchess Gisela von Habsburg",
     title: "Archduchess of Austria-Danubio",
     age: 65,
     style: "Her Imperial Highness",
     position: "centre-left",
-    bio: "The Emperor's younger sister. Archduchess Ana is a distinguished patron of the arts and a founding trustee of the Imperial Foundation for Cultural Heritage. Known for her warmth and accessibility, she has represented the Imperial House at cultural and humanitarian events across Europe for over three decades.",
-    initials: "AN",
+    bio: "The Emperor's younger sister. Archduchess Gisela is a distinguished patron of the arts and a founding trustee of the Imperial Foundation for Cultural Heritage. Known for her warmth and accessibility, she has represented the Imperial House at cultural and humanitarian events across Europe for over three decades.",
+    initials: "GI",
     dress: "Deep crimson gown",
   },
   {

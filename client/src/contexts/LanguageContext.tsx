@@ -2,7 +2,8 @@
  * Language Context — Multilingual support for the Danubian Federation website
  * Default: German (de), with English, French, Hungarian, Czech, Croatian
  */
-import { createContext, useContext, useState, useCallback, type ReactNode } from "react";
+import { createContext, useContext, useState, useCallback, useMemo, type ReactNode } from "react";
+import { historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations } from "@/i18n";
 
 export type Language = "de" | "en" | "fr" | "hu" | "cs" | "hr";
 
@@ -332,6 +333,25 @@ const translations: Record<Language, Record<string, string>> = {
   },
 };
 
+// Merge all page translations into a single lookup
+const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations];
+
+function mergeTranslations(): Record<Language, Record<string, string>> {
+  const langs: Language[] = ["de", "en", "fr", "hu", "cs", "hr"];
+  const merged = {} as Record<Language, Record<string, string>>;
+  for (const lang of langs) {
+    merged[lang] = { ...translations[lang] };
+    for (const pageT of allPageTranslations) {
+      if (pageT[lang]) {
+        Object.assign(merged[lang], pageT[lang]);
+      }
+    }
+  }
+  return merged;
+}
+
+const allTranslations = mergeTranslations();
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
     const saved = localStorage.getItem("df-language");
@@ -346,7 +366,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const t = useCallback(
     (key: string): string => {
       // Try current language, fallback to German, then English, then key
-      return translations[language]?.[key] || translations.de[key] || translations.en[key] || key;
+      return allTranslations[language]?.[key] || allTranslations.de[key] || allTranslations.en[key] || key;
     },
     [language]
   );

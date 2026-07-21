@@ -3,8 +3,11 @@
  * Dark section with gold ornament, dynasty motto, and navigation links
  */
 import { Link } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer
       style={{
@@ -35,7 +38,7 @@ export default function Footer() {
                   marginBottom: "0.25rem",
                 }}
               >
-                Imperial House
+                {t("footer.brand")}
               </div>
               <div
                 style={{
@@ -45,7 +48,7 @@ export default function Footer() {
                   color: "oklch(0.88 0.015 85)",
                 }}
               >
-                Austria-Danubio
+                {t("footer.brandSub")}
               </div>
             </div>
             {/* Motto */}
@@ -76,16 +79,16 @@ export default function Footer() {
                 marginBottom: "1.5rem",
               }}
             >
-              Navigation
+              {t("footer.nav")}
             </h4>
             <ul className="flex flex-col gap-3">
               {[
-                { href: "/", label: "Home" },
-                { href: "/history", label: "History" },
-                { href: "/family", label: "The Imperial Family" },
-                { href: "/traditions", label: "Traditions" },
-                { href: "/heraldry", label: "Heraldry" },
-                { href: "/properties", label: "Imperial Properties" },
+                { href: "/", labelKey: "footer.navHome" },
+                { href: "/history", labelKey: "footer.navHistory" },
+                { href: "/family", labelKey: "footer.navFamily" },
+                { href: "/traditions", labelKey: "footer.navTraditions" },
+                { href: "/heraldry", labelKey: "footer.navHeraldry" },
+                { href: "/properties", labelKey: "footer.navProperties" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -99,7 +102,7 @@ export default function Footer() {
                     }}
                     className="hover:text-yellow-400"
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </Link>
                 </li>
               ))}
@@ -118,7 +121,7 @@ export default function Footer() {
                 marginBottom: "1.5rem",
               }}
             >
-              Imperial Chancery
+              {t("footer.chancery")}
             </h4>
             <div
               style={{
@@ -170,7 +173,7 @@ export default function Footer() {
               textTransform: "uppercase",
             }}
           >
-            © MMXXVI Imperial House of Austria-Danubio — All Rights Reserved
+            {t("footer.copyright")}
           </p>
           <p
             style={{
@@ -180,7 +183,7 @@ export default function Footer() {
               color: "oklch(0.35 0.008 85)",
             }}
           >
-            This is a fictional institution created for literary purposes.
+            {t("footer.disclaimer")}
           </p>
         </div>
       </div>

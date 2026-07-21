@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.09 0.005 285)";
@@ -14,6 +15,7 @@ const CREAM = "oklch(0.96 0.015 85)";
 
 // Sub-component: engagement portrait video with touch-to-activate audio
 function PaintingVideo() {
+  const { t } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [activated, setActivated] = useState(false);
 
@@ -50,7 +52,7 @@ function PaintingVideo() {
       <div style={{ position: "relative" }}>
         <video
           ref={videoRef}
-          src="/manus-storage/klimt_engagement_portrait_4e104b52.mp4"
+          src="/manus-storage/klimt_engagement_portrait_german_5e989dc6.mp4"
           autoPlay
           loop
           muted
@@ -102,7 +104,7 @@ function PaintingVideo() {
               letterSpacing: "0.25em",
               textTransform: "uppercase",
               color: GOLD,
-            }}>Touch the Painting</span>
+            }}>{t("family.portrait.touch")}</span>
           </div>
         )}
       </div>
@@ -231,6 +233,7 @@ const familyMembers = [
 
 export default function Family() {
   useScrollReveal();
+  const { t } = useLanguage();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -275,7 +278,7 @@ export default function Family() {
               opacity: 0.8,
             }}
           >
-            Imperial House of Austria-Danubio
+            {t("family.header.pretitle")}
           </div>
           <h1
             style={{
@@ -288,7 +291,7 @@ export default function Family() {
               marginBottom: "1.5rem",
             }}
           >
-            The <span style={{ color: GOLD }}>Imperial Family</span>
+            {t("family.header.title1")}<span style={{ color: GOLD }}>{t("family.header.title2")}</span>
           </h1>
           <p
             style={{
@@ -300,7 +303,7 @@ export default function Family() {
               lineHeight: 1.7,
             }}
           >
-            The members of the Imperial House of Austria-Danubio, their titles, and their service to the Danubian Confederation.
+            {t("family.header.subtitle")}
           </p>
         </div>
       </section>
@@ -319,7 +322,7 @@ export default function Family() {
                 marginBottom: "0.75rem",
               }}
             >
-              Official Photograph · Hofburg Imperial Palace · 2026
+              {t("family.photo.pretitle")}
             </div>
             <h2
               style={{
@@ -330,7 +333,7 @@ export default function Family() {
                 letterSpacing: "0.03em",
               }}
             >
-              The Imperial Household
+              {t("family.members.title")}
             </h2>
           </div>
 
@@ -515,7 +518,7 @@ export default function Family() {
               textTransform: "uppercase",
               marginBottom: "0.6rem",
               opacity: 0.7,
-            }}>In Memoriam</div>
+            }}>{t("family.memorial.pretitle")}</div>
             <h3 style={{
               fontFamily: "'Cinzel', serif",
               fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
@@ -523,7 +526,7 @@ export default function Family() {
               color: CREAM,
               letterSpacing: "0.06em",
               marginBottom: "0.35rem",
-            }}>Empress Maria-Cristina</h3>
+            }}>{t("family.memorial.name")}</h3>
             <div style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontStyle: "italic",
@@ -554,7 +557,7 @@ export default function Family() {
               color: "oklch(0.4 0.01 85)",
               textTransform: "uppercase",
               marginTop: "0.5rem",
-            }}>In thy light shall we see light</div>
+            }}>{t("family.memorial.mottoTranslation")}</div>
 
           </div>
         </div>
@@ -587,7 +590,7 @@ export default function Family() {
                     opacity: 0.8,
                   }}
                 >
-                  The Sovereign
+                  {t("family.emperor.pretitle")}
                 </div>
                 <h2
                   style={{
@@ -615,12 +618,12 @@ export default function Family() {
                 </div>
                 <div style={{ height: "1px", background: "oklch(0.72 0.12 85 / 0.2)", marginBottom: "1.25rem" }} />
                 {[
-                  { label: "Age", value: `${emperor.age} years` },
-                  { label: "Style", value: emperor.style },
-                  { label: "Years on Throne", value: `${emperor.reignYears} years` },
-                  { label: "Status", value: "Widower" },
-                  { label: "Late Empress", value: emperor.lateSpouse },
-                  { label: "Tragedy", value: emperor.spouseDeath },
+                  { label: t("family.members.age"), value: `${emperor.age}` },
+                  { label: t("family.emperor.styleLabel"), value: emperor.style },
+                  { label: t("family.emperor.reignLabel"), value: `${emperor.reignYears}` },
+                  { label: t("family.emperor.statusLabel"), value: t("family.members.widow") },
+                  { label: t("family.emperor.lateEmpressLabel"), value: emperor.lateSpouse },
+                  { label: t("family.emperor.tragedyLabel"), value: emperor.spouseDeath },
                 ].map((item, i) => (
                   <div
                     key={i}
@@ -671,7 +674,7 @@ export default function Family() {
                   opacity: 0.8,
                 }}
               >
-                His Imperial and Royal Majesty
+                {t("family.emperor.title")}
               </div>
               <h2
                 style={{
@@ -684,7 +687,7 @@ export default function Family() {
                   letterSpacing: "0.03em",
                 }}
               >
-                Emperor<br />Maximilian I
+                {t("family.emperor.name")}
               </h2>
               <div style={{ height: "1px", background: `linear-gradient(90deg, ${GOLD}, transparent)`, marginBottom: "1.75rem" }} />
               <p
@@ -717,7 +720,7 @@ export default function Family() {
                     opacity: 0.7,
                   }}
                 >
-                  In Memoriam
+                  {t("family.memorial.pretitle")}
                 </div>
                 <p
                   style={{
@@ -728,7 +731,7 @@ export default function Family() {
                     lineHeight: 1.8,
                   }}
                 >
-                  The late Empress Maria-Cristina, beloved consort of Emperor Maximilian I, perished in the fire at the Paris Ritz on the 10th of September, 2000. Her memory is honoured each year on that date by a solemn Mass at the Cathedral of Neustadt, attended by the Imperial Family and representatives of the Confederation's seven constituent states.
+                  {t("family.emperor.memorial")}
                 </p>
               </div>
             </div>
@@ -750,7 +753,7 @@ export default function Family() {
                 marginBottom: "1rem",
               }}
             >
-              Members of the House
+              {t("family.members.pretitle")}
             </div>
             <h2
               style={{
@@ -761,7 +764,7 @@ export default function Family() {
                 letterSpacing: "0.03em",
               }}
             >
-              The Imperial Household
+              {t("family.members.title")}
             </h2>
           </div>
 
@@ -862,8 +865,8 @@ export default function Family() {
                       letterSpacing: "0.03em",
                     }}
                   >
-                    Age {member.age}
-                    {member.widow ? " · Widow" : ""}
+                    {t("family.members.age")} {member.age}
+                    {member.widow ? ` · ${t("family.members.widow")}` : ""}
 
                   </div>
                   <div
@@ -898,7 +901,7 @@ export default function Family() {
                           marginBottom: "0.5rem",
                         }}
                       >
-                        Languages
+                        {t("family.members.languages")}
                       </div>
                       <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
                         {member.languages.map((lang, j) => (
@@ -939,7 +942,7 @@ export default function Family() {
                           color: "oklch(0.4 0.01 285)",
                         }}
                       >
-                        Daughter of August von Richter, the foremost industrialist in Europe.
+                        {t("family.members.fatherNote")}
                       </span>
                     </div>
                   )}
@@ -965,7 +968,7 @@ export default function Family() {
                 opacity: 0.8,
               }}
             >
-              Order of Succession
+              {t("family.succession.pretitle")}
             </div>
             <h2
               style={{
@@ -976,7 +979,7 @@ export default function Family() {
                 marginBottom: "1.5rem",
               }}
             >
-              Succession to the Imperial Throne
+              {t("family.succession.title")}
             </h2>
             <p
               style={{
@@ -987,7 +990,7 @@ export default function Family() {
                 marginBottom: "2rem",
               }}
             >
-              Succession to the Imperial Throne of Austria-Danubio is governed by the ancient laws of the Imperial House. The current heir apparent is Crown Prince Leopold von Habsburg, Archduke of Neustadt, whose forthcoming marriage to Katharina von Richter is anticipated with great public interest throughout the Confederation.
+              {t("family.succession.text")}
             </p>
             <div
               style={{
@@ -1008,11 +1011,11 @@ export default function Family() {
                   opacity: 0.8,
                 }}
               >
-                Current Line of Succession
+                {t("family.succession.lineTitle")}
               </div>
               {[
-                "1st — Crown Prince Leopold von Habsburg, Archduke of Neustadt",
-                "2nd — Archduke Reiner von Habsburg, Marshall of the Crown",
+                t("family.succession.line1"),
+                t("family.succession.line2"),
               ].map((line, i) => (
                 <div
                   key={i}
@@ -1048,7 +1051,7 @@ export default function Family() {
                 marginBottom: "0.75rem",
               }}
             >
-              Official Engagement Portrait · 2026
+              {t("family.portrait.pretitle")}
             </div>
             <h2
               style={{
@@ -1060,7 +1063,7 @@ export default function Family() {
                 marginBottom: "0.5rem",
               }}
             >
-              Die Verlobung — The Betrothal
+              {t("family.portrait.title")}
             </h2>
             <p
               style={{
@@ -1073,7 +1076,7 @@ export default function Family() {
                 lineHeight: 1.7,
               }}
             >
-              Crown Prince Leopold von Habsburg and Fräulein Katharina von Richter, as depicted in the official engagement portrait commissioned by the Imperial House, 2026.
+              {t("family.portrait.subtitle")}
             </p>
           </div>
 
@@ -1102,7 +1105,7 @@ export default function Family() {
                   color: "oklch(0.55 0.08 85)",
                   textTransform: "uppercase",
                   marginBottom: "0.5rem",
-                }}>Artist</div>
+                }}>{t("family.portrait.artistLabel")}</div>
                 <div style={{
                   fontFamily: "'Cinzel', serif",
                   fontSize: "1rem",
@@ -1110,14 +1113,14 @@ export default function Family() {
                   color: DARK,
                   letterSpacing: "0.04em",
                   marginBottom: "0.6rem",
-                }}>Leon Klimt</div>
+                }}>{t("family.portrait.artistName")}</div>
                 <p style={{
                   fontFamily: "'Source Serif 4', serif",
                   fontSize: "0.9rem",
                   lineHeight: 1.85,
                   color: "oklch(0.3 0.005 285)",
                 }}>
-                  This painting is a confirmation of unity and imperial continuity. It was made with the same techniques used by Leon Klimt's great-great-grandfather, yet it also incorporates the latest nano-technology: His Imperial Highness Crown Prince Leopold von Habsburg and his bride Fräulein Katharina von Richter can grow older, change clothing, medals, and jewellery — even the background itself may shift — and then return to being young again. The work was unveiled at a private ceremony at the Hofburg in the spring of 2026, attended by the Emperor and members of the Imperial Household.
+                  {t("family.portrait.artistText")}
                 </p>
               </div>
             </div>
@@ -1140,7 +1143,7 @@ export default function Family() {
                   color: "oklch(0.55 0.08 85)",
                   textTransform: "uppercase",
                   marginBottom: "0.5rem",
-                }}>Current Exhibition</div>
+                }}>{t("family.portrait.exhibLabel")}</div>
                 <div style={{
                   fontFamily: "'Cinzel', serif",
                   fontSize: "1rem",
@@ -1148,14 +1151,14 @@ export default function Family() {
                   color: DARK,
                   letterSpacing: "0.04em",
                   marginBottom: "0.6rem",
-                }}>Lower Belvedere · Klimt Museum</div>
+                }}>{t("family.portrait.exhibVenue")}</div>
                 <p style={{
                   fontFamily: "'Source Serif 4', serif",
                   fontSize: "0.9rem",
                   lineHeight: 1.85,
                   color: "oklch(0.3 0.005 285)",
                 }}>
-                  The portrait is currently on public exhibition at the Lower Belvedere, in the permanent collection of the Klimt Museum, Vienna. It will remain on display until <strong>April 2027</strong>, when it will be returned to the Hofburg Imperial Palace to take its permanent place in the Habsburg Portrait Gallery.
+                  {t("family.portrait.exhibText")}
                 </p>
                 <div style={{
                   marginTop: "1rem",
@@ -1164,9 +1167,9 @@ export default function Family() {
                   flexWrap: "wrap",
                 }}>
                   {[
-                    { label: "Venue", value: "Lower Belvedere, Vienna" },
-                    { label: "On display until", value: "April 2027" },
-                    { label: "Permanent home", value: "Hofburg, Habsburg Portrait Gallery" },
+                    { label: t("family.portrait.venueLabel"), value: t("family.portrait.venueValue") },
+                    { label: t("family.portrait.untilLabel"), value: t("family.portrait.untilValue") },
+                    { label: t("family.portrait.homeLabel"), value: t("family.portrait.homeValue") },
                   ].map((item, i) => (
                     <div key={i}>
                       <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.45rem", letterSpacing: "0.2em", color: "oklch(0.55 0.08 85)", textTransform: "uppercase", marginBottom: "0.2rem" }}>{item.label}</div>
@@ -1193,7 +1196,7 @@ export default function Family() {
                     fontSize: "0.85rem",
                     color: "oklch(0.4 0.005 285)",
                     fontStyle: "italic",
-                  }}>Lower Belvedere, Rennweg 6, 1030 Vienna — open daily 10:00–18:00</span>
+                  }}>{t("family.portrait.address")}</span>
                 </div>
 
               </div>
@@ -1218,7 +1221,7 @@ export default function Family() {
                 opacity: 0.8,
               }}
             >
-              Dynastic Genealogy
+              {t("family.tree.pretitle")}
             </div>
             <h2
               style={{
@@ -1230,7 +1233,7 @@ export default function Family() {
                 marginBottom: "0.75rem",
               }}
             >
-              Habsburg Family Tree
+              {t("family.tree.title")}
             </h2>
             <p
               style={{
@@ -1243,7 +1246,7 @@ export default function Family() {
                 lineHeight: 1.7,
               }}
             >
-              From Franz Joseph I to the present day — the dynastic lineage of the Imperial House of Austria-Danubio.
+              {t("family.tree.subtitle")}
             </p>
           </div>
           <div className="reveal" style={{ maxWidth: "1000px", margin: "0 auto" }}>
@@ -1258,7 +1261,7 @@ export default function Family() {
               }}
             />
             <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: "0.8rem", color: "oklch(0.4 0.01 85)", textAlign: "center", marginTop: "1rem" }}>
-              Dynastic genealogy of the Imperial House · From Franz Joseph I to Emperor Maximilian I
+              {t("family.tree.caption")}
             </p>
           </div>
         </div>

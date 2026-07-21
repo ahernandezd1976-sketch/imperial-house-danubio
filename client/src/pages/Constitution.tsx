@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.09 0.005 285)";
@@ -17,6 +18,7 @@ const DARK_CARD = "oklch(0.12 0.005 285)";
 
 export default function Constitution() {
   useScrollReveal();
+  const { t } = useLanguage();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -59,7 +61,7 @@ export default function Constitution() {
               opacity: 0.8,
             }}
           >
-            Imperial House of Austria-Danubio
+            {t("const.header.pretitle")}
           </div>
           <h1
             style={{
@@ -72,7 +74,7 @@ export default function Constitution() {
               marginBottom: "1.5rem",
             }}
           >
-            The <span style={{ color: GOLD }}>Constitution</span>
+            {t("const.header.title1")}<span style={{ color: GOLD }}>{t("const.header.title2")}</span>
           </h1>
           <p
             style={{
@@ -84,7 +86,7 @@ export default function Constitution() {
               lineHeight: 1.75,
             }}
           >
-            The foundational document of the Danubian Federation — established in 1917 and amended through the 20th and 21st centuries. A constitutional monarchy bound by law, tradition, and the will of its peoples.
+            {t("const.header.subtitle")}
           </p>
         </div>
       </section>
@@ -104,7 +106,7 @@ export default function Constitution() {
                 opacity: 0.8,
               }}
             >
-              Foundational Document · Vienna · 1917
+              {t("const.s1.pretitle")}
             </div>
             <h2
               style={{
@@ -116,7 +118,7 @@ export default function Constitution() {
                 marginBottom: "1rem",
               }}
             >
-              The Federation Constitution
+              {t("const.s1.title")}
             </h2>
             <p
               style={{
@@ -129,7 +131,7 @@ export default function Constitution() {
                 lineHeight: 1.75,
               }}
             >
-              Adopted by the Diet of Vienna on 1 November 1917, the Constitution of the Danubian Federation established a federal monarchy with shared sovereignty among the Crown, the Imperial Diet, and the constituent kingdoms and lands.
+              {t("const.s1.subtitle")}
             </p>
           </div>
 
@@ -203,7 +205,7 @@ export default function Constitution() {
                 marginTop: "1rem",
               }}
             >
-              The Federation Constitution · Title Page · Vienna Archives · 1917
+              {t("const.s1.caption")}
             </p>
           </div>
 
@@ -228,29 +230,14 @@ export default function Constitution() {
                 textTransform: "uppercase",
               }}
             >
-              Constitutional Principles
+              {t("const.s1.tableTitle")}
             </div>
             {[
-              {
-                title: "Federal Monarchy",
-                description: "The Crown is the symbol of unity; executive power is shared between the Emperor and the Imperial Diet.",
-              },
-              {
-                title: "Constituent Kingdoms and Lands",
-                description: "Austria, Hungary, Bohemia, Galicia, and other territories retain internal autonomy while participating in federal governance.",
-              },
-              {
-                title: "Imperial Diet",
-                description: "A bicameral legislature representing the Crown, the kingdoms, and the peoples. Legislative power is shared.",
-              },
-              {
-                title: "Rights and Liberties",
-                description: "Fundamental rights are guaranteed to all subjects: freedom of conscience, property rights, and equal justice under law.",
-              },
-              {
-                title: "Amendment Process",
-                description: "Constitutional amendments require a supermajority in the Diet and the consent of the constituent kingdoms.",
-              },
+              { title: t("const.s1.pr1"), description: t("const.s1.pr1d") },
+              { title: t("const.s1.pr2"), description: t("const.s1.pr2d") },
+              { title: t("const.s1.pr3"), description: t("const.s1.pr3d") },
+              { title: t("const.s1.pr4"), description: t("const.s1.pr4d") },
+              { title: t("const.s1.pr5"), description: t("const.s1.pr5d") },
             ].map((item, i) => (
               <div
                 key={i}
@@ -303,7 +290,7 @@ export default function Constitution() {
                 opacity: 0.8,
               }}
             >
-              Territorial Extent · 2026
+              {t("const.s2.pretitle")}
             </div>
             <h2
               style={{
@@ -315,7 +302,7 @@ export default function Constitution() {
                 marginBottom: "1rem",
               }}
             >
-              The Danubian Federation in Europe
+              {t("const.s2.title")}
             </h2>
             <p
               style={{
@@ -328,7 +315,7 @@ export default function Constitution() {
                 lineHeight: 1.75,
               }}
             >
-              The Federation occupies the central arc of Europe, bordered by Bavaria and Germany to the west, the Russian Federation to the north and east, the Balkans and Ottoman Empire to the south, and the Adriatic Sea to the southwest.
+              {t("const.s2.subtitle")}
             </p>
           </div>
 
@@ -376,7 +363,7 @@ export default function Constitution() {
                 marginTop: "1rem",
               }}
             >
-              Danubian Federation Geopolitical Map · 2026
+              {t("const.s2.caption")}
             </p>
           </div>
 
@@ -400,7 +387,7 @@ export default function Constitution() {
                 marginBottom: "1.25rem",
               }}
             >
-              The Danubian Federation comprises the historic kingdoms and lands of the Austro-Hungarian crown, reorganized as a federal state in 1917. Its territory spans from the Alpine foothills to the Carpathian Mountains, encompassing the Danube River valley — the geopolitical and economic heart of Central Europe.
+              {t("const.s2.p1")}
             </p>
             <p
               style={{
@@ -411,7 +398,7 @@ export default function Constitution() {
                 marginBottom: "1.25rem",
               }}
             >
-              Vienna remains the capital and seat of the Emperor, the Imperial Diet, and the federal government. The Federation's borders have remained largely stable since the Treaty of Vienna (1917), with minor adjustments following the Balkan Accords (1945) and the European Territorial Settlement (1989).
+              {t("const.s2.p2")}
             </p>
             <p
               style={{
@@ -421,7 +408,7 @@ export default function Constitution() {
                 color: "oklch(0.65 0.01 85)",
               }}
             >
-              As a member of the United Nations, the European Confederation, and numerous international bodies, the Federation plays a central role in European diplomacy, security, and economic integration.
+              {t("const.s2.p3")}
             </p>
           </div>
         </div>

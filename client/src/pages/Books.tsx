@@ -10,6 +10,7 @@ import { useEffect, useState, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.09 0.005 285)";
@@ -17,6 +18,7 @@ const CREAM = "oklch(0.96 0.015 85)";
 const DARK_CARD = "oklch(0.12 0.005 285)";
 
 function TeaserVideo() {
+  const { t } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [activated, setActivated] = useState(false);
 
@@ -98,7 +100,7 @@ function TeaserVideo() {
               letterSpacing: "0.25em",
               textTransform: "uppercase",
               color: GOLD,
-            }}>Play with Sound</span>
+            }}>{t("books.teaser.play")}</span>
           </div>
         )}
       </div>
@@ -113,7 +115,7 @@ function TeaserVideo() {
           letterSpacing: "0.04em",
           margin: 0,
         }}>
-          Official teaser · <em>The Danubian Throne</em> · "History Was Not Prevented. Only Rewritten."
+          {t("books.teaser.caption")}
         </p>
       </div>
     </div>
@@ -122,6 +124,7 @@ function TeaserVideo() {
 
 export default function Books() {
   useScrollReveal();
+  const { t } = useLanguage();
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -189,7 +192,7 @@ export default function Books() {
                 opacity: 0.8,
               }}
             >
-              A Novel by AB
+              {t("books.hero.pretitle")}
             </div>
             <h1
               style={{
@@ -202,7 +205,7 @@ export default function Books() {
                 marginBottom: "0.75rem",
               }}
             >
-              The Danubian Throne · Book I
+              {t("books.hero.series")}
             </h1>
             <h2
               style={{
@@ -215,7 +218,7 @@ export default function Books() {
                 marginBottom: "2rem",
               }}
             >
-              The <span style={{ color: GOLD }}>Overwrite</span>
+              {t("books.hero.title1")}<span style={{ color: GOLD }}>{t("books.hero.title2")}</span>
             </h2>
             <div style={{ width: "64px", height: "1px", background: GOLD, margin: "0 auto 2rem", opacity: 0.5 }} />
           </div>
@@ -270,7 +273,7 @@ export default function Books() {
                 marginBottom: "1.5rem",
               }}
             >
-              June 1914. Sarajevo. The shots failed.
+              {t("books.synopsis.hook")}
             </p>
             <p
               style={{
@@ -281,7 +284,7 @@ export default function Books() {
                 marginBottom: "1.25rem",
               }}
             >
-              Franz Ferdinand survived. Europe avoided war. The Habsburg throne endured, and history quietly abandoned the course the world remembers. A century later, the Danubian Federation stands powerful, modern, and seemingly untouchable.
+              {t("books.synopsis.p1")}
             </p>
             <p
               style={{
@@ -292,7 +295,7 @@ export default function Books() {
                 marginBottom: "1.5rem",
               }}
             >
-              But beneath the order of the Empire, Crown Prince Leopold begins to uncover signals that should not exist — and a truth buried since Sarajevo.
+              {t("books.synopsis.p2")}
             </p>
             <p
               style={{
@@ -303,7 +306,7 @@ export default function Books() {
                 lineHeight: 1.7,
               }}
             >
-              The Empire was never saved. It was replaced.
+              {t("books.synopsis.tagline")}
             </p>
           </div>
         </div>
@@ -324,7 +327,7 @@ export default function Books() {
                 opacity: 0.8,
               }}
             >
-              Official Teaser
+              {t("books.teaser.pretitle")}
             </div>
             <h2
               style={{
@@ -336,7 +339,7 @@ export default function Books() {
                 marginBottom: "0.5rem",
               }}
             >
-              What if Sarajevo Failed?
+              {t("books.teaser.title")}
             </h2>
             <p
               style={{
@@ -347,7 +350,7 @@ export default function Books() {
                 lineHeight: 1.7,
               }}
             >
-              History was not prevented. Only rewritten.
+              {t("books.teaser.subtitle")}
             </p>
           </div>
           <TeaserVideo />
@@ -369,7 +372,7 @@ export default function Books() {
                 opacity: 0.8,
               }}
             >
-              A Trilogy
+              {t("books.trilogy.pretitle")}
             </div>
             <h2
               style={{
@@ -380,7 +383,7 @@ export default function Books() {
                 letterSpacing: "0.03em",
               }}
             >
-              The Danubian Throne
+              {t("books.trilogy.title")}
             </h2>
           </div>
 
@@ -388,24 +391,24 @@ export default function Books() {
             {[
               {
                 number: "I",
-                title: "The Overwrite",
-                status: "Coming Soon",
+                title: t("books.trilogy.b1title"),
+                status: t("books.trilogy.b1status"),
                 available: false,
-                description: "Crown Prince Leopold uncovers signals that should not exist — and a truth buried since Sarajevo. The Empire was never saved. It was replaced.",
+                description: t("books.trilogy.b1desc"),
               },
               {
                 number: "II",
-                title: "Forthcoming",
-                status: "In preparation",
+                title: t("books.trilogy.b2title"),
+                status: t("books.trilogy.b2status"),
                 available: false,
-                description: "The second volume of the trilogy. Details to be announced.",
+                description: t("books.trilogy.b2desc"),
               },
               {
                 number: "III",
-                title: "Forthcoming",
-                status: "In preparation",
+                title: t("books.trilogy.b3title"),
+                status: t("books.trilogy.b3status"),
                 available: false,
-                description: "The concluding volume of the trilogy. Details to be announced.",
+                description: t("books.trilogy.b3desc"),
               },
             ].map((book, i) => (
               <div
@@ -502,7 +505,7 @@ export default function Books() {
                 opacity: 0.8,
               }}
             >
-              Be the First to Know
+              {t("books.notify.pretitle")}
             </div>
             <h2
               style={{
@@ -514,7 +517,7 @@ export default function Books() {
                 marginBottom: "1rem",
               }}
             >
-              Publication Announcement
+              {t("books.notify.title")}
             </h2>
             <p
               style={{
@@ -526,7 +529,7 @@ export default function Books() {
                 marginBottom: "2.5rem",
               }}
             >
-              Leave your address and we will notify you when <em>The Overwrite</em> is available for purchase.
+              {t("books.notify.subtitle")}
             </p>
 
             {submitted ? (
@@ -551,7 +554,7 @@ export default function Books() {
                     lineHeight: 1.7,
                   }}
                 >
-                  Your address has been received. You will be among the first to hear when <em>The Overwrite</em> is published.
+                  {t("books.notify.success")}
                 </p>
               </div>
             ) : (
@@ -561,7 +564,7 @@ export default function Books() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Your electronic address"
+                    placeholder={t("books.notify.placeholder")}
                     required
                     style={{
                       flex: 1,
@@ -595,7 +598,7 @@ export default function Books() {
                     onMouseEnter={(e) => (e.currentTarget.style.background = "oklch(0.78 0.14 85)")}
                     onMouseLeave={(e) => (e.currentTarget.style.background = GOLD)}
                   >
-                    Notify Me
+                    {t("books.notify.button")}
                   </button>
                 </div>
                 <p
@@ -607,7 +610,7 @@ export default function Books() {
                     textTransform: "uppercase",
                   }}
                 >
-                  Your address will be used solely for publication announcements.
+                  {t("books.notify.privacy")}
                 </p>
               </form>
             )}
@@ -626,7 +629,7 @@ export default function Books() {
                   marginBottom: "0.5rem",
                 }}
               >
-                For enquiries regarding rights, translation, or publication:
+                {t("books.contact")}
               </p>
               <a
                 href="mailto:soloahpublishing2025@gmail.com"

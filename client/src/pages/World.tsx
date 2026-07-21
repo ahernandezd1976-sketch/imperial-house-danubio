@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.09 0.005 285)";
@@ -19,6 +20,7 @@ const DARK_CARD = "oklch(0.12 0.005 285)";
 
 export default function World() {
   useScrollReveal();
+  const { t } = useLanguage();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -61,7 +63,7 @@ export default function World() {
               opacity: 0.8,
             }}
           >
-            Imperial House of Austria-Danubio
+            {t("world.header.pretitle")}
           </div>
           <h1
             style={{
@@ -74,7 +76,7 @@ export default function World() {
               marginBottom: "1.5rem",
             }}
           >
-            The <span style={{ color: GOLD }}>World</span>
+            {t("world.header.title1")}<span style={{ color: GOLD }}>{t("world.header.title2")}</span>
           </h1>
           <p
             style={{
@@ -86,7 +88,7 @@ export default function World() {
               lineHeight: 1.75,
             }}
           >
-            The geopolitical order of the Danubian Federation — its alliances, its territories, its role in the governance of Jerusalem, and its reach beyond the Earth itself.
+            {t("world.header.subtitle")}
           </p>
         </div>
       </section>
@@ -109,7 +111,7 @@ export default function World() {
                   opacity: 0.8,
                 }}
               >
-                Geopolitical Position
+                {t("world.s1.pretitle")}
               </div>
               <h2
                 style={{
@@ -122,7 +124,7 @@ export default function World() {
                   letterSpacing: "0.03em",
                 }}
               >
-                The Danubian Federation and the Reformed Ottoman Empire
+                {t("world.s1.title")}
               </h2>
               <p
                 style={{
@@ -133,7 +135,7 @@ export default function World() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The Danubian Federation, established by the Treaty of Vienna in 1917, occupies the central arc of the European continent — from the Alps to the Carpathians, from the Bohemian plateau to the Adriatic coast. It is the largest constitutional monarchy in Europe and the principal guarantor of the post-1917 order.
+                {t("world.s1.p1")}
               </p>
               <p
                 style={{
@@ -144,7 +146,7 @@ export default function World() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The Danubian Federation model of shared governance has proven influential beyond Europe. Its principles of balanced representation, rotating leadership, and communal autonomy have been adapted in conflict resolution frameworks across the Middle East, the Balkans, and Southeast Asia. The Federation's success in managing multi-ethnic, multi-religious territories has made it a template for post-conflict reconstruction and regional stability initiatives.
+                {t("world.s1.p2")}
               </p>
               <p
                 style={{
@@ -155,7 +157,7 @@ export default function World() {
                   marginBottom: "1.25rem",
                 }}
               >
-                To its south and east, the Ottoman Empire — reformed and reorganised between 1918 and 1945 — remains the dominant power of the Near East. The two empires share a long border and a longer history of rivalry and accommodation. Their joint administration of the Jerusalem Special Administrative Zone, established by the Jerusalem Protocol of 1965, is the most consequential act of cooperation between them.
+                {t("world.s1.p3")}
               </p>
               <div
                 style={{
@@ -173,7 +175,7 @@ export default function World() {
                     lineHeight: 1.8,
                   }}
                 >
-                  "The map shows Palestine as a Special Administrative Zone — high-sensitivity, multi-communal, under demographic management. The Danubian Federation contributes forces to the Multinational Constabulary."
+                  {t("world.s1.quote")}
                 </p>
                 <div
                   style={{
@@ -185,7 +187,7 @@ export default function World() {
                     marginTop: "0.75rem",
                   }}
                 >
-                  Imperial Foreign Ministry · Briefing Note · 2025
+                  {t("world.s1.quoteSource")}
                 </div>
               </div>
             </div>
@@ -210,7 +212,7 @@ export default function World() {
                 opacity: 0.8,
               }}
             >
-              Governance Architecture · 1965
+              {t("world.s2.pretitle")}
             </div>
             <h2
               style={{
@@ -222,7 +224,7 @@ export default function World() {
                 marginBottom: "1rem",
               }}
             >
-              The Jerusalem Protocol
+              {t("world.s2.title")}
             </h2>
             <p
               style={{
@@ -235,7 +237,7 @@ export default function World() {
                 lineHeight: 1.75,
               }}
             >
-              Signed in 1965 by the Ottoman Empire, the Danubian Federation, and the Arab League, the Jerusalem Protocol established a tripartite governance system for the Holy City — neither partition nor unification, but a machine for coexistence built from interlocking constraints.
+              {t("world.s2.subtitle")}
             </p>
           </div>
 
@@ -301,7 +303,7 @@ export default function World() {
                   marginBottom: "1.5rem",
                 }}
               >
-                The Jerusalem Council — the primary governing institution — consists of nine seats divided equally among the Muslim, Christian, and Jewish communities. No community holds a permanent majority. Decisions require a supermajority of six of nine votes, and each community retains a structural veto over matters affecting its essential interests.
+                {t("world.s2.p1")}
               </p>
               <p
                 style={{
@@ -312,7 +314,7 @@ export default function World() {
                   marginBottom: "1.5rem",
                 }}
               >
-                The Rotating Presidency cycles between the three communities on a two-year term: Muslim, then Christian, then Jewish, and back again. Ottoman symbolic sovereignty is preserved, but executive authority rests with the Council. The Multinational Constabulary — drawn from Ottoman, Danubian, and Arab League forces — maintains public order under rotating command.
+                {t("world.s2.p2")}
               </p>
 
               {/* Key principles table */}
@@ -334,14 +336,14 @@ export default function World() {
                     textTransform: "uppercase",
                   }}
                 >
-                  Administrative Principles
+                  {t("world.s2.tableTitle")}
                 </div>
                 {[
-                  { principle: "Rotating Presidency", detail: "Muslim → Christian → Jewish (2-year terms)" },
-                  { principle: "Supermajority Rule", detail: "6 of 9 votes required; structural veto power" },
-                  { principle: "Communal Autonomy", detail: "Personal law, courts, schools, charities, religious endowments" },
-                  { principle: "Demographic Balance", detail: "Jewish population ceiling of 40% in Palestine as a whole" },
-                  { principle: "Multinational Security", detail: "Ottoman, Danubian Federation, and Arab League forces" },
+                  { principle: t("world.s2.pr1"), detail: t("world.s2.pr1d") },
+                  { principle: t("world.s2.pr2"), detail: t("world.s2.pr2d") },
+                  { principle: t("world.s2.pr3"), detail: t("world.s2.pr3d") },
+                  { principle: t("world.s2.pr4"), detail: t("world.s2.pr4d") },
+                  { principle: t("world.s2.pr5"), detail: t("world.s2.pr5d") },
                 ].map((item, i) => (
                   <div
                     key={i}
@@ -399,7 +401,7 @@ export default function World() {
                     marginBottom: "0.5rem",
                   }}
                 >
-                  "It is neither partitioned nor unified, neither imperial nor international."
+                  {t("world.s2.closingQuote1")}
                 </p>
                 <p
                   style={{
@@ -410,7 +412,7 @@ export default function World() {
                     fontWeight: 600,
                   }}
                 >
-                  IT IS A MACHINE FOR COEXISTENCE, BUILT FROM INTERLOCKING CONSTRAINTS.
+                  {t("world.s2.closingQuote2")}
                 </p>
                 <div
                   style={{
@@ -422,7 +424,7 @@ export default function World() {
                     marginTop: "0.75rem",
                   }}
                 >
-                  Jerusalem Protocol Archives · Article I · 1965
+                  {t("world.s2.closingSource")}
                 </div>
               </div>
             </div>
@@ -479,7 +481,7 @@ export default function World() {
                   marginTop: "1rem",
                 }}
               >
-                Political Map of Moon Corridors · Danubian Federation corridor allocated 2025
+                {t("world.s3.caption")}
               </p>
             </div>
 
@@ -497,7 +499,7 @@ export default function World() {
                   opacity: 0.8,
                 }}
               >
-                Lunar Territories · Since 2025
+                {t("world.s3.pretitle")}
               </div>
               <h2
                 style={{
@@ -510,7 +512,7 @@ export default function World() {
                   letterSpacing: "0.03em",
                 }}
               >
-                The Moon Corridors
+                {t("world.s3.title")}
               </h2>
               <p
                 style={{
@@ -521,7 +523,7 @@ export default function World() {
                   marginBottom: "1.25rem",
                 }}
               >
-                In 2025, the Danubian Federation became the sixth signatory to the Lunar Corridor Allocation Treaty — joining the United States, Russia, China, France, and the United Kingdom in the governance of the Moon's surface. The Federation's corridor, a narrow wedge of the lunar near-side, was allocated by agreement of the existing five powers in recognition of the Federation's contribution to the Multinational Space Observation Programme and its role in the governance of the Jerusalem Protocol.
+                {t("world.s3.p1")}
               </p>
               <p
                 style={{
@@ -532,7 +534,7 @@ export default function World() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The allocation is symbolic in the short term — no Danubian installation yet exists on the lunar surface — but the political significance is considerable. It places the Federation among the six powers that will govern the Moon as human activity there intensifies over the coming decades.
+                {t("world.s3.p2")}
               </p>
               <div
                 style={{
@@ -554,7 +556,7 @@ export default function World() {
                     color: "oklch(0.65 0.01 85)",
                   }}
                 >
-                  Danubian Federation · Lunar Corridor · Allocated 2025
+                  {t("world.s3.badge")}
                 </span>
               </div>
             </div>
@@ -577,7 +579,7 @@ export default function World() {
                 opacity: 0.8,
               }}
             >
-              Declassified Archive · Vienna · 2025
+              {t("world.s4.pretitle")}
             </div>
             <h2
               style={{
@@ -589,7 +591,7 @@ export default function World() {
                 marginBottom: "1rem",
               }}
             >
-              The Konopiště Protocol
+              {t("world.s4.title")}
             </h2>
             <p
               style={{
@@ -602,7 +604,7 @@ export default function World() {
                 lineHeight: 1.75,
               }}
             >
-              Declassified in 2025, the Imperial Intelligence Briefing on the Strategic Realignment of Europe documents the diplomatic sequence that led from the Franco-Russian Alliance of 1894 to the formation of the Danubian Federation in 1917.
+              {t("world.s4.subtitle")}
             </p>
           </div>
 
@@ -650,7 +652,7 @@ export default function World() {
                 marginTop: "1rem",
               }}
             >
-              Imperial Intelligence Briefing · Konopiště Protocol · Filed Vienna Archives · Declassified 2025
+              {t("world.s4.caption")}
             </p>
 
             {/* Key events timeline */}
@@ -672,16 +674,16 @@ export default function World() {
                   textTransform: "uppercase",
                 }}
               >
-                The Road to Vienna · Key Events
+                {t("world.s4.timelineTitle")}
               </div>
               {[
-                { year: "1894", event: "Franco-Russian Alliance — a mutual defence pact reshapes the balance of power in Europe." },
-                { year: "1902", event: "Paris extends loans to St. Petersburg, deepening financial interdependence between France and Russia." },
-                { year: "1905", event: "Russian reverses generate instability; Britain and France begin private discussions on strategic realignment." },
-                { year: "1912", event: "Paris proposes economic reorientation toward Vienna, isolating Berlin diplomatically." },
-                { year: "1914", event: "Konopiště Conference: Britain and France propose full economic realignment with Austria, isolating Germany. Serbia joins a new confederation with Austria under the Acta Danubiana (20 July)." },
-                { year: "1915–1916", event: "Germany faces European economic blockade. Submarine campaign fails to break the encirclement. Cabinet deadlocks." },
-                { year: "Winter 1917", event: "Formation of the Greater Austrian Federation confirmed. The Treaty of Vienna is signed. The Danubian Federation is established." },
+                { year: t("world.s4.ev1y"), event: t("world.s4.ev1") },
+                { year: t("world.s4.ev2y"), event: t("world.s4.ev2") },
+                { year: t("world.s4.ev3y"), event: t("world.s4.ev3") },
+                { year: t("world.s4.ev4y"), event: t("world.s4.ev4") },
+                { year: t("world.s4.ev5y"), event: t("world.s4.ev5") },
+                { year: t("world.s4.ev6y"), event: t("world.s4.ev6") },
+                { year: t("world.s4.ev7y"), event: t("world.s4.ev7") },
               ].map((item, i) => (
                 <div
                   key={i}

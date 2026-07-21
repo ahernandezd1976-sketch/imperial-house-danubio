@@ -3,11 +3,12 @@
  * Real characters: Emperor Maximilian I and the Imperial Household
  * Portrait: Official family photograph, Hofburg Imperial Palace
  */
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getFamilyMembers } from "@/i18n/familyMembers";
 
 const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.09 0.005 285)";
@@ -126,9 +127,7 @@ function PaintingVideo() {
           lineHeight: 1.6,
           margin: 0,
         }}>
-          His Imperial Highness Crown Prince Leopold von Habsburg
-          <span style={{ display: "inline-block", margin: "0 0.6em", color: GOLD, fontStyle: "normal" }}>·</span>
-          and his bride Fräulein Katharina von Richter
+          {t("family.portrait.caption")}
         </p>
         <div style={{ width: "48px", height: "1px", background: GOLD, margin: "1rem auto 0", opacity: 0.5 }} />
       </div>
@@ -136,104 +135,11 @@ function PaintingVideo() {
   );
 }
 
-// Right to left in the official portrait (as viewed)
-const familyMembers = [
-  {
-    name: "Crown Prince Leopold von Habsburg",
-    title: "Crown Prince of Austria-Danubio, Archduke of Neustadt",
-    age: 32,
-    style: "His Imperial Highness",
-    position: "far right",
-    bio: "The heir apparent to the Imperial Throne. Crown Prince Leopold holds degrees from New York University and the London School of Economics. A gifted polyglot, he speaks German, French, English, Spanish, Hungarian, Czech, and Croatian — a linguistic range that reflects the Confederation's multilingual heritage and his own deep commitment to the unity of its peoples. He chairs the Imperial Commission on European Affairs and is widely regarded as one of the most capable members of his generation.",
-    initials: "LP",
-    dress: "Full dress military uniform, blue",
-    languages: ["German", "French", "English", "Spanish", "Hungarian", "Czech", "Croatian"],
-  },
-  {
-    name: "Katharina von Richter",
-    title: "Fiancée of the Crown Prince",
-    age: 31,
-    style: "Fräulein",
-    position: "second from right",
-    bio: "Daughter of August von Richter, the foremost industrialist and financier in Europe. Katharina holds a degree in Corporate Management from the University of Vienna and has served as a director of the von Richter Group's philanthropic arm. She speaks German, English, French, Spanish, and Hungarian. Her engagement to Crown Prince Leopold was announced at the Imperial Court in the spring of 2026 and was greeted with widespread public enthusiasm.",
-    initials: "KR",
-    dress: "White bridal gown",
-    father: "August von Richter",
-    languages: ["German", "English", "French", "Spanish", "Hungarian"],
-  },
-  {
-    name: "Emperor Maximilian I",
-    title: "His Imperial Majesty the Emperor of Austria-Danubio",
-    age: 72,
-    style: "His Imperial and Royal Majesty",
-    position: "centre",
-    bio: "The reigning Emperor of Austria-Danubio, now in his nineteenth year on the throne. Emperor Maximilian I ascended following the death of his father and has presided over a period of constitutional consolidation, economic modernisation, and deepened European integration. His reign has been marked by personal courage in the face of profound tragedy: the late Empress Maria-Cristina perished in the fire at the Paris Ritz on the 10th of September, 2000, a loss that shook the Confederation and the wider world. His Majesty has since devoted himself entirely to his duties, and is universally respected for his dignity, his wisdom, and his tireless service to the Danubian peoples.",
-    initials: "MX",
-    dress: "Imperial state robes and full dynastic regalia",
-    isEmperor: true,
-    reignYears: 19,
-    widow: true,
-    lateSpouse: "Empress Maria-Cristina",
-    spouseDeath: "Paris Ritz fire, 10 September 2000",
-  },
-  {
-    name: "Archduchess Gisela von Habsburg",
-    title: "Archduchess of Austria-Danubio",
-    age: 65,
-    style: "Her Imperial Highness",
-    position: "centre-left",
-    bio: "The Emperor's younger sister. Archduchess Gisela is a distinguished patron of the arts and a founding trustee of the Imperial Foundation for Cultural Heritage. Known for her warmth and accessibility, she has represented the Imperial House at cultural and humanitarian events across Europe for over three decades.",
-    initials: "GI",
-    dress: "Deep crimson gown",
-  },
-  {
-    name: "Archduke Charles Bertroch",
-    title: "Archduke of Austria-Danubio",
-    age: 69,
-    style: "His Imperial Highness",
-    position: "second from left",
-    bio: "A senior member of the Imperial House. Archduke Charles Bertroch has served the Confederation with distinction across five decades of public life, including terms as President of the Imperial Council of State and as Special Envoy to the Danubian Principalities. He is regarded as one of the most respected elder statesmen of the dynasty.",
-    initials: "CB",
-    dress: "Military uniform",
-  },
-  {
-    name: "Archduchess Eleonora von Habsburg",
-    title: "Archduchess of Austria-Danubio",
-    age: 29,
-    style: "Her Imperial Highness",
-    position: "third from left",
-    bio: "The Emperor's daughter. Archduchess Eleonora studied international law at the University of Vienna and the Sorbonne. She serves as the Imperial Patron of the Danubian Youth Foundation and has been a prominent advocate for environmental protection of the Danube river system. Her poise and public presence have made her one of the most admired members of the younger generation of the Imperial House.",
-    initials: "EL",
-    dress: "Black gown",
-    languages: ["German", "English", "French", "Hungarian", "Czech", "Spanish", "Italian"],
-  },
-  {
-    name: "Archduchess Alexis von Habsburg",
-    title: "Archduchess of Austria-Danubio",
-    age: 66,
-    style: "Her Imperial Highness",
-    position: "second from left",
-    bio: "A senior member of the Imperial House and widow of the late Archduke Friedrich. Archduchess Alexis has served the Confederation as a diplomat, author, and philanthropist. She is the founder of the Imperial Society for the Preservation of Danubian Languages and a trustee of the Imperial Library. Her memoir, 'The River and the Crown' (2001), remains one of the most celebrated personal accounts of life within the Imperial House.",
-    initials: "AL",
-    dress: "Blue beaded gown",
-    widow: true,
-  },
-  {
-    name: "Reiner von Habsburg",
-    title: "Marshal of the Crown, Archduke of Austria-Danubio",
-    age: 55,
-    style: "His Imperial Highness",
-    position: "far left",
-    bio: "Marshal of the Crown and one of the most senior officers of the Imperial Household. Reiner von Habsburg is responsible for the organisation of all Imperial ceremonies, state visits, and court protocol. A graduate of the Imperial Military Academy, he holds the rank of General in the Imperial Guard and has served on diplomatic missions to Central Europe and the Balkans. He is regarded as the indispensable organising force behind the ceremonial life of the Imperial Court.",
-    initials: "RV",
-    dress: "Full dress military uniform, gold epaulettes",
-    languages: ["German", "English", "French", "Hungarian", "Czech", "Spanish", "Russian"],
-  },
-];
 
 export default function Family() {
   useScrollReveal();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const familyMembers = useMemo(() => getFamilyMembers(language), [language]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -395,7 +301,7 @@ export default function Family() {
                     textTransform: "uppercase",
                   }}
                 >
-                  {m.name.split(" ").slice(-1)[0]}
+                  {m.shortName.split(" ").slice(-1)[0]}
                   {i < familyMembers.length - 1 && (
                     <span style={{ color: GOLD, marginLeft: "1.5rem" }}>·</span>
                   )}
@@ -428,7 +334,7 @@ export default function Family() {
                     textOverflow: "ellipsis",
                     marginBottom: "0.2rem",
                   }}>
-                    {m.name.replace("Archduke ", "").replace("Archduchess ", "").replace("Crown Prince ", "").replace("Emperor ", "")}
+                    {m.shortName}
                   </div>
                   {/* tick pointing down */}
                   <div style={{ width: "1px", height: "6px", background: m.isEmperor ? `oklch(0.72 0.12 85 / 0.7)` : `oklch(0.72 0.12 85 / 0.35)` }} />
@@ -461,7 +367,7 @@ export default function Family() {
                     overflow: "hidden",
                     textOverflow: "ellipsis",
                   }}>
-                    {m.name.replace("Archduke ", "").replace("Archduchess ", "").replace("Crown Prince ", "").replace("Emperor ", "")}
+                    {m.shortName}
                   </div>
                 </div>
               ))}
@@ -787,8 +693,8 @@ export default function Family() {
                 {/* Avatar */}
                 <div
                   style={{
-                    height: member.name === "Crown Prince Leopold von Habsburg" ? "280px" : "140px",
-                    background: member.name === "Crown Prince Leopold von Habsburg" ? "oklch(0.12 0.005 285)" : "oklch(0.93 0.01 85)",
+                    height: member.isCrownPrince ? "280px" : "140px",
+                    background: member.isCrownPrince ? "oklch(0.12 0.005 285)" : "oklch(0.93 0.01 85)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -797,10 +703,10 @@ export default function Family() {
                     position: "relative",
                   }}
                 >
-                  {member.name === "Crown Prince Leopold von Habsburg" ? (
+                  {member.isCrownPrince ? (
                     <img
                       src="/manus-storage/ChatGPTImageMar24,2026,08_10_09AM-copia_ea6b538b.png"
-                      alt="Crown Prince Leopold von Habsburg — official engraving portrait"
+                      alt={`${member.name} — official engraving portrait`}
                       style={{
                         width: "100%",
                         height: "100%",

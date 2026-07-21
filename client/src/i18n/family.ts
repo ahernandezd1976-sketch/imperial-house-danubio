@@ -56,6 +56,7 @@ export const familyTranslations: Record<Language, Record<string, string>> = {
     "family.emperor.tragedyLabel": "Tragödie",
     "family.emperor.memorial": "Die verstorbene Kaiserin Maria-Cristina, geliebte Gemahlin Kaiser Maximilians I., kam beim Brand im Pariser Ritz am 10. September 2000 ums Leben. Ihr Andenken wird jedes Jahr an diesem Datum durch eine feierliche Messe in der Kathedrale von Neustadt geehrt, an der die Kaiserliche Familie und Vertreter der sieben Gliedstaaten der Konföderation teilnehmen.",
     "family.portrait.touch": "Das Gemälde berühren",
+    "family.portrait.caption": "Seine Kaiserliche Hoheit Kronprinz Leopold von Habsburg · und seine Braut Fräulein Katharina von Richter",
   },
   en: {
     "family.header.pretitle": "Imperial House of Austria-Danubio",
@@ -112,6 +113,7 @@ export const familyTranslations: Record<Language, Record<string, string>> = {
     "family.emperor.tragedyLabel": "Tragedy",
     "family.emperor.memorial": "The late Empress Maria-Cristina, beloved consort of Emperor Maximilian I, perished in the fire at the Paris Ritz on the 10th of September, 2000. Her memory is honoured each year on that date by a solemn Mass at the Cathedral of Neustadt, attended by the Imperial Family and representatives of the Confederation's seven constituent states.",
     "family.portrait.touch": "Touch the Painting",
+    "family.portrait.caption": "His Imperial Highness Crown Prince Leopold von Habsburg · and his bride Fräulein Katharina von Richter",
   },
   hu: {
     "family.header.pretitle": "Ausztria-Duna Császári Ház",
@@ -168,6 +170,7 @@ export const familyTranslations: Record<Language, Record<string, string>> = {
     "family.emperor.tragedyLabel": "Tragédia",
     "family.emperor.memorial": "A néhai Mária-Krisztina császárné, I. Miksa császár szeretett hitvesttársa, a párizsi Ritz szálloda tűzvészében vesztette életét 2000. szeptember 10-én. Emlékét minden évben ezen a napon ünnepélyes misével tisztelik a neustadti székesegyházban, amelyen a Császári Család és a Konföderáció hét tagországának képviselői vesznek részt.",
     "family.portrait.touch": "Érintse meg a Festményt",
+    "family.portrait.caption": "Őfensége Leopold von Habsburg koronaherceg · és menyasszonya, Katharina von Richter kisasszony",
   },
   fr: {
     "family.header.pretitle": "Maison Impériale d'Autriche-Danube",

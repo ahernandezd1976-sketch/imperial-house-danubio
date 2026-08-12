@@ -489,11 +489,16 @@ export default function Books() {
         </div>
       </section>
 
-      {/* ── Notification Sign-up ── */}
+      {/* ── Reserve Your Copy ── */}
       <section style={{ backgroundColor: DARK, padding: "6rem 0", borderTop: `1px solid oklch(0.72 0.12 85 / 0.1)` }}>
         <div className="container">
-          <div className="reveal" style={{ maxWidth: "560px", margin: "0 auto", textAlign: "center" }}>
-            <div style={{ width: "48px", height: "1px", background: GOLD, margin: "0 auto 2rem", opacity: 0.4 }} />
+          <div className="reveal" style={{ maxWidth: "620px", margin: "0 auto", textAlign: "center" }}>
+            {/* Decorative crown icon */}
+            <div style={{ marginBottom: "2rem" }}>
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.7 }}>
+                <path d="M2 20h20M4 20V10l4 4 4-8 4 8 4-4v10" />
+              </svg>
+            </div>
             <div
               style={{
                 fontFamily: "'Cinzel', serif",
@@ -505,7 +510,7 @@ export default function Books() {
                 opacity: 0.8,
               }}
             >
-              {t("books.notify.pretitle")}
+              {t("books.reserve.pretitle")}
             </div>
             <h2
               style={{
@@ -517,19 +522,49 @@ export default function Books() {
                 marginBottom: "1rem",
               }}
             >
-              {t("books.notify.title")}
+              {t("books.reserve.title")}
             </h2>
             <p
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 fontStyle: "italic",
-                fontSize: "1rem",
+                fontSize: "1.05rem",
                 color: "oklch(0.55 0.01 85)",
+                lineHeight: 1.75,
+                marginBottom: "1.5rem",
+              }}
+            >
+              {t("books.reserve.subtitle")}
+            </p>
+
+            {/* Coming Soon badge */}
+            <div style={{
+              display: "inline-block",
+              padding: "0.5rem 1.5rem",
+              border: `1px solid oklch(0.72 0.12 85 / 0.4)`,
+              marginBottom: "2.5rem",
+            }}>
+              <span style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "0.55rem",
+                letterSpacing: "0.3em",
+                color: GOLD,
+                textTransform: "uppercase",
+              }}>
+                {t("books.reserve.badge")}
+              </span>
+            </div>
+
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: "0.95rem",
+                color: "oklch(0.45 0.01 85)",
                 lineHeight: 1.75,
                 marginBottom: "2.5rem",
               }}
             >
-              {t("books.notify.subtitle")}
+              {t("books.reserve.emailPrompt")}
             </p>
 
             {submitted ? (

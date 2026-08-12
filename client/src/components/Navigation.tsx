@@ -18,6 +18,7 @@ const navLinkKeys = [
   { href: "/constitution", key: "nav.constitution" },
   { href: "/books", key: "nav.books" },
   { href: "/press", key: "nav.press" },
+  { href: "/transparency", key: "nav.transparency" },
 ];
 
 export default function Navigation() {

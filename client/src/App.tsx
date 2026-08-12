@@ -15,6 +15,7 @@ import World from "./pages/World";
 import Constitution from "./pages/Constitution";
 import Books from "./pages/Books";
 import Press from "./pages/Press";
+import Transparency from "./pages/Transparency";
 
 function Router() {
   return (
@@ -29,6 +30,7 @@ function Router() {
       <Route path={"/constitution"} component={Constitution} />
       <Route path={"/books"} component={Books} />
       <Route path={"/press"} component={Press} />
+      <Route path={"/transparency"} component={Transparency} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

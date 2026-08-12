@@ -3,7 +3,7 @@
  * Default: German (de), with English, French, Hungarian, Czech, Croatian
  */
 import { createContext, useContext, useState, useCallback, useMemo, type ReactNode } from "react";
-import { historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations } from "@/i18n";
+import { historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations } from "@/i18n";
 
 export type Language = "de" | "en" | "fr" | "hu" | "cs" | "hr";
 
@@ -35,6 +35,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.constitution": "Verfassung",
     "nav.books": "Der Donau-Thron",
     "nav.press": "Presse",
+    "nav.transparency": "Transparenz",
     // Header
     "header.imperialHouse": "Kaiserliches Haus",
     // Hero
@@ -113,6 +114,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.constitution": "Constitution",
     "nav.books": "The Danubian Throne",
     "nav.press": "Press",
+    "nav.transparency": "Transparency",
     "header.imperialHouse": "Imperial House",
     "hero.pretitle": "Est. MCMXVII · Neustadt, Danubio",
     "hero.title1": "Imperial House",
@@ -182,6 +184,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.constitution": "Constitution",
     "nav.books": "Le Trône Danubien",
     "nav.press": "Presse",
+    "nav.transparency": "Transparence",
     "header.imperialHouse": "Maison Impériale",
     "hero.pretitle": "Fond. MCMXVII · Neustadt, Danube",
     "hero.title1": "Maison Impériale",
@@ -251,6 +254,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.constitution": "Alkotmány",
     "nav.books": "A Dunai Trón",
     "nav.press": "Sajtó",
+    "nav.transparency": "Átláthatóság",
     "header.imperialHouse": "Császári Ház",
     "hero.pretitle": "Alapítva MCMXVII · Neustadt, Duna",
     "hero.title1": "Császári Ház",
@@ -320,6 +324,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.constitution": "Ústava",
     "nav.books": "Dunajský Trůn",
     "nav.press": "Tisk",
+    "nav.transparency": "Transparentnost",
     "header.imperialHouse": "Císařský Dům",
     "hero.pretitle": "Zal. MCMXVII · Neustadt, Dunaj",
     "hero.title1": "Císařský Dům",
@@ -388,6 +393,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.constitution": "Ustav",
     "nav.books": "Dunavski Prijestolje",
     "nav.press": "Tisak",
+    "nav.transparency": "Transparentnost",
     "header.imperialHouse": "Carski Dom",
     "hero.pretitle": "Osn. MCMXVII · Neustadt, Dunav",
     "hero.title1": "Carski Dom",
@@ -448,7 +454,7 @@ const translations: Record<Language, Record<string, string>> = {
 };
 
 // Merge all page translations into a single lookup
-const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations];
+const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations];
 
 function mergeTranslations(): Record<Language, Record<string, string>> {
   const langs: Language[] = ["de", "en", "fr", "hu", "cs", "hr"];

@@ -32,7 +32,7 @@ const familyMembersEN: FamilyMember[] = [
     bio: "The heir apparent to the Imperial Throne. Crown Prince Leopold holds degrees from New York University and the London School of Economics. A gifted polyglot, he speaks German, French, English, Spanish, Hungarian, Czech, and Croatian — a linguistic range that reflects the Confederation's multilingual heritage and his own deep commitment to the unity of its peoples. He chairs the Imperial Commission on European Affairs and is widely regarded as one of the most capable members of his generation.",
     initials: "LP",
     dress: "Full dress military uniform, blue",
-    portrait: "/manus-storage/ChatGPTImageMar24,2026,08_10_09AM-copia_ea6b538b.png",
+    portrait: "/manus-storage/leopold_portrait_heraldic_6e6d6298.png",
     isCrownPrince: true,
     languages: ["German", "French", "English", "Spanish", "Hungarian", "Czech", "Croatian"],
   },
@@ -130,7 +130,7 @@ const familyMembersEN: FamilyMember[] = [
     bio: "Marshal of the Crown and one of the most senior officers of the Imperial Household. Reiner von Habsburg is responsible for the organisation of all Imperial ceremonies, state visits, and court protocol. A graduate of the Imperial Military Academy, he holds the rank of General in the Imperial Guard and has served on diplomatic missions to Central Europe and the Balkans. He is regarded as the indispensable organising force behind the ceremonial life of the Imperial Court.",
     initials: "RV",
     dress: "Full dress military uniform, gold epaulettes",
-    portrait: "/manus-storage/ChatGPTImage12ago2026,16_15_30_fc8d8ed6.png",
+    portrait: "/manus-storage/reiner_portrait_heraldic_ba22a28b.png",
     languages: ["German", "English", "French", "Hungarian", "Czech", "Spanish", "Russian"],
   },
 ];
@@ -147,7 +147,7 @@ const familyMembersDE: FamilyMember[] = [
     bio: "Der Thronerbe des Kaiserlichen Throns. Kronprinz Leopold besitzt Abschlüsse der New York University und der London School of Economics. Als begabter Polyglott spricht er Deutsch, Französisch, Englisch, Spanisch, Ungarisch, Tschechisch und Kroatisch — eine sprachliche Vielfalt, die das mehrsprachige Erbe der Konföderation und sein eigenes tiefes Engagement für die Einheit ihrer Völker widerspiegelt. Er leitet die Kaiserliche Kommission für Europäische Angelegenheiten und gilt weithin als eines der fähigsten Mitglieder seiner Generation.",
     initials: "LP",
     dress: "Volle Galauniform, blau",
-    portrait: "/manus-storage/ChatGPTImageMar24,2026,08_10_09AM-copia_ea6b538b.png",
+    portrait: "/manus-storage/leopold_portrait_heraldic_6e6d6298.png",
     languages: ["Deutsch", "Französisch", "Englisch", "Spanisch", "Ungarisch", "Tschechisch", "Kroatisch"],
   },
   {
@@ -244,7 +244,7 @@ const familyMembersDE: FamilyMember[] = [
     bio: "Marschall der Krone und einer der ranghöchsten Offiziere des Kaiserlichen Haushalts. Reiner von Habsburg ist verantwortlich für die Organisation aller kaiserlichen Zeremonien, Staatsbesuche und des Hofprotokolls. Als Absolvent der Kaiserlichen Militärakademie hält er den Rang eines Generals in der Kaiserlichen Garde und hat diplomatische Missionen in Mitteleuropa und auf dem Balkan durchgeführt. Er gilt als die unverzichtbare organisierende Kraft hinter dem zeremoniellen Leben des Kaiserlichen Hofes.",
     initials: "RV",
     dress: "Volle Galauniform, goldene Epauletten",
-    portrait: "/manus-storage/ChatGPTImage12ago2026,16_15_30_fc8d8ed6.png",
+    portrait: "/manus-storage/reiner_portrait_heraldic_ba22a28b.png",
     languages: ["Deutsch", "Englisch", "Französisch", "Ungarisch", "Tschechisch", "Spanisch", "Russisch"],
   },
 ];
@@ -261,7 +261,7 @@ const familyMembersHU: FamilyMember[] = [
     bio: "A Császári Trón trónörököse. Leopold koronaherceg a New York-i Egyetemen és a London School of Economics-on szerzett diplomát. Tehetséges poliglottként beszél németül, franciául, angolul, spanyolul, magyarul, csehül és horvátul — ez a nyelvi sokszínűség tükrözi a Konfödéráció többnyelvű örökségét és saját mély elkötelezettségét népei egysége iránt. Ő vezeti a Császári Európai Ügyek Bizottságát, és széles körben generációja egyik legtehetségesebb tagjának tartják.",
     initials: "LP",
     dress: "Teljes díszegyenruha, kék",
-    portrait: "/manus-storage/ChatGPTImageMar24,2026,08_10_09AM-copia_ea6b538b.png",
+    portrait: "/manus-storage/leopold_portrait_heraldic_6e6d6298.png",
     languages: ["Német", "Francia", "Angol", "Spanyol", "Magyar", "Cseh", "Horvát"],
   },
   {
@@ -358,7 +358,7 @@ const familyMembersHU: FamilyMember[] = [
     bio: "A Korona Marsallja és a Császári Háztartás egyik legrangosabb tisztje. Reiner von Habsburg felelős az összes császári szertartás, államlátogatás és udvari protokoll megszervezéséért. A Császári Katonai Akadémia végzettjeként a Császári Gárda tábornoki rangját viseli, és diplomáciai küldetéseket teljesített Közép-Európában és a Balkánon. A Császári Udvar szertartási életének nélkülözhetetlen szervező erejének tartják.",
     initials: "RV",
     dress: "Teljes díszegyenruha, arany vállszalagok",
-    portrait: "/manus-storage/ChatGPTImage12ago2026,16_15_30_fc8d8ed6.png",
+    portrait: "/manus-storage/reiner_portrait_heraldic_ba22a28b.png",
     languages: ["Német", "Angol", "Francia", "Magyar", "Cseh", "Spanyol", "Orosz"],
   },
 ];

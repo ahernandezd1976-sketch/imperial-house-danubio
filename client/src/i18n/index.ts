@@ -4,3 +4,4 @@ export { worldTranslations } from "./world";
 export { constitutionTranslations } from "./constitution";
 export { booksTranslations } from "./books";
 export { footerTranslations } from "./footer";
+export { transparencyTranslations } from "./transparency";

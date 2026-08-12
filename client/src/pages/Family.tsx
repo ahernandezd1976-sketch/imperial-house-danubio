@@ -693,8 +693,8 @@ export default function Family() {
                 {/* Avatar */}
                 <div
                   style={{
-                    height: member.isCrownPrince ? "280px" : "140px",
-                    background: member.isCrownPrince ? "oklch(0.12 0.005 285)" : "oklch(0.93 0.01 85)",
+                    height: member.portrait ? "280px" : "140px",
+                    background: "oklch(0.12 0.005 285)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -703,17 +703,16 @@ export default function Family() {
                     position: "relative",
                   }}
                 >
-                  {member.isCrownPrince ? (
+                  {member.portrait ? (
                     <img
-                      src="/manus-storage/ChatGPTImageMar24,2026,08_10_09AM-copia_ea6b538b.png"
+                      src={member.portrait}
                       alt={`${member.name} — official engraving portrait`}
                       style={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "contain",
+                        objectFit: "cover",
                         objectPosition: "center",
                         display: "block",
-                        padding: "0.5rem",
                       }}
                     />
                   ) : (

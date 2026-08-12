@@ -10,6 +10,7 @@ export interface FamilyMember {
   bio: string;
   initials: string;
   dress: string;
+  portrait?: string;
   languages?: string[];
   isEmperor?: boolean;
   isCrownPrince?: boolean;
@@ -31,6 +32,7 @@ const familyMembersEN: FamilyMember[] = [
     bio: "The heir apparent to the Imperial Throne. Crown Prince Leopold holds degrees from New York University and the London School of Economics. A gifted polyglot, he speaks German, French, English, Spanish, Hungarian, Czech, and Croatian — a linguistic range that reflects the Confederation's multilingual heritage and his own deep commitment to the unity of its peoples. He chairs the Imperial Commission on European Affairs and is widely regarded as one of the most capable members of his generation.",
     initials: "LP",
     dress: "Full dress military uniform, blue",
+    portrait: "/manus-storage/ChatGPTImageMar24,2026,08_10_09AM-copia_ea6b538b.png",
     isCrownPrince: true,
     languages: ["German", "French", "English", "Spanish", "Hungarian", "Czech", "Croatian"],
   },
@@ -44,6 +46,7 @@ const familyMembersEN: FamilyMember[] = [
     bio: "Daughter of August von Richter, the foremost industrialist and financier in Europe. Katharina holds a degree in Corporate Management from the University of Vienna and has served as a director of the von Richter Group's philanthropic arm. She speaks German, English, French, Spanish, and Hungarian. Her engagement to Crown Prince Leopold was announced at the Imperial Court in the spring of 2026 and was greeted with widespread public enthusiasm.",
     initials: "KR",
     dress: "White bridal gown",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_23_46_89b175aa.png",
     father: "August von Richter",
     languages: ["German", "English", "French", "Spanish", "Hungarian"],
   },
@@ -57,6 +60,7 @@ const familyMembersEN: FamilyMember[] = [
     bio: "The reigning Emperor of Austria-Danubio, now in his nineteenth year on the throne. Emperor Maximilian I ascended following the death of his father and has presided over a period of constitutional consolidation, economic modernisation, and deepened European integration. His reign has been marked by personal courage in the face of profound tragedy: the late Empress Maria-Cristina perished in the fire at the Paris Ritz on the 10th of September, 2000, a loss that shook the Confederation and the wider world. His Majesty has since devoted himself entirely to his duties, and is universally respected for his dignity, his wisdom, and his tireless service to the Danubian peoples.",
     initials: "MX",
     dress: "Imperial state robes and full dynastic regalia",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_27_28_7fc2c010.png",
     isEmperor: true,
     reignYears: 19,
     widow: true,
@@ -73,6 +77,8 @@ const familyMembersEN: FamilyMember[] = [
     bio: "The Emperor's younger sister. Archduchess Gisela is a distinguished patron of the arts and a founding trustee of the Imperial Foundation for Cultural Heritage. Known for her warmth and accessibility, she has represented the Imperial House at cultural and humanitarian events across Europe for over three decades.",
     initials: "GI",
     dress: "Deep crimson gown",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_22_09_1e038914.png",
+    languages: ["German", "French", "Hungarian", "Czech", "Latin"],
   },
   {
     name: "Archduke Charles Bertroch",
@@ -84,6 +90,8 @@ const familyMembersEN: FamilyMember[] = [
     bio: "A senior member of the Imperial House. Archduke Charles Bertroch has served the Confederation with distinction across five decades of public life, including terms as President of the Imperial Council of State and as Special Envoy to the Danubian Principalities. He is regarded as one of the most respected elder statesmen of the dynasty.",
     initials: "CB",
     dress: "Military uniform",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_20_48_2f7410fe.png",
+    languages: ["Italian", "French", "German"],
   },
   {
     name: "Archduchess Eleonora von Habsburg",
@@ -95,6 +103,7 @@ const familyMembersEN: FamilyMember[] = [
     bio: "The Emperor's daughter. Archduchess Eleonora studied international law at the University of Vienna and the Sorbonne. She serves as the Imperial Patron of the Danubian Youth Foundation and has been a prominent advocate for environmental protection of the Danube river system. Her poise and public presence have made her one of the most admired members of the younger generation of the Imperial House.",
     initials: "EL",
     dress: "Black gown",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_33_54_2e0318f5.png",
     languages: ["German", "English", "French", "Hungarian", "Czech", "Spanish", "Italian"],
   },
   {
@@ -107,7 +116,9 @@ const familyMembersEN: FamilyMember[] = [
     bio: "A senior member of the Imperial House and widow of the late Archduke Friedrich. Archduchess Alexis has served the Confederation as a diplomat, author, and philanthropist. She is the founder of the Imperial Society for the Preservation of Danubian Languages and a trustee of the Imperial Library. Her memoir, 'The River and the Crown' (2001), remains one of the most celebrated personal accounts of life within the Imperial House.",
     initials: "AL",
     dress: "Blue beaded gown",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_15_43_21ec8582.png",
     widow: true,
+    languages: ["German", "French", "Hungarian", "Czech", "Latin"],
   },
   {
     name: "Reiner von Habsburg",
@@ -119,6 +130,7 @@ const familyMembersEN: FamilyMember[] = [
     bio: "Marshal of the Crown and one of the most senior officers of the Imperial Household. Reiner von Habsburg is responsible for the organisation of all Imperial ceremonies, state visits, and court protocol. A graduate of the Imperial Military Academy, he holds the rank of General in the Imperial Guard and has served on diplomatic missions to Central Europe and the Balkans. He is regarded as the indispensable organising force behind the ceremonial life of the Imperial Court.",
     initials: "RV",
     dress: "Full dress military uniform, gold epaulettes",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_15_30_fc8d8ed6.png",
     languages: ["German", "English", "French", "Hungarian", "Czech", "Spanish", "Russian"],
   },
 ];
@@ -135,6 +147,7 @@ const familyMembersDE: FamilyMember[] = [
     bio: "Der Thronerbe des Kaiserlichen Throns. Kronprinz Leopold besitzt Abschlüsse der New York University und der London School of Economics. Als begabter Polyglott spricht er Deutsch, Französisch, Englisch, Spanisch, Ungarisch, Tschechisch und Kroatisch — eine sprachliche Vielfalt, die das mehrsprachige Erbe der Konföderation und sein eigenes tiefes Engagement für die Einheit ihrer Völker widerspiegelt. Er leitet die Kaiserliche Kommission für Europäische Angelegenheiten und gilt weithin als eines der fähigsten Mitglieder seiner Generation.",
     initials: "LP",
     dress: "Volle Galauniform, blau",
+    portrait: "/manus-storage/ChatGPTImageMar24,2026,08_10_09AM-copia_ea6b538b.png",
     languages: ["Deutsch", "Französisch", "Englisch", "Spanisch", "Ungarisch", "Tschechisch", "Kroatisch"],
   },
   {
@@ -147,6 +160,7 @@ const familyMembersDE: FamilyMember[] = [
     bio: "Tochter von August von Richter, dem führenden Industriellen und Finanzier Europas. Katharina besitzt einen Abschluss in Unternehmensführung der Universität Wien und war als Direktorin des philanthropischen Zweigs der von Richter-Gruppe tätig. Sie spricht Deutsch, Englisch, Französisch, Spanisch und Ungarisch. Ihre Verlobung mit Kronprinz Leopold wurde im Frühjahr 2026 am Kaiserlichen Hof bekannt gegeben und mit großer öffentlicher Begeisterung aufgenommen.",
     initials: "KR",
     dress: "Weißes Brautkleid",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_23_46_89b175aa.png",
     father: "August von Richter",
     languages: ["Deutsch", "Englisch", "Französisch", "Spanisch", "Ungarisch"],
   },
@@ -160,6 +174,7 @@ const familyMembersDE: FamilyMember[] = [
     bio: "Der regierende Kaiser von Österreich-Donau, nun im neunzehnten Jahr seiner Regentschaft. Kaiser Maximilian I. bestieg den Thron nach dem Tod seines Vaters und hat eine Periode der verfassungsmäßigen Konsolidierung, wirtschaftlichen Modernisierung und vertieften europäischen Integration geleitet. Seine Regentschaft ist von persönlichem Mut angesichts tiefgreifender Tragödie geprägt: Die verstorbene Kaiserin Maria-Cristina kam beim Brand im Pariser Ritz am 10. September 2000 ums Leben, ein Verlust, der die Konföderation und die weitere Welt erschütterte. Seine Majestät hat sich seither ganz seinen Pflichten gewidmet und wird allgemein für seine Würde, seine Weisheit und seinen unermüdlichen Dienst an den Donau-Völkern geachtet.",
     initials: "MX",
     dress: "Kaiserliche Staatsroben und volle dynastische Insignien",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_27_28_7fc2c010.png",
     isEmperor: true,
     reignYears: 19,
     widow: true,
@@ -176,6 +191,8 @@ const familyMembersDE: FamilyMember[] = [
     bio: "Die jüngere Schwester des Kaisers. Erzherzogin Gisela ist eine angesehene Kunstmäzenin und Gründungstreuhänderin der Kaiserlichen Stiftung für Kulturerbe. Bekannt für ihre Herzlichkeit und Zugänglichkeit, hat sie das Kaiserliche Haus bei kulturellen und humanitären Veranstaltungen in ganz Europa über drei Jahrzehnte vertreten.",
     initials: "GI",
     dress: "Tiefes Karmesinrot-Kleid",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_22_09_1e038914.png",
+    languages: ["Deutsch", "Französisch", "Ungarisch", "Tschechisch", "Latein"],
   },
   {
     name: "Erzherzog Karl Bertroch",
@@ -187,6 +204,8 @@ const familyMembersDE: FamilyMember[] = [
     bio: "Ein hochrangiges Mitglied des Kaiserlichen Hauses. Erzherzog Karl Bertroch hat der Konföderation mit Auszeichnung über fünf Jahrzehnte des öffentlichen Lebens gedient, darunter als Präsident des Kaiserlichen Staatsrats und als Sondergesandter bei den Donau-Fürstentümern. Er gilt als einer der angesehensten älteren Staatsmänner der Dynastie.",
     initials: "CB",
     dress: "Militäruniform",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_20_48_2f7410fe.png",
+    languages: ["Italienisch", "Französisch", "Deutsch"],
   },
   {
     name: "Erzherzogin Eleonora von Habsburg",
@@ -198,6 +217,7 @@ const familyMembersDE: FamilyMember[] = [
     bio: "Die Tochter des Kaisers. Erzherzogin Eleonora studierte Völkerrecht an der Universität Wien und der Sorbonne. Sie dient als Kaiserliche Patronin der Donau-Jugendstiftung und ist eine prominente Fürsprecherin des Umweltschutzes des Donau-Flusssystems. Ihre Haltung und öffentliche Präsenz haben sie zu einem der bewundertsten Mitglieder der jüngeren Generation des Kaiserlichen Hauses gemacht.",
     initials: "EL",
     dress: "Schwarzes Kleid",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_33_54_2e0318f5.png",
     languages: ["Deutsch", "Englisch", "Französisch", "Ungarisch", "Tschechisch", "Spanisch", "Italienisch"],
   },
   {
@@ -210,7 +230,9 @@ const familyMembersDE: FamilyMember[] = [
     bio: "Ein hochrangiges Mitglied des Kaiserlichen Hauses und Witwe des verstorbenen Erzherzogs Friedrich. Erzherzogin Alexis hat der Konföderation als Diplomatin, Autorin und Philanthropin gedient. Sie ist Gründerin der Kaiserlichen Gesellschaft zur Bewahrung der Donau-Sprachen und Treuhänderin der Kaiserlichen Bibliothek. Ihre Memoiren ‚Der Fluss und die Krone' (2001) gelten als einer der berühmtesten persönlichen Berichte über das Leben im Kaiserlichen Haus.",
     initials: "AL",
     dress: "Blaues Perlenkleid",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_15_43_21ec8582.png",
     widow: true,
+    languages: ["Deutsch", "Französisch", "Ungarisch", "Tschechisch", "Latein"],
   },
   {
     name: "Reiner von Habsburg",
@@ -222,6 +244,7 @@ const familyMembersDE: FamilyMember[] = [
     bio: "Marschall der Krone und einer der ranghöchsten Offiziere des Kaiserlichen Haushalts. Reiner von Habsburg ist verantwortlich für die Organisation aller kaiserlichen Zeremonien, Staatsbesuche und des Hofprotokolls. Als Absolvent der Kaiserlichen Militärakademie hält er den Rang eines Generals in der Kaiserlichen Garde und hat diplomatische Missionen in Mitteleuropa und auf dem Balkan durchgeführt. Er gilt als die unverzichtbare organisierende Kraft hinter dem zeremoniellen Leben des Kaiserlichen Hofes.",
     initials: "RV",
     dress: "Volle Galauniform, goldene Epauletten",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_15_30_fc8d8ed6.png",
     languages: ["Deutsch", "Englisch", "Französisch", "Ungarisch", "Tschechisch", "Spanisch", "Russisch"],
   },
 ];
@@ -238,6 +261,7 @@ const familyMembersHU: FamilyMember[] = [
     bio: "A Császári Trón trónörököse. Leopold koronaherceg a New York-i Egyetemen és a London School of Economics-on szerzett diplomát. Tehetséges poliglottként beszél németül, franciául, angolul, spanyolul, magyarul, csehül és horvátul — ez a nyelvi sokszínűség tükrözi a Konfödéráció többnyelvű örökségét és saját mély elkötelezettségét népei egysége iránt. Ő vezeti a Császári Európai Ügyek Bizottságát, és széles körben generációja egyik legtehetségesebb tagjának tartják.",
     initials: "LP",
     dress: "Teljes díszegyenruha, kék",
+    portrait: "/manus-storage/ChatGPTImageMar24,2026,08_10_09AM-copia_ea6b538b.png",
     languages: ["Német", "Francia", "Angol", "Spanyol", "Magyar", "Cseh", "Horvát"],
   },
   {
@@ -250,6 +274,7 @@ const familyMembersHU: FamilyMember[] = [
     bio: "August von Richter, Európa vezető iparosának és pénzemberének lánya. Katharina a Bécsi Egyetemen szerzett diplomát vállalatirányításból, és a von Richter Csoport jótékonysági ágának igazgatójaként tevékenykedett. Beszél németül, angolul, franciául, spanyolul és magyarul. Leopold koronaherceggel való eljegyzését 2026 tavaszán jelentették be a Császári Udvarnál, és széles körű közlelkesedéssel fogadták.",
     initials: "KR",
     dress: "Fehér menyasszonyi ruha",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_23_46_89b175aa.png",
     father: "August von Richter",
     languages: ["Német", "Angol", "Francia", "Spanyol", "Magyar"],
   },
@@ -263,6 +288,7 @@ const familyMembersHU: FamilyMember[] = [
     bio: "Ausztria-Duna uralkodó császára, immár tizenkilencedik éve a trónon. I. Miksa császár apja halálát követően lépett trónra, és az alkotmányos konszolidáció, gazdasági modernizáció és elmélyülő európai integráció időszakát vezette. Uralkodását személyes bátorság jellemezte mély tragédiával szemben: a néhai Mária-Krisztina császárné a párizsi Ritz szálloda tűzvészében vesztette életét 2000. szeptember 10-én, egy veszteség, amely megrázta a Konföderációt és a szélesebb világot. Őfelsége azóta teljesen kötelességeinek szentelte magát, és általánosan tisztelik méltóságáért, bölcsességéért és fáradhatatlan szolgálatáért a dunai népek javára.",
     initials: "MX",
     dress: "Császári államruha és teljes dinasztikus jelvények",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_27_28_7fc2c010.png",
     isEmperor: true,
     reignYears: 19,
     widow: true,
@@ -279,6 +305,8 @@ const familyMembersHU: FamilyMember[] = [
     bio: "A császár húga. Gisela főhercegnő a művészetek kiváló mecénása és a Császári Kulturális Örökség Alapítvány alapító gondnoka. Melegségéről és megközelíthetőségéről ismert, több mint három évtizede képviseli a Császári Házat kulturális és humanitárius eseményeken egész Európában.",
     initials: "GI",
     dress: "Mély karmazsinvörös ruha",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_22_09_1e038914.png",
+    languages: ["Német", "Francia", "Magyar", "Cseh", "Latin"],
   },
   {
     name: "Karl Bertroch főherceg",
@@ -290,6 +318,8 @@ const familyMembersHU: FamilyMember[] = [
     bio: "A Császári Ház rangidős tagja. Karl Bertroch főherceg öt évtizeden át szolgálta a Konföderációt kitüntetéssel a közéletben, beleértve a Császári Államtanács elnöki és a Dunai Fejedelemségekhez küldött különmegbízotti tisztségeit. A dinasztia egyik legtiszteltebb idős államférfijának tartják.",
     initials: "CB",
     dress: "Katonai egyenruha",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_20_48_2f7410fe.png",
+    languages: ["Olasz", "Francia", "Német"],
   },
   {
     name: "Eleonora von Habsburg főhercegnő",
@@ -301,6 +331,7 @@ const familyMembersHU: FamilyMember[] = [
     bio: "A császár lánya. Eleonora főhercegnő nemzetközi jogot tanult a Bécsi Egyetemen és a Sorbonne-on. A Dunai Ifjúsági Alapítvány Császári Patrónusaként szolgál, és a Duna folyamrendszer környezetvédelmének kiemelkedő szószólója. Tartása és közéleti jelenléte a Császári Ház fiatalabb generációjának egyik legcsodáltabb tagjává tette.",
     initials: "EL",
     dress: "Fekete ruha",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_33_54_2e0318f5.png",
     languages: ["Német", "Angol", "Francia", "Magyar", "Cseh", "Spanyol", "Olasz"],
   },
   {
@@ -313,7 +344,9 @@ const familyMembersHU: FamilyMember[] = [
     bio: "A Császári Ház rangidős tagja és a néhai Friedrich főherceg özvegye. Alexis főhercegnő diplomatként, szerzőként és filantrópaként szolgálta a Konföderációt. Ő a Dunai Nyelvek Megőrzéséért Császári Társaság alapítója és a Császári Könyvtár gondnoka. Emlékirata, ‚A Folyó és a Korona' (2001), a Császári Házon belüli élet egyik legünnepeltebb személyes beszámolója marad.",
     initials: "AL",
     dress: "Kék gyöngyös ruha",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_15_43_21ec8582.png",
     widow: true,
+    languages: ["Német", "Francia", "Magyar", "Cseh", "Latin"],
   },
   {
     name: "Reiner von Habsburg",
@@ -325,6 +358,7 @@ const familyMembersHU: FamilyMember[] = [
     bio: "A Korona Marsallja és a Császári Háztartás egyik legrangosabb tisztje. Reiner von Habsburg felelős az összes császári szertartás, államlátogatás és udvari protokoll megszervezéséért. A Császári Katonai Akadémia végzettjeként a Császári Gárda tábornoki rangját viseli, és diplomáciai küldetéseket teljesített Közép-Európában és a Balkánon. A Császári Udvar szertartási életének nélkülözhetetlen szervező erejének tartják.",
     initials: "RV",
     dress: "Teljes díszegyenruha, arany vállszalagok",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_15_30_fc8d8ed6.png",
     languages: ["Német", "Angol", "Francia", "Magyar", "Cseh", "Spanyol", "Orosz"],
   },
 ];

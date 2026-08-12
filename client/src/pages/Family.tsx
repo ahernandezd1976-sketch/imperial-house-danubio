@@ -18,13 +18,19 @@ const CREAM = "oklch(0.96 0.015 85)";
 function PaintingVideo() {
   const { t } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
   const [activated, setActivated] = useState(false);
 
   const handleTouch = () => {
     const v = videoRef.current;
+    const a = audioRef.current;
     if (!v) return;
-    v.muted = false;
+    v.muted = true;
     v.play().catch(() => {});
+    if (a) {
+      a.currentTime = 0;
+      a.play().catch(() => {});
+    }
     setActivated(true);
   };
 
@@ -65,6 +71,8 @@ function PaintingVideo() {
             boxShadow: "0 20px 60px oklch(0.09 0.005 285 / 0.25)",
           }}
         />
+        {/* Painter narration audio */}
+        <audio ref={audioRef} src="/manus-storage/painter_narration_de_d70174e4.wav" preload="auto" />
 
         {/* Touch overlay — disappears after first click */}
         {!activated && (
@@ -484,6 +492,25 @@ export default function Family() {
                   top: "6rem",
                 }}
               >
+                {/* Emperor Portrait */}
+                {emperor.portrait && (
+                  <div style={{
+                    marginBottom: "1.5rem",
+                    overflow: "hidden",
+                    border: `1px solid oklch(0.72 0.12 85 / 0.2)`,
+                  }}>
+                    <img
+                      src={emperor.portrait}
+                      alt={`${emperor.name} — official portrait`}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        display: "block",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
+                )}
                 <div style={{ height: "2px", background: GOLD, marginBottom: "1.5rem" }} />
                 <div
                   style={{

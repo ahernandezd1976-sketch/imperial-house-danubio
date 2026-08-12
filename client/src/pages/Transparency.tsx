@@ -206,6 +206,99 @@ export default function Transparency() {
         </div>
       </section>
 
+      {/* Year in Highlights */}
+      <section className="py-24 px-6 border-b border-[#c9a84c]/10">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[#c9a84c] tracking-[0.2em] uppercase text-xs mb-3">{t("trans.highlights.pretitle")}</p>
+          <h2 className="font-serif text-3xl md:text-4xl mb-4">{t("trans.highlights.title")}</h2>
+          <p className="text-[#a09880] max-w-3xl mb-12 leading-relaxed">{t("trans.highlights.subtitle")}</p>
+
+          {/* Year in Images - Family Photo */}
+          <div className="relative mb-16 overflow-hidden border border-[#c9a84c]/20">
+            <img
+              src="/manus-storage/imperial_family_event_2025_e44a1b50.png"
+              alt="Emperor Maximilian II, Crown Prince Leopold, and Archduchess Eleonora at a state event, 2025"
+              className="w-full h-auto object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+              <p className="text-[#f5f0e8] font-serif text-lg">{t("trans.highlights.photoCaption")}</p>
+            </div>
+          </div>
+
+          {/* Key Figures Row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+            <div className="bg-[#1a1a18] border border-[#c9a84c]/30 p-6 text-center">
+              <p className="text-3xl mb-2">🌐</p>
+              <p className="text-[#c9a84c] font-serif text-3xl mb-1">{t("trans.highlights.kf1v")}</p>
+              <p className="text-[#a09880] text-xs">{t("trans.highlights.kf1")}</p>
+            </div>
+            <div className="bg-[#1a1a18] border border-[#c9a84c]/30 p-6 text-center">
+              <p className="text-3xl mb-2">🏛</p>
+              <p className="text-[#c9a84c] font-serif text-3xl mb-1">{t("trans.highlights.kf2v")}</p>
+              <p className="text-[#a09880] text-xs">{t("trans.highlights.kf2")}</p>
+            </div>
+            <div className="bg-[#1a1a18] border border-[#c9a84c]/30 p-6 text-center">
+              <p className="text-3xl mb-2">👥</p>
+              <p className="text-[#c9a84c] font-serif text-3xl mb-1">{t("trans.highlights.kf3v")}</p>
+              <p className="text-[#a09880] text-xs">{t("trans.highlights.kf3")}</p>
+            </div>
+            <div className="bg-[#1a1a18] border border-[#c9a84c]/30 p-6 text-center">
+              <p className="text-3xl mb-2">✈</p>
+              <p className="text-[#c9a84c] font-serif text-3xl mb-1">{t("trans.highlights.kf4v")}</p>
+              <p className="text-[#a09880] text-xs">{t("trans.highlights.kf4")}</p>
+            </div>
+          </div>
+
+          {/* Highlighted Events */}
+          <h3 className="text-[#c9a84c] text-sm uppercase tracking-wider mb-8">{t("trans.highlights.eventsTitle")}</h3>
+          <div className="space-y-6">
+            {/* Event 1: Budapest */}
+            <div className="bg-[#141412] border-l-4 border-[#c9a84c] p-6">
+              <div className="flex items-start gap-4">
+                <span className="text-[#c9a84c] font-serif text-lg min-w-[100px]">{t("trans.highlights.ev1date")}</span>
+                <div>
+                  <h4 className="text-[#f5f0e8] font-medium text-lg mb-2">{t("trans.highlights.ev1title")}</h4>
+                  <p className="text-[#a09880] leading-relaxed">{t("trans.highlights.ev1desc")}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Event 2: Federative Land Tour */}
+            <div className="bg-[#141412] border-l-4 border-[#c9a84c] p-6">
+              <div className="flex items-start gap-4">
+                <span className="text-[#c9a84c] font-serif text-lg min-w-[100px]">{t("trans.highlights.ev2date")}</span>
+                <div>
+                  <h4 className="text-[#f5f0e8] font-medium text-lg mb-2">{t("trans.highlights.ev2title")}</h4>
+                  <p className="text-[#a09880] leading-relaxed">{t("trans.highlights.ev2desc")}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Event 3: Americas Tour */}
+            <div className="bg-[#141412] border-l-4 border-[#c9a84c] p-6">
+              <div className="flex items-start gap-4">
+                <span className="text-[#c9a84c] font-serif text-lg min-w-[100px]">{t("trans.highlights.ev3date")}</span>
+                <div>
+                  <h4 className="text-[#f5f0e8] font-medium text-lg mb-2">{t("trans.highlights.ev3title")}</h4>
+                  <p className="text-[#a09880] leading-relaxed">{t("trans.highlights.ev3desc")}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Event 4: Federation Day */}
+            <div className="bg-[#141412] border-l-4 border-[#c9a84c] p-6">
+              <div className="flex items-start gap-4">
+                <span className="text-[#c9a84c] font-serif text-lg min-w-[100px]">{t("trans.highlights.ev4date")}</span>
+                <div>
+                  <h4 className="text-[#f5f0e8] font-medium text-lg mb-2">{t("trans.highlights.ev4title")}</h4>
+                  <p className="text-[#a09880] leading-relaxed">{t("trans.highlights.ev4desc")}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer Note */}
       <section className="py-16 px-6 text-center">
         <div className="max-w-3xl mx-auto">

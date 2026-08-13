@@ -270,7 +270,7 @@ export default function ChristeningInvitation() {
             margin: "0 auto 2.5rem",
           }}
         >
-          Seine Kaiserliche und Königliche Apostolische Majestät Kaiser Maximilian I.
+          Seine Kaiserliche und Königliche Apostolische Majestät Kaiser Maximilian II.
           und Ihre Kaiserlichen und Königlichen Hoheiten Kronprinz Leopold und
           Kronprinzessin Katharina von Habsburg-Danubio geben sich die Ehre,
           Eure Königliche Hoheit zur feierlichen Taufe ihrer Kinder einzuladen:

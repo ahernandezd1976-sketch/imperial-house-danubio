@@ -47,7 +47,7 @@ export default function Press() {
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-6 md:px-16 py-6">
           <p className="text-white/80 text-xs tracking-[0.2em] uppercase">
-            His Imperial Majesty Emperor Maximilian I leads the Imperial cortège into the Grand Ballroom of the Hofburg, followed by Crown Prince Leopold von Habsburg and Fräulein Katharina von Richter · Hofburg Palace, Vienna · January 2026
+            His Imperial Majesty Emperor Maximilian II leads the Imperial cortège into the Grand Ballroom of the Hofburg, followed by Crown Prince Leopold von Habsburg and Fräulein Katharina von Richter · Hofburg Palace, Vienna · January 2026
           </p>
         </div>
       </div>
@@ -71,7 +71,7 @@ export default function Press() {
         {/* Opening paragraph */}
         <div className="prose-custom mb-10">
           <p className="text-xl md:text-2xl leading-relaxed text-[#2a2a2a] first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:text-[#8B7355]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            There is a moment, just before half-past nine on the last Friday of January, when the Grand Ballroom of the Hofburg falls absolutely silent. Two thousand guests — in white tie, in orders and decorations, in gowns that have taken the better part of the autumn to construct — hold their breath. The great chandeliers, each one a constellation of Bohemian crystal, throw their light across a sea of silk and platinum and ancient lace. The Obersthofmeister, Baron Karl von Sternberg, raises his staff. And then, from the far end of the hall, His Imperial Majesty Emperor Maximilian I enters, and the orchestra strikes up.
+            There is a moment, just before half-past nine on the last Friday of January, when the Grand Ballroom of the Hofburg falls absolutely silent. Two thousand guests — in white tie, in orders and decorations, in gowns that have taken the better part of the autumn to construct — hold their breath. The great chandeliers, each one a constellation of Bohemian crystal, throw their light across a sea of silk and platinum and ancient lace. The Obersthofmeister, Baron Karl von Sternberg, raises his staff. And then, from the far end of the hall, His Imperial Majesty Emperor Maximilian II enters, and the orchestra strikes up.
           </p>
           <p className="text-lg leading-relaxed text-[#2a2a2a] mt-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             This is the Court Ball. It has not changed in its essentials since Emperor Franz Ferdinand I revived it in 1919. And yet, in January 2026, it has never felt more alive.

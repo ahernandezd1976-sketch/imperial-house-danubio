@@ -1184,7 +1184,7 @@ export default function Family() {
           <div className="reveal" style={{ maxWidth: "1000px", margin: "0 auto" }}>
             <img
               src="/manus-storage/family_tree_ced9a0a3.webp"
-              alt="Habsburg Family Tree from Franz Joseph I to Emperor Maximilian I"
+              alt="Habsburg Family Tree from Franz Joseph I to Emperor Maximilian II"
               style={{
                 width: "100%",
                 height: "auto",

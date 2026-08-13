@@ -57,7 +57,7 @@ export default function History() {
       numeral: "V",
       period: "1989 –",
       titleKey: "history.era5.title",
-      emperor: "Maximilian I",
+      emperor: "Maximilian II",
       subtitleKey: "history.era5.subtitle",
       paragraphKeys: ["history.era5.p1", "history.era5.p2", "history.era5.p3"],
     },
@@ -290,7 +290,7 @@ export default function History() {
                   { n: "II", name: "Franz Ferdinand I", reign: "1916–1936", life: "1863–1936", noteKey: "history.table.note2" },
                   { n: "III", name: "Friedrich I", reign: "1936–1955", life: "1902–1955", noteKey: "history.table.note3" },
                   { n: "IV", name: "Otto I", reign: "1955–1989", life: "1912–1989", noteKey: "history.table.note4" },
-                  { n: "V", name: "Maximilian I", reign: "1989–", life: "1954–", noteKey: "history.table.note5" },
+                  { n: "V", name: "Maximilian II", reign: "1989–", life: "1954–", noteKey: "history.table.note5" },
                 ].map((row, i) => (
                   <tr
                     key={i}

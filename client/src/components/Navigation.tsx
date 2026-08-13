@@ -8,7 +8,6 @@ import LanguageSelector from "@/components/LanguageSelector";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const navLinkKeys = [
-  { href: "/", key: "nav.home" },
   { href: "/history", key: "nav.history" },
   { href: "/family", key: "nav.family" },
   { href: "/traditions", key: "nav.traditions" },
@@ -16,9 +15,9 @@ const navLinkKeys = [
   { href: "/properties", key: "nav.properties" },
   { href: "/world", key: "nav.world" },
   { href: "/constitution", key: "nav.constitution" },
-  { href: "/books", key: "nav.books" },
   { href: "/press", key: "nav.press" },
   { href: "/transparency", key: "nav.transparency" },
+  { href: "/books", key: "nav.books" },
 ];
 
 export default function Navigation() {
@@ -85,7 +84,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop nav */}
-          <ul className="hidden lg:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-3 xl:gap-4 flex-nowrap">
             {navLinks.map((link) => {
               const isActive = location === link.href;
               return (
@@ -93,10 +92,11 @@ export default function Navigation() {
                   <Link
                     href={link.href}
                     style={{
-                      fontFamily: "'Cinzel', serif",
-                      fontSize: "0.7rem",
-                      letterSpacing: "0.15em",
+                     fontFamily: "'Cinzel', serif",
+                      fontSize: "0.55rem",
+                      letterSpacing: "0.08em",
                       textTransform: "uppercase",
+                      whiteSpace: "nowrap",
                       color: isActive ? "oklch(0.72 0.12 85)" : "oklch(0.85 0.01 85)",
                       textDecoration: "none",
                       position: "relative",

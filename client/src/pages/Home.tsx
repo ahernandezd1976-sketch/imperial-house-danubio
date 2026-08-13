@@ -522,7 +522,7 @@ export default function Home() {
               <div style={{ maxWidth: "340px", width: "100%" }}>
                 <img
                   src="/manus-storage/emperor_engraving_a2dd5d8f.png"
-                  alt="His Imperial Majesty Emperor Maximilian I"
+                  alt="His Imperial Majesty Emperor Maximilian II"
                   className="portrait-frame"
                   style={{ width: "100%", height: "auto", display: "block" }}
                 />
@@ -569,7 +569,7 @@ export default function Home() {
                 }}
               >
                 {t("emperor.title")}<br />
-                <span style={{ color: GOLD }}>Maximilian I</span>
+                <span style={{ color: GOLD }}>Maximilian II</span>
               </h2>
               <SectionDivider light />
               <p

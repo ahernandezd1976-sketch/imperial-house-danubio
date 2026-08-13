@@ -135,7 +135,7 @@ const traditions = [
     numeral: "IX",
     title: "The Imperial Birthday",
     subtitle: "Public Holiday · 21 June",
-    description: "The 21st of June — the summer solstice — is the birthday of His Imperial Majesty Emperor Maximilian I, and is observed as a public holiday throughout the Danubian Confederation. The day is marked by a solemn Te Deum at the Cathedral of Neustadt, a military review on the Kaiserplatz, and a public reception at the Hofburg at which the Emperor receives delegations from each of the fifteen member states. In the evening, the Imperial Box at the Neustadt Opera is traditionally occupied by the Emperor and members of the Imperial Family for a gala performance in his honour. The birthday of the reigning sovereign has been a public holiday since the reign of Emperor Franz Ferdinand I.",
+    description: "The 21st of June — the summer solstice — is the birthday of His Imperial Majesty Emperor Maximilian II, and is observed as a public holiday throughout the Danubian Confederation. The day is marked by a solemn Te Deum at the Cathedral of Neustadt, a military review on the Kaiserplatz, and a public reception at the Hofburg at which the Emperor receives delegations from each of the fifteen member states. In the evening, the Imperial Box at the Neustadt Opera is traditionally occupied by the Emperor and members of the Imperial Family for a gala performance in his honour. The birthday of the reigning sovereign has been a public holiday since the reign of Emperor Franz Ferdinand I.",
     detail: "Public holiday throughout the Danubian Confederation. The Hofburg gardens are open to the public from 10:00 to sunset. A fireworks display over the Danube concludes the celebrations.",
   },
   {

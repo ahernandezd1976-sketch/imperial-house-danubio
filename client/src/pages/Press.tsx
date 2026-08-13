@@ -183,7 +183,7 @@ export default function Press() {
             style={{ display: "block", height: "auto" }}
           />
           <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2">
-            Three hundred and sixty drones choreographed by Lichtarchitektur above the Hofburg · The double-headed eagle dissolves into the fifteen stars of the Danubian Federation · January 2026
+            Three hundred and sixty drones choreographed by Lichtarchitektur above the Hofburg · The double-headed eagle dissolves into the fourteen stars of the Danubian Federation · January 2026
           </p>
         </div>
 
@@ -196,7 +196,7 @@ export default function Press() {
             At midnight, as the Imperial Family withdraws and the guests prepare to receive their bonbonnières, the great windows of the Ballroom are opened. The guests move to the Schweizerhof and the outer courtyards. And above the Hofburg, in the cold January sky, three hundred and sixty drones rise in formation.
           </p>
           <p className="text-lg leading-relaxed text-[#2a2a2a] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            What follows is twelve minutes that no guest will forget. The drones trace the history of the Danubian Federation across the sky: the double-headed eagle assembles and dissolves. The fifteen stars form and reform. The Danube river, rendered in moving light, winds its way from the Alps to the Black Sea. And then, at the last, the Federation Crown, assembled star by star, floating above the Hofburg in gold and white light, before dissolving into a cascade of sparks over the rooftops of Vienna.
+            What follows is twelve minutes that no guest will forget. The drones trace the history of the Danubian Federation across the sky: the double-headed eagle assembles and dissolves. The fourteen stars form and reform. The Danube river, rendered in moving light, winds its way from the Alps to the Black Sea. And then, at the last, the Federation Crown, assembled star by star, floating above the Hofburg in gold and white light, before dissolving into a cascade of sparks over the rooftops of Vienna.
           </p>
           <blockquote className="border-l-4 border-[#8B7355] pl-4 my-6">
             <p className="text-2xl italic text-[#8B7355]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>

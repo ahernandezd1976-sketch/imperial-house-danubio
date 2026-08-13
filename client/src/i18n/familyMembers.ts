@@ -103,7 +103,7 @@ const familyMembersEN: FamilyMember[] = [
     bio: "The Emperor's daughter. Archduchess Eleonora studied international law at the University of Vienna and the Sorbonne. She serves as the Imperial Patron of the Danubian Youth Foundation and has been a prominent advocate for environmental protection of the Danube river system. Her poise and public presence have made her one of the most admired members of the younger generation of the Imperial House.",
     initials: "EL",
     dress: "Black gown",
-    portrait: "/manus-storage/eleonora_portrait_cropped_d40ddb46.png",
+    portrait: "/manus-storage/eleonora_portrait_v3_cc8dec11.png",
     languages: ["German", "English", "French", "Hungarian", "Czech", "Spanish", "Italian"],
   },
   {
@@ -217,7 +217,7 @@ const familyMembersDE: FamilyMember[] = [
     bio: "Die Tochter des Kaisers. Erzherzogin Eleonora studierte Völkerrecht an der Universität Wien und der Sorbonne. Sie dient als Kaiserliche Patronin der Donau-Jugendstiftung und ist eine prominente Fürsprecherin des Umweltschutzes des Donau-Flusssystems. Ihre Haltung und öffentliche Präsenz haben sie zu einem der bewundertsten Mitglieder der jüngeren Generation des Kaiserlichen Hauses gemacht.",
     initials: "EL",
     dress: "Schwarzes Kleid",
-    portrait: "/manus-storage/eleonora_portrait_cropped_d40ddb46.png",
+    portrait: "/manus-storage/eleonora_portrait_v3_cc8dec11.png",
     languages: ["Deutsch", "Englisch", "Französisch", "Ungarisch", "Tschechisch", "Spanisch", "Italienisch"],
   },
   {
@@ -331,7 +331,7 @@ const familyMembersHU: FamilyMember[] = [
     bio: "A császár lánya. Eleonora főhercegnő nemzetközi jogot tanult a Bécsi Egyetemen és a Sorbonne-on. A Dunai Ifjúsági Alapítvány Császári Patrónusaként szolgál, és a Duna folyamrendszer környezetvédelmének kiemelkedő szószólója. Tartása és közéleti jelenléte a Császári Ház fiatalabb generációjának egyik legcsodáltabb tagjává tette.",
     initials: "EL",
     dress: "Fekete ruha",
-    portrait: "/manus-storage/eleonora_portrait_cropped_d40ddb46.png",
+    portrait: "/manus-storage/eleonora_portrait_v3_cc8dec11.png",
     languages: ["Német", "Angol", "Francia", "Magyar", "Cseh", "Spanyol", "Olasz"],
   },
   {
@@ -445,7 +445,7 @@ const familyMembersFR: FamilyMember[] = [
     bio: "La fille de l'Empereur. L'Archiduchesse Eleonora a étudié le droit international à l'Université de Vienne et à la Sorbonne. Elle est Patronne Impériale de la Fondation de la Jeunesse Danubienne et a été une avocate éminente de la protection environnementale du système fluvial du Danube. Son élégance et sa présence publique en font l'un des membres les plus admirés de la jeune génération de la Maison Impériale.",
     initials: "EL",
     dress: "Robe noire",
-    portrait: "/manus-storage/eleonora_portrait_cropped_d40ddb46.png",
+    portrait: "/manus-storage/eleonora_portrait_v3_cc8dec11.png",
     languages: ["Allemand", "Anglais", "Français", "Hongrois", "Tchèque", "Espagnol", "Italien"],
   },
   {
@@ -559,7 +559,7 @@ const familyMembersCS: FamilyMember[] = [
     bio: "Dcera císaře. Arcivévodkyně Eleonora studovala mezinárodní právo na Vídeňské univerzitě a na Sorbonně. Slouží jako Císařská patronka Dunajské nadace mládeže a je významnou zastánkyní ochrany životního prostředí říčního systému Dunaje. Její elegance a veřejná přítomnost z ní činí jednu z nejobdivovanějších členek mladší generace Císařského domu.",
     initials: "EL",
     dress: "Černé šaty",
-    portrait: "/manus-storage/eleonora_portrait_cropped_d40ddb46.png",
+    portrait: "/manus-storage/eleonora_portrait_v3_cc8dec11.png",
     languages: ["Němčina", "Angličtina", "Francouzština", "Maďarština", "Čeština", "Španělština", "Italština"],
   },
   {
@@ -673,7 +673,7 @@ const familyMembersHR: FamilyMember[] = [
     bio: "Kći cara. Nadvojvotkinja Eleonora studirala je međunarodno pravo na Bečkom sveučilištu i Sorbonni. Služi kao Carska zaštitnica Dunavske zaklade za mlade i istaknuta je zagovornica zaštite okoliša riječnog sustava Dunava. Njezina elegancija i javna prisutnost čine je jednom od najdivljenijih članica mlađe generacije Carskog doma.",
     initials: "EL",
     dress: "Crna haljina",
-    portrait: "/manus-storage/eleonora_portrait_cropped_d40ddb46.png",
+    portrait: "/manus-storage/eleonora_portrait_v3_cc8dec11.png",
     languages: ["Njemački", "Engleski", "Francuski", "Mađarski", "Češki", "Španjolski", "Talijanski"],
   },
   {

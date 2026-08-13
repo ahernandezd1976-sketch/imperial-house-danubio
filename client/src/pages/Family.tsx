@@ -734,13 +734,13 @@ export default function Family() {
                     <img
                       src={member.portrait}
                       alt={`${member.name} — official engraving portrait`}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        objectPosition: "center",
-                        display: "block",
-                      }}
+                     style={{
+                       width: "100%",
+                       height: "100%",
+                       objectFit: "cover",
+                        objectPosition: "top center",
+                       display: "block",
+                     }}
                     />
                   ) : (
                   <div

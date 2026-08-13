@@ -1000,7 +1000,7 @@ export default function Heraldry() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The Federation Crown is the supreme symbol of Imperial authority within the Danubian Confederation. It was commissioned by Emperor Franz Ferdinand I in 1920, following the reconstitution of the Danubian state, and required three years of painstaking work to complete, being presented to the Emperor in 1923. Crafted entirely in platinum by the Viennese atelier of Köchert & Söhne, it rises in fifteen towers — each one representing one of the fifteen sovereign states of the Federation — set throughout with pearls, diamonds, rubies, sapphires, and emeralds of the first water. At its apex stands a cross of platinum surmounted by a cabochon ruby of exceptional size.
+                The Federation Crown is the supreme symbol of Imperial authority within the Danubian Confederation. It was commissioned by Emperor Franz Ferdinand I in 1920, following the reconstitution of the Danubian state, and required three years of painstaking work to complete, being presented to the Emperor in 1923. Crafted entirely in platinum by the Viennese atelier of Köchert & Söhne, it rises in fourteen towers — each one representing one of the fourteen constituent states of the Federation — set throughout with pearls, diamonds, rubies, sapphires, and emeralds of the first water. At its apex stands a cross of platinum surmounted by a cabochon ruby of exceptional size.
               </p>
               <p
                 style={{

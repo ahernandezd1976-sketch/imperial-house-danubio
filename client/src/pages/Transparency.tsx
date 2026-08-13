@@ -90,6 +90,43 @@ export default function Transparency() {
         </div>
       </section>
 
+      {/* Year-over-Year Comparison */}
+      <section className="py-24 px-6 border-b border-[#c9a84c]/10">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-[#c9a84c] tracking-[0.2em] uppercase text-xs mb-3">{t("trans.yoy.pretitle")}</p>
+          <h2 className="font-serif text-3xl md:text-4xl mb-4">{t("trans.yoy.title")}</h2>
+          <p className="text-[#a09880] max-w-3xl mb-12 leading-relaxed">{t("trans.yoy.subtitle")}</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { label: t("trans.yoy.budget"), v2024: "€ 46.800.000", v2025: "€ 48.200.000", change: "+3,0%" },
+              { label: t("trans.yoy.engagements"), v2024: "812", v2025: "847", change: "+4,3%" },
+              { label: t("trans.yoy.patronages"), v2024: "134", v2025: "142", change: "+6,0%" },
+              { label: t("trans.yoy.travel"), v2024: "29", v2025: "33", change: "+13,8%" },
+            ].map((item, i) => (
+              <div key={i} className="bg-[#1a1a18] border border-[#c9a84c]/20 p-6">
+                <p className="text-[#a09880] text-xs uppercase tracking-wider mb-4">{item.label}</p>
+                <div className="flex items-end justify-between mb-3">
+                  <div>
+                    <p className="text-[#666] text-xs mb-1">2024</p>
+                    <p className="text-[#a09880] font-serif text-lg">{item.v2024}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-[#666] text-xs mb-1">2025</p>
+                    <p className="text-[#f5f0e8] font-serif text-lg">{item.v2025}</p>
+                  </div>
+                </div>
+                <div className="border-t border-[#333] pt-3">
+                  <p className="text-[#c9a84c] font-serif text-sm text-center">{item.change}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-[#666] text-xs mt-8 text-center italic">{t("trans.yoy.note")}</p>
+        </div>
+      </section>
+
       {/* Engagements Section */}
       <section className="py-24 px-6 border-b border-[#c9a84c]/10">
         <div className="max-w-5xl mx-auto">

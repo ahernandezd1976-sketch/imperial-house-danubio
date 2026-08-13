@@ -123,11 +123,11 @@ const familyMembersEN: FamilyMember[] = [
   {
     name: "Reiner von Habsburg",
     shortName: "Reiner von Habsburg",
-    title: "Marshal of the Crown, Archduke of Austria-Danubio",
+    title: "Marshal of the Crown (hereditary), Archduke of Austria-Danubio",
     age: 31,
     style: "His Imperial Highness",
     position: "far left",
-    bio: "Marshal of the Crown and the youngest officer ever appointed to this role in the Imperial Household. Reiner von Habsburg is responsible for the organisation of all Imperial ceremonies, state visits, and court protocol. A graduate of the Imperial Military Academy with highest honours, he holds the rank of Colonel in the Imperial Guard and has already served on diplomatic missions to Central Europe and the Balkans. His appointment at such a young age is regarded as a mark of exceptional ability and the Emperor's personal trust.",
+    bio: "Marshal of the Crown — a hereditary position — and the youngest officer ever to assume this role in the Imperial Household. Reiner von Habsburg is responsible for the organisation of all Imperial ceremonies, state visits, and court protocol. A graduate of the Imperial Military Academy with highest honours, he holds the rank of Colonel in the Imperial Guard and has already served on diplomatic missions to Central Europe and the Balkans. His appointment at such a young age is regarded as a mark of exceptional ability and the Emperor's personal trust.",
     initials: "RV",
     dress: "Full dress military uniform, gold epaulettes",
     portrait: "/manus-storage/reiner_portrait_cropped_4cb50aa7.png",
@@ -237,11 +237,11 @@ const familyMembersDE: FamilyMember[] = [
   {
     name: "Reiner von Habsburg",
     shortName: "Reiner von Habsburg",
-    title: "Marschall der Krone, Erzherzog von Österreich-Donau",
+    title: "Marschall der Krone (erblich), Erzherzog von Österreich-Donau",
     age: 31,
     style: "Seine Kaiserliche Hoheit",
     position: "far left",
-    bio: "Marschall der Krone und einer der ranghöchsten Offiziere des Kaiserlichen Haushalts. Reiner von Habsburg ist verantwortlich für die Organisation aller kaiserlichen Zeremonien, Staatsbesuche und des Hofprotokolls. Als Absolvent der Kaiserlichen Militärakademie hält er den Rang eines Generals in der Kaiserlichen Garde und hat diplomatische Missionen in Mitteleuropa und auf dem Balkan durchgeführt. Er gilt als die unverzichtbare organisierende Kraft hinter dem zeremoniellen Leben des Kaiserlichen Hofes.",
+    bio: "Marschall der Krone und der jüngste Offizier, der jemals in diese erbliche Rolle im Kaiserlichen Haushalt berufen wurde. Reiner von Habsburg ist verantwortlich für die Organisation aller kaiserlichen Zeremonien, Staatsbesuche und des Hofprotokolls. Als Absolvent der Kaiserlichen Militärakademie mit höchsten Auszeichnungen trägt er den Rang eines Obersten der Kaiserlichen Garde und hat bereits diplomatische Missionen in Mitteleuropa und auf dem Balkan durchgeführt. Seine Ernennung in so jungem Alter gilt als Zeichen außergewöhnlicher Fähigkeit und des persönlichen Vertrauens des Kaisers.",
     initials: "RV",
     dress: "Volle Galauniform, goldene Epauletten",
     portrait: "/manus-storage/reiner_portrait_cropped_4cb50aa7.png",
@@ -351,7 +351,7 @@ const familyMembersHU: FamilyMember[] = [
   {
     name: "Reiner von Habsburg",
     shortName: "Reiner von Habsburg",
-    title: "A Korona Marsallja, Ausztria-Duna főhercege",
+    title: "A Korona Marsallja (örökletes), Ausztria-Duna főhercege",
     age: 31,
     style: "Őfensége a Császári Herceg",
     position: "far left",
@@ -465,7 +465,7 @@ const familyMembersFR: FamilyMember[] = [
   {
     name: "Reiner de Habsbourg",
     shortName: "Reiner de Habsbourg",
-    title: "Maréchal de la Couronne, Archiduc d'Autriche-Danube",
+    title: "Maréchal de la Couronne (héréditaire), Archiduc d'Autriche-Danube",
     age: 31,
     style: "Son Altesse Impériale",
     position: "far left",
@@ -579,7 +579,7 @@ const familyMembersCS: FamilyMember[] = [
   {
     name: "Reiner von Habsburg",
     shortName: "Reiner von Habsburg",
-    title: "Maršál koruny, Arcivévoda Rakouska-Dunaje",
+    title: "Maršál koruny (dědičný), Arcivévoda Rakouska-Dunaje",
     age: 31,
     style: "Jeho Císařská Výsost",
     position: "far left",
@@ -693,7 +693,7 @@ const familyMembersHR: FamilyMember[] = [
   {
     name: "Reiner von Habsburg",
     shortName: "Reiner von Habsburg",
-    title: "Maršal krune, Nadvojvoda Austrije-Dunava",
+    title: "Maršal krune (nasljedni), Nadvojvoda Austrije-Dunava",
     age: 31,
     style: "Njegovo Carsko Visočanstvo",
     position: "far left",

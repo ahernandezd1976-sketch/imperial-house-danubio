@@ -57,6 +57,7 @@ export const familyTranslations: Record<Language, Record<string, string>> = {
     "family.emperor.memorial": "Die verstorbene Kaiserin Maria-Cristina, geliebte Gemahlin Kaiser Maximilians I., kam beim Brand im Pariser Ritz am 10. September 2000 ums Leben. Ihr Andenken wird jedes Jahr an diesem Datum durch eine feierliche Messe in der Kathedrale von Neustadt geehrt, an der die Kaiserliche Familie und Vertreter der sieben Gliedstaaten der Konföderation teilnehmen.",
     "family.portrait.touch": "Das Gemälde berühren",
     "family.portrait.caption": "Seine Kaiserliche Hoheit Kronprinz Leopold von Habsburg · und seine Braut Fräulein Katharina von Richter",
+    "family.hereditary.tooltip": "Der Titel des Kronmarschalls wird seit 1920 innerhalb der Familie Habsburg vererbt. Er wurde von Kaiser Franz Ferdinand I. als erbliches Amt geschaffen, um die Kontinuität des Hofzeremoniells zu sichern.",
   },
   en: {
     "family.header.pretitle": "Imperial House of Austria-Danubio",
@@ -114,6 +115,7 @@ export const familyTranslations: Record<Language, Record<string, string>> = {
     "family.emperor.memorial": "The late Empress Maria-Cristina, beloved consort of Emperor Maximilian II, perished in the fire at the Paris Ritz on the 10th of September, 2000. Her memory is honoured each year on that date by a solemn Mass at the Cathedral of Neustadt, attended by the Imperial Family and representatives of the Confederation's seven constituent states.",
     "family.portrait.touch": "Touch the Painting",
     "family.portrait.caption": "His Imperial Highness Crown Prince Leopold von Habsburg · and his bride Fräulein Katharina von Richter",
+    "family.hereditary.tooltip": "The title of Marshal of the Crown has been inherited within the Habsburg family since 1920. It was created by Emperor Franz Ferdinand I as a hereditary office to ensure continuity of court ceremonial.",
   },
   hu: {
     "family.header.pretitle": "Ausztria-Duna Császári Ház",
@@ -171,6 +173,7 @@ export const familyTranslations: Record<Language, Record<string, string>> = {
     "family.emperor.memorial": "A néhai Mária-Krisztina császárné, II. Miksa császár szeretett hitvesttársa, a párizsi Ritz szálloda tűzvészében vesztette életét 2000. szeptember 10-én. Emlékét minden évben ezen a napon ünnepélyes misével tisztelik a neustadti székesegyházban, amelyen a Császári Család és a Konföderáció hét tagországának képviselői vesznek részt.",
     "family.portrait.touch": "Érintse meg a Festményt",
     "family.portrait.caption": "Őfensége Leopold von Habsburg koronaherceg · és menyasszonya, Katharina von Richter kisasszony",
+    "family.hereditary.tooltip": "A Korona Marsalljának címe 1920 óta öröklődik a Habsburg családon belül. Franz Ferdinand I. császár hozta létre örökletes hivatalként az udvari szertartások folytonosságának biztosítására.",
   },
   fr: {
     "family.header.pretitle": "Maison Impériale d'Autriche-Danube",
@@ -205,6 +208,7 @@ export const familyTranslations: Record<Language, Record<string, string>> = {
     "family.portrait.subtitle": "Le Prince héritier Léopold et Mademoiselle Katharina von Richter, dans le portrait officiel de fiançailles commandé par la Maison Impériale, 2026.",
     "family.portrait.touch": "Toucher le Tableau",
     "family.portrait.caption": "Prince héritier Léopold & Katharina von Richter — Portrait de fiançailles, 2026",
+    "family.hereditary.tooltip": "Le titre de Maréchal de la Couronne est hérité au sein de la famille Habsbourg depuis 1920. Il a été créé par l'Empereur Franz Ferdinand Ier comme charge héréditaire pour assurer la continuité du cérémonial de cour.",
     "family.emperor.styleLabel": "Style",
     "family.emperor.reignLabel": "Années de Règne",
     "family.emperor.statusLabel": "Statut",
@@ -252,6 +256,7 @@ export const familyTranslations: Record<Language, Record<string, string>> = {
     "family.portrait.subtitle": "Korunní princ Leopold a slečna Katharina von Richter v oficiálním zásnubním portrétu, 2026.",
     "family.portrait.touch": "Dotkněte se Obrazu",
     "family.portrait.caption": "Korunní princ Leopold & Katharina von Richter — Zásnubní portrét, 2026",
+    "family.hereditary.tooltip": "Titul Maršála koruny se v rodině Habsburků dědí od roku 1920. Byl vytvořen císařem Franzem Ferdinandem I. jako dědičný úřad k zajištění kontinuity dvorského ceremoniálu.",
     "family.emperor.styleLabel": "Styl",
     "family.emperor.reignLabel": "Roky Vlády",
     "family.emperor.statusLabel": "Status",
@@ -299,6 +304,7 @@ export const familyTranslations: Record<Language, Record<string, string>> = {
     "family.portrait.subtitle": "Prijestolonasljednik Leopold i gospođica Katharina von Richter u službenom zaručničkom portretu, 2026.",
     "family.portrait.touch": "Dodirnite Sliku",
     "family.portrait.caption": "Prijestolonasljednik Leopold & Katharina von Richter — Zaručnički portret, 2026.",
+    "family.hereditary.tooltip": "Titula Maršala krune nasljeđuje se unutar obitelji Habsburg od 1920. Stvorio ju je car Franz Ferdinand I. kao nasljednu dužnost za osiguranje kontinuiteta dvorskog ceremoniala.",
     "family.emperor.styleLabel": "Stil",
     "family.emperor.reignLabel": "Godine Vladavine",
     "family.emperor.statusLabel": "Status",

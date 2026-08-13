@@ -786,7 +786,25 @@ export default function Family() {
                       lineHeight: 1.4,
                     }}
                   >
-                    {member.title}
+                    {member.title.includes("(") ? (
+                      <>
+                        {member.title.split("(")[0]}
+                        <span
+                          className="group relative inline-block cursor-help"
+                          style={{ borderBottom: "1px dotted oklch(0.72 0.12 85)" }}
+                        >
+                          ({member.title.split("(")[1]}
+                          <span
+                            className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 rounded bg-[#1a1a18] border border-[#c9a84c]/40 px-3 py-2 text-xs text-[#f5f0e8] opacity-0 transition-opacity duration-200 group-hover:opacity-100 z-50"
+                            style={{ fontFamily: "'Source Serif 4', serif", fontSize: "0.7rem", lineHeight: 1.5 }}
+                          >
+                            {t("family.hereditary.tooltip")}
+                          </span>
+                        </span>
+                      </>
+                    ) : (
+                      member.title
+                    )}
                   </div>
                   <div
                     style={{

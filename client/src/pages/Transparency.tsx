@@ -100,7 +100,7 @@ export default function Transparency() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { label: t("trans.yoy.budget"), v2024: "€ 46.800.000", v2025: "€ 48.200.000", change: "+3,0%" },
-              { label: t("trans.yoy.engagements"), v2024: "812", v2025: "847", change: "+4,3%" },
+              { label: t("trans.yoy.engagements"), v2024: "775", v2025: "810", change: "+4,5%" },
               { label: t("trans.yoy.patronages"), v2024: "134", v2025: "142", change: "+6,0%" },
               { label: t("trans.yoy.travel"), v2024: "29", v2025: "33", change: "+13,8%" },
             ].map((item, i) => (

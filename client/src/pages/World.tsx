@@ -723,6 +723,83 @@ export default function World() {
             </div>
           </div>
         </div>
+     </section>
+
+      {/* ── Section 5: Associated Kingdoms & Protectorate ── */}
+      <section style={{ backgroundColor: DARK_CARD, padding: "6rem 0", borderTop: `1px solid oklch(0.72 0.12 85 / 0.1)` }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+            <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.35em", color: GOLD, textTransform: "uppercase", marginBottom: "0.75rem" }}>
+              {t("world.associated.pretitle")}
+            </div>
+            <h2 style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 700, color: CREAM, letterSpacing: "0.04em" }}>
+              {t("world.associated.title")}
+            </h2>
+          </div>
+
+          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.15rem", lineHeight: 1.9, color: "oklch(0.75 0.01 85)", maxWidth: "900px", margin: "0 auto 3rem", textAlign: "center" }}>
+            {t("world.associated.intro")}
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ maxWidth: "1100px", margin: "0 auto" }}>
+            {/* Serbia */}
+            <div style={{ background: "oklch(0.12 0.005 285)", border: `1px solid oklch(0.72 0.12 85 / 0.15)`, padding: "2rem", position: "relative" }}>
+              <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.3em", color: GOLD, textTransform: "uppercase", marginBottom: "0.5rem" }}>
+                {t("world.associated.schedule")} B
+              </div>
+              <h3 style={{ fontFamily: "'Cinzel', serif", fontSize: "1.2rem", fontWeight: 700, color: CREAM, marginBottom: "0.75rem" }}>
+                {t("world.associated.serbia.name")}
+              </h3>
+              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.85rem", color: "oklch(0.6 0.01 85)", marginBottom: "1rem", fontStyle: "italic" }}>
+                {t("world.associated.serbia.native")}
+              </div>
+              <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.95rem", lineHeight: 1.7, color: "oklch(0.75 0.01 85)" }}>
+                {t("world.associated.serbia.desc")}
+              </p>
+              <div style={{ marginTop: "1rem", fontSize: "0.75rem", color: GOLD, fontFamily: "'Cinzel', serif", letterSpacing: "0.1em" }}>
+                {t("world.associated.serbia.treaty")}
+              </div>
+            </div>
+
+            {/* Montenegro */}
+            <div style={{ background: "oklch(0.12 0.005 285)", border: `1px solid oklch(0.72 0.12 85 / 0.15)`, padding: "2rem", position: "relative" }}>
+              <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.3em", color: GOLD, textTransform: "uppercase", marginBottom: "0.5rem" }}>
+                {t("world.associated.schedule")} B
+              </div>
+              <h3 style={{ fontFamily: "'Cinzel', serif", fontSize: "1.2rem", fontWeight: 700, color: CREAM, marginBottom: "0.75rem" }}>
+                {t("world.associated.montenegro.name")}
+              </h3>
+              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.85rem", color: "oklch(0.6 0.01 85)", marginBottom: "1rem", fontStyle: "italic" }}>
+                {t("world.associated.montenegro.native")}
+              </div>
+              <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.95rem", lineHeight: 1.7, color: "oklch(0.75 0.01 85)" }}>
+                {t("world.associated.montenegro.desc")}
+              </p>
+              <div style={{ marginTop: "1rem", fontSize: "0.75rem", color: GOLD, fontFamily: "'Cinzel', serif", letterSpacing: "0.1em" }}>
+                {t("world.associated.montenegro.treaty")}
+              </div>
+            </div>
+
+            {/* Albania */}
+            <div style={{ background: "oklch(0.12 0.005 285)", border: `1px solid oklch(0.72 0.12 85 / 0.15)`, padding: "2rem", position: "relative" }}>
+              <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.3em", color: GOLD, textTransform: "uppercase", marginBottom: "0.5rem" }}>
+                {t("world.associated.schedule")} C
+              </div>
+              <h3 style={{ fontFamily: "'Cinzel', serif", fontSize: "1.2rem", fontWeight: 700, color: CREAM, marginBottom: "0.75rem" }}>
+                {t("world.associated.albania.name")}
+              </h3>
+              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.85rem", color: "oklch(0.6 0.01 85)", marginBottom: "1rem", fontStyle: "italic" }}>
+                {t("world.associated.albania.native")}
+              </div>
+              <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.95rem", lineHeight: 1.7, color: "oklch(0.75 0.01 85)" }}>
+                {t("world.associated.albania.desc")}
+              </p>
+              <div style={{ marginTop: "1rem", fontSize: "0.75rem", color: GOLD, fontFamily: "'Cinzel', serif", letterSpacing: "0.1em" }}>
+                {t("world.associated.albania.treaty")}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <Footer />

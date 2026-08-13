@@ -1,8 +1,8 @@
 /**
- * History Page — Imperial Modernism / Vienna Secession Reborn
- * Full dynastic history with timeline, eras, and key events
- */
-import { useEffect } from "react";
+* History Page — Imperial Modernism / Vienna Secession Reborn
+* Full dynastic history with timeline, eras, and key events
+*/
+import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -11,6 +11,80 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
+
+// Tooltip component for constitutional terms
+function ConstitutionalTooltip({ term, explanation, color }: { term: string; explanation: string; color: string }) {
+  const [show, setShow] = useState(false);
+  return (
+    <span
+      style={{ position: "relative", display: "inline" }}
+      onMouseEnter={() => setShow(true)}
+      onMouseLeave={() => setShow(false)}
+    >
+      <span style={{ borderBottom: `1px dashed ${GOLD}`, cursor: "help", color }}>{term}</span>
+      {show && (
+        <span
+          style={{
+            position: "absolute",
+            bottom: "calc(100% + 8px)",
+            left: "50%",
+            transform: "translateX(-50%)",
+            background: "oklch(0.15 0.01 285)",
+            border: `1px solid ${GOLD}`,
+            borderRadius: "4px",
+            padding: "0.6rem 0.9rem",
+            fontSize: "0.82rem",
+            lineHeight: 1.5,
+            color: CREAM,
+            whiteSpace: "normal",
+            width: "280px",
+            zIndex: 50,
+            boxShadow: "0 4px 16px rgba(0,0,0,0.5)",
+            pointerEvents: "none",
+          }}
+        >
+          {explanation}
+        </span>
+      )}
+    </span>
+  );
+}
+
+// Renders paragraph text with tooltips for constitutional terms
+function ParagraphWithTooltips({ text, color, t }: { text: string; color: string; t: (key: string) => string }) {
+  const tooltipTerms: { patterns: string[]; key: string }[] = [
+    { patterns: ["associated kingdoms", "assoziierten Königreichen", "társult királyságokkal", "royaumes associés", "přidruženými královstvími", "pridruženim kraljevstvima", "társult királyságokban", "přidružených královstvích", "pridruženim kraljevstvima"], key: "history.tooltip.associated" },
+    { patterns: ["protectorate", "Protektorat", "protektorátussal", "protectorat", "protektorátem", "protektoratom", "protektorátus"], key: "history.tooltip.protectorate" },
+  ];
+
+  // Find all matches and their positions
+  const segments: { start: number; end: number; term: string; key: string }[] = [];
+  for (const { patterns, key } of tooltipTerms) {
+    for (const pattern of patterns) {
+      let idx = text.indexOf(pattern);
+      while (idx !== -1) {
+        segments.push({ start: idx, end: idx + pattern.length, term: pattern, key });
+        idx = text.indexOf(pattern, idx + pattern.length);
+      }
+    }
+  }
+
+  if (segments.length === 0) return <>{text}</>;
+
+  // Sort by position and build JSX
+  segments.sort((a, b) => a.start - b.start);
+  const parts: React.ReactNode[] = [];
+  let lastEnd = 0;
+  segments.forEach((seg, i) => {
+    if (seg.start > lastEnd) parts.push(text.slice(lastEnd, seg.start));
+    parts.push(
+      <ConstitutionalTooltip key={i} term={seg.term} explanation={t(seg.key)} color={color} />
+    );
+    lastEnd = seg.end;
+  });
+  if (lastEnd < text.length) parts.push(text.slice(lastEnd));
+  return <>{parts}</>;
+}
 
 export default function History() {
   useScrollReveal();
@@ -222,7 +296,7 @@ export default function History() {
                       marginBottom: j < era.paragraphKeys.length - 1 ? "1.5rem" : 0,
                     }}
                   >
-                    {t(key)}
+                    <ParagraphWithTooltips text={t(key)} color={i % 2 === 0 ? "oklch(0.25 0.005 285)" : "oklch(0.75 0.01 85)"} t={t} />
                   </p>
                 ))}
               </div>

@@ -48,7 +48,9 @@ export const historyTranslations: Record<Language, Record<string, string>> = {
     "history.table.note2": "Überlebte das Attentat von Sarajevo (1914); unterzeichnete den Vertrag von Wien (1917); gründete die Donauföderation; gab die Föderationskrone in Auftrag (1920, vollendet 1923).",
     "history.table.note3": "Führte die Föderation durch den Zweiten Weltkrieg; bewahrte Neutralität bis 1943; unterzeichnete die Neustädter Abkommen (1945).",
     "history.table.note4": "Präsidierte über den Aufstieg der Föderation als Vorbild zentraleuropäischer Stabilität; Neustadt wurde ein Zentrum internationaler Diplomatie.",
+    "history.tooltip.associated": "Assoziierte Königreiche behalten ihre souveräne Unabhängigkeit, eigene Armeen und innere Selbstverwaltung. Sie sind durch Zollunion, Handelskoordination und gemeinsame Verteidigung an die Föderation gebunden, können aber eigenständige Außenpolitik betreiben, sofern diese nicht der Sicherheit der Föderation widerspricht.",
     "history.table.note5": "Gegenwärtiger Kaiser; 37 Jahre auf dem Thron. Witwer seit dem Tod der Kaiserin beim Brand im Pariser Ritz, 2000.",
+    "history.tooltip.protectorate": "Das Protektorat Albanien wird von einem vom Kaiser ernannten Hochkommissar verwaltet. Albanien hat keine eigenständige Außenpolitik; seine Untertanen sind keine Bürger der Föderation, genießen aber deren Schutz und Freizügigkeit innerhalb des Föderationsgebiets.",
   },
   en: {
     "history.header.pretitle": "Imperial House of Austria-Danubio",
@@ -91,7 +93,9 @@ export const historyTranslations: Record<Language, Record<string, string>> = {
     "history.table.note2": "Survived the Sarajevo assassination attempt (1914); signed the Treaty of Vienna (1917); founded the Danubian Federation; commissioned the Federation Crown (1920, completed 1923).",
     "history.table.note3": "Guided the Federation through the Second World War; maintained neutrality until 1943; signed the Neustadt Accords (1945).",
     "history.table.note4": "Presided over the Federation's rise as a model of Central European stability; Neustadt became a centre of international diplomacy.",
+    "history.tooltip.associated": "Associated Kingdoms retain their sovereign independence, their own armies, and internal self-governance. They are bound to the Federation by customs union, trade coordination, and common defence, but may conduct their own foreign policy so long as it does not conflict with the security of the Federation.",
     "history.table.note5": "Current Emperor; 37 years on the throne. Widower since the death of the Empress in the Paris Ritz fire, 2000.",
+    "history.tooltip.protectorate": "The Protectorate of Albania is administered by a High Commissioner appointed by the Emperor. Albania has no independent foreign relations; its subjects are not citizens of the Federation but are entitled to its protection and freedom of movement within Federation territories.",
   },
   hu: {
     "history.header.pretitle": "Ausztria-Duna Császári Ház",
@@ -134,7 +138,9 @@ export const historyTranslations: Record<Language, Record<string, string>> = {
     "history.table.note2": "Túlélte a szarajevói merényletet (1914); aláírta a bécsi szerződést (1917); megalapította a Dunai Föderációt; megrendelte a Föderációs Koronát (1920, befejezve 1923).",
     "history.table.note3": "Átvezette a Föderációt a második világháborún; semlegességet tartott fenn 1943-ig; aláírta a neustadti egyezményeket (1945).",
     "history.table.note4": "Elnökölt a Föderáció felemelkedése felett mint a közép-európai stabilitás mintája; Neustadt a nemzetközi diplomácia központjává vált.",
+    "history.tooltip.associated": "A társult királyságok megőrzik szuverén függetlenségüket, saját hadseregüket és belső önkormányzatukat. Vámunió, kereskedelmi koordináció és közös védelem köti őket a Föderációhoz, de önálló külpolitikát folytathatnak, amennyiben az nem veszélyezteti a Föderáció biztonságát.",
     "history.table.note5": "Jelenlegi császár; 37 éve a trónon. Özvegy a császárné halála óta a párizsi Ritz tűzvészében, 2000.",
+    "history.tooltip.protectorate": "Az albán protektorátust a császár által kinevezett Főbiztos irányítja. Albániának nincs önálló külpolitikája; alattvalói nem a Föderáció polgárai, de élvezik annak védelmét és a szabad mozgás jogát a Föderáció területén.",
   },
   fr: {
     "history.header.pretitle": "Maison Impériale d'Autriche-Danube",
@@ -177,7 +183,9 @@ export const historyTranslations: Record<Language, Record<string, string>> = {
     "history.table.note2": "Survécut à l'attentat de Sarajevo (1914) ; signa le Traité de Vienne (1917) ; fonda la Fédération danubienne ; commanda la Couronne de la Fédération (1920, achevée 1923).",
     "history.table.note3": "Guida la Fédération à travers la Seconde Guerre mondiale ; maintint la neutralité jusqu'en 1943 ; signa les Accords de Neustadt (1945).",
     "history.table.note4": "Présida l'ascension de la Fédération comme modèle de stabilité centre-européenne ; Neustadt devint un centre de diplomatie internationale.",
+    "history.tooltip.associated": "Les royaumes associés conservent leur indépendance souveraine, leurs propres armées et leur autonomie interne. Ils sont liés à la Fédération par une union douanière, une coordination commerciale et une défense commune, mais peuvent mener leur propre politique étrangère tant qu'elle ne menace pas la sécurité de la Fédération.",
     "history.table.note5": "Empereur régnant. A présidé la modernisation constitutionnelle, l'intégration européenne et la stabilité de la Fédération depuis 1989.",
+    "history.tooltip.protectorate": "Le protectorat d'Albanie est administré par un Haut-Commissaire nommé par l'Empereur. L'Albanie n'a pas de politique étrangère indépendante ; ses sujets ne sont pas citoyens de la Fédération, mais bénéficient de sa protection et de la liberté de circulation sur son territoire.",
   },
   cs: {
     "history.header.pretitle": "Císařský Dům Rakousko-Dunaj",
@@ -221,6 +229,8 @@ export const historyTranslations: Record<Language, Record<string, string>> = {
     "history.table.note3": "Provedl Federaci druhou světovou válkou; udržoval neutralitu do 1943; podepsal Neustadtské dohody (1945).",
     "history.table.note4": "Předsedal vzestupu Federace jako vzoru středoevropské stability.",
     "history.table.note5": "Vládnoucí císař. Předsedá ústavní modernizaci a evropské integraci od roku 1989.",
+    "history.tooltip.associated": "Přidružená království si zachovávají suverénní nezávislost, vlastní armády a vnitřní samosprávu. Jsou vázána k Federaci celní unií, obchodní koordinací a společnou obranou, ale mohou vést vlastní zahraniční politiku, pokud neohrožuje bezpečnost Federace.",
+    "history.tooltip.protectorate": "Protektorát Albánie je spravován Vysokým komisařem jmenovaným Císařem. Albánie nemá nezávislou zahraniční politiku; její poddaní nejsou občany Federace, ale požívají její ochrany a volného pohybu na území Federace.",
   },
   hr: {
     "history.header.pretitle": "Carski Dom Austrija-Dunav",
@@ -263,6 +273,8 @@ export const historyTranslations: Record<Language, Record<string, string>> = {
     "history.table.note2": "Preživio atentat u Sarajevu (1914.); potpisao Bečki ugovor (1917.); osnovao Dunavsku Federaciju.",
     "history.table.note3": "Proveo Federaciju kroz Drugi svjetski rat; održavao neutralnost do 1943.; potpisao Neustadtske sporazume (1945.).",
     "history.table.note4": "Predsjedao uzdizanju Federacije kao uzora srednjoeuropske stabilnosti.",
+    "history.tooltip.associated": "Pridružena kraljevstva zadržavaju suverenu neovisnost, vlastite vojske i unutarnju samoupravu. Vezana su uz Federaciju carinskom unijom, trgovinskom koordinacijom i zajedničkom obranom, ali mogu voditi vlastitu vanjsku politiku sve dok ne ugrožava sigurnost Federacije.",
     "history.table.note5": "Vladajući car. Predsjeda ustavnoj modernizaciji i europskoj integraciji od 1989.",
+    "history.tooltip.protectorate": "Protektorat Albanija upravljan je od strane Visokog povjerenika kojeg imenuje Car. Albanija nema neovisnu vanjsku politiku; njezini podanici nisu građani Federacije, ali uživaju njezinu zaštitu i slobodu kretanja unutar teritorija Federacije.",
   },
 };

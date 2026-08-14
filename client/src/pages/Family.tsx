@@ -1201,7 +1201,7 @@ export default function Family() {
           </div>
           <div className="reveal" style={{ maxWidth: "1000px", margin: "0 auto" }}>
             <img
-              src="/manus-storage/family_tree_ced9a0a3.webp"
+              src="/manus-storage/family_tree_v2_6e2dce57.png"
               alt="Habsburg Family Tree from Franz Joseph I to Emperor Maximilian II"
               style={{
                 width: "100%",

@@ -105,7 +105,7 @@ export default function History() {
     },
     {
       numeral: "II",
-      period: "1914 – 1917",
+      period: "1914 – 1922",
       titleKey: "history.era2.title",
       emperor: "Franz Ferdinand I",
       subtitleKey: "history.era2.subtitle",
@@ -113,17 +113,17 @@ export default function History() {
     },
     {
       numeral: "III",
-      period: "1917 – 1936",
+      period: "1922 – 1939",
       titleKey: "history.era3.title",
-      emperor: "Franz Ferdinand I",
+      emperor: "Karl I",
       subtitleKey: "history.era3.subtitle",
       paragraphKeys: ["history.era3.p1", "history.era3.p2", "history.era3.p3"],
     },
     {
       numeral: "IV",
-      period: "1936 – 1989",
+      period: "1939 – 1989",
       titleKey: "history.era4.title",
-      emperor: "Friedrich I & Otto I",
+      emperor: "Otto I & Friedrich I",
       subtitleKey: "history.era4.subtitle",
       paragraphKeys: ["history.era4.p1", "history.era4.p2"],
     },
@@ -361,10 +361,11 @@ export default function History() {
               <tbody>
                 {[
                   { n: "I", name: "Franz Joseph I", reign: "1848–1916", life: "1830–1916", noteKey: "history.table.note1" },
-                  { n: "II", name: "Franz Ferdinand I", reign: "1916–1936", life: "1863–1936", noteKey: "history.table.note2" },
-                  { n: "III", name: "Friedrich I", reign: "1936–1955", life: "1902–1955", noteKey: "history.table.note3" },
-                  { n: "IV", name: "Otto I", reign: "1955–1989", life: "1912–1989", noteKey: "history.table.note4" },
-                  { n: "V", name: "Maximilian II", reign: "1989–", life: "1954–", noteKey: "history.table.note5" },
+                  { n: "II", name: "Franz Ferdinand I", reign: "1916–1922", life: "1863–1922", noteKey: "history.table.note2" },
+                  { n: "III", name: "Karl I", reign: "1922–1939", life: "1887–1939", noteKey: "history.table.note3" },
+                  { n: "IV", name: "Otto I", reign: "1939–1955", life: "1912–1980", noteKey: "history.table.note4" },
+                  { n: "V", name: "Friedrich I", reign: "1955–1989", life: "1936–1989", noteKey: "history.table.note5" },
+                  { n: "VI", name: "Maximilian II", reign: "1989–", life: "1954–", noteKey: "history.table.note6" },
                 ].map((row, i) => (
                   <tr
                     key={i}

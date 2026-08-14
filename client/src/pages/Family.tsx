@@ -1212,7 +1212,59 @@ export default function Family() {
             />
             <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: "0.8rem", color: "oklch(0.4 0.01 85)", textAlign: "center", marginTop: "1rem" }}>
               {t("family.tree.caption")}
-            </p>
+          </p>
+        </div>
+      </div>
+    </section>
+
+      {/* Reign Timeline */}
+      <section style={{ backgroundColor: DARK, padding: "5rem 0", borderTop: `1px solid oklch(0.72 0.12 85 / 0.1)` }}>
+        <div className="container">
+          <div className="reveal" style={{ textAlign: "center", marginBottom: "3rem" }}>
+            <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.55rem", letterSpacing: "0.4em", color: GOLD, textTransform: "uppercase", marginBottom: "0.75rem", opacity: 0.7 }}>
+              {t("family.reign.pretitle")}
+            </div>
+            <h2 style={{ fontFamily: "'Cinzel', serif", fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 600, color: CREAM, letterSpacing: "0.06em" }}>
+              {t("family.reign.title")}
+            </h2>
+          </div>
+          <div style={{ position: "relative", maxWidth: "800px", margin: "0 auto" }}>
+            {/* Vertical line */}
+            <div style={{ position: "absolute", left: "50%", top: 0, bottom: 0, width: "1px", background: `linear-gradient(to bottom, transparent, ${GOLD}, transparent)`, transform: "translateX(-50%)" }} />
+            {[
+              { year: "1989", text: t("family.reign.e1") },
+              { year: "1993", text: t("family.reign.e2") },
+              { year: "2000", text: t("family.reign.e3") },
+              { year: "2005", text: t("family.reign.e4") },
+              { year: "2011", text: t("family.reign.e5") },
+              { year: "2020", text: t("family.reign.e6") },
+              { year: "2025", text: t("family.reign.e7") },
+            ].map((event, i) => (
+              <div
+                key={i}
+                className="reveal"
+                style={{
+                  display: "flex",
+                  alignItems: i % 2 === 0 ? "flex-end" : "flex-start",
+                  flexDirection: i % 2 === 0 ? "row" : "row-reverse",
+                  gap: "2rem",
+                  marginBottom: "2.5rem",
+                  position: "relative",
+                }}
+              >
+                <div style={{ flex: 1, textAlign: i % 2 === 0 ? "right" : "left" }}>
+                  <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.9rem", color: GOLD, fontWeight: 600, marginBottom: "0.3rem" }}>
+                    {event.year}
+                  </div>
+                  <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "0.9rem", color: CREAM, lineHeight: 1.6, opacity: 0.85 }}>
+                    {event.text}
+                  </p>
+                </div>
+                {/* Center dot */}
+                <div style={{ width: "12px", height: "12px", borderRadius: "50%", background: DARK, border: `2px solid ${GOLD}`, flexShrink: 0, position: "relative", zIndex: 1 }} />
+                <div style={{ flex: 1 }} />
+              </div>
+            ))}
           </div>
         </div>
       </section>

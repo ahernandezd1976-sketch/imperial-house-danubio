@@ -1,6 +1,6 @@
 /*
  * Family Page — Imperial Modernism / Vienna Secession Reborn
- * Real characters: Emperor Maximilian I and the Imperial Household
+ * Real characters: Emperor Maximilian II and the Imperial Household
  * Portrait: Official family photograph, Hofburg Imperial Palace
  */
 import { useEffect, useRef, useState, useMemo } from "react";
@@ -1232,13 +1232,11 @@ export default function Family() {
             {/* Vertical line */}
             <div style={{ position: "absolute", left: "50%", top: 0, bottom: 0, width: "1px", background: `linear-gradient(to bottom, transparent, ${GOLD}, transparent)`, transform: "translateX(-50%)" }} />
             {[
-              { year: "1989", text: t("family.reign.e1") },
-              { year: "1993", text: t("family.reign.e2") },
-              { year: "2000", text: t("family.reign.e3") },
-              { year: "2005", text: t("family.reign.e4") },
-              { year: "2011", text: t("family.reign.e5") },
-              { year: "2020", text: t("family.reign.e6") },
-              { year: "2025", text: t("family.reign.e7") },
+             { year: "1989", text: t("family.reign.e1") },
+             { year: "1993", text: t("family.reign.e2") },
+             { year: "2000", text: t("family.reign.e3") },
+             { year: "2015", text: t("family.reign.e5") },
+             { year: "2020", text: t("family.reign.e6") },
             ].map((event, i) => (
               <div
                 key={i}

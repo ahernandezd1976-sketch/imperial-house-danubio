@@ -736,7 +736,7 @@ const familyMembersES: FamilyMember[] = [
     languages: ["Alemán", "Inglés", "Francés", "Checo"],
     isCrownPrince: false,
     isEmperor: false,
-    portrait: "/manus-storage/katherina_portrait_cropped_b4d5e6f7.png",
+    portrait: "/manus-storage/katharina_portrait_cropped_b61d2458.png",
   },
   {
     name: "Archiduquesa Eleonora von Habsburg",
@@ -753,7 +753,7 @@ const familyMembersES: FamilyMember[] = [
     languages: ["Alemán", "Inglés", "Francés", "Italiano"],
     isCrownPrince: false,
     isEmperor: false,
-    portrait: "/manus-storage/eleonora_portrait_v3_c5e6f7a8.png",
+    portrait: "/manus-storage/eleonora_portrait_v3_cc8dec11.png",
   },
   {
     name: "Mariscal Reiner von Habsburg",
@@ -768,7 +768,7 @@ const familyMembersES: FamilyMember[] = [
     languages: ["Alemán", "Inglés", "Húngaro", "Francés", "Serbio"],
     isCrownPrince: false,
     isEmperor: false,
-    portrait: "/manus-storage/reiner_portrait_cropped_d6f7a8b9.png",
+    portrait: "/manus-storage/reiner_portrait_cropped_4cb50aa7.png",
   },
   {
     name: "Archiduque Carlos Bertroch",
@@ -783,7 +783,7 @@ const familyMembersES: FamilyMember[] = [
     languages: ["Italiano", "Francés", "Alemán"],
     isCrownPrince: false,
     isEmperor: false,
-    portrait: "/manus-storage/charles_portrait_cropped_e7a8b9c0.png",
+    portrait: "/manus-storage/charles_portrait_cropped_bf9fa829.png",
   },
   {
     name: "Archiduquesa Gisela von Habsburg",
@@ -798,7 +798,7 @@ const familyMembersES: FamilyMember[] = [
     languages: ["Alemán", "Francés", "Húngaro", "Checo", "Latín"],
     isCrownPrince: false,
     isEmperor: false,
-    portrait: "/manus-storage/gisela_portrait_cropped_f8b9c0d1.png",
+    portrait: "/manus-storage/gisela_portrait_cropped_647203db.png",
   },
   {
     name: "Archiduquesa Alexis von Habsburg",
@@ -814,7 +814,7 @@ const familyMembersES: FamilyMember[] = [
     languages: ["Alemán", "Francés", "Húngaro", "Checo", "Latín"],
     isCrownPrince: false,
     isEmperor: false,
-    portrait: "/manus-storage/alexis_portrait_cropped_a9c0d1e2.png",
+    portrait: "/manus-storage/alexis_portrait_cropped_d43db48b.png",
   },
   {
     name: "Emperador Maximiliano II",
@@ -832,7 +832,7 @@ const familyMembersES: FamilyMember[] = [
     isEmperor: true,
     lateSpouse: "† Emperatriz María-Cristina (1954–2000)",
     spouseDeath: "Ritz de París, 10 de septiembre de 2000",
-    portrait: "/manus-storage/ChatGPTImage12ago2026,16_27_28_a1b2c3d4.png",
+    portrait: "/manus-storage/ChatGPTImage12ago2026,16_27_28_7fc2c010.png",
   },
 ];
 

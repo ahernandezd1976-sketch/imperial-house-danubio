@@ -10,6 +10,7 @@ export type Language = "de" | "en" | "fr" | "hu" | "cs" | "hr" | "es";
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
+  switching: boolean;
   t: (key: string) => string;
 }
 
@@ -557,14 +558,26 @@ function mergeTranslations(): Record<Language, Record<string, string>> {
 const allTranslations = mergeTranslations();
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [switching, setSwitching] = useState(false);
   const [language, setLanguageState] = useState<Language>(() => {
+    // Check URL parameter first
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get("lang") as Language;
+    if (urlLang && ["de","en","fr","hu","cs","hr","es"].includes(urlLang)) {
+      localStorage.setItem("df-language", urlLang);
+      return urlLang;
+    }
     const saved = localStorage.getItem("df-language");
     return (saved as Language) || "de";
   });
 
   const setLanguage = useCallback((lang: Language) => {
+    setSwitching(true);
+    setTimeout(() => {
     setLanguageState(lang);
     localStorage.setItem("df-language", lang);
+      setSwitching(false);
+    }, 150);
   }, []);
 
   const t = useCallback(
@@ -576,7 +589,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   );
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, switching }}>
       {children}
     </LanguageContext.Provider>
   );

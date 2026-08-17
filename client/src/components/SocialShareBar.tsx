@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const GOLD = "oklch(0.72 0.12 85)";
 const DARK = "oklch(0.11 0.005 285)";
@@ -6,7 +7,9 @@ const DARK = "oklch(0.11 0.005 285)";
 export function SocialShareBar() {
   const [copied, setCopied] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const siteUrl = typeof window !== "undefined" ? window.location.href : "https://www.thedanubianthrone.com";
+  const { language } = useLanguage();
+  const baseUrl = typeof window !== "undefined" ? window.location.origin + window.location.pathname : "https://www.thedanubianthrone.com";
+  const siteUrl = `${baseUrl}?lang=${language}`;
   const shareText = "The Imperial House of Austria-Danubio — Guardians of the Danube";
 
   const handleCopy = () => {

@@ -1,4 +1,5 @@
 import { Toaster } from "@/components/ui/sonner";
+import { useLanguage } from "./contexts/LanguageContext";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
@@ -46,7 +47,7 @@ function App() {
         <ThemeProvider defaultTheme="light">
           <TooltipProvider>
             <Toaster />
-            <Router />
+            <FadeWrapper><Router /></FadeWrapper>
       <DynamicMeta />
             <SocialShareBar />
           </TooltipProvider>
@@ -54,6 +55,11 @@ function App() {
       </LanguageProvider>
     </ErrorBoundary>
   );
+}
+
+function FadeWrapper({ children }: { children: React.ReactNode }) {
+  const { switching } = useLanguage();
+  return <div className={`lang-fade ${switching ? "switching" : ""}`}>{children}</div>;
 }
 
 export default App;

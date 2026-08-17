@@ -223,3 +223,11 @@
     transform: translateY(0);
   }
 }
+
+/* Language switch fade transition */
+.lang-fade {
+  transition: opacity 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.lang-fade.switching {
+  opacity: 0;
+}

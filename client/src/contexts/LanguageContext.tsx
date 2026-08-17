@@ -522,7 +522,7 @@ const translations: Record<Language, Record<string, string>> = {
 const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations];
 
 function mergeTranslations(): Record<Language, Record<string, string>> {
-  const langs: Language[] = ["de", "en", "fr", "hu", "cs", "hr"];
+  const langs: Language[] = ["de", "en", "fr", "hu", "cs", "hr", "es"];
   const merged = {} as Record<Language, Record<string, string>>;
   for (const lang of langs) {
     merged[lang] = { ...translations[lang] };

@@ -744,7 +744,7 @@ export default function Heraldry() {
                   marginBottom: "1.5rem",
                 }}
               >
-                The Order's insignia consists of a golden eagle pendant of exceptional craftsmanship, suspended from a black and gold ribbon; a breast star of eight points in gold and silver; and a ceremonial mantle of black velvet lined with gold silk. The badge is worn on formal occasions and at all ceremonies of the Imperial Court.
+                {t("her.order.insignia")}
               </p>
               <p
                 style={{
@@ -754,7 +754,7 @@ export default function Heraldry() {
                   color: "oklch(0.75 0.01 85)",
                 }}
               >
-                The Order has been awarded 94 times since its founding. Recipients have included statesmen, scholars, military commanders, artists, and scientists who have made exceptional contributions to the welfare of the Danubian peoples or to the cause of European civilisation.
+                {t("her.order.awards")}
               </p>
             </div>
 
@@ -841,11 +841,11 @@ export default function Heraldry() {
                   Notable Recipients
                 </div>
                 {[
-                  "Emperor Franz-Leopold III (1945)",
-                  "Chancellor Heinrich Brandt (1962)",
-                  "Composer Elena Vásárhelyi (1978)",
-                  "President Marie-Claire Fontaine (2003)",
-                  "Scientist Prof. Dr. Otto Schreiber (2015)",
+                  t("her.order.r1"),
+                  t("her.order.r2"),
+                  t("her.order.r3"),
+                  t("her.order.r4"),
+                  t("her.order.r5"),
                 ].map((name, i) => (
                   <div
                     key={i}

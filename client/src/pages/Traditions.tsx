@@ -3,6 +3,7 @@
  * Imperial ceremonies, customs, and cultural traditions
  */
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -156,6 +157,7 @@ const traditions = [
 ];
 
 export default function Traditions() {
+  const { t } = useLanguage();
   useScrollReveal();
 
   useEffect(() => {
@@ -198,7 +200,7 @@ export default function Traditions() {
               opacity: 0.8,
             }}
           >
-            Imperial House of Austria-Danubio
+            {t("trad.pretitle")}
           </div>
           <h1
             style={{
@@ -223,7 +225,7 @@ export default function Traditions() {
               lineHeight: 1.7,
             }}
           >
-            The ceremonies, customs, and rites that have defined the Imperial House of Austria-Danubio across generations.
+            The ceremonies, customs, and rites that have defined the {t("trad.pretitle")} across generations.
           </p>
         </div>
       </section>

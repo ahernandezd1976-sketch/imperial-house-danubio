@@ -3,7 +3,7 @@
  * Default: German (de), with English, French, Hungarian, Czech, Croatian
  */
 import { createContext, useContext, useState, useCallback, useMemo, type ReactNode } from "react";
-import { historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations } from "@/i18n";
+import { historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations } from "@/i18n";
 
 export type Language = "de" | "en" | "fr" | "hu" | "cs" | "hr" | "es";
 
@@ -519,7 +519,7 @@ const translations: Record<Language, Record<string, string>> = {
 };
 
 // Merge all page translations into a single lookup
-const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations];
+const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations];
 
 function mergeTranslations(): Record<Language, Record<string, string>> {
   const langs: Language[] = ["de", "en", "fr", "hu", "cs", "hr"];

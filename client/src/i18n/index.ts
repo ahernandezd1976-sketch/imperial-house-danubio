@@ -5,3 +5,6 @@ export { constitutionTranslations } from "./constitution";
 export { booksTranslations } from "./books";
 export { footerTranslations } from "./footer";
 export { transparencyTranslations } from "./transparency";
+export { traditionsTranslations } from "./traditions";
+export { heraldryTranslations } from "./heraldry";
+export { propertiesTranslations } from "./properties";

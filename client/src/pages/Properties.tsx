@@ -7,6 +7,7 @@
 import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const GOLD = "oklch(0.72 0.12 85)";
@@ -145,6 +146,7 @@ const properties = [
 ];
 
 export default function Properties() {
+  const { t } = useLanguage();
   useScrollReveal();
   const [activeProperty, setActiveProperty] = useState<string | null>(null);
 
@@ -206,7 +208,7 @@ export default function Properties() {
               marginBottom: "1.25rem",
             }}
           >
-            The Imperial Estate &nbsp;·&nbsp; Eight Residences
+            {t("prop.pretitle")}
           </div>
           <h1
             className="animate-fade-up"

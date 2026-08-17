@@ -3,6 +3,7 @@
  * Coat of arms, motto, colours, and the Order of the Golden Eagle
  */
 import { useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -12,6 +13,7 @@ const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
 
 export default function Heraldry() {
+  const { t } = useLanguage();
   useScrollReveal();
 
   useEffect(() => {
@@ -54,7 +56,7 @@ export default function Heraldry() {
               opacity: 0.8,
             }}
           >
-            Imperial House of Austria-Danubio
+            {t("her.pretitle")}
           </div>
           <h1
             style={{
@@ -79,7 +81,7 @@ export default function Heraldry() {
               lineHeight: 1.7,
             }}
           >
-            The symbols, colours, and honours of the Imperial House of Austria-Danubio.
+            The symbols, colours, and honours of the {t("her.pretitle")}.
           </p>
         </div>
       </section>
@@ -731,7 +733,7 @@ export default function Heraldry() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Founded by Emperor Franz Ferdinand I on the 12th of June, 1917 — the day of the proclamation of the Danubian Federation — the Order of the Golden Eagle is the supreme order of chivalry of the Imperial House of Austria-Danubio. It is awarded exclusively by the Emperor, acting on his personal initiative, and is limited to twelve living members at any one time.
+                Founded by Emperor Franz Ferdinand I on the 12th of June, 1917 — the day of the proclamation of the Danubian Federation — the Order of the Golden Eagle is the supreme order of chivalry of the {t("her.pretitle")}. It is awarded exclusively by the Emperor, acting on his personal initiative, and is limited to twelve living members at any one time.
               </p>
               <p
                 style={{

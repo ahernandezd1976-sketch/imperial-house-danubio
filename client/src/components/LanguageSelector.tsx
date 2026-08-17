@@ -187,19 +187,19 @@ export default function LanguageSelector() {
                 setLanguage(lang.code);
                 setOpen(false);
               }}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.6rem",
-                width: "100%",
-                padding: "0.6rem 0.85rem",
-                background: language === lang.code ? "oklch(0.72 0.12 85 / 0.1)" : "transparent",
-                border: "none",
-                cursor: "pointer",
-                transition: "background 0.2s ease",
+             style={{
+               display: "flex",
+               alignItems: "center",
+               gap: "0.6rem",
+               width: "100%",
+               padding: "0.6rem 0.85rem",
+               background: language === lang.code ? "oklch(0.72 0.12 85 / 0.1)" : "transparent",
+               border: "none",
+               cursor: "pointer",
+                transition: "all 0.2s cubic-bezier(0.23, 1, 0.32, 1)",
                 borderLeft: language === lang.code ? `2px solid ${GOLD}` : "2px solid transparent",
               }}
-              className="hover:bg-yellow-400/5"
+              className="hover:bg-yellow-400/10 hover:pl-4 hover:scale-[1.02]"
             >
               <lang.Flag />
               <span

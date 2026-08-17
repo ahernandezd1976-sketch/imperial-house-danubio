@@ -89,7 +89,7 @@ export default function Press() {
             {t("press.page.arrival.p1")}
           </p>
           <p className="text-lg leading-relaxed text-[#2a2a2a] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            Your name is at the door. Your table is where VEGA said it would be. The debutante beside you has her briefing memorised — she checked it on the way here, the same way one checks the time. Countess Isabelle von Trauttmansdorff-Weinsberg, twenty, presented this year in a column of ivory duchess satin by Maison Leitner, shrugs when asked. <em>"My grandmother had a governess for this,"</em> she says. <em>"I had VEGA. I think we both turned out all right."</em>
+            {t("press.page.arrival.p2")} <em>"{t("press.page.arrival.quote1")}"</em> she says. <em>"{t("press.page.arrival.quote2")}"</em>
           </p>
           <p className="text-lg leading-relaxed text-[#2a2a2a]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             {t("press.page.arrival.p3")}
@@ -114,7 +114,7 @@ export default function Press() {
               The Waltz Descends
             </h3>
             <p className="text-lg leading-relaxed text-[#2a2a2a] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              At eleven o'clock, the Cercle concluded and the diplomatic reception complete, the floor is cleared for the first waltz of the evening. This year, the baton passes to a name that requires no introduction in Vienna: <strong>Johann Leopold Strauss</strong>, thirty-one, great-great-great-grandson of Johann Strauss II, conducting the Imperial Court Orchestra for the first time.
+              {t("press.page.waltz.p1")}
             </p>
             {/* Pull quote */}
             <blockquote className="border-l-4 border-[#8B7355] pl-4 my-4">
@@ -195,10 +195,10 @@ export default function Press() {
             Above the Hofburg
           </h3>
           <p className="text-lg leading-relaxed text-[#2a2a2a] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            At midnight, as the Imperial Family withdraws and the guests prepare to receive their bonbonnières, the great windows of the Ballroom are opened. The guests move to the Schweizerhof and the outer courtyards. And above the Hofburg, in the cold January sky, three hundred and sixty drones rise in formation.
+            {t("press.page.drones.p1")}
           </p>
           <p className="text-lg leading-relaxed text-[#2a2a2a] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            What follows is twelve minutes that no guest will forget. The drones trace the history of the Danubian Federation across the sky: the double-headed eagle assembles and dissolves. The fourteen stars form and reform. The Danube river, rendered in moving light, winds its way from the Alps to the Black Sea. And then, at the last, the Federation Crown, assembled star by star, floating above the Hofburg in gold and white light, before dissolving into a cascade of sparks over the rooftops of Vienna.
+            {t("press.page.drones.p2")}
           </p>
           <blockquote className="border-l-4 border-[#8B7355] pl-4 my-6">
             <p className="text-2xl italic text-[#8B7355]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -214,7 +214,7 @@ export default function Press() {
             The Bonbonnière
           </h3>
           <p className="text-lg leading-relaxed text-[#2a2a2a] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            No account of the Court Ball is complete without the bonbonnière — the small lacquered box, filled with Imperial confections, presented to each guest upon departure. This year's edition, by <strong>Wiener Werkstätte Neu</strong>: a box of imperial black lacquer with a double-headed eagle in twenty-four-carat gold relief on the lid. Inside: a Mozartkugel, a violet cream, a dark chocolate truffle dusted with edible gold, and a small card printed with the date and the Imperial cipher. On the reverse, in the smallest possible type, a single line:
+            {t("press.page.bonbonniere.p1")}
           </p>
           <p className="text-center text-sm italic text-[#8B7355] tracking-wide my-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             {t("press.page.bonbonniere.vega")}

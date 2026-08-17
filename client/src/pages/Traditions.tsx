@@ -160,7 +160,7 @@ export default function Traditions() {
   const { t, language } = useLanguage();
 
   // Spanish translations for tradition items
-  const tradEs: Record<string, { title: string; subtitle: string; desc: string }> = {
+  const tradMap: Record<string, { title: string; subtitle: string; desc: string }> = {
     "The Proclamation of the Emperor": { title: t("trad.proc.title"), subtitle: t("trad.proc.subtitle"), desc: t("trad.proc.desc") },
     "The Feast of the Eagle": { title: t("trad.eagle.title"), subtitle: t("trad.eagle.subtitle"), desc: t("trad.eagle.desc") },
     "The Investiture of the Order of the Golden Eagle": { title: t("trad.order.title"), subtitle: t("trad.order.subtitle"), desc: t("trad.order.desc") },
@@ -174,8 +174,8 @@ export default function Traditions() {
     "The New Year\'s Concert": { title: t("trad.newyear.title"), subtitle: t("trad.newyear.subtitle"), desc: t("trad.newyear.desc") },
   };
   const getTrad = (t_item: { title: string; subtitle: string; description: string }) => {
-    if (language === "en") return t_item;
-    const es = tradEs[t_item.title];
+    
+    const es = tradMap[t_item.title];
     if (es) return { title: es.title, subtitle: es.subtitle, description: es.desc };
     return t_item;
   };

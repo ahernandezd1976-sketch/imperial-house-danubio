@@ -34,6 +34,7 @@ function Router() {
       <Route path={"/constitution"} component={Constitution} />
       <Route path={"/books"} component={Books} />
       <Route path={"/press"} component={Press} />
+      <Route path={"/news"} component={News} />
       <Route path={"/transparency"} component={Transparency} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />

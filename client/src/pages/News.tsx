@@ -5,6 +5,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { Link } from "wouter";
 
 const GOLD = "#C8A415";
+const ITEMS_PER_PAGE = 3;
 
 function ShareButtons({ title, index }: { title: string; index: number }) {
   const { language } = useLanguage();
@@ -60,6 +61,7 @@ function ShareButtons({ title, index }: { title: string; index: number }) {
 export default function News() {
   const { t, language } = useLanguage();
   const [activeFilter, setActiveFilter] = useState<string>("all");
+  const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
 
   const newsItems = [
     { dateKey: "news.item1.date", titleKey: "news.item1.title", bodyKey: "news.item1.body", tagKey: "news.item1.tag", category: "publication" },
@@ -78,6 +80,9 @@ export default function News() {
     ? newsItems
     : newsItems.filter((item) => item.category === activeFilter);
 
+  const displayedItems = filteredItems.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredItems.length;
+
   return (
     <div className="min-h-screen bg-[#0d0b09]">
       <Navigation />
@@ -94,13 +99,52 @@ export default function News() {
         </p>
       </section>
 
+      {/* Featured News Item */}
+      <section className="max-w-3xl mx-auto px-6 pb-12">
+        <div
+          className="relative border-2 p-8 md:p-10 transition-all duration-300 hover:shadow-[0_0_30px_oklch(0.72_0.12_85_/_0.15)]"
+          style={{ borderColor: GOLD, background: "oklch(0.72 0.12 85 / 0.03)" }}
+        >
+          {/* Featured badge */}
+          <div
+            className="absolute -top-3 left-6 px-4 py-1 text-[0.6rem] tracking-[0.25em] uppercase font-bold"
+            style={{ background: GOLD, color: "#0d0b09", fontFamily: "'Cinzel', serif" }}
+          >
+            {t("news.featured.badge")}
+          </div>
+          {/* Gold corner accents */}
+          <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2" style={{ borderColor: GOLD }} />
+          <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2" style={{ borderColor: GOLD }} />
+
+          <div className="flex items-center gap-3 mb-4 mt-2">
+            <span className="text-xs tracking-[0.2em] uppercase text-white/50" style={{ fontFamily: "'Cinzel', serif" }}>
+              {t("news.featured.date")}
+            </span>
+            <span
+              className="text-[0.6rem] tracking-[0.15em] uppercase px-2 py-0.5"
+              style={{ background: `oklch(0.72 0.12 85 / 0.2)`, color: GOLD, fontFamily: "'Cinzel', serif" }}
+            >
+              {t("news.featured.tag")}
+            </span>
+          </div>
+          <h2 className="text-2xl md:text-3xl text-white mb-4 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            {t("news.featured.title")}
+          </h2>
+          <p className="text-white/70 leading-relaxed text-lg" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            {t("news.featured.body")}
+          </p>
+          {/* Decorative line */}
+          <div className="mt-6 h-px w-24" style={{ background: `linear-gradient(to right, ${GOLD}, transparent)` }} />
+        </div>
+      </section>
+
       {/* Category Filters */}
       <section className="max-w-3xl mx-auto px-6 pb-8">
         <div className="flex flex-wrap gap-2">
           {categories.map((cat) => (
             <button
               key={cat.id}
-              onClick={() => setActiveFilter(cat.id)}
+              onClick={() => { setActiveFilter(cat.id); setVisibleCount(ITEMS_PER_PAGE); }}
               className="text-[0.6rem] tracking-[0.2em] uppercase px-4 py-2 border transition-all duration-200 hover:scale-[0.97]"
               style={{
                 borderColor: activeFilter === cat.id ? GOLD : "oklch(1 0 0 / 0.15)",
@@ -116,12 +160,12 @@ export default function News() {
       </section>
 
       {/* News Items */}
-      <section className="max-w-3xl mx-auto px-6 pb-16">
+      <section className="max-w-3xl mx-auto px-6 pb-8">
         <h2 className="text-sm tracking-[0.3em] uppercase mb-8" style={{ color: GOLD, fontFamily: "'Cinzel', serif" }}>
           {t("news.latest")}
         </h2>
         <div className="space-y-8">
-          {filteredItems.map((item, i) => (
+          {displayedItems.map((item, i) => (
             <article
               key={item.category + i}
               id={`item-${i}`}
@@ -149,6 +193,23 @@ export default function News() {
             </article>
           ))}
         </div>
+      </section>
+
+      {/* Load More Button */}
+      <section className="max-w-3xl mx-auto px-6 pb-16 text-center">
+        {hasMore ? (
+          <button
+            onClick={() => setVisibleCount((prev) => prev + ITEMS_PER_PAGE)}
+            className="px-8 py-3 border text-xs tracking-[0.25em] uppercase transition-all duration-200 hover:scale-[0.97] hover:shadow-[0_0_20px_oklch(0.72_0.12_85_/_0.2)]"
+            style={{ borderColor: GOLD, color: GOLD, fontFamily: "'Cinzel', serif" }}
+          >
+            {t("news.loadmore")}
+          </button>
+        ) : (
+          <p className="text-white/30 text-sm tracking-[0.15em] uppercase" style={{ fontFamily: "'Cinzel', serif" }}>
+            {t("news.nomore")}
+          </p>
+        )}
       </section>
 
       {/* Subscribe Section */}

@@ -56,9 +56,9 @@ export default function Heraldry() {
               opacity: 0.8,
             }}
           >
-            {t("her.pretitle")}
-          </div>
-          <h1
+          {t("her.pretitle")}
+         </div>
+         <h1
             style={{
               fontFamily: "'Cinzel', serif",
               fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
@@ -69,7 +69,7 @@ export default function Heraldry() {
               marginBottom: "1.5rem",
             }}
           >
-            Heraldry &amp; <span style={{ color: GOLD }}>Honours</span>
+            {t("her.title1")} <span style={{ color: GOLD }}>{t("her.title2")}</span>
           </h1>
           <p
             style={{
@@ -81,7 +81,7 @@ export default function Heraldry() {
               lineHeight: 1.7,
             }}
           >
-            The symbols, colours, and honours of the {t("her.pretitle")}.
+            {t("her.subtitle")}
           </p>
         </div>
       </section>
@@ -177,7 +177,7 @@ export default function Heraldry() {
                   marginBottom: "1rem",
                 }}
               >
-                I &nbsp;·&nbsp; The Arms
+                {t("her.sec1")}
               </div>
               <h2
                 style={{
@@ -189,7 +189,7 @@ export default function Heraldry() {
                   marginBottom: "1.5rem",
                 }}
               >
-                The Imperial Coat of Arms
+                {t("her.arms.h2")}
               </h2>
               <div
                 style={{
@@ -229,7 +229,7 @@ export default function Heraldry() {
                     lineHeight: 1.8,
                   }}
                 >
-                  Quarterly: first and fourth, Sable, a double-headed eagle displayed Or, charged on the breast with an escutcheon Gules fimbriated Argent; second and third, Argent, three barrulets wavy Azure. The whole surmounted by an Imperial Crown. Supporters: two lions rampant Or, crowned Gules, each holding a lance bearing a banner. Motto on a scroll below: <em>Aquila et Flumen in Aeternum.</em>
+                  {t("her.blazon.text")}
                 </p>
               </div>
 
@@ -242,7 +242,7 @@ export default function Heraldry() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The arms of the Imperial House combine the ancient double-headed eagle of the Habsburg tradition — symbol of authority over East and West — with the three wavy bars of the Danubio branch, representing the three principal tributaries of the Danube within the Confederation's territory.
+                {t("her.arms.p1")}
               </p>
               <p
                 style={{
@@ -252,7 +252,7 @@ export default function Heraldry() {
                   color: "oklch(0.25 0.005 285)",
                 }}
               >
-                The Imperial Crown depicted above the shield in the arms is a heraldic representation of sovereignty. The Austrian Imperial title is inherited by dynastic right and has never required a coronation ceremony. The Federation Crown — commissioned by Emperor Franz Ferdinand I in 1920 and completed in 1923 — is the supreme symbol of Imperial authority, displayed at state occasions and accession proclamations, not placed upon the sovereign's head in a coronation rite. The sole coronation ceremony observed by the dynasty is the ancient rite of the Apostolic King of Hungary, performed in Budapest with the Holy Crown of Saint Stephen.
+                {t("her.arms.p2")}
               </p>
             </div>
           </div>
@@ -317,7 +317,7 @@ export default function Heraldry() {
                     letterSpacing: "0.05em",
                   }}
                 >
-                  The Austrian Imperial Crown &nbsp;·&nbsp; Crown of Rudolf II, 1602 &nbsp;·&nbsp; Kunsthistorisches Museum, Vienna
+                  {t("her.crown.caption")}
                 </p>
               </div>
             </div>
@@ -334,7 +334,7 @@ export default function Heraldry() {
                   marginBottom: "1rem",
                 }}
               >
-                II &nbsp;·&nbsp; The Imperial Crown
+                {t("her.sec2")}
               </div>
               <h2
                 style={{
@@ -358,7 +358,7 @@ export default function Heraldry() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The Austrian Imperial Crown — formally the Crown of Rudolf II — was crafted in Prague in 1602 by the goldsmith Jan Vermeyen for Emperor Rudolf II. It is the most significant object in the Habsburg treasury: a masterpiece of Mannerist goldsmithery set with rubies, sapphires, spinels, and pearls, surmounted by a great blue sapphire. It served as the private crown of the Holy Roman Emperors and, from 1804, as the crown of the Austrian Empire.
+                {t("her.crown.p1")}
               </p>
               <p
                 style={{
@@ -369,7 +369,7 @@ export default function Heraldry() {
                   marginBottom: "1.25rem",
                 }}
               >
-                It is essential to understand that the Austrian Imperial title was <em>never</em> conferred by placing this crown upon the sovereign's head. The crown is a symbol of office, not a coronation instrument. The Austrian Emperor inherited his title by dynastic right of succession; no ceremony of crowning was required or performed. The Crown of Rudolf II was displayed at accession proclamations and state occasions, but the act of succession was complete from the moment of the predecessor's death.
+                {t("her.crown.p2")}
               </p>
               <p
                 style={{
@@ -379,7 +379,7 @@ export default function Heraldry() {
                   color: "oklch(0.25 0.005 285)",
                 }}
               >
-                The sole coronation ceremony of the dynasty was the rite of the Apostolic King of Hungary, performed in Budapest with the ancient Holy Crown of Saint Stephen. Today the Crown of Rudolf II is kept in the Imperial Treasury at the Hofburg, where it remains one of the most visited objects in the world. The Federation Crown, commissioned in 1920, serves as the ceremonial symbol of the Danubian Federation but follows the same tradition: it is displayed, not worn.
+                {t("her.crown.p3")}
               </p>
             </div>
           </div>
@@ -401,7 +401,7 @@ export default function Heraldry() {
                 opacity: 0.8,
               }}
             >
-              II &nbsp;·&nbsp; The Colours
+              {t("her.sec2b")}
             </div>
             <h2
               style={{
@@ -412,35 +412,35 @@ export default function Heraldry() {
                 letterSpacing: "0.03em",
               }}
             >
-              Imperial Colours & Symbolism
+              {t("her.colours.h1")}
             </h2>
           </div>
 
           <div className="reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                name: "Imperial Black",
+                name: "her.colour.black.name",
                 hex: "#0D0D0D",
-                heraldic: "Sable",
-                meaning: "Authority, permanence, and the night sky over the Danubian plains. The primary colour of the Imperial House, worn by the Emperor in formal mourning and by the Imperial Guard.",
+                heraldic: "her.colour.black.heraldic",
+                meaning: "her.colour.black.meaning",
               },
               {
-                name: "Imperial Gold",
+                name: "her.colour.gold.name",
                 hex: "#D4AF37",
-                heraldic: "Or",
-                meaning: "Sovereignty, excellence, and the golden light of the Danube at dawn. Used for the Imperial Crown, the Order of the Golden Eagle, and all official insignia.",
+                heraldic: "her.colour.gold.heraldic",
+                meaning: "her.colour.gold.meaning",
               },
               {
-                name: "Danubian Blue",
+                name: "her.colour.blue.name",
                 hex: "#1A3A6B",
-                heraldic: "Azure",
-                meaning: "The Danube river, loyalty, and the sky of the Confederation. Represented in the wavy bars of the Danubio quarter of the arms.",
+                heraldic: "her.colour.blue.heraldic",
+                meaning: "her.colour.blue.meaning",
               },
               {
-                name: "Imperial Crimson",
+                name: "her.colour.crimson.name",
                 hex: "#8B1A1A",
-                heraldic: "Gules",
-                meaning: "Courage, sacrifice, and the blood of the dynasty. Used for the Imperial mantle, the Order's ribbon, and the velvet lining of the Crown.",
+                heraldic: "her.colour.crimson.heraldic",
+                meaning: "her.colour.crimson.meaning",
               },
             ].map((colour, i) => (
               <div
@@ -468,7 +468,7 @@ export default function Heraldry() {
                       marginBottom: "0.25rem",
                     }}
                   >
-                    {colour.name}
+                    {t(colour.name)}
                   </div>
                   <div
                     style={{
@@ -479,7 +479,7 @@ export default function Heraldry() {
                       marginBottom: "0.75rem",
                     }}
                   >
-                    {colour.heraldic} &nbsp;·&nbsp; {colour.hex}
+                    {t(colour.heraldic)} &nbsp;·&nbsp; {colour.hex}
                   </div>
                   <p
                     style={{
@@ -489,7 +489,7 @@ export default function Heraldry() {
                       color: "oklch(0.55 0.01 85)",
                     }}
                   >
-                    {colour.meaning}
+                    {t(colour.meaning)}
                   </p>
                 </div>
               </div>
@@ -513,7 +513,7 @@ export default function Heraldry() {
                   marginBottom: "1rem",
                 }}
               >
-                III &nbsp;·&nbsp; The Motto
+                {t("her.sec3")}
               </div>
               <h2
                 style={{
@@ -543,7 +543,7 @@ export default function Heraldry() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The motto of the Imperial House — <em>Aquila et Flumen in Aeternum</em>, "The Eagle and the River, Forever" — was composed by the court poet Heinrich von Schreiber at the request of Emperor Franz Ferdinand I and adopted at the founding of the Danubian Federation in 1917.
+                {t("her.motto.p1")}
               </p>
               <p
                 style={{
@@ -553,7 +553,7 @@ export default function Heraldry() {
                   color: "oklch(0.25 0.005 285)",
                 }}
               >
-                The eagle represents the ancient Habsburg heritage and the sovereign authority of the Imperial House; the river represents the Danube — the lifeblood of the Confederation, the source of its prosperity, and the bond that unites its peoples. Together, they express the dynasty's commitment to enduring governance rooted in both tradition and the natural world.
+                {t("her.motto.p1")}
               </p>
             </div>
             <div className="reveal flex justify-center" style={{ transitionDelay: "0.2s" }}>
@@ -627,7 +627,7 @@ export default function Heraldry() {
                     fontStyle: "italic",
                   }}
                 >
-                  "The Eagle and the River, Forever"
+                  {t("her.motto.translation")}
                 </div>
               </div>
             </div>
@@ -650,7 +650,7 @@ export default function Heraldry() {
                 opacity: 0.8,
               }}
             >
-              IV &nbsp;·&nbsp; The Order
+              {t("her.sec4")}
             </div>
             <h2
               style={{
@@ -675,7 +675,7 @@ export default function Heraldry() {
                 lineHeight: 1.7,
               }}
             >
-              The highest honour of the Imperial House, awarded for exceptional service to the Danubian Confederation and its peoples.
+              {t("her.order.subtitle")}
             </p>
           </div>
 
@@ -733,7 +733,7 @@ export default function Heraldry() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Founded by Emperor Franz Ferdinand I on the 12th of June, 1917 — the day of the proclamation of the Danubian Federation — the Order of the Golden Eagle is the supreme order of chivalry of the {t("her.pretitle")}. It is awarded exclusively by the Emperor, acting on his personal initiative, and is limited to twelve living members at any one time.
+                {t("her.order.p1")}
               </p>
               <p
                 style={{
@@ -780,12 +780,12 @@ export default function Heraldry() {
                   Statutes of the Order
                 </div>
                 {[
-                  { label: "Founded", value: "12 June 1917" },
-                  { label: "Founder", value: "Emperor Franz Ferdinand I" },
-                  { label: "Membership", value: "Maximum 12 living members" },
-                  { label: "Awarded by", value: "The Emperor, personally" },
-                  { label: "Total awards", value: "94 (as of 2026)" },
-                  { label: "Motto", value: "Pro Aquila et Flumen" },
+                  { label: t("her.order.spec.founded.l"), value: t("her.order.spec.founded.v") },
+                  { label: t("her.order.spec.founder.l"), value: t("her.order.spec.founder.v") },
+                  { label: t("her.order.spec.members.l"), value: t("her.order.spec.members.v") },
+                  { label: t("her.order.spec.awarded.l"), value: t("her.order.spec.awarded.v") },
+                  { label: t("her.order.spec.total.l"), value: t("her.order.spec.total.v") },
+                  { label: t("her.order.spec.motto.l"), value: t("her.order.spec.motto.v") },
                 ].map((item, i) => (
                   <div
                     key={i}
@@ -911,7 +911,7 @@ export default function Heraldry() {
                   marginBottom: "1rem",
                 }}
               >
-                V &nbsp;·&nbsp; The Imperial Flag
+                {t("her.sec5")}
               </div>
               <h2
                 style={{
@@ -935,7 +935,7 @@ export default function Heraldry() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The flag of the Danubian Confederation bears the Imperial colours of black and gold — Sable and Or — in two horizontal bands, echoing the ancient livery of the Habsburg dynasty. At its centre, the Imperial Crown of the Confederation is displayed above the combined arms of the member kingdoms, encircled by twelve golden stars representing the founding member states.
+                {t("her.flag.p1")}
               </p>
               <p
                 style={{
@@ -978,7 +978,7 @@ export default function Heraldry() {
                   opacity: 0.8,
                 }}
               >
-                VI &nbsp;·&nbsp; The Crown
+                {t("her.sec6")}
               </div>
               <h2
                 style={{
@@ -1002,7 +1002,7 @@ export default function Heraldry() {
                   marginBottom: "1.25rem",
                 }}
               >
-                The Federation Crown is the supreme symbol of Imperial authority within the Danubian Confederation. It was commissioned by Emperor Franz Ferdinand I in 1920, following the reconstitution of the Danubian state, and required three years of painstaking work to complete, being presented to the Emperor in 1923. Crafted entirely in platinum by the Viennese atelier of Köchert & Söhne, it rises in fourteen towers — each one representing one of the fourteen constituent states of the Federation — set throughout with pearls, diamonds, rubies, sapphires, and emeralds of the first water. At its apex stands a cross of platinum surmounted by a cabochon ruby of exceptional size.
+                {t("her.fecrown.p1")}
               </p>
               <p
                 style={{
@@ -1022,14 +1022,14 @@ export default function Heraldry() {
                   background: "oklch(0.12 0.005 285)",
                 }}
               >
-                <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.2em", color: GOLD, textTransform: "uppercase", marginBottom: "0.75rem" }}>Specifications</div>
+                <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.6rem", letterSpacing: "0.2em", color: GOLD, textTransform: "uppercase", marginBottom: "0.75rem" }}>{t("her.specs.title")}</div>
                 {[
-                  ["Material", "Platinum, pearls, diamonds, rubies, sapphires, emeralds"],
-                  ["Commissioned", "Emperor Franz Ferdinand I, 1920"],
-                  ["Maker", "Köchert & Söhne, Vienna, 1920–1923"],
-                  ["Towers", "Fifteen — one for each state of the Federation"],
-                  ["Apex", "Platinum cross with cabochon ruby"],
-                  ["Location", "Imperial Treasury, Hofburg, Neustadt"],
+                  [t("her.crown.spec.material.l"), t("her.crown.spec.material.v")],
+                  [t("her.crown.spec.commissioned.l"), t("her.crown.spec.commissioned.v")],
+                  [t("her.crown.spec.maker.l"), t("her.crown.spec.maker.v")],
+                  [t("her.crown.spec.towers.l"), t("her.crown.spec.towers.v")],
+                  [t("her.crown.spec.apex.l"), t("her.crown.spec.apex.v")],
+                  [t("her.crown.spec.location.l"), t("her.crown.spec.location.v")],
                 ].map(([label, value], i) => (
                   <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "0.5rem 0", borderBottom: i < 5 ? `1px solid oklch(0.72 0.12 85 / 0.1)` : "none" }}>
                     <span style={{ fontFamily: "'Cinzel', serif", fontSize: "0.65rem", letterSpacing: "0.1em", color: "oklch(0.55 0.01 85)", textTransform: "uppercase" }}>{label}</span>
@@ -1114,7 +1114,7 @@ export default function Heraldry() {
                   marginBottom: "1rem",
                 }}
               >
-                VII &nbsp;·&nbsp; The Ancient Order
+                {t("her.sec7")}
               </div>
               <h2
                 style={{
@@ -1195,13 +1195,13 @@ export default function Heraldry() {
                   Statutes of the Order
                 </div>
                 {[
-                  ["Founded", "10 January 1430, Bruges"],
-                  ["Founder", "Philip the Good, Duke of Burgundy"],
-                  ["Passed to Habsburgs", "1477, by marriage"],
-                  ["Membership", "Sovereign + 24 knights"],
-                  ["Insignia", "La Potence — the golden collar"],
-                  ["Motto", "Ante ferit quam flamma micet"],
-                  ["Location", "Imperial Treasury, Hofburg, Neustadt"],
+                  [t("her.fleece.spec.founded.l"), t("her.fleece.spec.founded.v")],
+                  [t("her.fleece.spec.founder.l"), t("her.fleece.spec.founder.v")],
+                  [t("her.fleece.spec.passed.l"), t("her.fleece.spec.passed.v")],
+                  [t("her.fleece.spec.members.l"), t("her.fleece.spec.members.v")],
+                  [t("her.fleece.spec.insignia.l"), t("her.fleece.spec.insignia.v")],
+                  [t("her.fleece.spec.motto.l"), t("her.fleece.spec.motto.v")],
+                  [t("her.crown.spec.location.l"), t("her.crown.spec.location.v")],
                 ].map(([label, value], i) => (
                   <div
                     key={i}

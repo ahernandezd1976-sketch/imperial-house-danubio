@@ -39,10 +39,7 @@ const properties = [
     subtitleKey: "prop.hofburg.subtitle",
     locationKey: "prop.hofburg.location",
     flag: "🇦🇹",
-    era: "13th century — present",
-    description:
-      "The Hofburg is the historic heart of the Imperial House — a vast complex of palaces, chapels, and state apartments that has served as the winter residence of the dynasty since the thirteenth century. Its Baroque and Neoclassical wings house the Imperial Apartments, the Sisi Museum, and the Imperial Silver Collection. The Hofburg remains the official seat of the Imperial Chancellery.",
-    visitNote: "Open to the public on the first and third Saturday of each month, 10:00–16:00.",
+    eraKey: "prop.hofburg.era",
     image: "/manus-storage/hofburg_5d7a6dae.webp",
     tagKey: "prop.hofburg.tag",
     tagColor: GOLD,
@@ -55,10 +52,7 @@ const properties = [
     subtitleKey: "prop.schonbrunn.subtitle",
     locationKey: "prop.hofburg.location",
     flag: "🇦🇹",
-    era: "1696 — present",
-    description:
-      "Schönbrunn is the grandest of the Imperial summer residences, its 1,441 rooms and sweeping formal gardens stretching across the western suburbs of Vienna. Commissioned in the late seventeenth century, it served as the preferred summer court of the dynasty for over three centuries. The Great Gallery, the Millions Room, and the Gloriette pavilion remain among the finest examples of Imperial Baroque in Central Europe.",
-    visitNote: "Open to the public on the second and fourth Sunday of each month, 09:00–15:00.",
+    eraKey: "prop.schonbrunn.era",
     image: "/manus-storage/schonbrunn_df205bcc.png",
     tagKey: "prop.schonbrunn.tag",
     tagColor: "oklch(0.55 0.08 85)",
@@ -71,10 +65,7 @@ const properties = [
     subtitleKey: "prop.belvedere.subtitle",
     locationKey: "prop.hofburg.location",
     flag: "🇦🇹",
-    era: "1714 — present",
-    description:
-      "The Upper and Lower Belvedere form one of the finest Baroque palace complexes in Europe, set within magnificent formal gardens descending in terraces from the Upper Palace to the Orangery. Originally built for Prince Eugene of Savoy, the Belvedere passed to the Imperial House in 1752. Its state rooms are used for official receptions and diplomatic functions of the highest order.",
-    visitNote: "Open to the public on the first Sunday of each month, 10:00–14:00.",
+    eraKey: "prop.belvedere.era",
     image: "/manus-storage/belvedere_7304965c.png",
     tagKey: "prop.belvedere.tag",
     tagColor: "oklch(0.45 0.07 150)",
@@ -87,10 +78,7 @@ const properties = [
     subtitleKey: "prop.laxenburg.subtitle",
     locationKey: "prop.laxenburg.location",
     flag: "🇦🇹",
-    era: "14th century — present",
-    description:
-      "Set within an English landscape park of over 250 hectares, the Laxenburg complex comprises the Blue Court, the Franzensburg — a romantic neo-Gothic castle on an island in the palace lake — and the Old Palace. For centuries the preferred spring retreat of the Imperial family, Laxenburg retains an atmosphere of quiet, pastoral grandeur far removed from the ceremonial weight of the Vienna residences.",
-    visitNote: "Open to the public on the second Saturday of each month, 10:00–15:00.",
+    eraKey: "prop.laxenburg.era",
     image: "/manus-storage/laxenburg_palace_736e60bb.png",
     tagKey: "prop.laxenburg.tag",
     tagColor: "oklch(0.45 0.07 150)",
@@ -103,10 +91,7 @@ const properties = [
     subtitleKey: "prop.budapest.subtitle",
     locationKey: "prop.budapest.location",
     flag: "🇭🇺",
-    era: "14th century — present",
-    description:
-      "Crowning the Castle Hill above the Danube, the Royal Palace of Budapest is the historic seat of the Hungarian Crown within the Danubian Confederation. Its Neo-Baroque façade, restored and extended in the early twentieth century, overlooks the Chain Bridge and the Parliament across the river. The throne room and the Hungarian state apartments are among the most splendid interiors in Central Europe.",
-    visitNote: "Open to the public on the third Saturday of each month, 10:00–15:00.",
+    eraKey: "prop.budapest.era",
     image: "/manus-storage/budapest_castle_a9b51aa6.webp",
     tagKey: "prop.budapest.tag",
     tagColor: "oklch(0.5 0.15 30)",
@@ -119,10 +104,7 @@ const properties = [
     subtitleKey: "prop.prague.subtitle",
     locationKey: "prop.prague.location",
     flag: "🇨🇿",
-    era: "9th century — present",
-    description:
-      "Prague Castle — Pražský hrad — is the largest ancient castle complex in the world, encompassing palaces, churches, gardens, and galleries spread across a hilltop above the Vltava. The Imperial apartments within the Old Royal Palace and the Spanish Hall served as the Bohemian seat of the dynasty for centuries. The Cathedral of St. Vitus, containing the Bohemian Crown Jewels, stands at its heart.",
-    visitNote: "Open to the public on the first and third Sunday of each month, 09:00–14:00.",
+    eraKey: "prop.prague.era",
     image: "https://images.unsplash.com/photo-1541849546-216549ae216d?w=1200&q=85",
     tagKey: "prop.prague.tag",
     tagColor: "oklch(0.4 0.1 260)",
@@ -135,10 +117,7 @@ const properties = [
     subtitleKey: "prop.miramare.subtitle",
     locationKey: "prop.miramare.location",
     flag: "🇮🇹",
-    era: "1856 — present",
-    description:
-      "Perched on a rocky promontory above the Gulf of Trieste, Miramare Castle was built between 1856 and 1860 for Archduke Maximilian of Austria. Its white Neo-Gothic towers rise directly from the Adriatic Sea, surrounded by a park of exotic trees and formal gardens. The castle's interiors — preserved almost entirely in their original state — evoke the romantic sensibility of the mid-nineteenth century Imperial court.",
-    visitNote: "Open to the public on the second Saturday of each month, 10:00–16:00.",
+    eraKey: "prop.miramare.era",
     image: "/manus-storage/miramare_castle_756fbc7c.png",
     tagKey: "prop.miramare.tag",
     tagColor: "oklch(0.45 0.1 220)",
@@ -151,10 +130,7 @@ const properties = [
     subtitleKey: "prop.hermes.subtitle",
     locationKey: "prop.hofburg.location",
     flag: "🇦🇹",
-    era: "1886 — present",
-    description:
-      "Built by Emperor Franz Joseph I as a personal retreat for the Empress Elisabeth within the Lainzer Tiergarten nature reserve, the Hermes Villa is a Historicist jewel of intimate scale. Its rooms, decorated by Hans Makart and Gustav Klimt, reflect the refined private taste of the Imperial couple. Surrounded by ancient woodland, the villa remains one of the most atmospheric of the Imperial residences.",
-    visitNote: "Open to the public on the fourth Saturday of each month, 10:00–14:00.",
+    eraKey: "prop.hermes.era",
     image: "/manus-storage/hermes_villa_7f607740.png",
     tagKey: "prop.hermes.tag",
     tagColor: "oklch(0.45 0.07 150)",
@@ -621,7 +597,7 @@ export default function Properties() {
                       letterSpacing: "0.05em",
                     }}
                   >
-                    {t(prop.subtitleKey)} &nbsp;·&nbsp; {prop.era}
+                    {t(prop.subtitleKey)} &nbsp;·&nbsp; {t(prop.eraKey)}
                   </div>
                   <p
                     style={{

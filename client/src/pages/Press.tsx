@@ -1,8 +1,9 @@
-// Press page — Die Wiener Eleganz · Court Season Special · January 2026
+// Press page — {t("press.page.title")} · Court Season Special · January 2026
 // Design philosophy: Broadsheet editorial aesthetic — serif typography, generous whitespace,
 // full-bleed photography, pull quotes in gold, classical column layout.
 
 import { Link } from "wouter";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const IMAGES = {
   cortege:
@@ -20,6 +21,7 @@ const IMAGES = {
 };
 
 export default function Press() {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-[#F5F0E8]" style={{ fontFamily: "'Cormorant Garamond', 'Georgia', serif" }}>
 
@@ -29,7 +31,7 @@ export default function Press() {
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[#1a1a1a]" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700 }}>
           Court Season Special
         </h1>
-        <p className="text-xs tracking-[0.25em] uppercase text-[#8B7355] mt-1">January 2026 · Vienna</p>
+        <p className="text-xs tracking-[0.25em] uppercase text-[#8B7355] mt-1">{t("press.page.date")}</p>
         <div className="mt-4 flex items-center justify-center gap-4">
           <div className="h-px flex-1 max-w-24 bg-[#8B7355]" />
           <span className="text-[#8B7355] text-lg">✦</span>
@@ -65,7 +67,7 @@ export default function Press() {
             <span className="text-[#8B7355]">✦</span>
             <div className="h-px flex-1 max-w-32 bg-[#8B7355]" />
           </div>
-          <p className="text-sm tracking-[0.2em] uppercase text-[#8B7355]">By Constanze Veltri-Hofer · Fashion &amp; Society Correspondent</p>
+          <p className="text-sm tracking-[0.2em] uppercase text-[#8B7355]">{t("press.page.byline")}</p>
         </div>
 
         {/* Opening paragraph */}
@@ -74,7 +76,7 @@ export default function Press() {
             There is a moment, just before half-past nine on the last Friday of January, when the Grand Ballroom of the Hofburg falls absolutely silent. Two thousand guests — in white tie, in orders and decorations, in gowns that have taken the better part of the autumn to construct — hold their breath. The great chandeliers, each one a constellation of Bohemian crystal, throw their light across a sea of silk and platinum and ancient lace. The Obersthofmeister, Baron Karl von Sternberg, raises his staff. And then, from the far end of the hall, His Imperial Majesty Emperor Maximilian II enters, and the orchestra strikes up.
           </p>
           <p className="text-lg leading-relaxed text-[#2a2a2a] mt-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            This is the Court Ball. It has not changed in its essentials since Emperor Franz Ferdinand I revived it in 1919. And yet, in January 2026, it has never felt more alive.
+            {t("press.page.intro2")}
           </p>
         </div>
 
@@ -84,13 +86,13 @@ export default function Press() {
             The Arrival
           </h3>
           <p className="text-lg leading-relaxed text-[#2a2a2a] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            The first thing a guest notices, arriving at the Hofburg on the last Friday of January, is not the footmen in imperial livery, nor the scent of white roses banked along the Schweizerhof. It is that everything is exactly where it should be.
+            {t("press.page.arrival.p1")}
           </p>
           <p className="text-lg leading-relaxed text-[#2a2a2a] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Your name is at the door. Your table is where VEGA said it would be. The debutante beside you has her briefing memorised — she checked it on the way here, the same way one checks the time. Countess Isabelle von Trauttmansdorff-Weinsberg, twenty, presented this year in a column of ivory duchess satin by Maison Leitner, shrugs when asked. <em>"My grandmother had a governess for this,"</em> she says. <em>"I had VEGA. I think we both turned out all right."</em>
           </p>
           <p className="text-lg leading-relaxed text-[#2a2a2a]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            The Hofmarschall, Countess Maria-Theresia von Esterházy, moves through the room with the particular ease of someone who has not had to explain a seating plan in five years.
+            {t("press.page.arrival.p3")}
           </p>
         </div>
 
@@ -117,12 +119,12 @@ export default function Press() {
             {/* Pull quote */}
             <blockquote className="border-l-4 border-[#8B7355] pl-4 my-4">
               <p className="text-xl italic text-[#8B7355]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                "The waltz makes you feel that time is not a line. It is a circle."
+                "{t("press.page.waltz.quote")}"
               </p>
               <cite className="text-xs tracking-[0.2em] uppercase text-[#8B7355] not-italic">— Johann Leopold Strauss</cite>
             </blockquote>
             <p className="text-lg leading-relaxed text-[#2a2a2a]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              He conducts from memory, without a score, with the easy authority of a man who has heard this music in his sleep since childhood. The Turkish Ambassador, a man not known for sentiment, was observed to close his eyes.
+              {t("press.page.waltz.p2")}
             </p>
           </div>
         </div>
@@ -200,7 +202,7 @@ export default function Press() {
           </p>
           <blockquote className="border-l-4 border-[#8B7355] pl-4 my-6">
             <p className="text-2xl italic text-[#8B7355]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              "I have attended this ball for thirty years. I have never wept before. I wept tonight."
+              "{t("press.page.drones.quote")}"
             </p>
             <cite className="text-xs tracking-[0.2em] uppercase text-[#8B7355] not-italic">— Princess Mathilde von Schwarzenberg</cite>
           </blockquote>
@@ -215,7 +217,7 @@ export default function Press() {
             No account of the Court Ball is complete without the bonbonnière — the small lacquered box, filled with Imperial confections, presented to each guest upon departure. This year's edition, by <strong>Wiener Werkstätte Neu</strong>: a box of imperial black lacquer with a double-headed eagle in twenty-four-carat gold relief on the lid. Inside: a Mozartkugel, a violet cream, a dark chocolate truffle dusted with edible gold, and a small card printed with the date and the Imperial cipher. On the reverse, in the smallest possible type, a single line:
           </p>
           <p className="text-center text-sm italic text-[#8B7355] tracking-wide my-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            Prepared with the assistance of VEGA · Imperial Institute of Applied Sciences, Neustadt · 2026.
+            {t("press.page.bonbonniere.vega")}
           </p>
           {/* Bonbonnière image */}
           <img
@@ -236,17 +238,17 @@ export default function Press() {
           <div className="h-px flex-1 bg-[#8B7355]" />
         </div>
         <p className="text-center text-xs tracking-[0.2em] uppercase text-[#8B7355]">
-          Die Wiener Eleganz · Journal of Fashion, Society &amp; Culture · Published from Vienna since 1923
+          {t("press.page.footer1")}
         </p>
         <p className="text-center text-xs tracking-[0.2em] uppercase text-[#8B7355] mt-1">
-          Court Season coverage continues in our February issue
+          {t("press.page.footer2")}
         </p>
 
         {/* Back link */}
         <div className="text-center mt-12">
           <Link href="/">
             <span className="text-sm tracking-[0.25em] uppercase text-[#8B7355] hover:text-[#1a1a1a] transition-colors cursor-pointer border-b border-[#8B7355]">
-              ← Return to the Imperial House
+              {t("press.page.back")}
             </span>
           </Link>
         </div>

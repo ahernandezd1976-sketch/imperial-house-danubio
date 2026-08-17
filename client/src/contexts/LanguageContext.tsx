@@ -539,7 +539,8 @@ const translations: Record<Language, Record<string, string>> = {
 };
 
 // Merge all page translations into a single lookup
-const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations];
+import { pressTranslations } from "../i18n/press";
+const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations, pressTranslations];
 
 function mergeTranslations(): Record<Language, Record<string, string>> {
   const langs: Language[] = ["de", "en", "fr", "hu", "cs", "hr", "es"];

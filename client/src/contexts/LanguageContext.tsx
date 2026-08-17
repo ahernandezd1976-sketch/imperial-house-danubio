@@ -3,7 +3,7 @@
  * Default: German (de), with English, French, Hungarian, Czech, Croatian
  */
 import { createContext, useContext, useState, useCallback, useMemo, type ReactNode } from "react";
-import { historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations } from "@/i18n";
+import { historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, pressTranslations, newsTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations } from "@/i18n";
 
 export type Language = "de" | "en" | "fr" | "hu" | "cs" | "hr" | "es";
 
@@ -37,6 +37,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.books": "Der Donau-Thron",
     "nav.press": "Presse",
     "nav.transparency": "Transparenz",
+    "nav.news": "Nachrichten",
     // Header
     "header.imperialHouse": "Kaiserliches Haus",
     // Hero
@@ -116,6 +117,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.books": "The Danubian Throne",
     "nav.press": "Press",
     "nav.transparency": "Transparency",
+    "nav.news": "News",
     "header.imperialHouse": "Imperial House",
     "hero.pretitle": "Est. MCMXVII · Neustadt, Danubio",
     "hero.title1": "Imperial House",
@@ -186,6 +188,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.books": "Le Trône Danubien",
     "nav.press": "Presse",
     "nav.transparency": "Transparence",
+    "nav.news": "Nouvelles",
     "header.imperialHouse": "Maison Impériale",
     "hero.pretitle": "Fond. MCMXVII · Neustadt, Danube",
     "hero.title1": "Maison Impériale",
@@ -256,6 +259,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.books": "A Dunai Trón",
     "nav.press": "Sajtó",
     "nav.transparency": "Átláthatóság",
+    "nav.news": "Hírek",
     "header.imperialHouse": "Császári Ház",
     "hero.pretitle": "Alapítva MCMXVII · Neustadt, Duna",
     "hero.title1": "Császári Ház",
@@ -326,6 +330,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.books": "Dunajský Trůn",
     "nav.press": "Tisk",
     "nav.transparency": "Transparentnost",
+    "nav.news": "Zprávy",
     "header.imperialHouse": "Císařský Dům",
     "hero.pretitle": "Zal. MCMXVII · Neustadt, Dunaj",
     "hero.title1": "Císařský Dům",
@@ -395,6 +400,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.books": "Dunavski Prijestolje",
     "nav.press": "Tisak",
     "nav.transparency": "Transparentnost",
+    "nav.news": "Vijesti",
     "header.imperialHouse": "Carski Dom",
     "hero.pretitle": "Osn. MCMXVII · Neustadt, Dunav",
     "hero.title1": "Carski Dom",
@@ -463,6 +469,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.constitution": "Constitución",
     "nav.press": "Prensa",
     "nav.transparency": "Transparencia",
+    "nav.news": "Noticias",
     "nav.books": "El Trono del Danubio",
     "hero.pretitle": "Fundada MCMXVII · Neustadt, Danubio",
     "hero.title1": "Casa Imperial",
@@ -539,8 +546,7 @@ const translations: Record<Language, Record<string, string>> = {
 };
 
 // Merge all page translations into a single lookup
-import { pressTranslations } from "../i18n/press";
-const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations, pressTranslations];
+const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations, pressTranslations, newsTranslations];
 
 function mergeTranslations(): Record<Language, Record<string, string>> {
   const langs: Language[] = ["de", "en", "fr", "hu", "cs", "hr", "es"];

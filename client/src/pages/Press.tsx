@@ -21,7 +21,7 @@ const IMAGES = {
 };
 
 export default function Press() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
     <div className="min-h-screen bg-[#F5F0E8]" style={{ fontFamily: "'Cormorant Garamond', 'Georgia', serif" }}>
 
@@ -49,7 +49,7 @@ export default function Press() {
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-6 md:px-16 py-6">
           <p className="text-white/80 text-xs tracking-[0.2em] uppercase">
-            His Imperial Majesty Emperor Maximilian II leads the Imperial cortège into the Grand Ballroom of the Hofburg, followed by Crown Prince Leopold von Habsburg and Fräulein Katharina von Richter · Hofburg Palace, Vienna · January 2026
+            {t("press.page.caption.hero")}
           </p>
         </div>
       </div>
@@ -68,12 +68,24 @@ export default function Press() {
             <div className="h-px flex-1 max-w-32 bg-[#8B7355]" />
           </div>
           <p className="text-sm tracking-[0.2em] uppercase text-[#8B7355]">{t("press.page.byline")}</p>
+        <button
+          onClick={() => {
+            const url = `${window.location.origin}/press?lang=${language}`;
+            navigator.clipboard.writeText(url);
+            const btn = document.getElementById("copy-link-btn");
+            if (btn) { btn.textContent = "✓"; setTimeout(() => btn.textContent = "⎘", 2000); }
+          }}
+          id="copy-link-btn"
+          className="mt-3 text-xs tracking-[0.2em] uppercase px-4 py-1.5 border transition-all duration-200 hover:scale-[0.97]"
+          style={{ borderColor: "oklch(0.72 0.12 85 / 0.3)", color: "#8B7355", fontFamily: "'Cinzel', serif" }}
+          title="Copy link"
+        >⎘</button>
         </div>
 
         {/* Opening paragraph */}
         <div className="prose-custom mb-10">
           <p className="text-xl md:text-2xl leading-relaxed text-[#2a2a2a] first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:text-[#8B7355]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            There is a moment, just before half-past nine on the last Friday of January, when the Grand Ballroom of the Hofburg falls absolutely silent. Two thousand guests — in white tie, in orders and decorations, in gowns that have taken the better part of the autumn to construct — hold their breath. The great chandeliers, each one a constellation of Bohemian crystal, throw their light across a sea of silk and platinum and ancient lace. The Obersthofmeister, Baron Karl von Sternberg, raises his staff. And then, from the far end of the hall, His Imperial Majesty Emperor Maximilian II enters, and the orchestra strikes up.
+            {t("press.page.intro1")}
           </p>
           <p className="text-lg leading-relaxed text-[#2a2a2a] mt-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             {t("press.page.intro2")}
@@ -106,7 +118,7 @@ export default function Press() {
             style={{ display: "block", height: "auto" }}
           />
             <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2">
-              Countess Isabelle von Trauttmansdorff-Weinsberg makes her presentation to the Imperial Family · Maison Leitner, ivory duchess satin · Jewels by A. E. Köchert, Vienna
+              {t("press.page.caption.debutante")}
             </p>
           </div>
           <div className="flex flex-col justify-center">
@@ -138,7 +150,7 @@ export default function Press() {
             style={{ display: "block", height: "auto" }}
           />
           <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2">
-            Johann Leopold Strauss, great-great-great-grandson of Johann Strauss II, conducts the Imperial Court Orchestra · Hofburg Grand Ballroom · January 2026
+            {t("press.page.caption.strauss")}
           </p>
         </div>
 
@@ -149,18 +161,18 @@ export default function Press() {
               What to Wear
             </h3>
             <p className="text-lg leading-relaxed text-[#2a2a2a] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              The dominant silhouette this season is architectural: structured shoulders, narrow waists, and skirts that move with the waltz rather than against it. The influence of the Viennese Secession is everywhere — geometric embroidery, gold leaf appliqué, the sinuous line of Klimt translated into beading and silk.
+              {t("press.page.fashion.p2")}
             </p>
             <p className="text-lg leading-relaxed text-[#2a2a2a] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              The jewellery of the 2026 season is, broadly, unafraid. The trend — if one can call a consensus among the most confident women in the Confederation a trend — is toward scale and structure: wide cuffs in hammered gold, ear pieces that extend rather than hang, tiaras redesigned as architectural headbands with stones set flush rather than raised.
+              {t("press.page.fashion.p3")}
             </p>
             <blockquote className="border-l-4 border-[#8B7355] pl-4 my-4">
               <p className="text-xl italic text-[#8B7355]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                "The effect is not of old money quietly displayed, but of a civilisation that has decided it has earned the right to be seen."
+                "{t("press.page.fashion.quote")}"
               </p>
             </blockquote>
             <p className="text-lg leading-relaxed text-[#2a2a2a]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              Crown Prince Leopold wore a masterpiece by <strong>Schneider &amp; Sohn</strong> in superfine black wool, with the sash of the Order of the Golden Eagle and, on his lapel, edelweiss in white enamel and pavé diamond. Beside him, Fräulein Katharina von Richter wore pale gold silk organza by <strong>Maison Leitner</strong> and, at her throat, a wide crescent of yellow gold set with a continuous line of cushion-cut diamonds by <strong>A. E. Köchert</strong>, the Imperial and Royal Court Jewellers — the most discussed piece of jewellery of the evening.
+              {t("press.page.fashion.p4")}
             </p>
           </div>
           <div className="order-1 md:order-2">
@@ -171,7 +183,7 @@ export default function Press() {
             style={{ display: "block", height: "auto" }}
           />
             <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2">
-              The first waltz of the evening · Maison Leitner black silk faille with gold leaf bodice · Goldschmiede Weiss emerald collar necklace in geometric white gold
+              {t("press.page.caption.waltz")}
             </p>
           </div>
         </div>
@@ -185,7 +197,7 @@ export default function Press() {
             style={{ display: "block", height: "auto" }}
           />
           <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2">
-            Three hundred and sixty drones choreographed by Lichtarchitektur above the Hofburg · The double-headed eagle dissolves into the fourteen stars of the Danubian Federation · January 2026
+            {t("press.page.caption.drones")}
           </p>
         </div>
 
@@ -227,7 +239,7 @@ export default function Press() {
             style={{ display: "block", height: "auto", maxWidth: "600px", margin: "0 auto" }}
           />
           <p className="text-xs text-[#8B7355] tracking-[0.15em] uppercase mt-2 text-center">
-            The 2026 Court Ball bonbonnière · Wiener Werkstätte Neu · Imperial black lacquer, 24-carat gold double-headed eagle · Confections by K. u. K. Hofzuckerbäcker Demel, Vienna
+            {t("press.page.caption.bonbonniere")}
           </p>
         </div>
 

@@ -9,3 +9,4 @@ export { traditionsTranslations } from "./traditions";
 export { heraldryTranslations } from "./heraldry";
 export { propertiesTranslations } from "./properties";
 export { pressTranslations } from "./press";
+export { newsTranslations } from "./news";

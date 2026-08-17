@@ -16,6 +16,7 @@ import World from "./pages/World";
 import Constitution from "./pages/Constitution";
 import Books from "./pages/Books";
 import Press from "./pages/Press";
+import News from "./pages/News";
 import Transparency from "./pages/Transparency";
 import { SocialShareBar } from "./components/SocialShareBar";
 import DynamicMeta from "./components/DynamicMeta";

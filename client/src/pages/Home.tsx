@@ -521,7 +521,7 @@ export default function Home() {
             <div className="reveal flex justify-center order-2 lg:order-1" style={{ transitionDelay: "0.2s" }}>
               <div style={{ maxWidth: "340px", width: "100%" }}>
                 <img
-                  src="/manus-storage/emperor_engraving_a2dd5d8f.png"
+                  src="/manus-storage/emperor_engraving_german_c468c181.png"
                   alt="His Imperial Majesty Emperor Maximilian II"
                   className="portrait-frame"
                   style={{ width: "100%", height: "auto", display: "block" }}

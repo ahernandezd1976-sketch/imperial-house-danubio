@@ -17,6 +17,7 @@ import Books from "./pages/Books";
 import Press from "./pages/Press";
 import Transparency from "./pages/Transparency";
 import { SocialShareBar } from "./components/SocialShareBar";
+import DynamicMeta from "./components/DynamicMeta";
 
 function Router() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <TooltipProvider>
             <Toaster />
             <Router />
+      <DynamicMeta />
             <SocialShareBar />
           </TooltipProvider>
         </ThemeProvider>

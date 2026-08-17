@@ -157,7 +157,29 @@ const traditions = [
 ];
 
 export default function Traditions() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  // Spanish translations for tradition items
+  const tradEs: Record<string, { title: string; subtitle: string; desc: string }> = {
+    "The Proclamation of the Emperor": { title: t("trad.proc.title"), subtitle: t("trad.proc.subtitle"), desc: t("trad.proc.desc") },
+    "The Feast of the Eagle": { title: t("trad.eagle.title"), subtitle: t("trad.eagle.subtitle"), desc: t("trad.eagle.desc") },
+    "The Investiture of the Order of the Golden Eagle": { title: t("trad.order.title"), subtitle: t("trad.order.subtitle"), desc: t("trad.order.desc") },
+    "The Blessing of the Danube": { title: t("trad.danube.title"), subtitle: t("trad.danube.subtitle"), desc: t("trad.danube.desc") },
+    "The Imperial Hunt": { title: t("trad.hunt.title"), subtitle: t("trad.hunt.subtitle"), desc: t("trad.hunt.desc") },
+    "The Imperial Court Balls": { title: t("trad.courtball.title"), subtitle: t("trad.courtball.subtitle"), desc: t("trad.courtball.desc") },
+    "The Spring Ball": { title: t("trad.spring.title"), subtitle: t("trad.spring.subtitle"), desc: t("trad.spring.desc") },
+    "Federation Day": { title: t("trad.federation.title"), subtitle: t("trad.federation.subtitle"), desc: t("trad.federation.desc") },
+    "The Imperial Birthday": { title: t("trad.birthday.title"), subtitle: t("trad.birthday.subtitle"), desc: t("trad.birthday.desc") },
+    "Konopiště Day": { title: t("trad.konopiste.title"), subtitle: t("trad.konopiste.subtitle"), desc: t("trad.konopiste.desc") },
+    "The New Year\'s Concert": { title: t("trad.newyear.title"), subtitle: t("trad.newyear.subtitle"), desc: t("trad.newyear.desc") },
+  };
+  const getTrad = (t_item: { title: string; subtitle: string; description: string }) => {
+    if (language === "en") return t_item;
+    const es = tradEs[t_item.title];
+    if (es) return { title: es.title, subtitle: es.subtitle, description: es.desc };
+    return t_item;
+  };
+
   useScrollReveal();
 
   useEffect(() => {
@@ -231,7 +253,7 @@ export default function Traditions() {
       </section>
 
       {/* Traditions list */}
-      {traditions.map((t, i) => (
+      {traditions.map((trad, i) => (
         <section
           key={i}
           style={{
@@ -253,7 +275,7 @@ export default function Traditions() {
                     marginBottom: "0.5rem",
                   }}
                 >
-                  {t.numeral}
+                  {trad.numeral}
                 </div>
                 <div
                   style={{
@@ -278,7 +300,7 @@ export default function Traditions() {
                     opacity: 0.8,
                   }}
                 >
-                  {t.subtitle}
+                  {getTrad(trad).subtitle}
                 </div>
                 <h2
                   style={{
@@ -291,7 +313,7 @@ export default function Traditions() {
                     letterSpacing: "0.03em",
                   }}
                 >
-                  {t.title}
+                  {getTrad(trad).title}
                 </h2>
                 <p
                   style={{
@@ -302,7 +324,7 @@ export default function Traditions() {
                     marginBottom: "1.5rem",
                   }}
                 >
-                  {t.description}
+                  {getTrad(trad).description}
                 </p>
                 <div
                   style={{
@@ -320,11 +342,11 @@ export default function Traditions() {
                       lineHeight: 1.7,
                     }}
                   >
-                    {t.detail}
+                    {trad.detail}
                   </p>
                 </div>
-                {t.audio && (
-                  <HymnPlayer src={t.audio} isDark={i % 2 !== 0} />
+                {trad.audio && (
+                  <HymnPlayer src={trad.audio} isDark={i % 2 !== 0} />
                 )}
               </div>
             </div>

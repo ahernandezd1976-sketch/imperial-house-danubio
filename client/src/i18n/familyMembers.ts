@@ -717,6 +717,8 @@ export function getFamilyMembers(language: Language): FamilyMember[] {
       return familyMembersCS;
     case "hr":
       return familyMembersHR;
+    case "es":
+      return familyMembersEN;
     default:
       return familyMembersEN;
   }

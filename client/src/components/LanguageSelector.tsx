@@ -89,6 +89,16 @@ function BohemianFlag() {
   );
 }
 
+function SpainFlag() {
+  return (
+    <svg viewBox="0 0 30 20" width="20" height="13">
+      <rect width="30" height="5" fill="#c60b1e" />
+      <rect y="5" width="30" height="10" fill="#ffc400" />
+      <rect y="15" width="30" height="5" fill="#c60b1e" />
+    </svg>
+  );
+}
+
 const languages: { code: Language; label: string; Flag: React.FC }[] = [
   { code: "de", label: "Deutsch", Flag: () => (
     <svg viewBox="0 0 30 20" width="20" height="13">
@@ -102,6 +112,7 @@ const languages: { code: Language; label: string; Flag: React.FC }[] = [
   { code: "hu", label: "Magyar", Flag: HungarianFlag },
   { code: "cs", label: "Čeština", Flag: BohemianFlag },
   { code: "hr", label: "Hrvatski", Flag: CroatianFlag },
+  { code: "es", label: "Español", Flag: SpainFlag },
 ];
 
 export default function LanguageSelector() {

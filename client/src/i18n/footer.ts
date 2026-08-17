@@ -85,4 +85,19 @@ export const footerTranslations: Record<Language, Record<string, string>> = {
     "footer.copyright": "© MMXXVI Carski Dom Austrija-Dunav — Sva Prava Pridržana",
     "footer.disclaimer": "Ovo je fiktivna institucija stvorena u književne svrhe.",
   },
+
+  es: {
+    "footer.brand": "Imperial House",
+    "footer.brandSub": "Austria-Danubio",
+    "footer.nav": "Navigation",
+    "footer.navHome": "Home",
+    "footer.navHistory": "History",
+    "footer.navFamily": "The Imperial Family",
+    "footer.navTraditions": "Traditions",
+    "footer.navHeraldry": "Heraldry",
+    "footer.navProperties": "Imperial Properties",
+    "footer.chancery": "Imperial Chancery",
+    "footer.copyright": "© MMXXVI Imperial House of Austria-Danubio — All Rights Reserved",
+    "footer.disclaimer": "This is a fictional institution created for literary purposes.",
+  },
 };

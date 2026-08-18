@@ -89,7 +89,7 @@ const translations: Record<Language, Record<string, string>> = {
     "timeline.1917.desc": "Kaiser Franz Ferdinand I. unterzeichnet den Vertrag von Wien und verwandelt die Österreichisch-Ungarische Monarchie in die Donauföderation von vierzehn Gliedstaaten mit assoziierten Königreichen — eine neue konstitutionelle Ordnung für Mitteleuropa.",
     "timeline.1923.event": "Die Föderationskrone vollendet",
     "timeline.1923.desc": "Die Föderationskrone, 1920 von Kaiser Franz Ferdinand I. in Auftrag gegeben, wird nach drei Jahren Handwerkskunst in Platin, Perlen, Diamanten, Rubinen, Saphiren und Smaragden fertiggestellt.",
-    "timeline.1998.event": "Thronbesteigung Maximilians I.",
+    "timeline.1998.event": "Thronbesteigung Maximilians II.",
     "timeline.1998.desc": "Der gegenwärtige Kaiser besteigt den Thron und beginnt eine Regentschaft, die von diplomatischer Erneuerung, kultureller Förderung und der Modernisierung der Institutionen der Konföderation geprägt ist.",
     "timeline.2000.event": "Tragödie im Pariser Ritz",
     "timeline.2000.desc": "Die verstorbene Kaiserin Maria-Cristina kommt bei dem Brand im Pariser Ritz am 10. September ums Leben. Die stoische Trauer des Kaisers und sein fortgesetzter Dienst werden zu einem prägenden Moment seiner Regentschaft.",

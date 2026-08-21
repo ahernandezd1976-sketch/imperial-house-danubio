@@ -159,8 +159,8 @@ export default function Constitution() {
                 />
               ))}
               <img
-                src="/manus-storage/constitution_document_3ac93f6f.png"
-                alt="The Federation Constitution — Title page with coat of arms and foundational cities"
+              src="/manus-storage/constitution_document_3ac93f6f.png"
+                alt={t("const.s1.caption")}
                 style={{
                   width: "100%",
                   height: "auto",
@@ -168,6 +168,79 @@ export default function Constitution() {
                   border: `1px solid oklch(0.72 0.12 85 / 0.15)`, backgroundColor: '#2b2727',
                 }}
               />
+              {/* CSS overlay for translated title */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: "14%",
+                  left: "15%",
+                  right: "15%",
+                  height: "18%",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundColor: "oklch(0.85 0.04 75 / 1.0)",
+                  zIndex: 1,
+                  padding: "0.5rem",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontWeight: 700,
+                    fontSize: "clamp(0.9rem, 2.5vw, 1.6rem)",
+                    color: "oklch(0.25 0.03 60)",
+                    textAlign: "center",
+                    lineHeight: 1.2,
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  {t("const.img.title")}
+                </span>
+              </div>
+              {/* CSS overlay for translated bottom text */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "2%",
+                  left: "10%",
+                  right: "10%",
+                  height: "8%",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundColor: "oklch(0.85 0.04 75 / 1.0)",
+                  zIndex: 1,
+                  padding: "0.3rem",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontWeight: 600,
+                    fontSize: "clamp(0.55rem, 1.5vw, 0.95rem)",
+                    color: "oklch(0.25 0.03 60)",
+                    textAlign: "center",
+                    lineHeight: 1.3,
+                  }}
+                >
+                  {t("const.img.bottom1")}
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'EB Garamond', serif",
+                    fontStyle: "italic",
+                    fontSize: "clamp(0.45rem, 1.2vw, 0.8rem)",
+                    color: "oklch(0.35 0.03 60)",
+                    textAlign: "center",
+                    lineHeight: 1.3,
+                  }}
+                >
+                  {t("const.img.bottom2")}
+                </span>
+              </div>
               {/* Sepia diamond (right) */}
               <div
                 style={{

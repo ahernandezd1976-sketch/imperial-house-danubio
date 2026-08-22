@@ -160,7 +160,7 @@ export default function Constitution() {
                 />
               ))}
               <img
-              src="/manus-storage/constitution_document_3ac93f6f.png"
+              src="/manus-storage/constitution_document_german_f6a9ed71.png"
                 alt={t("const.s1.caption")}
                 style={{
                   width: "100%",
@@ -169,34 +169,6 @@ export default function Constitution() {
                   border: `1px solid oklch(0.72 0.12 85 / 0.15)`, backgroundColor: '#2b2727',
                 }}
               />
-              {/* Overlay 1: Title "THE FEDERATION CONSTITUTION" → translated */}
-              <div style={{ position: "absolute", top: "13%", left: "18%", right: "18%", height: "24%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", backgroundColor: "oklch(0.84 0.04 75 / 1.0)", zIndex: 1 }}>
-                <span style={{ fontFamily: "'Cinzel', serif", fontWeight: 700, fontSize: "clamp(0.8rem, 2.8vw, 1.8rem)", color: "oklch(0.18 0.03 60)", textAlign: "center", lineHeight: 1.15, letterSpacing: "0.04em" }}>
-                  {t("const.img.title")}
-                </span>
-              </div>
-              {/* Overlay 2: City row 1 — BUDAPEST · VIENNA · PRAGUE */}
-              <div style={{ position: "absolute", top: "50%", left: "5%", right: "5%", height: "4%", display: "flex", alignItems: "center", justifyContent: "space-around", backgroundColor: "oklch(0.78 0.05 70 / 1.0)", zIndex: 1, padding: "0 5%" }}>
-                <span style={{ fontFamily: "'Cinzel', serif", fontWeight: 600, fontSize: "clamp(0.4rem, 1.4vw, 0.85rem)", color: "oklch(0.15 0.03 60)", letterSpacing: "0.08em" }}>{t("const.img.city1")}</span>
-                <span style={{ fontFamily: "'Cinzel', serif", fontWeight: 600, fontSize: "clamp(0.4rem, 1.4vw, 0.85rem)", color: "oklch(0.15 0.03 60)", letterSpacing: "0.08em" }}>{t("const.img.city2")}</span>
-                <span style={{ fontFamily: "'Cinzel', serif", fontWeight: 600, fontSize: "clamp(0.4rem, 1.4vw, 0.85rem)", color: "oklch(0.15 0.03 60)", letterSpacing: "0.08em" }}>{t("const.img.city3")}</span>
-              </div>
-              {/* Overlay 3: City row 2 — SARAJEVO · ZAGREB · BELGRADE · KRAKOW */}
-              <div style={{ position: "absolute", top: "63.5%", left: "5%", right: "5%", height: "4%", display: "flex", alignItems: "center", justifyContent: "space-around", backgroundColor: "oklch(0.78 0.05 70 / 1.0)", zIndex: 1, padding: "0 3%" }}>
-                <span style={{ fontFamily: "'Cinzel', serif", fontWeight: 600, fontSize: "clamp(0.35rem, 1.2vw, 0.75rem)", color: "oklch(0.15 0.03 60)", letterSpacing: "0.06em" }}>{t("const.img.city4")}</span>
-                <span style={{ fontFamily: "'Cinzel', serif", fontWeight: 600, fontSize: "clamp(0.35rem, 1.2vw, 0.75rem)", color: "oklch(0.15 0.03 60)", letterSpacing: "0.06em" }}>{t("const.img.city5")}</span>
-                <span style={{ fontFamily: "'Cinzel', serif", fontWeight: 600, fontSize: "clamp(0.35rem, 1.2vw, 0.75rem)", color: "oklch(0.15 0.03 60)", letterSpacing: "0.06em" }}>{t("const.img.city6")}</span>
-                <span style={{ fontFamily: "'Cinzel', serif", fontWeight: 600, fontSize: "clamp(0.35rem, 1.2vw, 0.75rem)", color: "oklch(0.15 0.03 60)", letterSpacing: "0.06em" }}>{t("const.img.city7")}</span>
-              </div>
-              {/* Overlay 4: Bottom text — "For the glory..." */}
-              <div style={{ position: "absolute", bottom: "1.5%", left: "8%", right: "8%", height: "9%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", backgroundColor: "oklch(0.84 0.04 75 / 1.0)", zIndex: 1, padding: "0.2rem 0.5rem" }}>
-                <span style={{ fontFamily: "'Cinzel', serif", fontWeight: 600, fontSize: "clamp(0.5rem, 1.6vw, 1rem)", color: "oklch(0.18 0.03 60)", textAlign: "center", lineHeight: 1.3 }}>
-                  {t("const.img.bottom1")}
-                </span>
-                <span style={{ fontFamily: "'EB Garamond', serif", fontStyle: "italic", fontSize: "clamp(0.4rem, 1.2vw, 0.8rem)", color: "oklch(0.3 0.03 60)", textAlign: "center", lineHeight: 1.3, marginTop: "0.1rem" }}>
-                  {t("const.img.bottom2")}
-                </span>
-              </div>
               {/* Zoom indicator */}
               <div
                 style={{
@@ -486,7 +458,7 @@ export default function Constitution() {
           }}
         >
           <img
-            src="/manus-storage/constitution_document_3ac93f6f.png"
+            src="/manus-storage/constitution_document_german_f6a9ed71.png"
             alt={t("const.s1.caption")}
             style={{
               maxWidth: "95vw",

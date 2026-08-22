@@ -51,3 +51,15 @@ The final family-tree asset is fully German and visually clear. The imperial suc
 Desktop and 390-pixel mobile captures confirm that the new briefing and family-tree assets load on their intended pages without the former CSS translation covers. The German Constitution document remains readable and retains its click-to-enlarge control.
 
 The lightbox opens as a modal dialog, displays a prominent gold-bordered **SCHLIESSEN** button, and closes when the Escape key is pressed. The trigger is keyboard-operable with Enter or Space, body scrolling is locked while the modal is open, and focus returns to the image trigger when it closes. TypeScript validation and the production build both complete successfully.
+
+## English Graphic Variants
+
+The English Intelligence Briefing is fully readable and contains no German remnants. It preserves the exact eight-event chronology, English archive labels, **TOP SECRET** stamp, and **DECLASSIFIED 2025** footer.
+
+The English family tree preserves the corrected imperial succession, Maximilian II designation, reign dates, ages, Leopold and Eleonora as the Emperor's children, Katharina as the Crown Prince's fiancée, and Reiner as hereditary Marshal of the Crown. It contains no German labels or unintended relationships.
+
+## Bilingual Control and Family-Tree Lightbox Verification
+
+Desktop captures confirm that German page URLs default to the German graphics and English page URLs default to the English graphics on both the World and Family pages. The compact DE/EN segmented controls remain visible immediately above each graphic.
+
+On the English Family page, activating the tree opens the high-resolution English infographic in a modal dialog. The visible **CLOSE** control appears at the upper-right and receives the localized accessible label.

@@ -6,6 +6,7 @@
 import { useEffect, useRef, useState, useMemo } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import GraphicLanguageToggle, { type GraphicLanguage } from "@/components/GraphicLanguageToggle";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getFamilyMembers } from "@/i18n/familyMembers";
@@ -148,13 +149,48 @@ export default function Family() {
   useScrollReveal();
   const { t, language } = useLanguage();
   const familyMembers = useMemo(() => getFamilyMembers(language), [language]);
+  const [treeGraphicLanguage, setTreeGraphicLanguage] = useState<GraphicLanguage>(() => language === "de" ? "de" : "en");
+  const [treeLightboxOpen, setTreeLightboxOpen] = useState(false);
+  const treeTriggerRef = useRef<HTMLDivElement>(null);
+  const treeCloseButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    setTreeGraphicLanguage(language === "de" ? "de" : "en");
+  }, [language]);
+
+  useEffect(() => {
+    if (!treeLightboxOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setTreeLightboxOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
+    window.requestAnimationFrame(() => treeCloseButtonRef.current?.focus());
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+      treeTriggerRef.current?.focus();
+    };
+  }, [treeLightboxOpen]);
+
   const emperor = familyMembers.find((m) => m.isEmperor)!;
   const others = familyMembers.filter((m) => !m.isEmperor);
+  const treeImageSrc = treeGraphicLanguage === "de"
+    ? "/manus-storage/family_tree_german_v3_ca1950aa.png"
+    : "/manus-storage/family_tree_english_d3bd15e8.png";
+  const treeImageAlt = treeGraphicLanguage === "de"
+    ? "Deutscher Habsburger Stammbaum von Franz Joseph I. bis Kaiser Maximilian II."
+    : "English Habsburg family tree from Franz Joseph I to Emperor Maximilian II";
+  const treeOpenLabel = treeGraphicLanguage === "de" ? "Stammbaum vergrößern" : "Enlarge family tree";
+  const treeDialogLabel = treeGraphicLanguage === "de" ? "Vergrößerter Habsburger Stammbaum" : "Enlarged Habsburg family tree";
 
   return (
     <div style={{ backgroundColor: DARK }}>
@@ -1199,23 +1235,61 @@ export default function Family() {
               {t("family.tree.subtitle")}
             </p>
           </div>
-          <div className="reveal" style={{ maxWidth: "1000px", margin: "0 auto", position: "relative" }}>
-            <img
-              src="/manus-storage/family_tree_german_v3_ca1950aa.png"
-              alt="Deutscher Habsburger Stammbaum von Franz Joseph I. bis Kaiser Maximilian II."
-              style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-                border: `1px solid oklch(0.72 0.12 85 / 0.15)`,
+          <div style={{ maxWidth: "1000px", margin: "0 auto 0.8rem", display: "flex", justifyContent: "flex-end" }}>
+            <GraphicLanguageToggle value={treeGraphicLanguage} onChange={setTreeGraphicLanguage} />
+          </div>
+          <div className="reveal" style={{ maxWidth: "1000px", margin: "0 auto" }}>
+            <div
+              ref={treeTriggerRef}
+              role="button"
+              tabIndex={0}
+              aria-haspopup="dialog"
+              aria-label={treeOpenLabel}
+              onClick={() => setTreeLightboxOpen(true)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  setTreeLightboxOpen(true);
+                }
               }}
-            />
+              style={{ position: "relative", cursor: "zoom-in" }}
+            >
+              <img
+                src={treeImageSrc}
+                alt={treeImageAlt}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                  border: `1px solid oklch(0.72 0.12 85 / 0.15)`,
+                }}
+              />
+              <span
+                aria-hidden="true"
+                style={{
+                  position: "absolute",
+                  right: "0.75rem",
+                  bottom: "0.75rem",
+                  width: "42px",
+                  height: "42px",
+                  display: "grid",
+                  placeItems: "center",
+                  border: `1px solid ${GOLD}`,
+                  background: "rgba(10, 9, 7, 0.88)",
+                  color: CREAM,
+                  fontSize: "1.15rem",
+                  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.35)",
+                }}
+              >
+                ⤢
+              </span>
+            </div>
             <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: "0.8rem", color: "oklch(0.4 0.01 85)", textAlign: "center", marginTop: "1rem" }}>
               {t("family.tree.caption")}
-          </p>
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Reign Timeline */}
       <section style={{ backgroundColor: DARK, padding: "5rem 0", borderTop: `1px solid oklch(0.72 0.12 85 / 0.1)` }}>
@@ -1268,6 +1342,70 @@ export default function Family() {
       </section>
 
       <Footer />
+
+      {treeLightboxOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={treeDialogLabel}
+          onClick={() => setTreeLightboxOpen(false)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 9999,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "clamp(0.5rem, 2vw, 1.25rem)",
+            background: "rgba(0, 0, 0, 0.94)",
+            cursor: "zoom-out",
+          }}
+        >
+          <img
+            src={treeImageSrc}
+            alt={treeImageAlt}
+            style={{
+              maxWidth: "97vw",
+              maxHeight: "93vh",
+              objectFit: "contain",
+              border: `1px solid ${GOLD}`,
+              boxShadow: "0 0 60px rgba(180, 150, 80, 0.28)",
+            }}
+          />
+          <button
+            ref={treeCloseButtonRef}
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              setTreeLightboxOpen(false);
+            }}
+            aria-label={t("const.lightbox.close")}
+            style={{
+              position: "absolute",
+              top: "max(1rem, env(safe-area-inset-top))",
+              right: "max(1rem, env(safe-area-inset-right))",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.55rem",
+              minHeight: "44px",
+              padding: "0.65rem 1rem",
+              border: `1px solid ${GOLD}`,
+              borderRadius: "2px",
+              background: "rgba(12, 10, 7, 0.94)",
+              color: CREAM,
+              fontFamily: "'Cinzel', serif",
+              fontSize: "0.7rem",
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              cursor: "pointer",
+              boxShadow: "0 8px 30px rgba(0, 0, 0, 0.45)",
+            }}
+          >
+            <span aria-hidden="true" style={{ fontSize: "1.5rem", lineHeight: 0.7 }}>&times;</span>
+            <span>{t("const.lightbox.close")}</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 }

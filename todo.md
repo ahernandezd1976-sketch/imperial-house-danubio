@@ -28,3 +28,15 @@
 - [x] Add Escape-key closing, a visible close button, focus behavior, and scroll locking to the image lightbox.
 - [x] Verify both desktop and mobile layouts, German text accuracy, TypeScript, and production build.
 - [ ] Save a checkpoint and deliver the completed website update.
+
+## Current Task: Bilingual Graphics + Family-Tree Lightbox + Netlify ZIP
+- [x] Inspect the current World, Family, translation, and lightbox implementations.
+- [x] Generate and visually verify an English Intelligence Briefing graphic.
+- [x] Generate and visually verify an English imperial family-tree graphic.
+- [x] Add an explicit German/English graphic toggle to the World page.
+- [x] Add an explicit German/English graphic toggle to the Family page.
+- [x] Add keyboard-accessible click-to-enlarge behavior to the family tree.
+- [x] Add Escape closing, a visible close button, focus return, and scroll locking to the family-tree lightbox.
+- [x] Verify both image languages, desktop/mobile layouts, TypeScript, and production build.
+- [x] Generate a self-contained Netlify ZIP with every required static asset and SPA redirects.
+- [ ] Save a checkpoint and deliver the ZIP.

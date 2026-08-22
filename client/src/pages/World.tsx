@@ -7,9 +7,10 @@
  * Design: Dark theme with gold/cream palette. Cinzel headings, Cormorant body.
  * Layout: Asymmetric — full-width map panels alternating with explanatory text columns.
  */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import GraphicLanguageToggle, { type GraphicLanguage } from "@/components/GraphicLanguageToggle";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -20,11 +21,16 @@ const DARK_CARD = "oklch(0.12 0.005 285)";
 
 export default function World() {
   useScrollReveal();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const [briefingGraphicLanguage, setBriefingGraphicLanguage] = useState<GraphicLanguage>(() => language === "de" ? "de" : "en");
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    setBriefingGraphicLanguage(language === "de" ? "de" : "en");
+  }, [language]);
 
   return (
     <div style={{ backgroundColor: DARK }}>
@@ -609,6 +615,9 @@ export default function World() {
           </div>
 
           <div className="reveal" style={{ maxWidth: "900px", margin: "0 auto" }}>
+            <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "0.8rem" }}>
+              <GraphicLanguageToggle value={briefingGraphicLanguage} onChange={setBriefingGraphicLanguage} />
+            </div>
             <div style={{ position: "relative" }}>
               {[
                 { top: -10, left: -10 },
@@ -632,8 +641,12 @@ export default function World() {
                 />
               ))}
               <img
-                src="/manus-storage/intelligence_briefing_german_v2_0395cc45.png"
-                alt="Kaiserliches Geheimdienstbriefing zum Konopiště-Protokoll, Wiener Archiv, freigegeben 2025"
+                src={briefingGraphicLanguage === "de"
+                  ? "/manus-storage/intelligence_briefing_german_v2_0395cc45.png"
+                  : "/manus-storage/intelligence_briefing_english_54220df6.png"}
+                alt={briefingGraphicLanguage === "de"
+                  ? "Kaiserliches Geheimdienstbriefing zum Konopiště-Protokoll, Wiener Archiv, freigegeben 2025"
+                  : "Imperial Intelligence Briefing on the Konopiště Protocol, Vienna Archives, declassified 2025"}
                 style={{
                   width: "100%",
                   height: "auto",

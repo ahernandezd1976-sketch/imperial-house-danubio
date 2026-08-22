@@ -641,6 +641,73 @@ export default function World() {
                   border: `1px solid oklch(0.72 0.12 85 / 0.15)`,
                 }}
               />
+              {/* CSS overlay for translated title */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: "0%",
+                  left: "0%",
+                  right: "0%",
+                  height: "14%",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "center",
+                  backgroundColor: "oklch(0.88 0.03 75 / 0.97)",
+                  zIndex: 1,
+                  padding: "clamp(0.3rem, 1.5vw, 1rem) clamp(0.5rem, 2vw, 1.5rem)",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontWeight: 700,
+                    fontSize: "clamp(0.7rem, 2.2vw, 1.4rem)",
+                    color: "oklch(0.15 0.02 60)",
+                    letterSpacing: "0.04em",
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {t("world.s4.img.title")}
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'Source Serif 4', serif",
+                    fontSize: "clamp(0.4rem, 1.1vw, 0.75rem)",
+                    color: "oklch(0.3 0.02 60)",
+                    marginTop: "0.15rem",
+                    letterSpacing: "0.02em",
+                  }}
+                >
+                  {t("world.s4.img.subtitle")}
+                </span>
+              </div>
+              {/* CSS overlay for filed line */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: "14%",
+                  left: "0%",
+                  right: "40%",
+                  height: "5%",
+                  display: "flex",
+                  alignItems: "center",
+                  backgroundColor: "oklch(0.88 0.03 75 / 0.97)",
+                  zIndex: 1,
+                  padding: "0 clamp(0.5rem, 2vw, 1.5rem)",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'Source Serif 4', serif",
+                    fontSize: "clamp(0.4rem, 1vw, 0.7rem)",
+                    color: "oklch(0.25 0.02 60)",
+                    letterSpacing: "0.03em",
+                  }}
+                >
+                  {t("world.s4.img.filed")}
+                </span>
+              </div>
             </div>
             <p
               style={{

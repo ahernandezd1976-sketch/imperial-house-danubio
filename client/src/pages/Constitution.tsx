@@ -5,7 +5,7 @@
  * Design: Dark theme with gold/cream palette. Cinzel headings, Cormorant body.
  * Layout: Hero section with constitution document, geopolitical map, and explanatory text.
  */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -19,6 +19,7 @@ const DARK_CARD = "oklch(0.12 0.005 285)";
 export default function Constitution() {
   useScrollReveal();
   const { t } = useLanguage();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -136,7 +137,7 @@ export default function Constitution() {
           </div>
 
           <div className="reveal" style={{ maxWidth: "900px", margin: "0 auto" }}>
-            <div style={{ position: "relative" }}>
+            <div style={{ position: "relative", cursor: "zoom-in" }} onClick={() => setLightboxOpen(true)} role="button" aria-label="Click to enlarge">
               {[
                 { top: -10, left: -10 },
                 { top: -10, right: -10 },
@@ -240,6 +241,30 @@ export default function Constitution() {
                 >
                   {t("const.img.bottom2")}
                 </span>
+              </div>
+              {/* Zoom indicator */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "12%",
+                  right: "3%",
+                  width: "clamp(24px, 3vw, 36px)",
+                  height: "clamp(24px, 3vw, 36px)",
+                  borderRadius: "50%",
+                  backgroundColor: "oklch(0.72 0.12 85 / 0.8)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  zIndex: 3,
+                  pointerEvents: "none",
+                }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="oklch(0.15 0.02 60)" strokeWidth="2.5">
+                  <circle cx="10" cy="10" r="7" />
+                  <line x1="15" y1="15" x2="21" y2="21" />
+                  <line x1="10" y1="7" x2="10" y2="13" />
+                  <line x1="7" y1="10" x2="13" y2="10" />
+                </svg>
               </div>
               {/* Sepia diamond (right) */}
               <div
@@ -488,6 +513,54 @@ export default function Constitution() {
       </section>
 
       <Footer />
+
+      {/* Lightbox modal for enlarged constitution document */}
+      {lightboxOpen && (
+        <div
+          onClick={() => setLightboxOpen(false)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 9999,
+            backgroundColor: "rgba(0, 0, 0, 0.92)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "zoom-out",
+            padding: "1rem",
+          }}
+        >
+          <img
+            src="/manus-storage/constitution_document_3ac93f6f.png"
+            alt={t("const.s1.caption")}
+            style={{
+              maxWidth: "95vw",
+              maxHeight: "95vh",
+              objectFit: "contain",
+              borderRadius: "4px",
+              boxShadow: "0 0 60px rgba(180, 150, 80, 0.3)",
+            }}
+          />
+          <button
+            onClick={(e) => { e.stopPropagation(); setLightboxOpen(false); }}
+            style={{
+              position: "absolute",
+              top: "1.5rem",
+              right: "1.5rem",
+              background: "none",
+              border: "none",
+              color: "white",
+              fontSize: "2rem",
+              cursor: "pointer",
+              lineHeight: 1,
+              opacity: 0.8,
+            }}
+            aria-label="Close"
+          >
+            &times;
+          </button>
+        </div>
+      )}
     </div>
   );
 }

@@ -5,7 +5,7 @@
  * Design: Dark theme with gold/cream palette. Cinzel headings, Cormorant body.
  * Layout: Hero section with constitution document, geopolitical map, and explanatory text.
  */
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -20,10 +20,31 @@ export default function Constitution() {
   useScrollReveal();
   const { t } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const lightboxTriggerRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setLightboxOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
+    window.requestAnimationFrame(() => closeButtonRef.current?.focus());
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+      lightboxTriggerRef.current?.focus();
+    };
+  }, [lightboxOpen]);
 
   return (
     <div style={{ backgroundColor: DARK }}>
@@ -137,7 +158,21 @@ export default function Constitution() {
           </div>
 
           <div className="reveal" style={{ maxWidth: "900px", margin: "0 auto" }}>
-            <div style={{ position: "relative", cursor: "zoom-in" }} onClick={() => setLightboxOpen(true)} role="button" aria-label="Click to enlarge">
+            <div
+              ref={lightboxTriggerRef}
+              style={{ position: "relative", cursor: "zoom-in" }}
+              onClick={() => setLightboxOpen(true)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  setLightboxOpen(true);
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-haspopup="dialog"
+              aria-label={t("const.lightbox.open")}
+            >
               {[
                 { top: -10, left: -10 },
                 { top: -10, right: -10 },
@@ -445,6 +480,9 @@ export default function Constitution() {
       {lightboxOpen && (
         <div
           onClick={() => setLightboxOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={t("const.lightbox.dialog")}
           style={{
             position: "fixed",
             inset: 0,
@@ -469,22 +507,33 @@ export default function Constitution() {
             }}
           />
           <button
+            ref={closeButtonRef}
             onClick={(e) => { e.stopPropagation(); setLightboxOpen(false); }}
             style={{
               position: "absolute",
-              top: "1.5rem",
-              right: "1.5rem",
-              background: "none",
-              border: "none",
-              color: "white",
-              fontSize: "2rem",
+              top: "max(1rem, env(safe-area-inset-top))",
+              right: "max(1rem, env(safe-area-inset-right))",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.55rem",
+              minHeight: "44px",
+              padding: "0.65rem 1rem",
+              background: "rgba(12, 10, 7, 0.92)",
+              border: `1px solid ${GOLD}`,
+              borderRadius: "2px",
+              color: CREAM,
+              fontFamily: "'Cinzel', serif",
+              fontSize: "0.7rem",
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
               cursor: "pointer",
               lineHeight: 1,
-              opacity: 0.8,
+              boxShadow: "0 8px 30px rgba(0, 0, 0, 0.4)",
             }}
-            aria-label="Close"
+            aria-label={t("const.lightbox.close")}
           >
-            &times;
+            <span aria-hidden="true" style={{ fontSize: "1.5rem", lineHeight: 0.7 }}>&times;</span>
+            <span>{t("const.lightbox.close")}</span>
           </button>
         </div>
       )}

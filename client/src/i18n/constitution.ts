@@ -38,6 +38,9 @@ export const constitutionTranslations: Record<Language, Record<string, string>> 
     "const.s2.p1": "Die Donauföderation umfasst die historischen Königreiche und Länder der österreichisch-ungarischen Krone, 1917 als Bundesstaat reorganisiert. Ihr Territorium erstreckt sich von den Alpen und dem böhmischen Plateau im Westen bis zu den Karpaten und der ungarischen Tiefebene im Osten, und von der Ostseeküste Galiziens im Norden bis zur dalmatinischen Adriaküste im Süden.",
     "const.s2.p2": "Wien bleibt die Hauptstadt und der Sitz des Kaisers, des Kaiserlichen Reichstags und der Bundesregierung. Die Grenzen der Föderation sind seit dem Vertrag von Wien (1917) weitgehend stabil geblieben, mit geringfügigen Anpassungen nach den Balkanabkommen (1945) und der Europäischen Territorialregelung (1989).",
     "const.s2.p3": "Als Mitglied der Vereinten Nationen, der Europäischen Konföderation und zahlreicher internationaler Organisationen spielt die Föderation eine zentrale Rolle in der europäischen Diplomatie, Sicherheit und wirtschaftlichen Integration.",
+    "const.lightbox.open": "Verfassungsdokument vergrößern",
+    "const.lightbox.dialog": "Vergrößertes Verfassungsdokument",
+    "const.lightbox.close": "Schließen",
   },
   en: {
     "const.header.pretitle": "Imperial House of Austria-Danubio",
@@ -76,6 +79,9 @@ export const constitutionTranslations: Record<Language, Record<string, string>> 
     "const.s2.p1": "The Danubian Federation comprises the historic kingdoms and lands of the Austro-Hungarian crown, reorganized as a federal state in 1917. Its territory spans from the Alps and the Bohemian plateau in the west to the Carpathians and the Hungarian plain in the east, and from the Baltic coast of Galicia in the north to the Dalmatian Adriatic coast in the south.",
     "const.s2.p2": "Vienna remains the capital and seat of the Emperor, the Imperial Diet, and the federal government. The Federation's borders have remained largely stable since the Treaty of Vienna (1917), with minor adjustments following the Balkan Accords (1945) and the European Territorial Settlement (1989).",
     "const.s2.p3": "As a member of the United Nations, the European Confederation, and numerous international bodies, the Federation plays a central role in European diplomacy, security, and economic integration.",
+    "const.lightbox.open": "Enlarge the constitution document",
+    "const.lightbox.dialog": "Enlarged constitution document",
+    "const.lightbox.close": "Close",
   },
   hu: {
     "const.header.pretitle": "Ausztria-Duna Császári Ház",
@@ -114,6 +120,9 @@ export const constitutionTranslations: Record<Language, Record<string, string>> 
     "const.s2.p1": "A Dunai Föderáció az osztrák-magyar korona történelmi királyságait és tartományait foglalja magában, amelyeket 1917-ben szövetségi államként szerveztek újjá. Területe az Alpoktól és a cseh fennsíktól nyugaton a Kárpátokig és a magyar alföldig keleten, és Galícia balti-tengeri partjától északon a dalmát Adriai-tengerpartig délen terjed.",
     "const.s2.p2": "Bécs marad a főváros és a Császár, a Birodalmi Gyűlés és a szövetségi kormány székhelye. A Föderáció határai nagyrészt stabilak maradtak a bécsi szerződés (1917) óta, kisebb kiigazításokkal a Balkáni Egyezmények (1945) és az Európai Területi Rendezés (1989) után.",
     "const.s2.p3": "Az Egyesült Nemzetek, az Európai Konföderáció és számos nemzetközi szervezet tagjaként a Föderáció központi szerepet játszik az európai diplomáciában, biztonságban és gazdasági integrációban.",
+    "const.lightbox.open": "Az alkotmánydokumentum nagyítása",
+    "const.lightbox.dialog": "Nagyított alkotmánydokumentum",
+    "const.lightbox.close": "Bezárás",
   },
   fr: {
     "const.header.pretitle": "Maison Impériale d'Autriche-Danube",
@@ -152,6 +161,9 @@ export const constitutionTranslations: Record<Language, Record<string, string>> 
     "const.s2.p1": "La Fédération danubienne comprend les royaumes et terres historiques de la couronne austro-hongroise, réorganisés en État fédéral en 1917. Son territoire s'étend des Alpes et du plateau bohémien à l'ouest aux Carpates et à la plaine hongroise à l'est.",
     "const.s2.p2": "Vienne reste la capitale et le siège de l'Empereur, de la Diète impériale et du gouvernement fédéral. Les frontières de la Fédération sont restées largement stables depuis le Traité de Vienne (1917).",
     "const.s2.p3": "En tant que membre des Nations Unies, de la Confédération européenne et de nombreux organismes internationaux, la Fédération joue un rôle central dans la diplomatie, la sécurité et l'intégration économique européennes.",
+    "const.lightbox.open": "Agrandir le document constitutionnel",
+    "const.lightbox.dialog": "Document constitutionnel agrandi",
+    "const.lightbox.close": "Fermer",
   },
   cs: {
     "const.header.pretitle": "Císařský Dům Rakousko-Dunaj",
@@ -190,6 +202,9 @@ export const constitutionTranslations: Record<Language, Record<string, string>> 
     "const.s2.p1": "Dunajská federace zahrnuje historická království a země rakousko-uherské koruny, reorganizovaná jako federální stát v roce 1917. Její území se rozprostírá od Alp a české náhorní plošiny na západě po Karpaty a uherskou nížinu na východě.",
     "const.s2.p2": "Vídeň zůstává hlavním městem a sídlem Císaře, Říšského sněmu a federální vlády. Hranice Federace zůstaly od Vídeňské smlouvy (1917) z velké části stabilní.",
     "const.s2.p3": "Jako člen Organizace spojených národů, Evropské konfederace a četných mezinárodních orgánů hraje Federace ústřední roli v evropské diplomacii, bezpečnosti a ekonomické integraci.",
+    "const.lightbox.open": "Zvětšit ústavní dokument",
+    "const.lightbox.dialog": "Zvětšený ústavní dokument",
+    "const.lightbox.close": "Zavřít",
   },
   hr: {
     "const.header.pretitle": "Carski Dom Austrija-Dunav",
@@ -228,6 +243,9 @@ export const constitutionTranslations: Record<Language, Record<string, string>> 
     "const.s2.p1": "Dunavska Federacija obuhvaća povijesna kraljevstva i zemlje austro-ugarske krune, reorganizirana kao savezna država 1917. Njezin teritorij proteže se od Alpa i češke visoravni na zapadu do Karpata i mađarske ravnice na istoku.",
     "const.s2.p2": "Beč ostaje glavni grad i sjedište Cara, Carskog sabora i savezne vlade. Granice Federacije ostale su uglavnom stabilne od Bečkog ugovora (1917.).",
     "const.s2.p3": "Kao članica Ujedinjenih naroda, Europske konfederacije i brojnih međunarodnih tijela, Federacija igra središnju ulogu u europskoj diplomaciji, sigurnosti i gospodarskoj integraciji.",
+    "const.lightbox.open": "Povećaj ustavni dokument",
+    "const.lightbox.dialog": "Povećani ustavni dokument",
+    "const.lightbox.close": "Zatvori",
   },
 
   es: {
@@ -278,5 +296,8 @@ export const constitutionTranslations: Record<Language, Record<string, string>> 
     "const.s2.p1": "La Federación comprende catorce estados constituyentes con plena representación parlamentaria, dos reinos asociados (Serbia y Montenegro) con autonomía garantizada, y un protectorado (Albania).",
     "const.s2.p2": "Cada estado constituyente mantiene su propia dieta provincial, sistema judicial y administración cultural, mientras que la defensa, la política exterior y el comercio son competencias federales.",
     "const.s2.p3": "Als Mitglied der Vereinten Nationen, der Europäischen Konföderation und zahlreicher internationaler Organisationen spielt die Föderation eine zentrale Rolle in der europäischen Diplomatie, Sicherheit und wirtschaftlichen Integration.",
+    "const.lightbox.open": "Ampliar el documento constitucional",
+    "const.lightbox.dialog": "Documento constitucional ampliado",
+    "const.lightbox.close": "Cerrar",
 },
 };

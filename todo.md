@@ -16,3 +16,15 @@
 
 ## German flag for language selector
 - The "de" flag should be the Federation flag (black top, gold bottom) since it's the Federation's official language
+
+## Current Task: German Graphics + Accessible Lightbox
+- [x] Review image-generation guidance and current World, Family, and Constitution implementations.
+- [x] Define complete, accurate German copy for the Intelligence Briefing graphic.
+- [x] Define the corrected German imperial succession and family-tree labels.
+- [x] Generate and visually verify a German Intelligence Briefing graphic from scratch.
+- [x] Generate and visually verify a German imperial family tree infographic from scratch.
+- [x] Replace the World page briefing image and remove obsolete CSS translation overlays.
+- [x] Replace the Family page family-tree image and remove obsolete CSS translation overlays.
+- [x] Add Escape-key closing, a visible close button, focus behavior, and scroll locking to the image lightbox.
+- [x] Verify both desktop and mobile layouts, German text accuracy, TypeScript, and production build.
+- [ ] Save a checkpoint and deliver the completed website update.

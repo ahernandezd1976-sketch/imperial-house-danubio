@@ -1201,8 +1201,8 @@ export default function Family() {
           </div>
           <div className="reveal" style={{ maxWidth: "1000px", margin: "0 auto", position: "relative" }}>
             <img
-              src="/manus-storage/family_tree_v2_6e2dce57.png"
-              alt="Habsburg Family Tree from Franz Joseph I to Emperor Maximilian II"
+              src="/manus-storage/family_tree_german_v3_ca1950aa.png"
+              alt="Deutscher Habsburger Stammbaum von Franz Joseph I. bis Kaiser Maximilian II."
               style={{
                 width: "100%",
                 height: "auto",
@@ -1210,51 +1210,6 @@ export default function Family() {
                 border: `1px solid oklch(0.72 0.12 85 / 0.15)`,
               }}
             />
-            {/* Overlay: translated heading at top of family tree image */}
-            <div style={{
-              position: "absolute",
-              top: "0",
-              left: "0",
-              right: "0",
-              height: "4.2%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor: "#f5f0e6",
-              borderBottom: "1px solid rgba(180, 150, 90, 0.3)",
-            }}>
-              <span style={{
-                fontFamily: "'Cinzel', serif",
-                fontSize: "clamp(0.45rem, 1.3vw, 1rem)",
-                fontWeight: 700,
-                color: "#2a1a0a",
-                letterSpacing: "0.04em",
-              }}>
-                {t("family.tree.overlay.heading")}
-              </span>
-            </div>
-            {/* Overlay: translated "Current Imperial Line" in middle */}
-            <div style={{
-              position: "absolute",
-              top: "46.5%",
-              left: "22%",
-              right: "22%",
-              height: "3.8%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor: "#f5f0e6",
-            }}>
-              <span style={{
-                fontFamily: "'Cinzel', serif",
-                fontSize: "clamp(0.4rem, 1.1vw, 0.85rem)",
-                fontWeight: 700,
-                color: "#2a1a0a",
-                letterSpacing: "0.06em",
-              }}>
-                {t("family.tree.overlay.current")}
-              </span>
-            </div>
             <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: "0.8rem", color: "oklch(0.4 0.01 85)", textAlign: "center", marginTop: "1rem" }}>
               {t("family.tree.caption")}
           </p>

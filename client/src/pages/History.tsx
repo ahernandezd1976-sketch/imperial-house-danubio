@@ -377,7 +377,7 @@ export default function History() {
                     }}
                   >
                     <td style={{ padding: "1rem", fontFamily: "'Cinzel', serif", fontSize: "0.9rem", color: GOLD }}>{row.n}</td>
-                    <td style={{ padding: "1rem", fontFamily: "'Cormorant Garamond', serif", fontSize: "1.12rem", color: GOLD, fontWeight: 700 }}>{row.name}</td>
+                    <td className="gold-name" style={{ padding: "1rem", fontFamily: "'Cormorant Garamond', serif", fontSize: "1.12rem", color: GOLD, fontWeight: 700 }}>{row.name}</td>
                     <td style={{ padding: "1rem", fontFamily: "'Source Serif 4', serif", fontSize: "0.9rem", color: "oklch(0.65 0.01 85)" }}>{row.reign}</td>
                     <td style={{ padding: "1rem", fontFamily: "'Source Serif 4', serif", fontSize: "0.9rem", color: "oklch(0.55 0.01 85)" }}>{row.life}</td>
                     <td style={{ padding: "1rem", fontFamily: "'Source Serif 4', serif", fontSize: "0.85rem", color: "oklch(0.55 0.01 85)", fontStyle: "italic" }}>{t(row.noteKey)}</td>

@@ -49,3 +49,13 @@
 - [x] Verify contrast and responsive wrapping on desktop and mobile screenshots.
 - [x] Run TypeScript and production build checks.
 - [ ] Save a checkpoint and deliver the readability update.
+
+## Current Task: Gold Glow + Animated Secession Corners + Netlify ZIP
+- [x] Inspect the current prominent-name styles, reveal classes, and Secession corner implementation.
+- [x] Add a restrained gold hover/focus glow to prominent enlarged names and titles.
+- [x] Animate the Secession corner linework when cards receive the visible reveal state.
+- [x] Ensure hover and scroll effects respect `prefers-reduced-motion`.
+- [x] Verify desktop/mobile appearance and interaction behavior.
+- [x] Run TypeScript and production build validation.
+- [x] Generate and validate a self-contained Netlify ZIP with all assets and SPA redirects.
+- [ ] Save a checkpoint and deliver the latest ZIP.

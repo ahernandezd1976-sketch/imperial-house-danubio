@@ -470,7 +470,7 @@ export default function Family() {
               marginBottom: "0.6rem",
               opacity: 0.7,
             }}>{t("family.memorial.pretitle")}</div>
-            <h3 style={{
+            <h3 className="gold-name" style={{
               fontFamily: "'Cinzel', serif",
               fontSize: "clamp(1.35rem, 2.8vw, 1.9rem)",
               fontWeight: 700,
@@ -563,6 +563,7 @@ export default function Family() {
                   {t("family.emperor.pretitle")}
                 </div>
                 <h2
+                  className="gold-name"
                   style={{
                     fontFamily: "'Cinzel', serif",
                     fontSize: "1.7rem",
@@ -647,6 +648,7 @@ export default function Family() {
                 {t("family.emperor.title")}
               </div>
               <h2
+                className="gold-name"
                 style={{
                   fontFamily: "'Cinzel', serif",
                   fontSize: "clamp(2.2rem, 4.4vw, 3.25rem)",
@@ -801,6 +803,7 @@ export default function Family() {
 
                 <div style={{ padding: "1.5rem" }}>
                   <h3
+                    className="gold-name"
                     style={{
                       fontFamily: "'Cinzel', serif",
                       fontSize: "1.08rem",

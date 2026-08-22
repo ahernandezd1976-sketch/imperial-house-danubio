@@ -849,6 +849,7 @@ export default function Heraldry() {
                 ].map((name, i) => (
                   <div
                     key={i}
+                    className="gold-name"
                     style={{
                       fontFamily: "'Source Serif 4', serif",
                       fontSize: "1rem",

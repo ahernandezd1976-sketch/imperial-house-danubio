@@ -449,6 +449,7 @@ export default function Books() {
                   {book.number}
                 </div>
                 <h3
+                  className="gold-name"
                   style={{
                     fontFamily: "'Cinzel', serif",
                     fontSize: "1.22rem",

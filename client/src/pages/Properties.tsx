@@ -571,6 +571,7 @@ export default function Properties() {
                       {prop.flag} &nbsp;{t(prop.locationKey)}
                     </div>
                     <h3
+                      className="gold-name"
                       style={{
                         fontFamily: "'Cinzel', serif",
                         fontSize: "clamp(1.4rem, 2.2vw, 1.65rem)",

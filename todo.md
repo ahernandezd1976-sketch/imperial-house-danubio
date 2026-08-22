@@ -40,3 +40,12 @@
 - [x] Verify both image languages, desktop/mobile layouts, TypeScript, and production build.
 - [x] Generate a self-contained Netlify ZIP with every required static asset and SPA redirects.
 - [ ] Save a checkpoint and deliver the ZIP.
+
+## Current Task: Brighter and Larger Names
+- [x] Audit representative dark and light sections to identify low-contrast names and important titles.
+- [x] Define a brighter, accessible gold/yellow text token for prominent names.
+- [x] Increase name and title sizing modestly without disrupting card layouts or navigation.
+- [x] Apply the improved styling to family-member names and key content headings across the site.
+- [x] Verify contrast and responsive wrapping on desktop and mobile screenshots.
+- [x] Run TypeScript and production build checks.
+- [ ] Save a checkpoint and deliver the readability update.

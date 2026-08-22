@@ -4,6 +4,7 @@
  */
 import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ADMonogram from "@/components/ADMonogram";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -22,18 +23,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand column */}
           <div className="flex flex-col items-start gap-4">
-            <img
-              src="/manus-storage/coat_of_arms_real_375cb88d.png"
-              alt="Imperial Coat of Arms"
-              className="w-16 h-auto opacity-90"
-            />
+            <div style={{ display: "flex", alignItems: "center", gap: "0.9rem" }}>
+              <ADMonogram size={58} />
+              <img
+                src="/manus-storage/coat_of_arms_real_375cb88d.png"
+                alt="Imperial Coat of Arms"
+                className="w-12 h-auto opacity-80"
+              />
+            </div>
             <div>
               <div
                 style={{
                   fontFamily: "'Cinzel', serif",
                   fontSize: "0.65rem",
                   letterSpacing: "0.25em",
-                  color: "oklch(0.72 0.12 85)",
+                  color: "oklch(0.80 0.14 88)",
                   textTransform: "uppercase",
                   marginBottom: "0.25rem",
                 }}
@@ -57,7 +61,7 @@ export default function Footer() {
                 fontFamily: "'Cormorant Garamond', serif",
                 fontStyle: "italic",
                 fontSize: "0.9rem",
-                color: "oklch(0.72 0.12 85)",
+                color: "oklch(0.80 0.14 88)",
                 borderLeft: "2px solid oklch(0.72 0.12 85 / 0.5)",
                 paddingLeft: "0.75rem",
                 marginTop: "0.5rem",
@@ -74,7 +78,7 @@ export default function Footer() {
                 fontFamily: "'Cinzel', serif",
                 fontSize: "0.65rem",
                 letterSpacing: "0.25em",
-                color: "oklch(0.72 0.12 85)",
+                color: "oklch(0.80 0.14 88)",
                 textTransform: "uppercase",
                 marginBottom: "1.5rem",
               }}
@@ -116,7 +120,7 @@ export default function Footer() {
                 fontFamily: "'Cinzel', serif",
                 fontSize: "0.65rem",
                 letterSpacing: "0.25em",
-                color: "oklch(0.72 0.12 85)",
+                color: "oklch(0.80 0.14 88)",
                 textTransform: "uppercase",
                 marginBottom: "1.5rem",
               }}

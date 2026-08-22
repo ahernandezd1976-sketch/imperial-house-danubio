@@ -6,7 +6,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useLanguage, type Language } from "@/contexts/LanguageContext";
 
-const GOLD = "oklch(0.72 0.12 85)";
+const GOLD = "oklch(0.80 0.14 88)";
 
 // SVG flag components
 function UKFlag() {

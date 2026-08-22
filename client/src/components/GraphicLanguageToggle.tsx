@@ -9,7 +9,7 @@ interface GraphicLanguageToggleProps {
   onChange: (value: GraphicLanguage) => void;
 }
 
-const GOLD = "oklch(0.72 0.12 85)";
+const GOLD = "oklch(0.80 0.14 88)";
 const CREAM = "oklch(0.96 0.015 85)";
 
 export default function GraphicLanguageToggle({ value, onChange }: GraphicLanguageToggleProps) {

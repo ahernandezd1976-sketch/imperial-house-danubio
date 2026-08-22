@@ -8,7 +8,8 @@ import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const GOLD = "oklch(0.72 0.12 85)";
+const GOLD = "oklch(0.80 0.14 88)";
+const GOLD_INK = "oklch(0.48 0.13 82)";
 const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
 
@@ -274,8 +275,9 @@ export default function History() {
                 <div
                   style={{
                     fontFamily: "'Source Serif 4', serif",
-                    fontSize: "0.8rem",
-                    color: GOLD,
+                    fontSize: "0.95rem",
+                    color: i % 2 === 0 ? GOLD_INK : GOLD,
+                    fontWeight: 600,
                     letterSpacing: "0.05em",
                   }}
                 >
@@ -375,7 +377,7 @@ export default function History() {
                     }}
                   >
                     <td style={{ padding: "1rem", fontFamily: "'Cinzel', serif", fontSize: "0.9rem", color: GOLD }}>{row.n}</td>
-                    <td style={{ padding: "1rem", fontFamily: "'Cormorant Garamond', serif", fontSize: "1rem", color: CREAM, fontWeight: 500 }}>{row.name}</td>
+                    <td style={{ padding: "1rem", fontFamily: "'Cormorant Garamond', serif", fontSize: "1.12rem", color: GOLD, fontWeight: 700 }}>{row.name}</td>
                     <td style={{ padding: "1rem", fontFamily: "'Source Serif 4', serif", fontSize: "0.9rem", color: "oklch(0.65 0.01 85)" }}>{row.reign}</td>
                     <td style={{ padding: "1rem", fontFamily: "'Source Serif 4', serif", fontSize: "0.9rem", color: "oklch(0.55 0.01 85)" }}>{row.life}</td>
                     <td style={{ padding: "1rem", fontFamily: "'Source Serif 4', serif", fontSize: "0.85rem", color: "oklch(0.55 0.01 85)", fontStyle: "italic" }}>{t(row.noteKey)}</td>

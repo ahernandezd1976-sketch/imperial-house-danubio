@@ -11,7 +11,8 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getFamilyMembers } from "@/i18n/familyMembers";
 
-const GOLD = "oklch(0.72 0.12 85)";
+const GOLD = "oklch(0.80 0.14 88)";
+const GOLD_INK = "oklch(0.48 0.13 82)";
 const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
 
@@ -471,9 +472,9 @@ export default function Family() {
             }}>{t("family.memorial.pretitle")}</div>
             <h3 style={{
               fontFamily: "'Cinzel', serif",
-              fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
-              fontWeight: 600,
-              color: CREAM,
+              fontSize: "clamp(1.35rem, 2.8vw, 1.9rem)",
+              fontWeight: 700,
+              color: GOLD,
               letterSpacing: "0.06em",
               marginBottom: "0.35rem",
             }}>{t("family.memorial.name")}</h3>
@@ -564,9 +565,9 @@ export default function Family() {
                 <h2
                   style={{
                     fontFamily: "'Cinzel', serif",
-                    fontSize: "1.5rem",
-                    fontWeight: 600,
-                    color: CREAM,
+                    fontSize: "1.7rem",
+                    fontWeight: 700,
+                    color: GOLD,
                     marginBottom: "0.35rem",
                     lineHeight: 1.2,
                   }}
@@ -648,9 +649,9 @@ export default function Family() {
               <h2
                 style={{
                   fontFamily: "'Cinzel', serif",
-                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  fontSize: "clamp(2.2rem, 4.4vw, 3.25rem)",
                   fontWeight: 700,
-                  color: CREAM,
+                  color: GOLD,
                   lineHeight: 1.15,
                   marginBottom: "1.5rem",
                   letterSpacing: "0.03em",
@@ -727,9 +728,9 @@ export default function Family() {
             <h2
               style={{
                 fontFamily: "'Cinzel', serif",
-                fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
-                fontWeight: 600,
-                color: DARK,
+                fontSize: "clamp(2rem, 3.8vw, 2.8rem)",
+                fontWeight: 700,
+                color: GOLD_INK,
                 letterSpacing: "0.03em",
               }}
             >
@@ -741,7 +742,7 @@ export default function Family() {
             {others.map((member, i) => (
               <div
                 key={i}
-                className="reveal"
+                className="reveal secession-card"
                 style={{
                   transitionDelay: `${i * 0.08}s`,
                   border: `1px solid oklch(0.72 0.12 85 / 0.2)`,
@@ -802,9 +803,9 @@ export default function Family() {
                   <h3
                     style={{
                       fontFamily: "'Cinzel', serif",
-                      fontSize: "0.95rem",
-                      fontWeight: 600,
-                      color: DARK,
+                      fontSize: "1.08rem",
+                      fontWeight: 700,
+                      color: GOLD_INK,
                       marginBottom: "0.3rem",
                       letterSpacing: "0.02em",
                       lineHeight: 1.3,
@@ -816,8 +817,8 @@ export default function Family() {
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       fontStyle: "italic",
-                      fontSize: "0.88rem",
-                      color: "oklch(0.55 0.08 85)",
+                      fontSize: "0.95rem",
+                      color: GOLD_INK,
                       marginBottom: "0.3rem",
                       lineHeight: 1.4,
                     }}

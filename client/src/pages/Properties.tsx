@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const GOLD = "oklch(0.72 0.12 85)";
+const GOLD = "oklch(0.80 0.14 88)";
 const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
 
@@ -498,7 +498,7 @@ export default function Properties() {
             {properties.map((prop, i) => (
               <div
                 key={prop.id}
-                className="reveal"
+                className="reveal secession-card"
                 style={{
                   transitionDelay: `${(i % 4) * 0.1}s`,
                   border: `1px solid ${activeProperty === prop.id ? GOLD : "oklch(0.72 0.12 85 / 0.15)"}`,
@@ -539,7 +539,7 @@ export default function Properties() {
                       position: "absolute",
                       top: "1rem",
                       right: "1rem",
-                      background: prop.tagColor,
+                      background: GOLD,
                       color: DARK,
                       fontFamily: "'Cinzel', serif",
                       fontSize: "0.55rem",
@@ -573,11 +573,12 @@ export default function Properties() {
                     <h3
                       style={{
                         fontFamily: "'Cinzel', serif",
-                        fontSize: "1.3rem",
-                        fontWeight: 600,
-                        color: CREAM,
+                        fontSize: "clamp(1.4rem, 2.2vw, 1.65rem)",
+                        fontWeight: 700,
+                        color: GOLD,
                         letterSpacing: "0.04em",
                         lineHeight: 1.2,
+                        textShadow: "0 2px 12px rgba(0, 0, 0, 0.9)",
                       }}
                     >
                       {t(prop.nameKey)}

@@ -85,3 +85,10 @@
 ## Selected Design: **Idea 2 — Imperial Modernism / Vienna Secession Reborn**
 
 Chosen for its visual distinctiveness and dramatic contrast, which will make the fictional website feel both historically rooted and strikingly designed — perfect for a book's world-building artifact.
+
+## Style Decisions
+
+- The recurring **AD monogram** is the primary compact brand mark in navigation and appears with the arms in the footer.
+- Ornament follows Vienna Secession geometry: square corner brackets, interlocking gold linework, modular frames, and Roman numerals rather than wax seals or generic filigree.
+- The core palette is near-black, warm cream, and high-contrast gold; residence-category distinctions use typography and layout rather than unrelated label colors.
+- Prominent personal names and property titles use a brighter gold hierarchy and a modestly larger type scale for readability.

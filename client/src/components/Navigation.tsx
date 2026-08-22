@@ -5,6 +5,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import LanguageSelector from "@/components/LanguageSelector";
+import ADMonogram from "@/components/ADMonogram";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const navLinkKeys = [
@@ -50,18 +51,16 @@ export default function Navigation() {
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <img
-              src="/manus-storage/coat_of_arms_real_375cb88d.png"
-              alt="Imperial Coat of Arms"
-              className="w-10 h-auto transition-transform duration-300 group-hover:scale-105"
-            />
+            <span className="transition-transform duration-300 group-hover:scale-105">
+              <ADMonogram size={42} />
+            </span>
             <div className="hidden sm:block">
               <div
                 style={{
                   fontFamily: "'Cinzel', serif",
                   fontSize: "0.65rem",
                   letterSpacing: "0.25em",
-                  color: "oklch(0.72 0.12 85)",
+                  color: "oklch(0.80 0.14 88)",
                   textTransform: "uppercase",
                   lineHeight: 1.2,
                 }}

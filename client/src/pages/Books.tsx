@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const GOLD = "oklch(0.72 0.12 85)";
+const GOLD = "oklch(0.80 0.14 88)";
 const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
 const DARK_CARD = "oklch(0.12 0.005 285)";
@@ -451,9 +451,9 @@ export default function Books() {
                 <h3
                   style={{
                     fontFamily: "'Cinzel', serif",
-                    fontSize: "1.1rem",
-                    fontWeight: 600,
-                    color: i === 0 ? CREAM : "oklch(0.4 0.01 85)",
+                    fontSize: "1.22rem",
+                    fontWeight: 700,
+                    color: i === 0 ? GOLD : "oklch(0.48 0.13 82)",
                     marginBottom: "0.5rem",
                     letterSpacing: "0.03em",
                   }}

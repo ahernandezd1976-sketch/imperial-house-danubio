@@ -8,7 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const GOLD = "oklch(0.72 0.12 85)";
+const GOLD = "oklch(0.80 0.14 88)";
 const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
 
@@ -851,8 +851,9 @@ export default function Heraldry() {
                     key={i}
                     style={{
                       fontFamily: "'Source Serif 4', serif",
-                      fontSize: "0.9rem",
-                      color: "oklch(0.65 0.01 85)",
+                      fontSize: "1rem",
+                      color: GOLD,
+                      fontWeight: 600,
                       padding: "0.4rem 0",
                       borderBottom: i < 4 ? `1px solid oklch(0.72 0.12 85 / 0.08)` : "none",
                       fontStyle: "italic",

@@ -3,7 +3,7 @@
  * Native archival route using the shared Navigation, Footer, LanguageContext,
  * Cinzel/Cormorant typography, black-gold palette, and supplied official art.
  */
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 import {
   ArrowDown,
@@ -14,6 +14,8 @@ import {
   Shield,
   Sparkles,
   Swords,
+  Search,
+  X,
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -41,6 +43,15 @@ type Branch = {
   subtitleKey: string;
   excluded?: boolean;
   members: BranchMember[];
+};
+
+type SearchCategory = "all" | "lineage" | "household" | "branches" | "succession";
+
+type SearchEntry = {
+  id: string;
+  name: string;
+  meta: string;
+  category: Exclude<SearchCategory, "all">;
 };
 
 const lineage: LineagePerson[] = [
@@ -121,7 +132,12 @@ function localisedName(name: string, language: Language) {
   if (language === "fr") return name.replace("Franz Joseph", "François-Joseph").replace("Franz Ferdinand", "François-Ferdinand").replace("Karl I", "Charles Ier").replace("Otto I", "Otto Ier").replace("Friedrich I", "Frédéric Ier").replace("Maximilian II", "Maximilien II").replace("Crown Prince", "Prince héritier").replace("Archduchess", "Archiduchesse").replace("Archduke", "Archiduc").replace("Duke of Hohenberg", "Duc de Hohenberg").replace("born", "né en").replace("age", "âge");
   if (language === "cs") return name.replace("Franz Joseph", "František Josef").replace("Franz Ferdinand", "František Ferdinand").replace("Karl I", "Karel I.").replace("Otto I", "Otto I.").replace("Friedrich I", "Fridrich I.").replace("Maximilian II", "Maxmilián II.").replace("Crown Prince", "Korunní princ").replace("Archduchess", "Arcivévodkyně").replace("Archduke", "Arcivévoda").replace("Duke of Hohenberg", "Vévoda z Hohenbergu").replace("born", "nar.").replace("age", "věk");
   if (language === "hr") return name.replace("Franz Joseph", "Franjo Josip").replace("Franz Ferdinand", "Franjo Ferdinand").replace("Karl I", "Karlo I.").replace("Otto I", "Otto I.").replace("Friedrich I", "Friedrich I.").replace("Maximilian II", "Maksimilijan II.").replace("Crown Prince", "Prijestolonasljednik").replace("Archduchess", "Nadvojvotkinja").replace("Archduke", "Nadvojvoda").replace("Duke of Hohenberg", "Vojvoda od Hohenberga").replace("born", "rođ.").replace("age", "dob");
+  if (language === "es") return name.replace("Franz Joseph", "Francisco José").replace("Franz Ferdinand", "Francisco Fernando").replace("Karl Ludwig", "Carlos Luis").replace("Carl Ludwig", "Carlos Luis").replace("Karl I", "Carlos I").replace("Otto Franz", "Otón Francisco").replace("Otto I", "Otón I").replace(/^Otto$/, "Otón").replace("Friedrich I", "Federico I").replace("Maximilian II", "Maximiliano II").replace("Maximilian,", "Maximiliano,").replace("Elisabeth", "Isabel").replace("Marie Valerie", "María Valeria").replace(/^Robert$/, "Roberto").replace(/^Felix$/, "Félix").replace(/^Charlotte$/, "Carlota").replace("Crown Prince", "Príncipe Heredero").replace("Archduchess", "Archiduquesa").replace("Archduke", "Archiduque").replace("Duke of Hohenberg", "Duque de Hohenberg").replace("of Bavaria", "de Baviera").replace("Leopold", "Leopoldo").replace("born", "nac.").replace("age", "edad");
   return name;
+}
+
+function normalizeSearch(value: string) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase();
 }
 
 function SectionHeading({ kicker, title, intro, dark = false }: { kicker: string; title: string; intro: string; dark?: boolean }) {
@@ -135,10 +151,10 @@ function SectionHeading({ kicker, title, intro, dark = false }: { kicker: string
   );
 }
 
-function HouseholdCard({ member, language, t }: { member: FamilyMember; language: Language; t: (key: string) => string }) {
+function HouseholdCard({ member, t, active }: { member: FamilyMember; t: (key: string) => string; active: boolean }) {
   const portrait = familyTreeAssets.portraits[member.initials] ?? member.portrait;
   return (
-    <article className="ift-household-card">
+    <article id={`household-${member.initials}`} className={`ift-household-card ${active ? "ift-search-match" : ""}`}>
       <div className="ift-household-portrait">
         <img src={portrait} alt={`${member.name} — official portrait`} />
         {(member.isCrownPrince || member.initials === "RV") && <span>{member.isCrownPrince ? t("tree.succession.crownPrince") : t("tree.succession.marshal")}</span>}
@@ -161,11 +177,59 @@ function HouseholdCard({ member, language, t }: { member: FamilyMember; language
 
 export default function FamilyTreeFull() {
   const { language, t } = useLanguage();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchCategory, setSearchCategory] = useState<SearchCategory>("all");
+  const [activeSearchId, setActiveSearchId] = useState<string | null>(null);
   const portrait = language === "de" ? familyTreeAssets.emperorDe : familyTreeAssets.emperorEn;
   const household = useMemo(() => {
     const members = getFamilyMembers(language).filter((member) => !member.isEmperor);
     return portraitOrder.map((initials) => members.find((member) => member.initials === initials)).filter(Boolean) as FamilyMember[];
   }, [language]);
+
+  const searchEntries = useMemo<SearchEntry[]>(() => {
+    const entries: SearchEntry[] = [
+      ...lineage.map((person) => ({
+        id: `lineage-${person.id}`,
+        name: localisedName(person.name, language),
+        meta: `${person.dates} · ${t(person.roleKey)}`,
+        category: "lineage" as const,
+      })),
+      ...household.map((member) => ({
+        id: `household-${member.initials}`,
+        name: member.name,
+        meta: member.title,
+        category: "household" as const,
+      })),
+      ...branches.flatMap((branch) => branch.members.map(([name, dates, roleKey], index) => ({
+        id: `branch-${branch.id}-${index}`,
+        name: localisedName(name, language),
+        meta: `${localisedName(dates, language)} · ${t(roleKey)}`,
+        category: "branches" as const,
+      }))),
+      {
+        id: "succession-leopold",
+        name: localisedName("Crown Prince Leopold von Habsburg", language),
+        meta: t("tree.succession.heir"),
+        category: "succession" as const,
+      },
+      {
+        id: "succession-reiner",
+        name: localisedName("Archduke Reiner von Habsburg", language),
+        meta: t("tree.succession.marshal"),
+        category: "succession" as const,
+      },
+    ];
+    return entries;
+  }, [household, language, t]);
+
+  const searchResults = useMemo(() => {
+    const normalized = normalizeSearch(searchQuery.trim());
+    return searchEntries.filter((entry) => {
+      const inCategory = searchCategory === "all" || entry.category === searchCategory;
+      const matchesQuery = !normalized || normalizeSearch(`${entry.name} ${entry.meta}`).includes(normalized);
+      return inCategory && matchesQuery;
+    });
+  }, [searchCategory, searchEntries, searchQuery]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -173,6 +237,15 @@ export default function FamilyTreeFull() {
   }, [language, t]);
 
   const scrollToLineage = () => document.getElementById("family-tree-lineage")?.scrollIntoView({ behavior: "smooth" });
+  const selectSearchResult = (id: string) => {
+    setActiveSearchId(id);
+    requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "center" }));
+  };
+  const resetSearch = () => {
+    setSearchQuery("");
+    setSearchCategory("all");
+    setActiveSearchId(null);
+  };
 
   return (
     <div className="family-tree-route ift-full">
@@ -215,10 +288,40 @@ export default function FamilyTreeFull() {
           </div>
         </section>
 
+        <section className="ift-genealogy-search ift-no-print" aria-labelledby="genealogy-search-title">
+          <div className="ift-container">
+            <div className="ift-search-shell">
+              <div className="ift-search-heading">
+                <Search size={18} aria-hidden="true" />
+                <div><small>{t("tree.search.kicker")}</small><h2 id="genealogy-search-title">{t("tree.search.title")}</h2></div>
+              </div>
+              <div className="ift-search-row">
+                <label className="ift-search-input">
+                  <Search size={17} aria-hidden="true" />
+                  <span className="sr-only">{t("tree.search.label")}</span>
+                  <input value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)} placeholder={t("tree.search.placeholder")} type="search" autoComplete="off" />
+                  {(searchQuery || searchCategory !== "all") && <button type="button" onClick={resetSearch} aria-label={t("tree.search.reset")}><X size={15} /></button>}
+                </label>
+                <div className="ift-search-filters" aria-label={t("tree.search.filterLabel")}>
+                  {(["all", "lineage", "household", "branches", "succession"] as SearchCategory[]).map((category) => (
+                    <button type="button" key={category} aria-pressed={searchCategory === category} onClick={() => setSearchCategory(category)}>{t(`tree.search.filter.${category}`)}</button>
+                  ))}
+                </div>
+              </div>
+              {(!!searchQuery.trim() || searchCategory !== "all") && (
+                <div className="ift-search-results" aria-live="polite">
+                  <p>{searchResults.length ? t("tree.search.results").replace("{count}", String(searchResults.length)) : t("tree.search.empty")}</p>
+                  {!!searchResults.length && <div>{searchResults.map((entry) => <button type="button" key={entry.id} onClick={() => selectSearchResult(entry.id)}><span>{entry.name}</span><small>{entry.meta}</small></button>)}</div>}
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
         <section className="ift-household-section">
           <div className="ift-container">
             <SectionHeading kicker={t("tree.household.kicker")} title={t("tree.household.title")} intro={t("tree.household.intro")} />
-            <div className="ift-household-grid">{household.map((member) => <HouseholdCard key={member.initials} member={member} language={language} t={t} />)}</div>
+            <div className="ift-household-grid">{household.map((member) => <HouseholdCard key={member.initials} member={member} t={t} active={activeSearchId === `household-${member.initials}`} />)}</div>
             <aside className="ift-memorial"><Crown size={24} /><div><h3>{t("tree.household.memorialTitle")}</h3><p>{t("tree.household.memorialText")}</p></div></aside>
             <Link className="ift-crosslink" href="/family"><BookOpen size={17} />{t("tree.action.family")}</Link>
           </div>
@@ -231,7 +334,7 @@ export default function FamilyTreeFull() {
             <div className="ift-lineage-list">
               {lineage.map((person, index) => (
                 <div className="ift-lineage-step" key={person.id}>
-                  <article className={`ift-imperial-card ${person.bridge ? "ift-bridge" : ""}`}>
+                  <article id={`lineage-${person.id}`} className={`ift-imperial-card ${person.bridge ? "ift-bridge" : ""} ${activeSearchId === `lineage-${person.id}` ? "ift-search-match" : ""}`}>
                     <span className="ift-ordinal">{String(index + 1).padStart(2, "0")}</span>
                     <Crown className="ift-card-crown" size={18} />
                     <p className="ift-person-dates">{person.dates}</p>
@@ -261,7 +364,7 @@ export default function FamilyTreeFull() {
                     <b>{t("tree.branches.open")}</b>
                   </summary>
                   <div className="ift-branch-members">
-                    {branch.members.map(([name, dates, roleKey]) => <div key={`${branch.id}-${name}-${dates}`}><i /><p><strong>{localisedName(name, language)}</strong><span>{localisedName(dates, language)} · {t(roleKey)}</span></p></div>)}
+                    {branch.members.map(([name, dates, roleKey], index) => <div id={`branch-${branch.id}-${index}`} className={activeSearchId === `branch-${branch.id}-${index}` ? "ift-search-match" : ""} key={`${branch.id}-${name}-${dates}`}><i /><p><strong>{localisedName(name, language)}</strong><span>{localisedName(dates, language)} · {t(roleKey)}</span></p></div>)}
                   </div>
                 </details>
               ))}
@@ -294,7 +397,7 @@ export default function FamilyTreeFull() {
                   ["01", "Leopold von Habsburg", "1994", "tree.succession.crownPrince", "tree.succession.heir"],
                   ["02", "Reiner von Habsburg", "31", "tree.succession.marshal", "tree.succession.nephew"],
                 ].map(([rank, name, born, role, relation], index) => (
-                  <article className={index === 0 ? "heir" : ""} key={rank}><b>{rank}</b><span>{index === 0 ? <Crown size={25} /> : <Shield size={22} />}</span><div><small>{t(role)}</small><h3>{name}</h3><p>{t(relation)}</p></div><em><small>{t("tree.succession.born")}</small>{born}</em></article>
+                  <article id={index === 0 ? "succession-leopold" : "succession-reiner"} className={`${index === 0 ? "heir" : ""} ${activeSearchId === (index === 0 ? "succession-leopold" : "succession-reiner") ? "ift-search-match" : ""}`} key={rank}><b>{rank}</b><span>{index === 0 ? <Crown size={25} /> : <Shield size={22} />}</span><div><small>{t(role)}</small><h3>{localisedName(index === 0 ? "Crown Prince Leopold von Habsburg" : "Archduke Reiner von Habsburg", language)}</h3><p>{t(relation)}</p></div><em><small>{t("tree.succession.born")}</small>{born}</em></article>
                 ))}
               </div>
               <aside className="ift-alliance"><p><BookOpen size={19} />{t("tree.alliance.kicker")}</p><h3>{t("tree.alliance.title")}</h3><div>{t("tree.alliance.text")}</div><section>{[1, 2, 3].map((n) => <span key={n}>{n === 1 ? <Crown size={20} /> : n === 2 ? <Sparkles size={20} /> : <Shield size={20} />}<strong>{t(`tree.alliance.p${n}`)}</strong><small>{t(`tree.alliance.v${n}`)}</small></span>)}</section></aside>

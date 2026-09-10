@@ -55,6 +55,35 @@ function nameFor(language: Language, english: string, german?: string) {
       "Friedrich I": "Friedrich I.",
       "Maximilian II": "Maksimilijan II.",
     },
+    es: {
+      "Franz Joseph I": "Francisco José I",
+      "Franz Ferdinand I": "Francisco Fernando I",
+      "Karl I": "Carlos I",
+      "Otto I": "Otón I",
+      "Friedrich I": "Federico I",
+      "Maximilian II": "Maximiliano II",
+      "Karl Ludwig": "Carlos Luis",
+      "Otto Franz": "Otón Francisco",
+      "Otto": "Otón",
+      "Rudolf": "Rodolfo",
+      "Sophie": "Sofía",
+      "Gisela": "Gisela",
+      "Marie Valerie": "María Valeria",
+      "Elisabeth ‘Sisi’ of Bavaria": "Isabel ‘Sisi’ de Baviera",
+      "Crown Prince Leopold von Habsburg": "Príncipe Heredero Leopoldo von Habsburg",
+      "Leopold von Habsburg": "Leopoldo von Habsburg",
+      "Reiner von Habsburg": "Reiner von Habsburg",
+      "Archduchess Eleonora von Habsburg": "Archiduquesa Eleonora von Habsburg",
+      "Archduchess Gisela von Habsburg": "Archiduquesa Gisela von Habsburg",
+      "Archduchess Alexis von Habsburg": "Archiduquesa Alexis von Habsburg",
+      "Archduke Reiner von Habsburg": "Archiduque Reiner von Habsburg",
+      "Archduke Charles Bertroch": "Archiduque Carlos Bertroch",
+      "Franz Ferdinand I & Sophie Chotek": "Francisco Fernando I y Sophie Chotek",
+      "Maximilian, Duke of Hohenberg": "Maximiliano, Duque de Hohenberg",
+      "Franz Ferdinand, Duke of Hohenberg": "Francisco Fernando, Duque de Hohenberg",
+      "Franz Ferdinand von Hohenberg": "Francisco Fernando von Hohenberg",
+      "Maria-Cristina": "María-Cristina",
+    },
   };
   return variants[language]?.[english] ?? english;
 }
@@ -65,6 +94,7 @@ function lifeFor(language: Language, value: string) {
   if (language === "fr") return value.replace("born", "né en").replace("age", "âge");
   if (language === "cs") return value.replace("born", "nar.").replace("age", "věk");
   if (language === "hr") return value.replace("born", "rođ.").replace("age", "dob");
+  if (language === "es") return value.replace("born", "nac.").replace("age", "edad");
   return value;
 }
 
@@ -110,37 +140,37 @@ export default function FamilyTreeSimple() {
             <small>{t("tree.simple.corrected")}</small>
           </header>
 
-          <section className="ift-simple-monarch">
+          <section className="ift-simple-monarch ift-print-keep">
             <img src={emperor} alt={t("tree.hero.sovereign")} />
             <div><small>{t("tree.hero.current")}</small><h2>{t("tree.hero.sovereign")}</h2><p>{t("tree.hero.factBorn")} · {t("tree.hero.sovereignTitle")} · {t("tree.hero.since")}</p><em>{t("tree.hero.factWidow")}</em></div>
           </section>
 
-          <section className="ift-simple-register">
+          <section className="ift-simple-register ift-print-break-before">
             <h3>{t("tree.simple.origin")}</h3>
             <div className="ift-simple-couple">
               <PersonBox name={nameFor(language, "Franz Joseph I", "Franz Joseph I.")} life="1830–1916" reign="1848–1916" detail={t("tree.person.fj.role")} featured />
               <span className="ift-marriage">∞</span>
-              <PersonBox name={language === "de" ? "Elisabeth ‘Sisi’ in Bayern" : "Elisabeth ‘Sisi’ of Bavaria"} life="1837–1898" detail={t("tree.member.sisi")} />
+              <PersonBox name={nameFor(language, "Elisabeth ‘Sisi’ of Bavaria", "Elisabeth ‘Sisi’ in Bayern")} life="1837–1898" detail={t("tree.member.sisi")} />
             </div>
             <div className="ift-children-grid four">
-              <PersonBox name="Sophie" life="1855–1857" detail={t("tree.member.sophie")} />
-              <PersonBox name="Gisela" life="1856–1932" detail={t("tree.member.gisela")} />
-              <PersonBox name="Rudolf" life="1858–1889" detail={t("tree.member.rudolf")} />
-              <PersonBox name="Marie Valerie" life="1868–1924" detail={t("tree.member.marie")} />
+              <PersonBox name={nameFor(language, "Sophie")} life="1855–1857" detail={t("tree.member.sophie")} />
+              <PersonBox name={nameFor(language, "Gisela")} life="1856–1932" detail={t("tree.member.gisela")} />
+              <PersonBox name={nameFor(language, "Rudolf")} life="1858–1889" detail={t("tree.member.rudolf")} />
+              <PersonBox name={nameFor(language, "Marie Valerie")} life="1868–1924" detail={t("tree.member.marie")} />
             </div>
           </section>
 
           <div className="ift-simple-divider"><span /><Crown size={17} /><span /></div>
 
-          <section className="ift-simple-register">
+          <section className="ift-simple-register ift-print-break-before">
             <h3>{t("tree.simple.branch")}</h3><p className="ift-register-note">{t("tree.simple.passed")}</p>
             <div className="ift-simple-line">
-              <PersonBox name="Karl Ludwig" life="1833–1896" detail={t("tree.person.karlLudwig.role")} />
+              <PersonBox name={nameFor(language, "Karl Ludwig")} life="1833–1896" detail={t("tree.person.karlLudwig.role")} />
               <PersonBox name={nameFor(language, "Franz Ferdinand I", "Franz Ferdinand I.")} life="1863–1922" reign="1916–1922" detail={t("tree.person.franzFerdinand.role")} featured />
-              <PersonBox name="Otto Franz" life="1865–1906" detail={t("tree.person.ottoFranz.role")} />
+              <PersonBox name={nameFor(language, "Otto Franz")} life="1865–1906" detail={t("tree.person.ottoFranz.role")} />
               <PersonBox name={nameFor(language, "Karl I", "Karl I.")} life="1887–1939" reign="1922–1939" detail={t("tree.person.karl.role")} featured />
               <PersonBox name={nameFor(language, "Otto I", "Otto I.")} life="1912–1980" reign="1939–1955" detail={t("tree.person.otto.role")} featured />
-              <PersonBox name="Rudolf" life="1919–2010" detail={t("tree.person.rudolf.role")} />
+              <PersonBox name={nameFor(language, "Rudolf")} life="1919–2010" detail={t("tree.person.rudolf.role")} />
               <PersonBox name={nameFor(language, "Friedrich I", "Friedrich I.")} life="1936–1988" reign="1955–1988" detail={t("tree.person.friedrich.role")} featured />
               <PersonBox name={nameFor(language, "Maximilian II", "Maximilian II.")} life="1954–" reign={`1988–${t("tree.reigns.present")}`} detail={t("tree.person.max.role")} featured />
             </div>
@@ -148,12 +178,12 @@ export default function FamilyTreeSimple() {
 
           <div className="ift-simple-divider"><span /><Crown size={17} /><span /></div>
 
-          <section className="ift-simple-register">
+          <section className="ift-simple-register ift-print-break-before">
             <h3>{t("tree.simple.current")}</h3>
             <div className="ift-simple-couple">
               <PersonBox name={nameFor(language, "Maximilian II", "Maximilian II.")} life="1954–" reign={`1988–${t("tree.reigns.present")}`} detail={t("tree.hero.sovereignTitle")} featured />
               <span className="ift-marriage">∞</span>
-              <PersonBox name="Maria-Cristina" life="1954–2000" detail={t("tree.household.memorialText")} />
+              <PersonBox name={nameFor(language, "Maria-Cristina")} life="1954–2000" detail={t("tree.household.memorialText")} />
             </div>
             <div className="ift-children-grid two">
               <PersonBox name={nameFor(language, "Crown Prince Leopold von Habsburg")} life={lifeFor(language, "born 1994")} detail={t("tree.succession.heir")} featured />
@@ -169,7 +199,7 @@ export default function FamilyTreeSimple() {
 
           <div className="ift-simple-divider"><span /><Gem size={14} /><span /></div>
 
-          <section className="ift-simple-register ift-collateral-register">
+          <section className="ift-simple-register ift-collateral-register ift-print-break-before">
             <h3>{t("tree.simple.collateral")}</h3><p className="ift-exclusion-note">{t("tree.simple.excluded")}</p>
             <div className="ift-simple-line compact">
               <PersonBox name={nameFor(language, "Franz Ferdinand I & Sophie Chotek")} life="1868–1938" detail={t("tree.member.sophieChotek")} />
@@ -180,9 +210,9 @@ export default function FamilyTreeSimple() {
             </div>
           </section>
 
-          <section className="ift-simple-succession">
+          <section className="ift-simple-succession ift-print-break-before">
             <h3>{t("tree.simple.succession")}</h3>
-            <ol><li><b>1</b><span><strong>Leopold von Habsburg</strong><small>{t("tree.succession.heir")}</small></span></li><li><b>2</b><span><strong>Reiner von Habsburg</strong><small>{t("tree.succession.marshal")}</small></span></li></ol>
+            <ol><li><b>1</b><span><strong>{nameFor(language, "Leopold von Habsburg")}</strong><small>{t("tree.succession.heir")}</small></span></li><li><b>2</b><span><strong>{nameFor(language, "Reiner von Habsburg")}</strong><small>{t("tree.succession.marshal")}</small></span></li></ol>
           </section>
 
           <footer className="ift-simple-footer"><img src={familyTreeAssets.arms} alt="" /><p>“Aquila et Flumen in Aeternum”</p><small>{t("tree.simple.note")}</small></footer>

@@ -72,3 +72,18 @@
 - [x] Pass TypeScript and production builds after synchronization.
 - [x] Verify German and English desktop/mobile layouts and both PDF downloads.
 - [x] Save the final integration checkpoint only after all checks pass.
+
+## Current Task: Spanish Family Tree + Genealogy Search + Print Layout
+- [x] Audit all family-tree translation keys, member datasets, controls, and print selectors.
+- [x] Add complete Spanish translations for both family-tree editions.
+- [x] Add Spanish names, titles, relationships, and simple-edition labels where language-specific data is required.
+- [x] Add a compact, accessible genealogy search field.
+- [x] Add useful filters for lineage groups and succession status.
+- [x] Highlight matching members and provide clear empty/reset states.
+- [x] Keep search/filter controls responsive and keyboard accessible.
+- [x] Add print-specific page sizes, page breaks, widows/orphans protection, and hidden interactive controls.
+- [x] Verify Spanish full and simple editions on desktop and mobile.
+- [x] Verify search, filters, reset, and no-results behavior.
+- [x] Generate and inspect printed PDF output for both editions.
+- [x] Pass TypeScript and production builds.
+- [x] Save the final checkpoint after all checks pass.

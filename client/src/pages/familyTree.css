@@ -58,6 +58,32 @@
 .ift-sovereign-facts { display: flex; align-items: center; gap: 22px; }
 .ift-sovereign-facts span { display: flex; align-items: center; gap: 7px; color: #655d50; font-size: 13px; }
 .ift-sovereign-facts svg { color: var(--ift-wine); }
+.ift-genealogy-search { position: relative; z-index: 4; padding: 28px 0; color: var(--ift-cream); background: #0a1926; border-bottom: 1px solid rgba(201,165,91,.28); }
+.ift-search-shell { padding: 22px 24px; display: grid; gap: 18px; border: 1px solid rgba(201,165,91,.32); background: linear-gradient(110deg, rgba(20,39,53,.96), rgba(8,23,36,.96)); box-shadow: 0 16px 34px rgba(0,0,0,.2); }
+.ift-search-heading { display: flex; align-items: center; gap: 12px; }
+.ift-search-heading > svg { flex: 0 0 auto; color: var(--ift-gold-light); }
+.ift-search-heading small { display: block; color: #b9954f; font-family: "Cinzel", serif; font-size: 8px; letter-spacing: .17em; text-transform: uppercase; }
+.ift-search-heading h2 { margin: 3px 0 0; color: #f1e3c7; font-family: "Cinzel", serif; font-size: 18px; font-weight: 500; }
+.ift-search-row { display: grid; grid-template-columns: minmax(250px, .8fr) 1.2fr; gap: 14px; align-items: center; }
+.ift-search-input { min-height: 44px; padding: 0 12px; display: flex; align-items: center; gap: 9px; color: #d9bd78; background: rgba(3,14,23,.62); border: 1px solid rgba(208,174,96,.4); }
+.ift-search-input:focus-within { border-color: #e1c77e; box-shadow: 0 0 0 3px rgba(201,165,91,.14); }
+.ift-search-input input { flex: 1; min-width: 0; color: #f1e4c9; background: transparent; border: 0; outline: 0; font-family: "Cormorant Garamond", serif; font-size: 16px; }
+.ift-search-input input::placeholder { color: #827b6f; }
+.ift-search-input button { width: 28px; height: 28px; display: grid; place-items: center; color: #c7ad74; background: transparent; border: 1px solid rgba(208,174,96,.24); }
+.ift-search-filters { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 7px; }
+.ift-search-filters button { min-height: 36px; padding: 0 11px; color: #a99f8c; background: rgba(5,18,29,.5); border: 1px solid rgba(201,165,91,.22); font-family: "Cinzel", serif; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; transition: color .18s, border-color .18s, background .18s, transform .18s cubic-bezier(.23,1,.32,1); }
+.ift-search-filters button:hover { color: #f0dbac; border-color: rgba(224,199,127,.58); transform: translateY(-1px); }
+.ift-search-filters button[aria-pressed="true"] { color: #101c27; background: #d4b363; border-color: #e0c77f; font-weight: 700; }
+.ift-search-results { padding-top: 15px; border-top: 1px solid rgba(201,165,91,.18); }
+.ift-search-results > p { margin: 0 0 10px; color: #a59b88; font-size: 13px; font-style: italic; }
+.ift-search-results > div { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; }
+.ift-search-results > div button { min-width: 0; padding: 11px 12px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; color: #e9dabd; background: rgba(5,17,27,.56); border: 1px solid rgba(201,165,91,.2); }
+.ift-search-results > div button:hover, .ift-search-results > div button:focus-visible { background: rgba(196,158,77,.12); border-color: rgba(224,199,127,.56); outline: none; }
+.ift-search-results span, .ift-search-results small { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ift-search-results span { font-family: "Cinzel", serif; font-size: 10px; }
+.ift-search-results small { margin-top: 3px; color: #948b7b; font-size: 11px; }
+.ift-search-match { scroll-margin-top: 120px; animation: ift-search-pulse 1.7s cubic-bezier(.23,1,.32,1) both; }
+@keyframes ift-search-pulse { 0%,100% { box-shadow: inherit; } 22%,70% { box-shadow: 0 0 0 3px #e2c36f, 0 0 34px rgba(215,179,99,.48); } }
 .ift-household-section, .ift-parchment, .ift-reigns { position: relative; padding: 125px 0 135px; color: var(--ift-ink); background: var(--ift-parchment); background-image: radial-gradient(circle at 16% 7%, rgba(156,120,52,.1), transparent 28%), linear-gradient(rgba(122,86,34,.04) 1px, transparent 1px); background-size: auto, 100% 34px; }
 .ift-household-section { background-color: #eee2c7; }
 .ift-section-heading { max-width: 780px; margin: 0 auto 58px; text-align: center; }
@@ -225,21 +251,79 @@
   .ift-hero { min-height: auto; }.ift-crown-frieze { top: 72px; height: 220px; opacity: .5; }.ift-hero-inner { padding: 150px 0 100px; grid-template-columns: 1fr; }.ift-hero-copy { padding-top: 20px; text-align: center; }.ift-hero-copy .ift-kicker { justify-content: center; }.ift-hero-intro { margin-inline: auto; }.ift-hero-copy blockquote { display: inline-block; }.ift-portrait-stage { width: min(100%,480px); margin-top: 30px; }.ift-hero-stats { max-width: 560px; margin-inline: auto; }
   .ift-sovereign-inner { grid-template-columns: 76px 1fr; padding: 20px 0; }.ift-crest { width: 68px; height: 68px; }.ift-sovereign-facts { grid-column: 1/-1; justify-content: flex-start; padding-bottom: 4px; }
   .ift-branch-grid { grid-template-columns: 1fr; }.ift-reign-row { grid-template-columns: 42px 1fr 82px; gap: 14px; padding: 15px 0; }.ift-reign-range { grid-column: 2/-1; grid-row: 2; }.ift-reign-length { grid-column: 3; grid-row: 1; }
+  .ift-search-row { grid-template-columns: 1fr; }.ift-search-filters { justify-content: flex-start; }.ift-search-results > div { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media (max-width: 620px) {
   .ift-container, .ift-hero-inner { width: min(100% - 28px,1180px); }.ift-hero-copy h1 { font-size: 46px; }.ift-hero-intro { font-size: 18px; }.ift-hero-actions { justify-content: center; }.ift-hero-stats div { padding-right: 9px; }.ift-hero-stats div + div { padding-left: 9px; }.ift-hero-stats strong { font-size: 19px; }.ift-portrait-stage { padding: 14px; }.ift-current-plaque { left: -5px; right: 36px; bottom: -40px; padding-left: 16px; }.ift-current-plaque h2 { font-size: 20px; }.ift-wax-seal { right: 2px; bottom: -56px; width: 69px; height: 69px; }
   .ift-household-section, .ift-parchment, .ift-branches, .ift-reigns, .ift-succession { padding: 88px 0; }.ift-section-heading { margin-bottom: 40px; }.ift-section-heading h2 { font-size: 37px; }.ift-section-heading > p:last-child { font-size: 16px; }.ift-household-grid { grid-template-columns: 1fr; }.ift-household-copy > p:not(.ift-age) { min-height: 0; }.ift-memorial { align-items: flex-start; padding: 20px; }.ift-legend { gap: 10px; flex-wrap: wrap; }
+  .ift-genealogy-search { padding: 18px 0; }.ift-search-shell { padding: 18px 15px; }.ift-search-filters { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }.ift-search-results > div { grid-template-columns: 1fr; }
   .ift-imperial-card { min-height: 0; padding: 88px 22px 26px; text-align: center; }.ift-ordinal { inset: 0 0 auto; width: auto; height: 63px; border-right: 0; border-bottom: 1px solid rgba(148,110,49,.25); font-size: 27px; }.ift-card-crown { top: 21px; }.ift-decree { padding: 20px; align-items: flex-start; }.ift-decree > span { flex-basis: 48px; width: 48px; height: 48px; }
   .ift-branch-register summary { grid-template-columns: 44px 1fr; padding: 18px 15px; }.ift-branch-register summary > b { display: none; }.ift-branch-register summary > span:first-child { width: 40px; height: 40px; }.ift-branch-register summary strong { font-size: 15px; }
   .ift-reign-row { grid-template-columns: 30px 1fr 58px; }.ift-reign-row strong { font-size: 14px; }.ift-reign-row em { font-size: 12px; }.ift-succession-list article { grid-template-columns: 38px 1fr 58px; padding: 15px; }.ift-succession-list article > span { display: none; }.ift-succession-list h3 { font-size: 14px; }.ift-alliance { padding: 27px 23px; }.ift-alliance section { grid-template-columns: 1fr; }.ift-alliance section span { min-height: 105px; }
   .ift-simple-page { padding: 95px 8px 35px; }.ift-simple-toolbar { flex-direction: column; }.ift-simple-toolbar > div { width: 100%; flex-wrap: wrap; }.ift-simple-toolbar a, .ift-simple-toolbar button { flex: 1; justify-content: center; }.ift-simple-sheet::before { left: 7px; }.ift-simple-sheet::after { right: 7px; }.ift-simple-banner { height: 135px; }.ift-simple-header { padding: 31px 25px 38px; }.ift-simple-header > img { width: 90px; height: 90px; top: -52px; }.ift-simple-header p { margin-top: 38px; }.ift-simple-monarch { margin: 34px 23px 20px; padding: 13px; grid-template-columns: 92px 1fr; gap: 15px; }.ift-simple-monarch img { width: 92px; height: 132px; }.ift-simple-monarch h2 { font-size: 19px; }.ift-simple-monarch p { font-size: 13px; }.ift-simple-register { padding: 34px 23px; }.ift-simple-couple { grid-template-columns: 1fr; }.ift-marriage { transform: rotate(90deg); line-height: .7; }.ift-children-grid.four, .ift-children-grid.two, .ift-extended-house { grid-template-columns: 1fr; }.ift-simple-succession { margin: 25px 23px 35px; padding: 25px 16px; }.ift-simple-footer { padding: 34px 28px 42px; }
 }
 @media (prefers-reduced-motion: no-preference) { .ift-hero-copy { animation: ift-rise .7s cubic-bezier(.23,1,.32,1) both; }.ift-portrait-stage { animation: ift-rise .75s .1s cubic-bezier(.23,1,.32,1) both; } @keyframes ift-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } } }
+@media (prefers-reduced-motion: reduce) { .ift-search-match { animation: none; outline: 3px solid #d8b75f; outline-offset: 4px; } }
 @media print {
-  .family-tree-route > header, .family-tree-route > footer, .ift-no-print { display: none !important; }
-  .ift-simple-page { padding: 0; background: #fff !important; }
-  .ift-simple-sheet { width: 100%; box-shadow: none; }
-  .ift-simple-banner { height: 120px; }
-  .ift-simple-register, .ift-simple-monarch, .ift-simple-succession { break-inside: avoid; }
-  .ift-simple-person { min-height: 82px; padding: 12px; }
+  @page { size: A4 portrait; margin: 11mm 10mm 12mm; }
+  html, body { background: #fff !important; }
+  body, .family-tree-route { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .family-tree-route { min-height: 0; background: #fff !important; }
+  .family-tree-route > header, .family-tree-route > footer, .ift-no-print, button[aria-label="Share"] { display: none !important; }
+  .family-tree-route h1, .family-tree-route h2, .family-tree-route h3, .family-tree-route p { orphans: 3; widows: 3; }
+
+  /* Full imperial edition */
+  .ift-full { overflow: visible; }
+  .ift-full .ift-hero { min-height: 268mm; break-after: page; page-break-after: always; background: radial-gradient(circle at 73% 40%, #193247 0, #0b1c2c 30%, #07131f 67%) !important; }
+  .ift-full .ift-crown-frieze { top: 0; height: 70mm; }
+  .ift-full .ift-hero-inner { width: 100%; min-height: 250mm; padding: 42mm 5mm 18mm; grid-template-columns: .9fr 1.1fr; gap: 12mm; }
+  .ift-full .ift-hero-copy { padding-top: 0; }
+  .ift-full .ift-hero-copy h1 { font-size: 38pt; }
+  .ift-full .ift-hero-intro { font-size: 14pt; }
+  .ift-full .ift-portrait-stage { max-width: 86mm; padding: 4mm; }
+  .ift-full .ift-current-plaque { left: -5mm; right: 8mm; bottom: -8mm; }
+  .ift-full .ift-hero-actions, .ift-full .ift-crosslink { display: none !important; }
+  .ift-full .ift-sovereign-strip { break-after: auto; page-break-after: auto; }
+  .ift-full .ift-household-section, .ift-full .ift-parchment, .ift-full .ift-branches, .ift-full .ift-reigns, .ift-full .ift-succession { padding: 16mm 0; break-before: page; page-break-before: always; }
+  .ift-full .ift-household-section { padding-top: 10mm; break-before: auto; page-break-before: auto; }
+  .ift-full .ift-container { width: 100%; }
+  .ift-full .ift-household-grid { grid-template-columns: repeat(3,1fr); gap: 3mm; }
+  .ift-full .ift-household-portrait { aspect-ratio: 1/1; }
+  .ift-full .ift-household-copy { padding: 4mm; }
+  .ift-full .ift-household-copy h3 { font-size: 11pt; }
+  .ift-full .ift-household-copy h4 { min-height: 0; margin-bottom: 2mm; font-size: 9pt; }
+  .ift-full .ift-household-copy > p:not(.ift-age) { font-size: 8.6pt; line-height: 1.34; }
+  .ift-full .ift-language-list { margin-top: 3mm; padding-top: 2mm; }
+  .ift-household-card, .ift-imperial-card, .ift-reign-row, .ift-succession-list article, .ift-alliance, .ift-memorial, .ift-decree { break-inside: avoid-page; page-break-inside: avoid; }
+  .ift-household-copy > p:not(.ift-age) { min-height: 0; }
+  .ift-full .ift-branch-grid { display: block; }
+  .ift-full .ift-branch-register { margin-bottom: 5mm; break-inside: avoid-page; page-break-inside: avoid; }
+  .ift-full .ift-branch-register > .ift-branch-members { display: block !important; }
+  .ift-full .ift-alliance { position: static; }
+  .ift-full .ift-reigns { padding-block: 10mm; }
+  .ift-full .ift-reigns .ift-section-heading { margin-bottom: 7mm; }
+  .ift-full .ift-reign-row { min-height: 23mm; }
+  .ift-full .ift-succession { padding-block: 10mm; }
+  .ift-full .ift-succession .ift-section-heading { margin-bottom: 7mm; }
+  .ift-full .ift-succession-layout { display: block; }
+  .ift-full .ift-succession-list { margin-bottom: 7mm; }
+
+  /* Simple regal edition */
+  .ift-simple-page { min-height: 0; padding: 0; background: #fff !important; }
+  .ift-simple-sheet { width: 100%; overflow: visible; border: 0; box-shadow: none; }
+  .ift-simple-sheet::before, .ift-simple-sheet::after { display: none; }
+  .ift-simple-banner { height: 46mm; }
+  .ift-simple-header { min-height: 92mm; padding: 14mm 14mm 12mm; break-inside: avoid-page; page-break-inside: avoid; }
+  .ift-simple-header > img { top: -20mm; width: 30mm; height: 30mm; }
+  .ift-simple-monarch { margin: 8mm 10mm 4mm; padding: 5mm; }
+  .ift-print-keep, .ift-simple-person, .ift-simple-couple, .ift-children-grid, .ift-extended-house, .ift-simple-footer { break-inside: avoid-page; page-break-inside: avoid; }
+  .ift-print-break-before { break-before: page; page-break-before: always; }
+  .ift-simple-register { padding: 12mm 10mm; }
+  .ift-simple-register > h3, .ift-simple-succession h3 { break-after: avoid-page; page-break-after: avoid; }
+  .ift-simple-divider { display: none; }
+  .ift-simple-person { min-height: 26mm; padding: 4mm; }
+  .ift-simple-line .ift-simple-person + .ift-simple-person { margin-top: 12mm; }
+  .ift-simple-line .ift-simple-person + .ift-simple-person::before { height: 12mm; }
+  .ift-simple-succession { margin: 8mm 10mm 10mm; padding: 7mm; }
+  .ift-simple-footer { padding: 10mm; }
 }

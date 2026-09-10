@@ -3,6 +3,7 @@
 * Full dynastic history with timeline, eras, and key events
 */
 import { useEffect, useState } from "react";
+import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -385,6 +386,22 @@ export default function History() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: "linear-gradient(120deg, oklch(0.11 0.015 245), oklch(0.075 0.008 285))", borderTop: `1px solid ${GOLD}33`, padding: "4.5rem 0" }}>
+        <div className="container">
+          <div className="reveal" style={{ maxWidth: "920px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 270px), 1fr))", gap: "2rem", alignItems: "center" }}>
+            <div>
+              <div style={{ fontFamily: "'Cinzel', serif", fontSize: "0.58rem", letterSpacing: "0.26em", color: GOLD, textTransform: "uppercase", marginBottom: "0.8rem" }}>{t("tree.lineage.kicker")}</div>
+              <h2 style={{ margin: 0, fontFamily: "'Cinzel', serif", color: CREAM, fontSize: "clamp(1.7rem, 3vw, 2.5rem)", fontWeight: 600 }}>{t("tree.lineage.title")}</h2>
+              <p style={{ maxWidth: "650px", margin: "0.9rem 0 0", color: "oklch(0.68 0.012 85)", fontFamily: "'Cormorant Garamond', serif", fontSize: "1.02rem", lineHeight: 1.65 }}>{t("tree.lineage.intro")}</p>
+            </div>
+            <div style={{ display: "grid", gap: "0.65rem" }}>
+              <Link href="/family-tree" style={{ minHeight: "44px", padding: "0 1.25rem", display: "inline-flex", alignItems: "center", justifyContent: "center", background: GOLD, color: DARK, border: `1px solid ${GOLD}`, fontFamily: "'Cinzel', serif", fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", whiteSpace: "nowrap" }}>{t("tree.action.full")}</Link>
+              <Link href="/family-tree/simple" style={{ minHeight: "44px", padding: "0 1.25rem", display: "inline-flex", alignItems: "center", justifyContent: "center", color: CREAM, border: `1px solid ${GOLD}`, fontFamily: "'Cinzel', serif", fontSize: "0.58rem", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", whiteSpace: "nowrap" }}>{t("tree.action.simple")}</Link>
+            </div>
           </div>
         </div>
       </section>

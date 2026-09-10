@@ -59,3 +59,16 @@
 - [x] Run TypeScript and production build validation.
 - [x] Generate and validate a self-contained Netlify ZIP with all assets and SPA redirects.
 - [ ] Save a checkpoint and deliver the latest ZIP.
+
+## Current Task: Native Family Tree Integration
+- [x] Read and follow the package's `INTEGRATION-BRIEF.md` completely.
+- [x] Upload the supplied portraits, Emperor images, ceremonial assets, and both PDFs through WebDev storage.
+- [x] Add the full family-tree edition as the internal `/family-tree` route.
+- [x] Add the simple regal edition as the internal `/family-tree/simple` route.
+- [x] Reuse the shared Navigation, Footer, LanguageContext, typography, and design system.
+- [x] Use the exact supplied household portraits and the correct German and English Emperor images.
+- [x] Add navigation and cross-links from the History and Imperial Family pages.
+- [x] Preserve all newer GitHub visual, accessibility, language, metadata, and Netlify-export improvements.
+- [x] Pass TypeScript and production builds after synchronization.
+- [x] Verify German and English desktop/mobile layouts and both PDF downloads.
+- [x] Save the final integration checkpoint only after all checks pass.

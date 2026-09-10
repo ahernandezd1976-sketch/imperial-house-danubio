@@ -11,6 +11,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const navLinkKeys = [
   { href: "/history", key: "nav.history" },
   { href: "/family", key: "nav.family" },
+  { href: "/family-tree", key: "nav.familyTree" },
   { href: "/traditions", key: "nav.traditions" },
   { href: "/heraldry", key: "nav.heraldry" },
   { href: "/properties", key: "nav.properties" },
@@ -85,7 +86,7 @@ export default function Navigation() {
           {/* Desktop nav */}
           <ul className="hidden lg:flex items-center gap-3 xl:gap-4 flex-nowrap">
             {navLinks.map((link) => {
-              const isActive = location === link.href;
+              const isActive = location === link.href || (link.href === "/family-tree" && location.startsWith("/family-tree"));
               return (
                 <li key={link.href}>
                   <Link
@@ -176,7 +177,7 @@ export default function Navigation() {
                     fontSize: "0.75rem",
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
-                    color: location === link.href ? "oklch(0.72 0.12 85)" : "oklch(0.85 0.01 85)",
+                    color: location === link.href || (link.href === "/family-tree" && location.startsWith("/family-tree")) ? "oklch(0.72 0.12 85)" : "oklch(0.85 0.01 85)",
                     textDecoration: "none",
                     display: "block",
                     padding: "0.5rem 0",

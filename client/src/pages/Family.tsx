@@ -4,6 +4,7 @@
  * Portrait: Official family photograph, Hofburg Imperial Palace
  */
 import { useEffect, useRef, useState, useMemo } from "react";
+import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GraphicLanguageToggle, { type GraphicLanguage } from "@/components/GraphicLanguageToggle";
@@ -1291,6 +1292,10 @@ export default function Family() {
             <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: "0.8rem", color: "oklch(0.4 0.01 85)", textAlign: "center", marginTop: "1rem" }}>
               {t("family.tree.caption")}
             </p>
+            <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "0.75rem", marginTop: "1.75rem" }}>
+              <Link href="/family-tree" style={{ minHeight: "46px", padding: "0 1.4rem", display: "inline-flex", alignItems: "center", justifyContent: "center", border: `1px solid ${GOLD}`, background: GOLD, color: DARK, fontFamily: "'Cinzel', serif", fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.13em", textTransform: "uppercase", textDecoration: "none" }}>{t("tree.action.full")}</Link>
+              <Link href="/family-tree/simple" style={{ minHeight: "46px", padding: "0 1.4rem", display: "inline-flex", alignItems: "center", justifyContent: "center", border: `1px solid ${GOLD_INK}`, color: DARK, fontFamily: "'Cinzel', serif", fontSize: "0.62rem", letterSpacing: "0.13em", textTransform: "uppercase", textDecoration: "none" }}>{t("tree.action.simple")}</Link>
+            </div>
           </div>
         </div>
       </section>

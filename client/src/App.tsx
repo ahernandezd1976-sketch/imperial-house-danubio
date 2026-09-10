@@ -18,6 +18,8 @@ import Books from "./pages/Books";
 import Press from "./pages/Press";
 import News from "./pages/News";
 import Transparency from "./pages/Transparency";
+import FamilyTreeFull from "./pages/FamilyTreeFull";
+import FamilyTreeSimple from "./pages/FamilyTreeSimple";
 import { SocialShareBar } from "./components/SocialShareBar";
 import DynamicMeta from "./components/DynamicMeta";
 
@@ -36,6 +38,8 @@ function Router() {
       <Route path={"/press"} component={Press} />
       <Route path={"/news"} component={News} />
       <Route path={"/transparency"} component={Transparency} />
+      <Route path={"/family-tree/simple"} component={FamilyTreeSimple} />
+      <Route path={"/family-tree"} component={FamilyTreeFull} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

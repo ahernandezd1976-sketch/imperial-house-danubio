@@ -3,7 +3,7 @@
  * Default: German (de), with English, French, Hungarian, Czech, Croatian
  */
 import { createContext, useContext, useState, useCallback, useMemo, type ReactNode } from "react";
-import { historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, pressTranslations, newsTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations } from "@/i18n";
+import { historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, pressTranslations, newsTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations, familyTreeTranslations } from "@/i18n";
 
 export type Language = "de" | "en" | "fr" | "hu" | "cs" | "hr" | "es";
 
@@ -29,6 +29,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.home": "Startseite",
     "nav.history": "Geschichte",
     "nav.family": "Die Kaiserliche Familie",
+    "nav.familyTree": "Stammbaum",
     "nav.traditions": "Traditionen",
     "nav.heraldry": "Heraldik",
     "nav.properties": "Kaiserliche Residenzen",
@@ -109,6 +110,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.home": "Home",
     "nav.history": "History",
     "nav.family": "The Imperial Family",
+    "nav.familyTree": "Family Tree",
     "nav.traditions": "Traditions",
     "nav.heraldry": "Heraldry",
     "nav.properties": "Imperial Properties",
@@ -180,6 +182,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.home": "Accueil",
     "nav.history": "Histoire",
     "nav.family": "La Famille Impériale",
+    "nav.familyTree": "Arbre Généalogique",
     "nav.traditions": "Traditions",
     "nav.heraldry": "Héraldique",
     "nav.properties": "Résidences Impériales",
@@ -251,6 +254,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.home": "Kezdőlap",
     "nav.history": "Történelem",
     "nav.family": "A Császári Család",
+    "nav.familyTree": "Családfa",
     "nav.traditions": "Hagyományok",
     "nav.heraldry": "Heraldika",
     "nav.properties": "Császári Rezidenciák",
@@ -322,6 +326,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.home": "Úvod",
     "nav.history": "Historie",
     "nav.family": "Císařská Rodina",
+    "nav.familyTree": "Rodokmen",
     "nav.traditions": "Tradice",
     "nav.heraldry": "Heraldika",
     "nav.properties": "Císařské Rezidence",
@@ -392,6 +397,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.home": "Početna",
     "nav.history": "Povijest",
     "nav.family": "Carska Obitelj",
+    "nav.familyTree": "Obiteljsko Stablo",
     "nav.traditions": "Tradicije",
     "nav.heraldry": "Heraldika",
     "nav.properties": "Carske Rezidencije",
@@ -462,6 +468,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.home": "Inicio",
     "nav.history": "Historia",
     "nav.family": "La Familia Imperial",
+    "nav.familyTree": "Árbol Genealógico",
     "nav.traditions": "Tradiciones",
     "nav.heraldry": "Heráldica",
     "nav.properties": "Residencias Imperiales",
@@ -546,7 +553,7 @@ const translations: Record<Language, Record<string, string>> = {
 };
 
 // Merge all page translations into a single lookup
-const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations, pressTranslations, newsTranslations];
+const allPageTranslations = [historyTranslations, familyTranslations, worldTranslations, constitutionTranslations, booksTranslations, footerTranslations, transparencyTranslations, traditionsTranslations, heraldryTranslations, propertiesTranslations, pressTranslations, newsTranslations, familyTreeTranslations];
 
 function mergeTranslations(): Record<Language, Record<string, string>> {
   const langs: Language[] = ["de", "en", "fr", "hu", "cs", "hr", "es"];

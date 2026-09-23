@@ -4,7 +4,7 @@
  * Typography: Cinzel headings, Cormorant Garamond italic, Source Serif 4 body
  * Layout: asymmetric card grid with full-bleed property hero images
  */
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -13,6 +13,15 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const GOLD = "oklch(0.80 0.14 88)";
 const DARK = "oklch(0.09 0.005 285)";
 const CREAM = "oklch(0.96 0.015 85)";
+
+function MultilineText({ value }: { value: string }) {
+  return value.split("\n").map((line, index) => (
+    <Fragment key={`${index}-${line}`}>
+      {index > 0 && <br />}
+      {line}
+    </Fragment>
+  ));
+}
 
 function SectionDivider({ light = false }: { light?: boolean }) {
   return (
@@ -308,7 +317,7 @@ export default function Properties() {
                   letterSpacing: "0.03em",
                 }}
               >
-                {t("prop.visit.title").split("\n").map((l,i) => <>{i > 0 && <br />}{l}</>)}
+                <MultilineText value={t("prop.visit.title")} />
               </h2>
               <SectionDivider />
               <p
@@ -373,7 +382,7 @@ export default function Properties() {
                     marginBottom: "0.5rem",
                   }}
                 >
-                  {t("prop.office.address").split("\n").map((l,i) => <>{i > 0 && <br />}{l}</>)}
+                  <MultilineText value={t("prop.office.address")} />
                 </p>
                 <p
                   style={{
@@ -383,7 +392,7 @@ export default function Properties() {
                     lineHeight: 1.7,
                   }}
                 >
-                  {t("prop.office.note").split("\n").map((l,i) => <>{i > 0 && <br />}{l}</>)}
+                  <MultilineText value={t("prop.office.note")} />
                 </p>
               </div>
             </div>
@@ -741,13 +750,13 @@ export default function Properties() {
                   color: "oklch(0.3 0.005 285)",
                   lineHeight: 1.8,
                 }}
-              >
-                <strong style={{ fontFamily: "'Cinzel', serif", fontSize: "0.75rem", letterSpacing: "0.1em", fontStyle: "normal", color: DARK }}>
-                  {t("prop.cta.office")}
-                </strong>
-                <br />
-                {t("prop.cta.address").split("\n").map((l,i) => <>{i > 0 && <br />}{l}</>)}
-              </p>
+                >
+                  <strong style={{ fontFamily: "'Cinzel', serif", fontSize: "0.75rem", letterSpacing: "0.1em", fontStyle: "normal", color: DARK }}>
+                    {t("prop.cta.office")}
+                  </strong>
+                  <br />
+                  <MultilineText value={t("prop.cta.address")} />
+                </p>
             </div>
           </div>
         </div>

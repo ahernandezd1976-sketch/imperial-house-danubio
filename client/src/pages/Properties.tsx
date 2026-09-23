@@ -135,6 +135,32 @@ const properties = [
     tagKey: "prop.hermes.tag",
     tagColor: "oklch(0.45 0.07 150)",
   },
+  {
+    id: "innsbruck",
+    descKey: "prop.innsbruck.desc",
+    visitKey: "prop.innsbruck.visit",
+    nameKey: "prop.innsbruck.title",
+    subtitleKey: "prop.innsbruck.subtitle",
+    locationKey: "prop.innsbruck.location",
+    flag: "🇦🇹",
+    eraKey: "prop.innsbruck.era",
+    image: "/manus-storage/hofburg-innsbruck-hercules-hall_90f35d63.png",
+    tagKey: "prop.innsbruck.tag",
+    tagColor: GOLD,
+  },
+  {
+    id: "kaiservilla",
+    descKey: "prop.kaiservilla.desc",
+    visitKey: "prop.kaiservilla.visit",
+    nameKey: "prop.kaiservilla.title",
+    subtitleKey: "prop.kaiservilla.subtitle",
+    locationKey: "prop.kaiservilla.location",
+    flag: "🇦🇹",
+    eraKey: "prop.kaiservilla.era",
+    image: "/manus-storage/kaiservilla-bad-ischl_bc829652.png",
+    tagKey: "prop.kaiservilla.tag",
+    tagColor: GOLD,
+  },
 ];
 
 export default function Properties() {
@@ -423,6 +449,8 @@ export default function Properties() {
                       [t("prop.prague.title"), t("prop.schedule.prague.day"), "09:00–14:00"],
                       [t("prop.miramare.title"), t("prop.schedule.miramare.day"), "10:00–16:00"],
                       [t("prop.hermes.title"), t("prop.schedule.hermes.day"), "10:00–14:00"],
+                      [t("prop.innsbruck.title"), t("prop.schedule.innsbruck.day"), "10:00–15:00"],
+                      [t("prop.kaiservilla.title"), t("prop.schedule.kaiservilla.day"), "10:00–16:00"],
                     ].map(([name, day, hours], i) => (
                       <tr
                         key={i}
@@ -685,7 +713,7 @@ export default function Properties() {
                 marginBottom: "2.5rem",
               }}
             >
-              Written applications for visits to any Imperial residence should be directed to the {t("prop.office.title")} at the Hofburg Imperial Chancellery. Please include your full name, nationality, the residence you wish to visit, and your preferred date. Confirmations are issued within fifteen working days. Groups are limited to twelve persons per visit.
+              {t("prop.cta.text")}
             </p>
 
             <div
